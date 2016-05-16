@@ -1,0 +1,1318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnAddConsignmentGoods.Caption" xml:space="preserve">
+    <value>寄售入库</value>
+  </data>
+  <data name="btnAddBuyGoods.Caption" xml:space="preserve">
+    <value>进货入库</value>
+  </data>
+  <data name="btnSaleGoods.Caption" xml:space="preserve">
+    <value>商品售出</value>
+  </data>
+  <data name="btnUpdateGoods.Caption" xml:space="preserve">
+    <value>修改商品</value>
+  </data>
+  <data name="btnGoodsRefrence.Caption" xml:space="preserve">
+    <value>视图刷新</value>
+  </data>
+  <data name="btnViewLayout.Caption" xml:space="preserve">
+    <value>视图布局</value>
+  </data>
+  <data name="btnViewRefrence.Caption" xml:space="preserve">
+    <value>刷新</value>
+  </data>
+  <data name="btnSystemViews.Caption" xml:space="preserve">
+    <value>视图周期</value>
+  </data>
+  <data name="btnAllViewAll.Caption" xml:space="preserve">
+    <value>全部</value>
+  </data>
+  <data name="btnViewExport.Caption" xml:space="preserve">
+    <value>导出</value>
+  </data>
+  <data name="btnPrint.Caption" xml:space="preserve">
+    <value>打印</value>
+  </data>
+  <data name="BtnPrintJH.Caption" xml:space="preserve">
+    <value>进货回单</value>
+  </data>
+  <data name="BtnPrintView.Caption" xml:space="preserve">
+    <value>视图</value>
+  </data>
+  <data name="barButtonItem1.Caption" xml:space="preserve">
+    <value>出库</value>
+  </data>
+  <data name="btnAddNewConfig.Caption" xml:space="preserve">
+    <value>新建</value>
+  </data>
+  <data name="btnUpdateConfig.Caption" xml:space="preserve">
+    <value>修改</value>
+  </data>
+  <data name="btnDeleteConfig.Caption" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="btnRefreshConfigView.Caption" xml:space="preserve">
+    <value>刷新</value>
+  </data>
+  <data name="BtnQueryThisWeek.Caption" xml:space="preserve">
+    <value>本周</value>
+  </data>
+  <data name="BtnQueryThisMonth.Caption" xml:space="preserve">
+    <value>本月</value>
+  </data>
+  <data name="BtnQueryThisQuarter.Caption" xml:space="preserve">
+    <value>本季度</value>
+  </data>
+  <data name="BtnQueryAll.Caption" xml:space="preserve">
+    <value>所有记录(十年)</value>
+  </data>
+  <data name="BtnQueryCustomer.Caption" xml:space="preserve">
+    <value>自定义时间段</value>
+  </data>
+  <data name="TxtJHPrimiceSum.Caption" xml:space="preserve">
+    <value>自有在库汇总</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="repositoryItemTextEdit1.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="repositoryItemTextEdit1.Mask.EditMask" xml:space="preserve">
+    <value>c</value>
+  </data>
+  <assembly alias="DevExpress.XtraEditors.v11.1" name="DevExpress.XtraEditors.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="repositoryItemTextEdit1.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v11.1">
+    <value>Numeric</value>
+  </data>
+  <data name="repositoryItemTextEdit1.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TxtJHPrimiceSum.Width" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="TxtJHSaledSum.Caption" xml:space="preserve">
+    <value>自有售出汇总</value>
+  </data>
+  <data name="repositoryItemTextEdit2.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="repositoryItemTextEdit2.Mask.EditMask" xml:space="preserve">
+    <value>c</value>
+  </data>
+  <data name="repositoryItemTextEdit2.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v11.1">
+    <value>Numeric</value>
+  </data>
+  <data name="repositoryItemTextEdit2.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TxtJHSaledSum.Width" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="BtnQueryThisYear.Caption" xml:space="preserve">
+    <value>本年度</value>
+  </data>
+  <data name="BtnExportPdf.Caption" xml:space="preserve">
+    <value>PDF (*.pdf)</value>
+  </data>
+  <data name="BtnExportHtml.Caption" xml:space="preserve">
+    <value>HTML (*.html)</value>
+  </data>
+  <data name="BtnExportXlsx.Caption" xml:space="preserve">
+    <value>Excel (*.xlsx)</value>
+  </data>
+  <data name="BtnExportXls.Caption" xml:space="preserve">
+    <value>Excel (*.xls)</value>
+  </data>
+  <data name="BtnExportMhtml.Caption" xml:space="preserve">
+    <value>HTML (*.mhtml)</value>
+  </data>
+  <data name="BtnUserAdd.Caption" xml:space="preserve">
+    <value>添加用户</value>
+  </data>
+  <data name="BtnUserMondify.Caption" xml:space="preserve">
+    <value>修改用户</value>
+  </data>
+  <data name="BtnUserRestorePwd.Caption" xml:space="preserve">
+    <value>重置密码</value>
+  </data>
+  <data name="TxtLogInUserName.Caption" xml:space="preserve">
+    <value>当前用户</value>
+  </data>
+  <data name="repositoryItemTextEdit4.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TxtLogInUserName.Width" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="BtnUserLoginName.Caption" xml:space="preserve">
+    <value>登录用户</value>
+  </data>
+  <data name="btnUserUpdateSelf.Caption" xml:space="preserve">
+    <value>修改个人信息</value>
+  </data>
+  <data name="btnUserLogout.Caption" xml:space="preserve">
+    <value>退出登录</value>
+  </data>
+  <data name="BtnUserViewRefresh.Caption" xml:space="preserve">
+    <value>刷新视图</value>
+  </data>
+  <data name="btnUserUpdatePwd.Caption" xml:space="preserve">
+    <value>修改密码</value>
+  </data>
+  <data name="BtnPrintJS.Caption" xml:space="preserve">
+    <value>寄售回单</value>
+  </data>
+  <data name="BtnPrintXS.Caption" xml:space="preserve">
+    <value>销售回单</value>
+  </data>
+  <data name="btnPayment.Caption" xml:space="preserve">
+    <value>确认打款</value>
+  </data>
+  <data name="barButtonItem3.Caption" xml:space="preserve">
+    <value>barButtonItem3</value>
+  </data>
+  <data name="barButtonGroup2.Caption" xml:space="preserve">
+    <value>barButtonGroup2</value>
+  </data>
+  <data name="btnCustomerViewOption.Caption" xml:space="preserve">
+    <value>自定义视图功能栏</value>
+  </data>
+  <data name="btnSaveCustomView.Caption" xml:space="preserve">
+    <value>保存视图样式</value>
+  </data>
+  <data name="btnSaveNewCustomView.Caption" xml:space="preserve">
+    <value>保存为新视图</value>
+  </data>
+  <data name="btnSetToDefaultView.Caption" xml:space="preserve">
+    <value>指定为默认视图</value>
+  </data>
+  <data name="btnCustomViewDelete.Caption" xml:space="preserve">
+    <value>删除自定义视图</value>
+  </data>
+  <data name="btnViewOptions.Caption" xml:space="preserve">
+    <value>视图操作栏</value>
+  </data>
+  <data name="btnShowFindPanel.Caption" xml:space="preserve">
+    <value>显示查找面板</value>
+  </data>
+  <data name="btnShowFilterRow.Caption" xml:space="preserve">
+    <value>显示过滤行</value>
+  </data>
+  <data name="btnShowGroupPanel.Caption" xml:space="preserve">
+    <value>显示分组面板</value>
+  </data>
+  <data name="TxtJSPrimiceSum.Caption" xml:space="preserve">
+    <value>寄售在库汇总</value>
+  </data>
+  <data name="repositoryItemTextEdit5.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="repositoryItemTextEdit5.Mask.EditMask" xml:space="preserve">
+    <value>c</value>
+  </data>
+  <data name="repositoryItemTextEdit5.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v11.1">
+    <value>Numeric</value>
+  </data>
+  <data name="repositoryItemTextEdit5.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TxtJSPrimiceSum.Width" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="TxtJSSaledSum.Caption" xml:space="preserve">
+    <value>寄售售出汇总</value>
+  </data>
+  <data name="repositoryItemTextEdit6.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="repositoryItemTextEdit6.Mask.EditMask" xml:space="preserve">
+    <value>c</value>
+  </data>
+  <data name="repositoryItemTextEdit6.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v11.1">
+    <value>Numeric</value>
+  </data>
+  <data name="repositoryItemTextEdit6.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TxtJSSaledSum.Width" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="btnImport.Caption" xml:space="preserve">
+    <value>导入</value>
+  </data>
+  <data name="btnRollBackGoods.Caption" xml:space="preserve">
+    <value>商品退货</value>
+  </data>
+  <data name="rPageUserManager.Text" xml:space="preserve">
+    <value>用户管理</value>
+  </data>
+  <data name="rPageGoodsGroup.Text" xml:space="preserve">
+    <value>商品出入库</value>
+  </data>
+  <data name="rPageViewGroup.Text" xml:space="preserve">
+    <value>视图</value>
+  </data>
+  <data name="riggonPageGroupSum.Text" xml:space="preserve">
+    <value>汇总</value>
+  </data>
+  <data name="ribbonPageGroup1.Text" xml:space="preserve">
+    <value>其它</value>
+  </data>
+  <data name="rPageGoodsManager.Text" xml:space="preserve">
+    <value>商品管理</value>
+  </data>
+  <data name="rPageSystemConfig.Text" xml:space="preserve">
+    <value>系统设置</value>
+  </data>
+  <data name="repositoryItemComboBox1.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v11.1" name="DevExpress.Utils.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="repositoryItemComboBox1.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v11.1">
+    <value>Combo</value>
+  </data>
+  <data name="repositoryItemDateEdit1.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="repositoryItemDateEdit1.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v11.1">
+    <value>Combo</value>
+  </data>
+  <data name="repositoryItemDateEdit1.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="repositoryItemDateEdit2.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="repositoryItemDateEdit2.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v11.1">
+    <value>Combo</value>
+  </data>
+  <data name="repositoryItemDateEdit2.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="repositoryItemTextEdit3.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="repositoryItemDateEdit3.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="repositoryItemDateEdit3.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v11.1">
+    <value>Combo</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ribbon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1012, 147</value>
+  </data>
+  <data name="&gt;&gt;ribbon.Name" xml:space="preserve">
+    <value>ribbon</value>
+  </data>
+  <data name="&gt;&gt;ribbon.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonControl, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbon.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ribbon.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ribbonPageCategory1.Text" xml:space="preserve">
+    <value>ribbonPageCategory1</value>
+  </data>
+  <data name="ribbonPageCategory2.Text" xml:space="preserve">
+    <value>ribbonPageCategory2</value>
+  </data>
+  <data name="rPageGroupConfigManager.Text" xml:space="preserve">
+    <value>管理</value>
+  </data>
+  <data name="RPageGroupLoginUser.Text" xml:space="preserve">
+    <value>登录用户</value>
+  </data>
+  <data name="ribbonPageGroup2.Text" xml:space="preserve">
+    <value>用户管理 </value>
+  </data>
+  <data name="RPageGroupUserOther.Text" xml:space="preserve">
+    <value>其它</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ViewContainers.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="ViewContainers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 147</value>
+  </data>
+  <data name="ViewContainers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1012, 355</value>
+  </data>
+  <data name="ViewContainers.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;ViewContainers.Name" xml:space="preserve">
+    <value>ViewContainers</value>
+  </data>
+  <data name="&gt;&gt;ViewContainers.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PanelControl, DevExpress.Utils.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ViewContainers.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ViewContainers.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="barButtonGroup1.Caption" xml:space="preserve">
+    <value>barButtonGroup1</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>43</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1012, 502</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAQEAAAAEAIAAoQgAAFgAAACgAAABAAAAAgAAAAAEAIAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAD+nAB4/5wAof+cAKH/nAAY/5wAAP+cAAD/nAAW/pwATv6cAGYAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAP+cAAj/nACL/5wAof+cAKH/nACh/5wAof+cAKH/nACh/5wAof+c
+        AKH/nACh/5wAof+cAKH/nACh/5wAof+cAKH/nACh/5wAof+cAKH/nACh/5wAof+cAKH/nACh/5wAof+c
+        ADgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/pwA4/+cAP//nAD//5wApf6cAAr+nAC5/pwAm/2b
+        AHz/nABaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/5wAHP+cANP/nAD//5wA//+c
+        AP//nAD//5wA//+cAP//nAD//5wA//+cAP//nAD//5wA//+cAP//nAD//5wA//+cAP//nAD//5wA//+c
+        AP//nAD//5wA//+cAP//nADR/5wABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/5wACv+cAP//nAD//5wA//+c
+        AP/+nABE/pwAEgAAAAD/nABqAAAAAP6cAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAD/mwAO/5wAs/+cAP//nAD//5wA//+cAP//nAD//5wA//+cAP//nAD//5wA//+cAP//nAD//5wA//+c
+        AP//nAD//5wA//+cAP//nAD//5wA//+cAP//nAD//5wA//+cAGgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP+c
+        AC7/nAD//5wA//+cAP//nAD//5wA1f+cAAT/nABY/5wAMP+cAHr+mwC3/5sAbv6cAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAP+cAAT/nACT/5wA//+cAP//nAD//5wA//+cAP//nAD//5wA//+c
+        AP//nAD//5wA//+cAP//nAD//5wA//+cAP//nAD//5wA//+cAP//nAD//5wA//+cAP//nADt/5wAEgAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAD/nABW/5wA//+cAP//nAD//5wA//+cAP//nAB8/5wAHP+cADr9mwCFAAAAAP+c
+        AA7/nABKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP6cAGr/nAD7/5wA//6c
+        AOf/nAC9/5wAvf+cAL3/nAC9/5wAvf+cAL3/nAC9/5wAvf+cAL3/nAC9/5wAvf+cAL3/nAC9/5wAz/+c
+        AP//nAD//5wA//+cAJMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/pwAgf+cAP//nAD//5wA//+cAP//nAD//5wA9f6c
+        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
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/5wAXP+cAP//nAD//5wA//6cANP/nAAOAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/nAAS/5wA//+c
+        AP//nAD//5wA//+cAP//nAD//5wA//+cAP//nAD//5wAvQAAAAAAAAAAAAAAAAAAAAAAAAAA/5wAh/+c
+        AP//nAD//5wA//+cAIUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/nACx/5wA//+c
+        AP//nAD//5wAq/+cAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA/5wAPP+cAP//nAD//5wA//+cAP//nAD//5wA//+cAP//nAD//5wA//+cAJMAAAAAAAAAAAAA
+        AAAAAAAAAAAAAP+cAAz+mwDj/5wA//+cAP//nAD5/5wAKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA/5wAJP+cAP3/nAD//5wA//+cAP//mwBkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAP+cAF7/nAD//5wA//+cAP//nAD//5wA//+cAP//nAD//5wA//+c
+        AP//nABkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/pwAVv+cAP//nAD//5wA//+cAL8AAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD+nACp/5wA//+cAP//nAD//5wA8f+cABoAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/nACH/5wA//+cAP//nAD//5wA//+c
+        AP//nAD//5wA//+cAP//nAD//5wANgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/nAC7/5wA//+c
+        AP//nAD//5wAWgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/5wARv+cAP//nAD//5wA//+c
+        AP//mwCdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/5wAr/+c
+        AP//nAD//5wA//+cAP//nAD//5wA//+cAP//nAD//5wA//6cAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA/5wAJP+cAPn/nAD//5wA//+cAOf/nAASAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/5wAz/6c
+        AK0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP+c
+        AAb/nAD3/5wA//+cAP//nAD//5wA+f+cABoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAP+cANf/nAD//5wA//+cAP//nAD//5wA//+cAP//nAD//5wA//+cAN0AAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD+nACH/5wA//+cAP//nAD//5sAmQAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAP6cAFb/nAD//5wAZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAA/5wAzf+cAP//nAD//5wA//+cAP//nAB6AAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAP+cAAL/nAD3/5wA//+cAP//nAD//5wA//+cAP//nAD//5wA//+c
+        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
+        AIP/nAD//5wA//+cAP//nAD//5wA//+cAP//nAD//5wA//+cAPMAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP+bAAb/nADb/5wA//+c
+        AP//nAD//5wAWgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAD/nACn/5wA//+cAP//nAD//5wA//+cAP//nAD//5wA//+cAP/+mwDDAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA/5wASv+cAP//nAD//5wA//+cAOn/nAASAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/pwAz/+cAP//nAD//5wA//+cAP//nAD//5wA//+c
+        AP//nAD//pwAmQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/nACn/5wA//+cAP//nAD//5wAnQAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP+cAPP/nAD//5wA//+c
+        AP//nAD//5wA//+cAP//nAD//5wA//6cAGgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/psAHP+cAPP/nAD//5wA//+c
+        AP3+mwA6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP6b
+        ACL/nAD//5wA//+cAP//nAD//5wA//+cAP//nAD//5wA//+cAP//nABAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAD+mwB0/5wA//+cAP//nAD//5wA0/+cAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAD+nABC/5wA//+cAP//nAD//5wA//+cAP//nAD//5wA//+cAP//nAD//5wAFAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAA/5wABv6bANP/nAD//5wA//+cAP/+mwB2AAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/5wAaP+cAP//nAD//5wA//+cAP//nAD//5wA//+c
+        AP//nAD//5wA6QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/nAA+/5wA//+cAP//nAD//5wA9f+c
+        ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP+cAJP/nAD//5wA//+c
+        AP//nAD//5wA//+cAP//nAD//5wA//+cALkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP+c
+        AKP/nAD//5wA//+cAP//nACzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAD/nAC3/5wA//+cAP//nAD//5wA//+cAP//nAD//5wA//+cAP//nACTAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAD/nAAY/5wA7/+cAP//nAD//5wA//6cAFIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAA/5wA3f+cAP//nAD//5wA//+cAP//nAD//5wA//+cAP//nAD//5wAZAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP+cAGz/nAD//5wA//+cAP//nADj/pwADAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/5wACv+cAP//nAD//5wA//+cAP//nAD//5wA//+c
+        AP//nAD//5wA//+cADoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/nAAE/5wA0f+c
+        AP//nAD//5wA//+cAJMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP+cAC7/nAD//5wA//+c
+        AP//nAD//5wA//+cAP//nAD//5wA//+cAP//nAAOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAP+cADz/nAD//5wA//+cAP//nAD7/5wANgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAD/nABU/5wA//+cAP//nAD//5wA//+cAP//nAD//5wA//+cAP//nADdAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/psAof+cAP//nAD//5wA//+cANH/nAACAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAA/5wAev+cAP//nAD//5wA//+cAP//nAD//5wA//+cAP//nAD//5wAtQAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP+cABT/nADv/5wA//+c
+        AP//nAD//psAcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP6cAKP/nAD//5wA//+cAP//nAD//5wA//+c
+        AP//nAD//5wA//+cAI8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA/5wAav+cAP//nAD//5wA//+cAPP/nAAeAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD+nADN/5wA//+c
+        AP//nAD//5wA//+cAP//nAD//5wA//+cAP/+mwBkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAP+cAAT+nADP/5wA//+cAP//nAD//5wAuQAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA/5wA8f+cAP//nAD//5wA//+cAP//nAD//5wA//+cAP//nAD//pwAVAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/5wANP6bAPv/nAD//5wA//+c
+        AP//nABcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAA/5wAFP+cAP//nAD//5wA//+cAP//nAD//5wA//+cAP//nAD//5wA//+c
+        AF4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAD+mwC9/5wA//+cAP//nAD//5wA7f+cAB4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP6cAEb/nAD//5wA//+cAP//nAD//5wA//+c
+        AP//nAD//5wA//+cAP//nACbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAA/5wAj/+cAP//nAD//5wA//+cAP//nADH/pwADgAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD+nACt/5wA//+c
+        AP//nAD//5wA//+cAP//nAD//5wA//+cAP//nAD//5wA8f+cABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP+cAKn/nAD//5wA//+cAP//nAD//5wA//6c
+        AMv/nAAcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAD/nABu/pwA//+cAP//nAD//5wA//+cAP//nAD//5wA//+cAP//nAD//5wA//+cAP//nADN/5wAHgAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP6cAEj+nAD7/5wA//+c
+        AP//nAD//5wA//+cAP//nAD//psA7f6cAF7/nAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAD/mwAU/5wAYv+cAIX+nADL/5wA//+cAP//nAD//5wA//+cAP//nAD//5wA//+cAP//nAD//5wA//+c
+        AP//nAD//5wA//+cAPf/nACl/5wAfv+cAH7/nAB+/5wAfv+cACoAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP+cAFT/nABk/5wAgf+c
+        ALf+mwD//5wA//+cAP//nAD//5wA//+cAP//nAD//5wA//+cAP//nAD//5wA4f+cAI3/nABGAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAA/5wAOP+cAP//nAD//5wA//+cAP//nAD//5wA//+cAP//nAD//5wA//+c
+        AP//nAD//5wA//+cAP//nAD//5wA//+cAP//nAD//5wA//+cAP//nAD//5wA//+cAP/+nABUAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAD+nACr/5wA//+cAP//nAD//5wA//+cAP//nAD//5wA//+cAP//nAD//5wA//+cAP//nAD//5wA//+c
+        AP//nAD//5wAxwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP6cABz/mwCB/5sAgf+bAIH/mwCB/5sAgf+b
+        AIH/mwCB/5sAgf+bAIH/mwCB/5sAgf+bAIH/mwCB/5sAgf+bAIH/mwCB/5sAgf+bAIH/mwCB/5sAgf+b
+        AIH/mwCB/pwAKgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAA/pwAVv+bAIH/mwCB/5sAgf+bAIH/mwCB/5sAgf+bAIH/mwCB/5sAgf+b
+        AIH/mwCB/5sAgf+bAIH/mwCB/5sAgf+cAGQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA/////////////n//AAAB///8J/+AAAD///w//8AAAP///B7/4AAAf//8Hf/4AAA///gP//x/
+        /j//+AZ//j//n//4B3//H//f//gD//+H////+AHf/8P////4Aff/4f////gA3//4////8AD///w////w
+        AH3//h////AAO///D///8AA3//+H///wAh///8P///ACHv//4f//8AcPv//w///gB4f///h//+AHh3//
+        /D//4AfD///+H//gB8H///4P/+AH4f///w//4A/w////B//AD/D///+D/8AP+H8//4P/wA/4P7//g//A
+        D/w/n/+B/8AP/h/P/4H/wB/+H+f/gf/AH/8P8/8B/4Af/4f4/gH/gB//h/wAA/+AH//D/gAD/4A//8H/
+        AAf/gD//4f/AD/+AP//w//z//wA///D/////AD//+H////8AP//4P////wB///w/////AH///h////8A
+        f//+H////wB///8P///+AH///wf///4Af///h////gD////D///+AP///8H///4A////4f///gD////g
+        ///+AP////D///wA////+H///AH////4P//8Af////w///wB/////B///AD////8D//4AP////wH//gA
+        f////AP/wAAf///gAH+AAAH//4AAP4AAAf//wAB///////////8=
+</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Vogue2 IMS</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageCategory1.Name" xml:space="preserve">
+    <value>ribbonPageCategory1</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageCategory1.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageCategory, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageCategory2.Name" xml:space="preserve">
+    <value>ribbonPageCategory2</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageCategory2.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageCategory, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;rPageGoodsManager.Name" xml:space="preserve">
+    <value>rPageGoodsManager</value>
+  </data>
+  <data name="&gt;&gt;rPageGoodsManager.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPage, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;rPageGoodsGroup.Name" xml:space="preserve">
+    <value>rPageGoodsGroup</value>
+  </data>
+  <data name="&gt;&gt;rPageGoodsGroup.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnAddConsignmentGoods.Name" xml:space="preserve">
+    <value>btnAddConsignmentGoods</value>
+  </data>
+  <data name="&gt;&gt;btnAddConsignmentGoods.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnAddBuyGoods.Name" xml:space="preserve">
+    <value>btnAddBuyGoods</value>
+  </data>
+  <data name="&gt;&gt;btnAddBuyGoods.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnSaleGoods.Name" xml:space="preserve">
+    <value>btnSaleGoods</value>
+  </data>
+  <data name="&gt;&gt;btnSaleGoods.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnUpdateGoods.Name" xml:space="preserve">
+    <value>btnUpdateGoods</value>
+  </data>
+  <data name="&gt;&gt;btnUpdateGoods.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnPayment.Name" xml:space="preserve">
+    <value>btnPayment</value>
+  </data>
+  <data name="&gt;&gt;btnPayment.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnRollBackGoods.Name" xml:space="preserve">
+    <value>btnRollBackGoods</value>
+  </data>
+  <data name="&gt;&gt;btnRollBackGoods.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barButtonGroup2.Name" xml:space="preserve">
+    <value>barButtonGroup2</value>
+  </data>
+  <data name="&gt;&gt;barButtonGroup2.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonGroup, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;rPageViewGroup.Name" xml:space="preserve">
+    <value>rPageViewGroup</value>
+  </data>
+  <data name="&gt;&gt;rPageViewGroup.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnSystemViews.Name" xml:space="preserve">
+    <value>btnSystemViews</value>
+  </data>
+  <data name="&gt;&gt;btnSystemViews.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarSubItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;BtnQueryThisWeek.Name" xml:space="preserve">
+    <value>BtnQueryThisWeek</value>
+  </data>
+  <data name="&gt;&gt;BtnQueryThisWeek.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;BtnQueryThisMonth.Name" xml:space="preserve">
+    <value>BtnQueryThisMonth</value>
+  </data>
+  <data name="&gt;&gt;BtnQueryThisMonth.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;BtnQueryThisQuarter.Name" xml:space="preserve">
+    <value>BtnQueryThisQuarter</value>
+  </data>
+  <data name="&gt;&gt;BtnQueryThisQuarter.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;BtnQueryThisYear.Name" xml:space="preserve">
+    <value>BtnQueryThisYear</value>
+  </data>
+  <data name="&gt;&gt;BtnQueryThisYear.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;BtnQueryAll.Name" xml:space="preserve">
+    <value>BtnQueryAll</value>
+  </data>
+  <data name="&gt;&gt;BtnQueryAll.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;BtnQueryCustomer.Name" xml:space="preserve">
+    <value>BtnQueryCustomer</value>
+  </data>
+  <data name="&gt;&gt;BtnQueryCustomer.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnViewRefrence.Name" xml:space="preserve">
+    <value>btnViewRefrence</value>
+  </data>
+  <data name="&gt;&gt;btnViewRefrence.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnCustomerViewOption.Name" xml:space="preserve">
+    <value>btnCustomerViewOption</value>
+  </data>
+  <data name="&gt;&gt;btnCustomerViewOption.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonGroup, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnSaveCustomView.Name" xml:space="preserve">
+    <value>btnSaveCustomView</value>
+  </data>
+  <data name="&gt;&gt;btnSaveCustomView.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnSaveNewCustomView.Name" xml:space="preserve">
+    <value>btnSaveNewCustomView</value>
+  </data>
+  <data name="&gt;&gt;btnSaveNewCustomView.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnSetToDefaultView.Name" xml:space="preserve">
+    <value>btnSetToDefaultView</value>
+  </data>
+  <data name="&gt;&gt;btnSetToDefaultView.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnCustomViewDelete.Name" xml:space="preserve">
+    <value>btnCustomViewDelete</value>
+  </data>
+  <data name="&gt;&gt;btnCustomViewDelete.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnViewOptions.Name" xml:space="preserve">
+    <value>btnViewOptions</value>
+  </data>
+  <data name="&gt;&gt;btnViewOptions.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonGroup, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnShowFindPanel.Name" xml:space="preserve">
+    <value>btnShowFindPanel</value>
+  </data>
+  <data name="&gt;&gt;btnShowFindPanel.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnShowFilterRow.Name" xml:space="preserve">
+    <value>btnShowFilterRow</value>
+  </data>
+  <data name="&gt;&gt;btnShowFilterRow.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnShowGroupPanel.Name" xml:space="preserve">
+    <value>btnShowGroupPanel</value>
+  </data>
+  <data name="&gt;&gt;btnShowGroupPanel.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;riggonPageGroupSum.Name" xml:space="preserve">
+    <value>riggonPageGroupSum</value>
+  </data>
+  <data name="&gt;&gt;riggonPageGroupSum.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;TxtJHPrimiceSum.Name" xml:space="preserve">
+    <value>TxtJHPrimiceSum</value>
+  </data>
+  <data name="&gt;&gt;TxtJHPrimiceSum.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarEditItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemTextEdit1.Name" xml:space="preserve">
+    <value>repositoryItemTextEdit1</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemTextEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemTextEdit, DevExpress.XtraEditors.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;TxtJHSaledSum.Name" xml:space="preserve">
+    <value>TxtJHSaledSum</value>
+  </data>
+  <data name="&gt;&gt;TxtJHSaledSum.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarEditItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemTextEdit2.Name" xml:space="preserve">
+    <value>repositoryItemTextEdit2</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemTextEdit2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemTextEdit, DevExpress.XtraEditors.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;TxtJSPrimiceSum.Name" xml:space="preserve">
+    <value>TxtJSPrimiceSum</value>
+  </data>
+  <data name="&gt;&gt;TxtJSPrimiceSum.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarEditItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemTextEdit5.Name" xml:space="preserve">
+    <value>repositoryItemTextEdit5</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemTextEdit5.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemTextEdit, DevExpress.XtraEditors.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;TxtJSSaledSum.Name" xml:space="preserve">
+    <value>TxtJSSaledSum</value>
+  </data>
+  <data name="&gt;&gt;TxtJSSaledSum.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarEditItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemTextEdit6.Name" xml:space="preserve">
+    <value>repositoryItemTextEdit6</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemTextEdit6.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemTextEdit, DevExpress.XtraEditors.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup1.Name" xml:space="preserve">
+    <value>ribbonPageGroup1</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup1.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnViewExport.Name" xml:space="preserve">
+    <value>btnViewExport</value>
+  </data>
+  <data name="&gt;&gt;btnViewExport.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarSubItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;BtnExportXls.Name" xml:space="preserve">
+    <value>BtnExportXls</value>
+  </data>
+  <data name="&gt;&gt;BtnExportXls.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;BtnExportXlsx.Name" xml:space="preserve">
+    <value>BtnExportXlsx</value>
+  </data>
+  <data name="&gt;&gt;BtnExportXlsx.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;BtnExportPdf.Name" xml:space="preserve">
+    <value>BtnExportPdf</value>
+  </data>
+  <data name="&gt;&gt;BtnExportPdf.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;BtnExportHtml.Name" xml:space="preserve">
+    <value>BtnExportHtml</value>
+  </data>
+  <data name="&gt;&gt;BtnExportHtml.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;BtnExportMhtml.Name" xml:space="preserve">
+    <value>BtnExportMhtml</value>
+  </data>
+  <data name="&gt;&gt;BtnExportMhtml.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnPrint.Name" xml:space="preserve">
+    <value>btnPrint</value>
+  </data>
+  <data name="&gt;&gt;btnPrint.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarSubItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;BtnPrintView.Name" xml:space="preserve">
+    <value>BtnPrintView</value>
+  </data>
+  <data name="&gt;&gt;BtnPrintView.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;BtnPrintJH.Name" xml:space="preserve">
+    <value>BtnPrintJH</value>
+  </data>
+  <data name="&gt;&gt;BtnPrintJH.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;BtnPrintJS.Name" xml:space="preserve">
+    <value>BtnPrintJS</value>
+  </data>
+  <data name="&gt;&gt;BtnPrintJS.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;BtnPrintXS.Name" xml:space="preserve">
+    <value>BtnPrintXS</value>
+  </data>
+  <data name="&gt;&gt;BtnPrintXS.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnImport.Name" xml:space="preserve">
+    <value>btnImport</value>
+  </data>
+  <data name="&gt;&gt;btnImport.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnDefaultView.Name" xml:space="preserve">
+    <value>btnDefaultView</value>
+  </data>
+  <data name="&gt;&gt;btnDefaultView.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnFormatView.Name" xml:space="preserve">
+    <value>btnFormatView</value>
+  </data>
+  <data name="&gt;&gt;btnFormatView.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnCardView.Name" xml:space="preserve">
+    <value>btnCardView</value>
+  </data>
+  <data name="&gt;&gt;btnCardView.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemDateEdit1.Name" xml:space="preserve">
+    <value>repositoryItemDateEdit1</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemDateEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemDateEdit, DevExpress.XtraEditors.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemDateEdit2.Name" xml:space="preserve">
+    <value>repositoryItemDateEdit2</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemDateEdit2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemDateEdit, DevExpress.XtraEditors.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemTextEdit3.Name" xml:space="preserve">
+    <value>repositoryItemTextEdit3</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemTextEdit3.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemTextEdit, DevExpress.XtraEditors.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnAllViewAll.Name" xml:space="preserve">
+    <value>btnAllViewAll</value>
+  </data>
+  <data name="&gt;&gt;btnAllViewAll.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnGoodsRefrence.Name" xml:space="preserve">
+    <value>btnGoodsRefrence</value>
+  </data>
+  <data name="&gt;&gt;btnGoodsRefrence.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemComboBox1.Name" xml:space="preserve">
+    <value>repositoryItemComboBox1</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemComboBox1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemComboBox, DevExpress.XtraEditors.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnViewLayout.Name" xml:space="preserve">
+    <value>btnViewLayout</value>
+  </data>
+  <data name="&gt;&gt;btnViewLayout.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarSubItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem1.Name" xml:space="preserve">
+    <value>barButtonItem1</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem1.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;rPageSystemConfig.Name" xml:space="preserve">
+    <value>rPageSystemConfig</value>
+  </data>
+  <data name="&gt;&gt;rPageSystemConfig.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPage, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;rPageGroupConfigManager.Name" xml:space="preserve">
+    <value>rPageGroupConfigManager</value>
+  </data>
+  <data name="&gt;&gt;rPageGroupConfigManager.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnAddNewConfig.Name" xml:space="preserve">
+    <value>btnAddNewConfig</value>
+  </data>
+  <data name="&gt;&gt;btnAddNewConfig.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnUpdateConfig.Name" xml:space="preserve">
+    <value>btnUpdateConfig</value>
+  </data>
+  <data name="&gt;&gt;btnUpdateConfig.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteConfig.Name" xml:space="preserve">
+    <value>btnDeleteConfig</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteConfig.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnRefreshConfigView.Name" xml:space="preserve">
+    <value>btnRefreshConfigView</value>
+  </data>
+  <data name="&gt;&gt;btnRefreshConfigView.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;rPageUserManager.Name" xml:space="preserve">
+    <value>rPageUserManager</value>
+  </data>
+  <data name="&gt;&gt;rPageUserManager.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPage, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;RPageGroupLoginUser.Name" xml:space="preserve">
+    <value>RPageGroupLoginUser</value>
+  </data>
+  <data name="&gt;&gt;RPageGroupLoginUser.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;BtnUserLoginName.Name" xml:space="preserve">
+    <value>BtnUserLoginName</value>
+  </data>
+  <data name="&gt;&gt;BtnUserLoginName.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarSubItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnUserUpdateSelf.Name" xml:space="preserve">
+    <value>btnUserUpdateSelf</value>
+  </data>
+  <data name="&gt;&gt;btnUserUpdateSelf.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnUserUpdatePwd.Name" xml:space="preserve">
+    <value>btnUserUpdatePwd</value>
+  </data>
+  <data name="&gt;&gt;btnUserUpdatePwd.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnUserLogout.Name" xml:space="preserve">
+    <value>btnUserLogout</value>
+  </data>
+  <data name="&gt;&gt;btnUserLogout.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup2.Name" xml:space="preserve">
+    <value>ribbonPageGroup2</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup2.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;BtnUserAdd.Name" xml:space="preserve">
+    <value>BtnUserAdd</value>
+  </data>
+  <data name="&gt;&gt;BtnUserAdd.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;BtnUserMondify.Name" xml:space="preserve">
+    <value>BtnUserMondify</value>
+  </data>
+  <data name="&gt;&gt;BtnUserMondify.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;BtnUserRestorePwd.Name" xml:space="preserve">
+    <value>BtnUserRestorePwd</value>
+  </data>
+  <data name="&gt;&gt;BtnUserRestorePwd.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;RPageGroupUserOther.Name" xml:space="preserve">
+    <value>RPageGroupUserOther</value>
+  </data>
+  <data name="&gt;&gt;RPageGroupUserOther.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;BtnUserViewRefresh.Name" xml:space="preserve">
+    <value>BtnUserViewRefresh</value>
+  </data>
+  <data name="&gt;&gt;BtnUserViewRefresh.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;TxtLogInUserName.Name" xml:space="preserve">
+    <value>TxtLogInUserName</value>
+  </data>
+  <data name="&gt;&gt;TxtLogInUserName.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarEditItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemTextEdit4.Name" xml:space="preserve">
+    <value>repositoryItemTextEdit4</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemTextEdit4.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemTextEdit, DevExpress.XtraEditors.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemDateEdit3.Name" xml:space="preserve">
+    <value>repositoryItemDateEdit3</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemDateEdit3.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemDateEdit, DevExpress.XtraEditors.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barEditItem1.Name" xml:space="preserve">
+    <value>barEditItem1</value>
+  </data>
+  <data name="&gt;&gt;barEditItem1.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarEditItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemPictureEdit1.Name" xml:space="preserve">
+    <value>repositoryItemPictureEdit1</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemPictureEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit, DevExpress.XtraEditors.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemPictureEdit2.Name" xml:space="preserve">
+    <value>repositoryItemPictureEdit2</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemPictureEdit2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit, DevExpress.XtraEditors.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem3.Name" xml:space="preserve">
+    <value>barButtonItem3</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem3.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barButtonGroup1.Name" xml:space="preserve">
+    <value>barButtonGroup1</value>
+  </data>
+  <data name="&gt;&gt;barButtonGroup1.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonGroup, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormMain</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>Vogue2_IMS.Common.FormBase.RibbonFormSimpleDialogBase, Vogue2 IMS.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+</root>

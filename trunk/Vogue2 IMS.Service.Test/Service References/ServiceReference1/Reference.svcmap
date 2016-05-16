@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="48fdbdfd-ed24-4eb6-b28f-17ac42fe8137" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:7008/DataService" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DataService.xsd" MetadataType="Schema" ID="a9e7796f-c2b0-469f-818f-b0469c663af8" SourceId="1" SourceUrl="http://localhost:7008/DataService?xsd=xsd2" />
+    <MetadataFile FileName="DataService1.xsd" MetadataType="Schema" ID="7eb7bce2-9a79-4f83-9abb-d53ef2f69cd6" SourceId="1" SourceUrl="http://localhost:7008/DataService?xsd=xsd3" />
+    <MetadataFile FileName="DataService.disco" MetadataType="Disco" ID="46520a21-b43c-4370-a8c7-32d027ded66a" SourceId="1" SourceUrl="http://localhost:7008/DataService?disco" />
+    <MetadataFile FileName="DataService2.xsd" MetadataType="Schema" ID="a40d6f98-02cb-448d-bd80-553f7a5ab11f" SourceId="1" SourceUrl="http://localhost:7008/DataService?xsd=xsd4" />
+    <MetadataFile FileName="DataService.wsdl" MetadataType="Wsdl" ID="a70621f5-b083-4db6-a830-41653eabee28" SourceId="1" SourceUrl="http://localhost:7008/DataService?wsdl" />
+    <MetadataFile FileName="DataService3.xsd" MetadataType="Schema" ID="ab583f48-95f4-4cc3-9246-a7f1b7acf9a7" SourceId="1" SourceUrl="http://localhost:7008/DataService?xsd=xsd0" />
+    <MetadataFile FileName="DataService4.xsd" MetadataType="Schema" ID="6d4dfc76-5413-474d-8160-4cfe44c38d2c" SourceId="1" SourceUrl="http://localhost:7008/DataService?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

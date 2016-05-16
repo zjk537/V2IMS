@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3C29C4B9-15E0-4CEB-BA67-69D698965008}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Vogue2_IMS.Business</RootNamespace>
+    <AssemblyName>Vogue2 IMS.Business</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NPOI">
+      <HintPath>..\..\refrence\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\..\refrence\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>..\..\refrence\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>..\..\refrence\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessBase.cs" />
+    <Compile Include="BusinessModel\CurrentLoginUser.cs" />
+    <Compile Include="BusinessModel\GoodsPaidInfo.cs" />
+    <Compile Include="BusinessModel\PurchaseGoodsInfo.cs" />
+    <Compile Include="BusinessModel\PurchaseGoodsOrderInfo.cs" />
+    <Compile Include="BusinessModel\RoleColumnsInfo.cs" />
+    <Compile Include="BusinessModel\SaledGoodsInfo.cs" />
+    <Compile Include="BusinessModel\SaledGoodsOrderInfo.cs" />
+    <Compile Include="BusinessModel\UserShopRoleInfo.cs" />
+    <Compile Include="CategoryBusiness.cs" />
+    <Compile Include="DataImportBusiness.cs" />
+    <Compile Include="GoodsBusiness.cs" />
+    <Compile Include="OperateLogBusiness.cs" />
+    <Compile Include="PayTypeBusiness.cs" />
+    <Compile Include="TableColumnBusiness.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchaseGoodsBusiness.cs" />
+    <Compile Include="RoleBusiness.cs" />
+    <Compile Include="SaleGoodsBusiness.cs" />
+    <Compile Include="Service References\DataServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service\ServiceManager.cs" />
+    <Compile Include="SharedVariables.cs" />
+    <Compile Include="ShopBusiness.cs" />
+    <Compile Include="SupplierBusiness.cs" />
+    <Compile Include="ViewModel\ViewMainGoodsInfos.cs" />
+    <Compile Include="UserBusiness.cs" />
+    <Compile Include="ViewModel\ViewQueryGoodsInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Vogue2 IMS.Common\Vogue2 IMS.Common.csproj">
+      <Project>{29E7273B-73C9-483F-9264-1819561AC8CD}</Project>
+      <Name>Vogue2 IMS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vogue2 IMS.Model\Vogue2 IMS.Model.csproj">
+      <Project>{0478AB84-9853-451F-8A2F-AA8DB19975C0}</Project>
+      <Name>Vogue2 IMS.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vogue2 IMS.Service\Vogue2 IMS.DataService\Vogue2 IMS.DataService.csproj">
+      <Project>{24A33109-BDF6-4383-8022-46238F2C90C7}</Project>
+      <Name>Vogue2 IMS.DataService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\Vogue2_IMS.DataService.Model.ResultValue.datasource" />
+    <None Include="Service References\DataServiceReference\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataServiceReference\service.wsdl" />
+    <None Include="Service References\DataServiceReference\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataServiceReference\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataServiceReference\System.Data.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataServiceReference\Vogue2_IMS.DataService.Model.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataServiceReference\Vogue2_IMS.Service.Business.Model.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\DataServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

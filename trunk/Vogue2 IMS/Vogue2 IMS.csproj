@@ -1,0 +1,501 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6B589AAE-A863-45BF-ABB6-F84E0ADB8F80}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Vogue2_IMS</RootNamespace>
+    <AssemblyName>Vogue2 IMS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Vogue2_IMS.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeRush.Common, Version=11.1.4.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\refrence\DevExpress.CodeRush.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\refrence\DevExpress.Data.v11.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.OfficeSkins.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v11.1.Core, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\refrence\DevExpress.Utils.v11.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v11.1.Design, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\refrence\ReportViewer\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\refrence\ReportViewer\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\refrence\ReportViewer\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\FmProgressBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\FmProgressBar.Designer.cs">
+      <DependentUpon>FmProgressBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\UICommon.cs" />
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GoodsManager\FmGoodsAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GoodsManager\FmGoodsAdd.Designer.cs">
+      <DependentUpon>FmGoodsAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GoodsManager\FmGoodsFindByCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GoodsManager\FmGoodsFindByCode.Designer.cs">
+      <DependentUpon>FmGoodsFindByCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GoodsManager\FmGoodsImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GoodsManager\FmGoodsImport.Designer.cs">
+      <DependentUpon>FmGoodsImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GoodsManager\FmGoodsInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GoodsManager\FmGoodsInfo.Designer.cs">
+      <DependentUpon>FmGoodsInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GoodsManager\FmGoodsMainView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GoodsManager\FmGoodsMainView.Designer.cs">
+      <DependentUpon>FmGoodsMainView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GoodsManager\FmGoodsPicShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GoodsManager\FmGoodsPicShow.Designer.cs">
+      <DependentUpon>FmGoodsPicShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GoodsManager\FmGoodsQueryCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GoodsManager\FmGoodsQueryCustomer.Designer.cs">
+      <DependentUpon>FmGoodsQueryCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GoodsManager\FmGoodsSaled.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GoodsManager\FmGoodsSaled.Designer.cs">
+      <DependentUpon>FmGoodsSaled.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GoodsManager\FmGoodsSaledConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GoodsManager\FmGoodsSaledConfirm.Designer.cs">
+      <DependentUpon>FmGoodsSaledConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GoodsManager\FmGoodsSaledMondify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GoodsManager\FmGoodsSaledMondify.Designer.cs">
+      <DependentUpon>FmGoodsSaledMondify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GoodsManager\FmNewCustomerViewName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GoodsManager\FmNewCustomerViewName.Designer.cs">
+      <DependentUpon>FmNewCustomerViewName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GoodsManager\FmWarningMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GoodsManager\FmWarningMessageBox.Designer.cs">
+      <DependentUpon>FmWarningMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ReceiptManager\FmReceiptView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceiptManager\FmReceiptView.Designer.cs">
+      <DependentUpon>FmReceiptView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierManager\FmFindSupplierByTel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupplierManager\FmFindSupplierByTel.Designer.cs">
+      <DependentUpon>FmFindSupplierByTel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemManager\FmCategoryInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemManager\FmCategoryInfo.Designer.cs">
+      <DependentUpon>FmCategoryInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemManager\FmPayTypeInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemManager\FmPayTypeInfo.Designer.cs">
+      <DependentUpon>FmPayTypeInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemManager\FmRoleDataViewInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemManager\FmRoleDataViewInfo.Designer.cs">
+      <DependentUpon>FmRoleDataViewInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemManager\FmShopInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemManager\FmShopInfo.Designer.cs">
+      <DependentUpon>FmShopInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemManager\FmSystemConfigView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemManager\FmSystemConfigView.Designer.cs">
+      <DependentUpon>FmSystemConfigView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserManager\FmUpdatedPwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManager\FmUpdatedPwd.Designer.cs">
+      <DependentUpon>FmUpdatedPwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserManager\FmUserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManager\FmUserInfo.Designer.cs">
+      <DependentUpon>FmUserInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserManager\FmUserView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManager\FmUserView.Designer.cs">
+      <DependentUpon>FmUserView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Common\FmProgressBar.resx">
+      <DependentUpon>FmProgressBar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.zh-CN.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GoodsManager\FmGoodsAdd.resx">
+      <DependentUpon>FmGoodsAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GoodsManager\FmGoodsAdd.zh-CN.resx">
+      <DependentUpon>FmGoodsAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GoodsManager\FmGoodsFindByCode.resx">
+      <DependentUpon>FmGoodsFindByCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GoodsManager\FmGoodsImport.resx">
+      <DependentUpon>FmGoodsImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GoodsManager\FmGoodsInfo.resx">
+      <DependentUpon>FmGoodsInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GoodsManager\FmGoodsMainView.resx">
+      <DependentUpon>FmGoodsMainView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GoodsManager\FmGoodsPicShow.resx">
+      <DependentUpon>FmGoodsPicShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GoodsManager\FmGoodsQueryCustomer.resx">
+      <DependentUpon>FmGoodsQueryCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GoodsManager\FmGoodsSaled.resx">
+      <DependentUpon>FmGoodsSaled.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GoodsManager\FmGoodsSaledConfirm.resx">
+      <DependentUpon>FmGoodsSaledConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GoodsManager\FmGoodsSaledMondify.resx">
+      <DependentUpon>FmGoodsSaledMondify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GoodsManager\FmNewCustomerViewName.resx">
+      <DependentUpon>FmNewCustomerViewName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GoodsManager\FmWarningMessageBox.resx">
+      <DependentUpon>FmWarningMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceiptManager\FmReceiptView.resx">
+      <DependentUpon>FmReceiptView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceiptManager\FmReceiptView.zh-CN.resx">
+      <DependentUpon>FmReceiptView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceiptManager\JhReceipt.rdlc">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceiptManager\JsReceipt.rdlc">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceiptManager\CkReceipt.rdlc">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupplierManager\FmFindSupplierByTel.resx">
+      <DependentUpon>FmFindSupplierByTel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemManager\FmCategoryInfo.resx">
+      <DependentUpon>FmCategoryInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemManager\FmPayTypeInfo.resx">
+      <DependentUpon>FmPayTypeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemManager\FmRoleDataViewInfo.resx">
+      <DependentUpon>FmRoleDataViewInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemManager\FmShopInfo.resx">
+      <DependentUpon>FmShopInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemManager\FmSystemConfigView.resx">
+      <DependentUpon>FmSystemConfigView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManager\FmUpdatedPwd.resx">
+      <DependentUpon>FmUpdatedPwd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManager\FmUserInfo.resx">
+      <DependentUpon>FmUserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManager\FmUserView.resx">
+      <DependentUpon>FmUserView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\DExpress.Localization\DExpress.Localization.csproj">
+      <Project>{FF481EFE-54D9-4B4E-926E-EF12E95EA363}</Project>
+      <Name>DExpress.Localization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vogue2 IMS.Business\Vogue2 IMS.Business.csproj">
+      <Project>{3C29C4B9-15E0-4CEB-BA67-69D698965008}</Project>
+      <Name>Vogue2 IMS.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vogue2 IMS.Common\Vogue2 IMS.Common.csproj">
+      <Project>{29E7273B-73C9-483F-9264-1819561AC8CD}</Project>
+      <Name>Vogue2 IMS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vogue2 IMS.Model\Vogue2 IMS.Model.csproj">
+      <Project>{0478AB84-9853-451F-8A2F-AA8DB19975C0}</Project>
+      <Name>Vogue2 IMS.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon1.ico" />
+    <Content Include="icon2.ico" />
+    <Content Include="icon3.ico" />
+    <Content Include="Images\back\Calendar_16x16.png" />
+    <Content Include="Images\back\Drafts_16x16.png" />
+    <Content Include="Images\back\Inbox_16x16.png" />
+    <Content Include="Images\back\Mail_16x16.png" />
+    <Content Include="Images\back\Organizer_16x16.png" />
+    <Content Include="Images\back\Outbox_16x16.png" />
+    <Content Include="Images\back\Tasks_16x16.png" />
+    <Content Include="Images\back\Trash_16x16.png" />
+    <Content Include="Images\Buy_Add_32.png" />
+    <Content Include="Images\Close_16x16.png" />
+    <Content Include="Images\Close_32x32.png" />
+    <Content Include="Images\Consignment_Add_32.png" />
+    <Content Include="Images\Delete_32.png" />
+    <Content Include="Images\Export_32.png" />
+    <Content Include="Images\Find_16x16.png" />
+    <Content Include="Images\Find_32x32.png" />
+    <Content Include="Images\Find_Good_32.png" />
+    <Content Include="Images\Layout_32.png" />
+    <Content Include="Images\Login_Animation.gif" />
+    <Content Include="Images\Map_32.png" />
+    <Content Include="Images\Print_32.png" />
+    <Content Include="Images\QueryDetail_16.png" />
+    <Content Include="Images\QueryDetail_32.png" />
+    <Content Include="Images\Refresh_32.png" />
+    <Content Include="Images\Report_Day_16.png" />
+    <Content Include="Images\Report_Day_32.png" />
+    <Content Include="Images\Report_Month_16.png" />
+    <Content Include="Images\Report_Month_32.png" />
+    <Content Include="Images\Report_Preset_16.png" />
+    <Content Include="Images\Report_Preset_32.png" />
+    <Content Include="Images\Report_Spread_16.png" />
+    <Content Include="Images\Report_Spread_32.png" />
+    <Content Include="Images\Report_Week_16.png" />
+    <Content Include="Images\Repor_Weekt_32.png" />
+    <Content Include="Images\Reprot_Performance_16.png" />
+    <Content Include="Images\Reprot_Performance_32.png" />
+    <Content Include="Images\Sale_32.png" />
+    <Content Include="Images\SaveAs_16x16.png" />
+    <Content Include="Images\SaveAs_32x32.png" />
+    <Content Include="Images\Save_16x16.png" />
+    <Content Include="Images\Save_32x32.png" />
+    <Content Include="Images\Shop_16.png" />
+    <Content Include="Images\Shop_32.png" />
+    <Content Include="Images\SpreadTime_16.png" />
+    <Content Include="Images\SpreadTime_32.png" />
+    <Content Include="Images\Update_32.png" />
+    <Content Include="权限备注说明.txt" />
+    <None Include="Resources\login_V2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\top.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\btn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\bg.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\loading11.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\DataSources\Vogue2_IMS.Business.BusinessModel.PurchaseJsGoodsOrderInfo.datasource" />
+    <None Include="Properties\DataSources\Vogue2_IMS.Business.BusinessModel.SaledGoodsOrderInfo.datasource" />
+    <None Include="Resources\201312221437261.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

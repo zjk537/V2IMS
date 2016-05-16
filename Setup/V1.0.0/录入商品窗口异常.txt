@@ -1,0 +1,325 @@
+有关调用实时(JIT)调试而不是此对话框的详细信息，
+请参见此消息的结尾。
+
+************** 异常文本 **************
+System.ArgumentException: 无法绑定到 DataSource 的属性或列 Color。
+参数名: dataMember
+   在 System.Windows.Forms.BindToObject.CheckBinding()
+   在 System.Windows.Forms.BindToObject.SetBindingManagerBase(BindingManagerBase lManager)
+   在 System.Windows.Forms.Binding.SetListManager(BindingManagerBase bindingManagerBase)
+   在 System.Windows.Forms.ListManagerBindingsCollection.AddCore(Binding dataBinding)
+   在 System.Windows.Forms.BindingsCollection.Add(Binding binding)
+   在 System.Windows.Forms.BindingContext.UpdateBinding(BindingContext newBindingContext, Binding binding)
+   在 System.Windows.Forms.Control.UpdateBindings()
+   在 System.Windows.Forms.Control.OnBindingContextChanged(EventArgs e)
+   在 System.Windows.Forms.Control.OnParentBindingContextChanged(EventArgs e)
+   在 System.Windows.Forms.Control.OnBindingContextChanged(EventArgs e)
+   在 System.Windows.Forms.Control.set_BindingContextInternal(BindingContext value)
+   在 System.Windows.Forms.ContainerControl.set_BindingContext(BindingContext value)
+   在 System.Windows.Forms.ContainerControl.get_BindingContext()
+   在 System.Windows.Forms.Control.get_BindingContextInternal()
+   在 System.Windows.Forms.Control.get_BindingContext()
+   在 System.Windows.Forms.Control.UpdateBindings()
+   在 System.Windows.Forms.Control.OnBindingContextChanged(EventArgs e)
+   在 System.Windows.Forms.Control.OnParentBindingContextChanged(EventArgs e)
+   在 System.Windows.Forms.Control.OnBindingContextChanged(EventArgs e)
+   在 System.Windows.Forms.ContainerControl.OnCreateControl()
+   在 System.Windows.Forms.Form.OnCreateControl()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Form.WndProc(Message& m)
+   在 DevExpress.XtraEditors.XtraForm.WndProc(Message& msg)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+
+************** 已加载的程序集 **************
+mscorlib
+    程序集版本: 4.0.0.0
+    Win32 版本: 4.0.30319.1 (RTMRel.030319-0100)
+    基本代码: file:///C:/WINDOWS/Microsoft.NET/Framework/v4.0.30319/mscorlib.dll
+----------------------------------------
+Vogue2 IMS
+    程序集版本: 1.0.0.0
+    Win32 版本: 1.0.0.0
+    基本代码: file:///C:/Program%20Files/Vogue2%20IMS/Vogue2%20IMS%20Setup/Vogue2%20IMS.exe
+----------------------------------------
+System.Windows.Forms
+    程序集版本: 4.0.0.0
+    Win32 版本: 4.0.30319.1 built by: RTMRel
+    基本代码: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.Windows.Forms/v4.0_4.0.0.0__b77a5c561934e089/System.Windows.Forms.dll
+----------------------------------------
+System.Drawing
+    程序集版本: 4.0.0.0
+    Win32 版本: 4.0.30319.1 built by: RTMRel
+    基本代码: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.Drawing/v4.0_4.0.0.0__b03f5f7f11d50a3a/System.Drawing.dll
+----------------------------------------
+System
+    程序集版本: 4.0.0.0
+    Win32 版本: 4.0.30319.1 built by: RTMRel
+    基本代码: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System/v4.0_4.0.0.0__b77a5c561934e089/System.dll
+----------------------------------------
+DevExpress.Utils.v11.1
+    程序集版本: 11.1.4.0
+    Win32 版本: 11.1.4.0
+    基本代码: file:///C:/Program%20Files/Vogue2%20IMS/Vogue2%20IMS%20Setup/DevExpress.Utils.v11.1.DLL
+----------------------------------------
+DevExpress.OfficeSkins.v11.1
+    程序集版本: 11.1.4.0
+    Win32 版本: 11.1.4.0
+    基本代码: file:///C:/Program%20Files/Vogue2%20IMS/Vogue2%20IMS%20Setup/DevExpress.OfficeSkins.v11.1.DLL
+----------------------------------------
+DevExpress.BonusSkins.v11.1
+    程序集版本: 11.1.4.0
+    Win32 版本: 11.1.4.0
+    基本代码: file:///C:/Program%20Files/Vogue2%20IMS/Vogue2%20IMS%20Setup/DevExpress.BonusSkins.v11.1.DLL
+----------------------------------------
+Vogue2 IMS.Common
+    程序集版本: 1.0.0.0
+    Win32 版本: 1.0.0.0
+    基本代码: file:///C:/Program%20Files/Vogue2%20IMS/Vogue2%20IMS%20Setup/Vogue2%20IMS.Common.DLL
+----------------------------------------
+DevExpress.XtraBars.v11.1
+    程序集版本: 11.1.4.0
+    Win32 版本: 11.1.4.0
+    基本代码: file:///C:/Program%20Files/Vogue2%20IMS/Vogue2%20IMS%20Setup/DevExpress.XtraBars.v11.1.DLL
+----------------------------------------
+DevExpress.XtraEditors.v11.1
+    程序集版本: 11.1.4.0
+    Win32 版本: 11.1.4.0
+    基本代码: file:///C:/Program%20Files/Vogue2%20IMS/Vogue2%20IMS%20Setup/DevExpress.XtraEditors.v11.1.DLL
+----------------------------------------
+DevExpress.Data.v11.1
+    程序集版本: 11.1.4.0
+    Win32 版本: 11.1.4.0
+    基本代码: file:///C:/Program%20Files/Vogue2%20IMS/Vogue2%20IMS%20Setup/DevExpress.Data.v11.1.DLL
+----------------------------------------
+Vogue2 IMS.Business
+    程序集版本: 1.0.0.0
+    Win32 版本: 1.0.0.0
+    基本代码: file:///C:/Program%20Files/Vogue2%20IMS/Vogue2%20IMS%20Setup/Vogue2%20IMS.Business.DLL
+----------------------------------------
+System.Configuration
+    程序集版本: 4.0.0.0
+    Win32 版本: 4.0.30319.1 (RTMRel.030319-0100)
+    基本代码: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.Configuration/v4.0_4.0.0.0__b03f5f7f11d50a3a/System.Configuration.dll
+----------------------------------------
+System.Xml
+    程序集版本: 4.0.0.0
+    Win32 版本: 4.0.30319.1 built by: RTMRel
+    基本代码: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.Xml/v4.0_4.0.0.0__b77a5c561934e089/System.Xml.dll
+----------------------------------------
+Pst.DExpress.Localization
+    程序集版本: 1.0.0.0
+    Win32 版本: 1.0.0.0
+    基本代码: file:///C:/Program%20Files/Vogue2%20IMS/Vogue2%20IMS%20Setup/Pst.DExpress.Localization.DLL
+----------------------------------------
+DevExpress.Localization.v11.1
+    程序集版本: 11.1.4.0
+    Win32 版本: 11.1.4.0
+    基本代码: file:///C:/Program%20Files/Vogue2%20IMS/Vogue2%20IMS%20Setup/DevExpress.Localization.v11.1.DLL
+----------------------------------------
+DevExpress.XtraCharts.v11.1
+    程序集版本: 11.1.4.0
+    Win32 版本: 11.1.4.0
+    基本代码: file:///C:/Program%20Files/Vogue2%20IMS/Vogue2%20IMS%20Setup/DevExpress.XtraCharts.v11.1.DLL
+----------------------------------------
+DevExpress.XtraLayout.v11.1
+    程序集版本: 11.1.4.0
+    Win32 版本: 11.1.4.0
+    基本代码: file:///C:/Program%20Files/Vogue2%20IMS/Vogue2%20IMS%20Setup/DevExpress.XtraLayout.v11.1.DLL
+----------------------------------------
+DevExpress.XtraNavBar.v11.1
+    程序集版本: 11.1.4.0
+    Win32 版本: 11.1.4.0
+    基本代码: file:///C:/Program%20Files/Vogue2%20IMS/Vogue2%20IMS%20Setup/DevExpress.XtraNavBar.v11.1.DLL
+----------------------------------------
+DevExpress.PivotGrid.v11.1.Core
+    程序集版本: 11.1.4.0
+    Win32 版本: 11.1.4.0
+    基本代码: file:///C:/Program%20Files/Vogue2%20IMS/Vogue2%20IMS%20Setup/DevExpress.PivotGrid.v11.1.Core.DLL
+----------------------------------------
+DevExpress.XtraReports.v11.1
+    程序集版本: 11.1.4.0
+    Win32 版本: 11.1.4.0
+    基本代码: file:///C:/Program%20Files/Vogue2%20IMS/Vogue2%20IMS%20Setup/DevExpress.XtraReports.v11.1.DLL
+----------------------------------------
+DevExpress.RichEdit.v11.1.Core
+    程序集版本: 11.1.4.0
+    Win32 版本: 11.1.4.0
+    基本代码: file:///C:/Program%20Files/Vogue2%20IMS/Vogue2%20IMS%20Setup/DevExpress.RichEdit.v11.1.Core.DLL
+----------------------------------------
+DevExpress.XtraRichEdit.v11.1.Extensions
+    程序集版本: 11.1.4.0
+    Win32 版本: 11.1.4.0
+    基本代码: file:///C:/Program%20Files/Vogue2%20IMS/Vogue2%20IMS%20Setup/DevExpress.XtraRichEdit.v11.1.Extensions.DLL
+----------------------------------------
+DevExpress.XtraScheduler.v11.1.Core
+    程序集版本: 11.1.4.0
+    Win32 版本: 11.1.4.0
+    基本代码: file:///C:/Program%20Files/Vogue2%20IMS/Vogue2%20IMS%20Setup/DevExpress.XtraScheduler.v11.1.Core.DLL
+----------------------------------------
+DevExpress.XtraScheduler.v11.1.Extensions
+    程序集版本: 11.1.4.0
+    Win32 版本: 11.1.4.0
+    基本代码: file:///C:/Program%20Files/Vogue2%20IMS/Vogue2%20IMS%20Setup/DevExpress.XtraScheduler.v11.1.Extensions.DLL
+----------------------------------------
+DevExpress.XtraTreeList.v11.1
+    程序集版本: 11.1.4.0
+    Win32 版本: 11.1.4.0
+    基本代码: file:///C:/Program%20Files/Vogue2%20IMS/Vogue2%20IMS%20Setup/DevExpress.XtraTreeList.v11.1.DLL
+----------------------------------------
+DevExpress.XtraVerticalGrid.v11.1
+    程序集版本: 11.1.4.0
+    Win32 版本: 11.1.4.0
+    基本代码: file:///C:/Program%20Files/Vogue2%20IMS/Vogue2%20IMS%20Setup/DevExpress.XtraVerticalGrid.v11.1.DLL
+----------------------------------------
+DevExpress.XtraWizard.v11.1
+    程序集版本: 11.1.4.0
+    Win32 版本: 11.1.4.0
+    基本代码: file:///C:/Program%20Files/Vogue2%20IMS/Vogue2%20IMS%20Setup/DevExpress.XtraWizard.v11.1.DLL
+----------------------------------------
+DevExpress.XtraGrid.v11.1
+    程序集版本: 11.1.4.0
+    Win32 版本: 11.1.4.0
+    基本代码: file:///C:/Program%20Files/Vogue2%20IMS/Vogue2%20IMS%20Setup/DevExpress.XtraGrid.v11.1.DLL
+----------------------------------------
+System.Core
+    程序集版本: 4.0.0.0
+    Win32 版本: 4.0.30319.1 built by: RTMRel
+    基本代码: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.Core/v4.0_4.0.0.0__b77a5c561934e089/System.Core.dll
+----------------------------------------
+Vogue2 IMS.resources
+    程序集版本: 1.0.0.0
+    Win32 版本: 1.0.0.0
+    基本代码: file:///C:/Program%20Files/Vogue2%20IMS/Vogue2%20IMS%20Setup/zh-CN/Vogue2%20IMS.resources.DLL
+----------------------------------------
+mscorlib.resources
+    程序集版本: 4.0.0.0
+    Win32 版本: 4.0.30319.1 (RTMRel.030319-0100)
+    基本代码: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/mscorlib.resources/v4.0_4.0.0.0_zh-Hans_b77a5c561934e089/mscorlib.resources.dll
+----------------------------------------
+Vogue2 IMS.Model
+    程序集版本: 1.0.0.0
+    Win32 版本: 1.0.0.0
+    基本代码: file:///C:/Program%20Files/Vogue2%20IMS/Vogue2%20IMS%20Setup/Vogue2%20IMS.Model.DLL
+----------------------------------------
+Vogue2 IMS.Service.Business
+    程序集版本: 1.0.0.0
+    Win32 版本: 1.0.0.0
+    基本代码: file:///C:/Program%20Files/Vogue2%20IMS/Vogue2%20IMS%20Setup/Vogue2%20IMS.Service.Business.DLL
+----------------------------------------
+System.ServiceModel
+    程序集版本: 4.0.0.0
+    Win32 版本: 4.0.30319.1 built by: RTMRel
+    基本代码: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.ServiceModel/v4.0_4.0.0.0__b77a5c561934e089/System.ServiceModel.dll
+----------------------------------------
+System.Runtime.DurableInstancing
+    程序集版本: 4.0.0.0
+    Win32 版本: 4.0.30319.1 built by: RTMRel
+    基本代码: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.Runtime.DurableInstancing/v4.0_4.0.0.0__31bf3856ad364e35/System.Runtime.DurableInstancing.dll
+----------------------------------------
+SMDiagnostics
+    程序集版本: 4.0.0.0
+    Win32 版本: 4.0.30319.1 (RTMRel.030319-0100)
+    基本代码: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/SMDiagnostics/v4.0_4.0.0.0__b77a5c561934e089/SMDiagnostics.dll
+----------------------------------------
+System.Runtime.Serialization
+    程序集版本: 4.0.0.0
+    Win32 版本: 4.0.30319.1 (RTMRel.030319-0100)
+    基本代码: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.Runtime.Serialization/v4.0_4.0.0.0__b77a5c561934e089/System.Runtime.Serialization.dll
+----------------------------------------
+System.WorkflowServices
+    程序集版本: 4.0.0.0
+    Win32 版本: 4.0.30319.1 (RTMRel.030319-0100)
+    基本代码: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.WorkflowServices/v4.0_4.0.0.0__31bf3856ad364e35/System.WorkflowServices.dll
+----------------------------------------
+System.ServiceModel.Web
+    程序集版本: 4.0.0.0
+    Win32 版本: 4.0.30319.1 (RTMRel.030319-0100)
+    基本代码: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.ServiceModel.Web/v4.0_4.0.0.0__31bf3856ad364e35/System.ServiceModel.Web.dll
+----------------------------------------
+System.ServiceModel.Discovery
+    程序集版本: 4.0.0.0
+    Win32 版本: 4.0.30319.1 built by: RTMRel
+    基本代码: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.ServiceModel.Discovery/v4.0_4.0.0.0__31bf3856ad364e35/System.ServiceModel.Discovery.dll
+----------------------------------------
+System.ServiceModel.Activities
+    程序集版本: 4.0.0.0
+    Win32 版本: 4.0.30319.1 built by: RTMRel
+    基本代码: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.ServiceModel.Activities/v4.0_4.0.0.0__31bf3856ad364e35/System.ServiceModel.Activities.dll
+----------------------------------------
+System.ServiceModel.Routing
+    程序集版本: 4.0.0.0
+    Win32 版本: 4.0.30319.1 built by: RTMRel
+    基本代码: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.ServiceModel.Routing/v4.0_4.0.0.0__31bf3856ad364e35/System.ServiceModel.Routing.dll
+----------------------------------------
+System.ServiceModel.Channels
+    程序集版本: 4.0.0.0
+    Win32 版本: 4.0.30319.1 built by: RTMRel
+    基本代码: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.ServiceModel.Channels/v4.0_4.0.0.0__31bf3856ad364e35/System.ServiceModel.Channels.dll
+----------------------------------------
+System.IdentityModel
+    程序集版本: 4.0.0.0
+    Win32 版本: 4.0.30319.1 (RTMRel.030319-0100)
+    基本代码: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.IdentityModel/v4.0_4.0.0.0__b77a5c561934e089/System.IdentityModel.dll
+----------------------------------------
+System.Data
+    程序集版本: 4.0.0.0
+    Win32 版本: 4.0.30319.1 (RTMRel.030319-0100)
+    基本代码: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_32/System.Data/v4.0_4.0.0.0__b77a5c561934e089/System.Data.dll
+----------------------------------------
+System.Transactions
+    程序集版本: 4.0.0.0
+    Win32 版本: 4.0.30319.1 (RTMRel.030319-0100)
+    基本代码: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_32/System.Transactions/v4.0_4.0.0.0__b77a5c561934e089/System.Transactions.dll
+----------------------------------------
+System.EnterpriseServices
+    程序集版本: 4.0.0.0
+    Win32 版本: 4.0.30319.1 (RTMRel.030319-0100)
+    基本代码: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_32/System.EnterpriseServices/v4.0_4.0.0.0__b03f5f7f11d50a3a/System.EnterpriseServices.dll
+----------------------------------------
+DevExpress.Printing.v11.1.Core
+    程序集版本: 11.1.4.0
+    Win32 版本: 11.1.4.0
+    基本代码: file:///C:/Program%20Files/Vogue2%20IMS/Vogue2%20IMS%20Setup/DevExpress.Printing.v11.1.Core.DLL
+----------------------------------------
+cjyh4ndl
+    程序集版本: 1.0.0.0
+    Win32 版本: 4.0.30319.1 built by: RTMRel
+    基本代码: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System/v4.0_4.0.0.0__b77a5c561934e089/System.dll
+----------------------------------------
+System.Windows.Forms.resources
+    程序集版本: 4.0.0.0
+    Win32 版本: 4.0.30319.1 built by: RTMRel
+    基本代码: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.Windows.Forms.resources/v4.0_4.0.0.0_zh-Hans_b77a5c561934e089/System.Windows.Forms.resources.dll
+----------------------------------------
+Accessibility
+    程序集版本: 4.0.0.0
+    Win32 版本: 4.0.30319.1 built by: RTMRel
+    基本代码: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/Accessibility/v4.0_4.0.0.0__b03f5f7f11d50a3a/Accessibility.dll
+----------------------------------------
+
+************** JIT 调试 **************
+要启用实时(JIT)调试，
+该应用程序或计算机的 .config 文件(machine.config)的 system.windows.forms 节中必须设置
+jitDebugging 值。
+编译应用程序时还必须启用
+调试。
+
+例如: 
+
+<configuration>
+    <system.windows.forms jitDebugging="true" />
+</configuration>
+
+启用 JIT 调试后，任何未经处理的异常
+都将被发送到在此计算机上注册的 JIT 调试器，
+而不是由此对话框处理。
+
+

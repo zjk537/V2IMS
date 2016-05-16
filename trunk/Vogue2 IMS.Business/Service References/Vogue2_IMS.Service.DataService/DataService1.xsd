@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Vogue2_IMS.Service.Business.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Vogue2_IMS.Service.Business.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:7008/DataService?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="ArrayOfFunctionPams">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FunctionPams" nillable="true" type="tns:FunctionPams" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFunctionPams" nillable="true" type="tns:ArrayOfFunctionPams" />
+  <xs:complexType name="FunctionPams">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FunctionName" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Pams" nillable="true" type="q1:ArrayOfKeyValueOfstringanyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FunctionPams" nillable="true" type="tns:FunctionPams" />
+</xs:schema>

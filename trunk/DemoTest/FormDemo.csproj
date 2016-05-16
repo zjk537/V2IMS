@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F21E2272-9DAA-471A-A86A-AA0C60E404D4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DXWindowsApplication1</RootNamespace>
+    <AssemblyName>DXWindowsApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.OfficeSkins.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v11.1.Core, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Reports.v11.1.Designer, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v11.1.Core, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v11.1.Extensions, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v11.1.Extensions, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="NPOI">
+      <HintPath>..\..\refrence\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\..\refrence\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>..\..\refrence\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>..\..\refrence\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DemoExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DemoExcel.Designer.cs">
+      <DependentUpon>DemoExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DemoGoodsAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DemoGoodsAdd.Designer.cs">
+      <DependentUpon>DemoGoodsAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DemoImageThum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DemoImageThum.Designer.cs">
+      <DependentUpon>DemoImageThum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DemoOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DemoOrder.Designer.cs">
+      <DependentUpon>DemoOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DemoUpdatePwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DemoUpdatePwd.Designer.cs">
+      <DependentUpon>DemoUpdatePwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmLogin.Designer.cs">
+      <DependentUpon>FmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FmProgressBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmProgressBar.Designer.cs">
+      <DependentUpon>FmProgressBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBase\FormSimpleDialogBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBase\FormSimpleDialogBase.Designer.cs">
+      <DependentUpon>FormSimpleDialogBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBase\RibbonFormSimpleGridDialogBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBase\RibbonFormSimpleGridDialogBase.Designer.cs">
+      <DependentUpon>RibbonFormSimpleGridDialogBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBase\RibbonFormSimpleDialogBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBase\RibbonFormSimpleDialogBase.Designer.cs">
+      <DependentUpon>RibbonFormSimpleDialogBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="DemoMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DemoMain.Designer.cs">
+      <DependentUpon>DemoMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DemoUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DemoUser.Designer.cs">
+      <DependentUpon>DemoUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DemoGoodsCreate2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DemoGoodsCreate2.Designer.cs">
+      <DependentUpon>DemoGoodsCreate2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DemoGoodsCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DemoGoodsCreate.Designer.cs">
+      <DependentUpon>DemoGoodsCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DemoGoods出库.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DemoGoods出库.Designer.cs">
+      <DependentUpon>DemoGoods出库.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="testdbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>testdbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="viewcontrol\UCMainGoodsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="viewcontrol\UCMainGoodsView.Designer.cs">
+      <DependentUpon>UCMainGoodsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XtraForm1.Designer.cs">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DemoExcel.resx">
+      <DependentUpon>DemoExcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemoGoodsAdd.resx">
+      <DependentUpon>DemoGoodsAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemoImageThum.resx">
+      <DependentUpon>DemoImageThum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemoOrder.resx">
+      <DependentUpon>DemoOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemoUpdatePwd.resx">
+      <DependentUpon>DemoUpdatePwd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemoUser.resx">
+      <DependentUpon>DemoUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmLogin.resx">
+      <DependentUpon>FmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmProgressBar.resx">
+      <DependentUpon>FmProgressBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBase\FormSimpleDialogBase.resx">
+      <DependentUpon>FormSimpleDialogBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBase\RibbonFormSimpleGridDialogBase.resx">
+      <DependentUpon>RibbonFormSimpleGridDialogBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBase\RibbonFormSimpleDialogBase.resx">
+      <DependentUpon>RibbonFormSimpleDialogBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemoMain.resx">
+      <DependentUpon>DemoMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemoGoodsCreate2.resx">
+      <DependentUpon>DemoGoodsCreate2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemoGoodsCreate.resx">
+      <DependentUpon>DemoGoodsCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemoGoods出库.resx">
+      <DependentUpon>DemoGoods出库.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="XtraForm1.resx">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="testdbDataSet.xsc">
+      <DependentUpon>testdbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="testdbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>testdbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="testdbDataSet.xss">
+      <DependentUpon>testdbDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\Icon1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavBar_CaColumn_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavBar_CaColumn_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavBar_PTable_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavBar_PTable_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ribbon_Exit_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ribbon_Exit_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ribbon_Report_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ribbon_Report_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ribbon_Save_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ribbon_Save_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavBar_SouKeReport_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\columnChart.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lineChart.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pieChart.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\Calendar_16x16.png" />
+    <Content Include="Images\Drafts_16x16.png" />
+    <Content Include="Images\Inbox_16x16.png" />
+    <Content Include="Images\Mail_16x16.png" />
+    <Content Include="Images\Organizer_16x16.png" />
+    <Content Include="Images\Outbox_16x16.png" />
+    <Content Include="Images\Tasks_16x16.png" />
+    <Content Include="Images\Trash_16x16.png" />
+    <Content Include="loading11.gif" />
+    <None Include="Resources\V2副本.png" />
+    <None Include="Resources\V2.png" />
+    <None Include="Resources\top.jpg" />
+    <None Include="Resources\btn.png" />
+    <None Include="Resources\bg.png" />
+    <None Include="Resources\loginForm6.png" />
+    <None Include="Resources\loading42.gif" />
+    <None Include="Resources\loading25.gif" />
+    <None Include="Resources\loading15.gif" />
+    <None Include="Resources\loading13.gif" />
+    <None Include="Resources\loading11.gif" />
+    <None Include="Resources\loading10.gif" />
+    <None Include="Resources\loading2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Vogue2 IMS.Business\Vogue2 IMS.Business.csproj">
+      <Project>{3C29C4B9-15E0-4CEB-BA67-69D698965008}</Project>
+      <Name>Vogue2 IMS.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vogue2 IMS.Common\Vogue2 IMS.Common.csproj">
+      <Project>{29E7273B-73C9-483F-9264-1819561AC8CD}</Project>
+      <Name>Vogue2 IMS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vogue2 IMS.Model\Vogue2 IMS.Model.csproj">
+      <Project>{0478AB84-9853-451F-8A2F-AA8DB19975C0}</Project>
+      <Name>Vogue2 IMS.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vogue2 IMS\Vogue2 IMS.csproj">
+      <Project>{6B589AAE-A863-45BF-ABB6-F84E0ADB8F80}</Project>
+      <Name>Vogue2 IMS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
