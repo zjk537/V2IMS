@@ -17,6 +17,7 @@ using Vogue2_IMS.Business;
 using Vogue2_IMS.Business.ViewModel;
 using Vogue2_IMS.Common;
 using System.Linq;
+using System.Configuration;
 
 namespace Vogue2_IMS.GoodsManager
 {
@@ -102,8 +103,10 @@ namespace Vogue2_IMS.GoodsManager
             if (MainView != null)
             {
                //LoadCusomterLayout();
+                MainView.ActiveFilterString = GetViewConditionStr(Condition);
             }
         }
+
 
         public void RefreshData()
         {
@@ -471,7 +474,60 @@ namespace Vogue2_IMS.GoodsManager
             }
         }
 
-         
+        ViewCondition _condition = ViewCondition.Normal;
+        public ViewCondition Condition
+        {
+            get { return _condition; }
+            set
+            {
+                _condition = value;
+
+                MainView.ActiveFilterString = GetViewConditionStr(Condition);
+            }
+        }
+
+        private string GetViewConditionStr(ViewCondition condition)
+        {
+            string returnStr = string.Empty;
+            switch(condition)
+            {
+                case ViewCondition.ZYWeiDaKuan:
+                    returnStr = "[GoodsStatusName] = '售出' And [SourceName] = '进货' And [GoodsPaid.Name] = '未打款'";
+                    break;
+                case ViewCondition.ZYZaiKu:
+                    returnStr = "[GoodsStatusName] = '在库' And [SourceName] = '进货'";
+                    break;
+                case ViewCondition.ZYChaoQi:
+                    var daySpanStr = ConfigurationManager.AppSettings["JinHuoTimeoutDaySpan"];
+                    var daySpan = string.IsNullOrEmpty(daySpanStr) ? 180 : Convert.ToInt32(daySpanStr);
+
+                    returnStr = "[GoodsStatusName] = '在库' And [SourceName] = '进货' And [Goods.UpdatedDate.Value] <= '" + DateTime.Now.AddDays(0 - daySpan).ToShortDateString() + "'";
+                    break;
+                case ViewCondition.JSWeiDaKuan:
+                    returnStr = "[GoodsStatusName] = '售出' And [SourceName] = '寄售' And [GoodsPaid.Name] = '未打款'";
+                    break;
+                case ViewCondition.JSZaiKu:
+                    returnStr = "[GoodsStatusName] = '在库' And [SourceName] = '寄售'";
+                    break;
+                case ViewCondition.JSChaoQi:
+                    returnStr = "[GoodsStatusName] = '在库' And [SourceName] = '寄售' and [Goods.ConsignEndDate]" + "< '" + DateTime.Now.ToShortDateString() + "'";
+                    break;
+            }
+
+            return returnStr;
+        }
+    }
+
+    [Serializable]
+    public enum ViewCondition
+    {
+        Normal
+        ,ZYWeiDaKuan
+        ,ZYZaiKu
+        ,ZYChaoQi
+        ,JSWeiDaKuan
+        ,JSZaiKu
+        ,JSChaoQi
     }
 
     [Serializable]

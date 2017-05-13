@@ -23,8 +23,8 @@ namespace Vogue2_IMS
             DevExpress.UserSkins.BonusSkins.Register();
             UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
 
-            Application.Run(new Form1());
-            //Application.Run(new FmRoleDataViewInfo());
+            //Application.Run(new Form1());
+            Application.Run(new FormMain());
         }
     }
 }

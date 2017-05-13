@@ -124,7 +124,7 @@
             this.FuncGroupContainer.Dock = System.Windows.Forms.DockStyle.Left;
             this.FuncGroupContainer.Location = new System.Drawing.Point(0, 0);
             this.FuncGroupContainer.Name = "FuncGroupContainer";
-            this.FuncGroupContainer.Size = new System.Drawing.Size(165, 422);
+            this.FuncGroupContainer.Size = new System.Drawing.Size(192, 454);
             this.FuncGroupContainer.TabIndex = 6;
             // 
             // mNavBarControl
@@ -145,7 +145,7 @@
             this.mNavBarControl.Location = new System.Drawing.Point(0, 0);
             this.mNavBarControl.Name = "mNavBarControl";
             this.mNavBarControl.OptionsNavPane.ExpandedWidth = 186;
-            this.mNavBarControl.Size = new System.Drawing.Size(165, 422);
+            this.mNavBarControl.Size = new System.Drawing.Size(192, 454);
             this.mNavBarControl.SmallImages = this.imageList16;
             this.mNavBarControl.TabIndex = 0;
             this.mNavBarControl.Text = "navBarControl1";
@@ -214,18 +214,18 @@
             this.panelControl1.Controls.Add(this.GridControlCategory);
             this.panelControl1.Controls.Add(this.GridControlShop);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl1.Location = new System.Drawing.Point(165, 0);
+            this.panelControl1.Location = new System.Drawing.Point(192, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(677, 422);
+            this.panelControl1.Size = new System.Drawing.Size(790, 454);
             this.panelControl1.TabIndex = 7;
             // 
             // GridControlRoleColumn
             // 
             this.GridControlRoleColumn.DataSource = this.roleColumnsInfoBindingSource;
-            this.GridControlRoleColumn.Location = new System.Drawing.Point(338, 227);
+            this.GridControlRoleColumn.Location = new System.Drawing.Point(394, 244);
             this.GridControlRoleColumn.MainView = this.GridViewDefaultRoleColumn;
             this.GridControlRoleColumn.Name = "GridControlRoleColumn";
-            this.GridControlRoleColumn.Size = new System.Drawing.Size(328, 189);
+            this.GridControlRoleColumn.Size = new System.Drawing.Size(383, 204);
             this.GridControlRoleColumn.TabIndex = 3;
             this.GridControlRoleColumn.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.GridViewDefaultRoleColumn});
@@ -284,10 +284,10 @@
             // GridControlPayType
             // 
             this.GridControlPayType.DataSource = this.payTypeInfoBindingSource;
-            this.GridControlPayType.Location = new System.Drawing.Point(5, 227);
+            this.GridControlPayType.Location = new System.Drawing.Point(6, 244);
             this.GridControlPayType.MainView = this.GridViewDefaultPayType;
             this.GridControlPayType.Name = "GridControlPayType";
-            this.GridControlPayType.Size = new System.Drawing.Size(328, 189);
+            this.GridControlPayType.Size = new System.Drawing.Size(383, 204);
             this.GridControlPayType.TabIndex = 2;
             this.GridControlPayType.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.GridViewDefaultPayType});
@@ -357,10 +357,10 @@
             // GridControlCategory
             // 
             this.GridControlCategory.DataSource = this.categoryInfoBindingSource;
-            this.GridControlCategory.Location = new System.Drawing.Point(339, 11);
+            this.GridControlCategory.Location = new System.Drawing.Point(395, 12);
             this.GridControlCategory.MainView = this.GridViewDefaultCategory;
             this.GridControlCategory.Name = "GridControlCategory";
-            this.GridControlCategory.Size = new System.Drawing.Size(328, 211);
+            this.GridControlCategory.Size = new System.Drawing.Size(383, 227);
             this.GridControlCategory.TabIndex = 1;
             this.GridControlCategory.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.GridViewDefaultCategory});
@@ -432,10 +432,10 @@
             // GridControlShop
             // 
             this.GridControlShop.DataSource = this.shopInfoBindingSource;
-            this.GridControlShop.Location = new System.Drawing.Point(5, 11);
+            this.GridControlShop.Location = new System.Drawing.Point(6, 12);
             this.GridControlShop.MainView = this.GridViewDefaultShop;
             this.GridControlShop.Name = "GridControlShop";
-            this.GridControlShop.Size = new System.Drawing.Size(328, 211);
+            this.GridControlShop.Size = new System.Drawing.Size(383, 227);
             this.GridControlShop.TabIndex = 0;
             this.GridControlShop.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.GridViewDefaultShop});
@@ -524,9 +524,9 @@
             // 
             // FmSystemConfigView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(842, 422);
+            this.ClientSize = new System.Drawing.Size(982, 454);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.FuncGroupContainer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

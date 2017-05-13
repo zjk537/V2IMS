@@ -60,6 +60,10 @@ namespace Vogue2_IMS.Business
 
                 return mInstance;
             }
+            set
+            {
+                mInstance = value;
+            }
         }
 
         #endregion
@@ -344,7 +348,7 @@ namespace Vogue2_IMS.Business
         public static int PMRoleId = 2;
 
         public static List<string> SexName = new List<string>() { "未知", "男", "女" };
-        public static List<string> GoodsStatusName = new List<string>() { "未知", "1.在库", "2.预定", "3.出售", "4.取回" };
+        public static List<string> GoodsStatusName = new List<string>() { "未知", "在库", "预定", "售出", "取回" };
 
         public static Dictionary<SourceType, string> SourceTypeRKCNNames = new Dictionary<SourceType, string>()
         {
@@ -400,6 +404,12 @@ namespace Vogue2_IMS.Business
         {
             this.CacheLastUpdatedTimes.Remove(mPayTypeInfosCacheKey);
         }
+
+        #endregion
+
+        #region
+
+
 
         #endregion
     }

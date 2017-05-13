@@ -87,27 +87,50 @@ namespace Vogue2_IMS.Business.ViewModel
         //[DBFieldAttribute("EndPurchaseDate")]
         //public DateTime? EndPurchaseDate { get { return endPurchaseDate; } set { endPurchaseDate = value; EndPurchaseDateSpecify = true; } }
 
-        //private DateTime? startSaledDate = null;
-        //public bool StartSaledDateSpecify { get; set; }
-        ///// <summary>
-        ///// 获取或设置 售出起始时间
-        ///// </summary>
-        //[DBFieldAttribute("StartSaledDate")]
-        //public DateTime? StartSaledDate { get { return startSaledDate; } set { startSaledDate = value; StartSaledDateSpecify = true; } }
+        private DateTime? salesStartDate = null;
+        public bool SalesStartDateSpecify { get; set; }
+        /// <summary>
+        /// 获取或设置 售出起始时间
+        /// </summary>
+        [DBFieldAttribute("SalesStartDate")]
+        public DateTime? SalesStartDate { get { return salesStartDate; } set { salesStartDate = value; SalesStartDateSpecify = true; } }
 
-        //private DateTime? endSaledDate = null;
-        //public bool EndSaledDateSpecify { get; set; }
-        ///// <summary>
-        ///// 获取或设置 售出结束时间
-        ///// </summary>
-        //[DBFieldAttribute("EndSaledDate")]
-        //public DateTime? EndSaledDate { get { return endSaledDate; } set { endSaledDate = value; EndSaledDateSpecify = true; } }
+        private DateTime? salesEndDate = null;
+        public bool SalesEndDateSpecify { get; set; }
+        /// <summary>
+        /// 获取或设置 售出结束时间
+        /// </summary>
+        [DBFieldAttribute("SalesEndDate")]
+        public DateTime? SalesEndDate { get { return salesEndDate; } set { salesEndDate = value; SalesEndDateSpecify = true; } }
 
-        private QueryDateRange dataRange=QueryDateRange.Customer;
+        private QueryDateRange dateRange=QueryDateRange.Customer;
         public QueryDateRange DateRange
         {
-            get { return dataRange; }
-            set { dataRange = value;  }
+            get { return dateRange; }
+            set
+            {
+                dateRange = value;
+
+                var dateNow = DateTime.Now;
+
+                if (dateRange == QueryDateRange.ThisWeek)
+                    StartDate = dateNow.AddDays(1 - Convert.ToInt32(dateNow.DayOfWeek.ToString("d")));
+
+                if (dateRange == QueryDateRange.ThisMonth)
+                    StartDate = dateNow.AddDays(1 - dateNow.Day);
+
+                if (dateRange == QueryDateRange.ThisQuarter)
+                    StartDate = dateNow.AddMonths(0 - (dateNow.Month - 1) % 3).AddDays(1 - dateNow.Day);
+
+                if (dateRange == QueryDateRange.ThisYear)
+                    StartDate = new DateTime(dateNow.Year, 1, 1);
+
+                if (dateRange == QueryDateRange.AllYear10)
+                    StartDate = new DateTime(dateNow.Year - 10, 1, 1);
+
+                if (dateRange != QueryDateRange.Customer)
+                    EndDate = DateTime.Now;
+            }
         }
 
         public override string ToString()

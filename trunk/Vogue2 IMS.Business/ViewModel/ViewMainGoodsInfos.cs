@@ -49,6 +49,12 @@ namespace Vogue2_IMS.Business.ViewModel
             }
         }
 
+        public string ShopName
+        {
+            get { return Shop.Name; }
+            set { Shop.Name = value; }
+        }
+
         string mSourceName = null;
         /// <summary>
         /// Get SourceType 商品来源
@@ -94,7 +100,33 @@ namespace Vogue2_IMS.Business.ViewModel
             set { mGoods = value; }
         }
 
-        public string GoodsStatusName { get { return SharedVariables.GoodsStatusName[Goods == null ? 0 : Goods.Status]; } }
+
+        public DateTime? SalesDate
+        {
+            get { return Goods.SaledDate; }
+            set { Goods.SaledDate = value; }
+        }
+
+        /// <summary>
+        /// readonly
+        /// </summary>
+        public int GoodsID
+        {
+            get { return Goods.Id; }            
+        }
+
+        /// <summary>
+        /// readonly
+        /// </summary>
+        public decimal SalesPrice
+        {
+            get { return Goods.SalePrice.HasValue ? Goods.SalePrice.Value : 0; }
+        }
+
+        public string GoodsStatusName
+        {
+            get { return SharedVariables.GoodsStatusName[Goods == null ? 0 : Goods.Status]; }
+        }
 
         public GoodsStatus GoodsStatus
         {
@@ -182,6 +214,7 @@ namespace Vogue2_IMS.Business.ViewModel
             }
             set { mSaledRecord = value; }
         }
+
 
         PayTypeInfo mSaledPayType = null;
         /// <summary>

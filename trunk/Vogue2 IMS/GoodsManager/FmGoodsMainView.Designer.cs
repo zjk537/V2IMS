@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FmGoodsMainView));
             this.viewMainGoodsInfosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.image32 = new DevExpress.Utils.ImageCollection(this.components);
-            this.image16 = new DevExpress.Utils.ImageCollection(this.components);
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.labSourceCondition = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -80,6 +79,7 @@
             this.colCustomerPhone = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGoosPaid = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGoodsPayCharge = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.image16 = new DevExpress.Utils.ImageCollection(this.components);
             this.ComboxGoodStatus = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.ComboxSex = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
@@ -258,16 +258,17 @@
             this.btnDefaultView = new DevExpress.XtraNavBar.NavBarItem();
             this.btnAdvBandedView = new DevExpress.XtraNavBar.NavBarItem();
             this.btnCardView = new DevExpress.XtraNavBar.NavBarItem();
+            this.btnDashBoard = new DevExpress.XtraNavBar.NavBarItem();
             this.NavBtnCustomerViewGroup = new DevExpress.XtraNavBar.NavBarGroup();
             this.ViewContainer = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.viewMainGoodsInfosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.image32)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.image16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mGridDefaultViewAll)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ViewPrictureEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.image16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ComboxGoodStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ComboxSex)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
@@ -336,45 +337,33 @@
             this.image32.Images.SetKeyName(2, "Simple_Pic1_32.png");
             this.image32.Images.SetKeyName(3, "Simple_Pic2_32.png");
             // 
-            // image16
-            // 
-            this.image16.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("image16.ImageStream")));
-            this.image16.Images.SetKeyName(0, "Pic_16.png");
-            this.image16.Images.SetKeyName(1, "Simple_Pic_16.png");
-            this.image16.Images.SetKeyName(2, "Simple_Pic1_16.png");
-            this.image16.Images.SetKeyName(3, "Simple_Pic2_16.png");
-            this.image16.Images.SetKeyName(4, "Report_Month_16.png");
-            this.image16.Images.SetKeyName(5, "Report_Week_16.png");
-            this.image16.Images.SetKeyName(6, "Map_32.png");
-            this.image16.Images.SetKeyName(7, "ViewFormat_Card_16.png");
-            this.image16.Images.SetKeyName(8, "card-file.png");
-            this.image16.Images.SetKeyName(9, "Reprot_Performance_16.png");
-            // 
             // panelControl1
             // 
             this.panelControl1.Controls.Add(this.labSourceCondition);
             this.panelControl1.Controls.Add(this.labelControl1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl1.Location = new System.Drawing.Point(2, 338);
+            this.panelControl1.Location = new System.Drawing.Point(2, 364);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(625, 30);
+            this.panelControl1.Size = new System.Drawing.Size(730, 32);
             this.panelControl1.TabIndex = 20;
             // 
             // labSourceCondition
             // 
+            this.labSourceCondition.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.labSourceCondition.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labSourceCondition.Location = new System.Drawing.Point(68, 6);
-            this.labSourceCondition.MaximumSize = new System.Drawing.Size(698, 13);
+            this.labSourceCondition.Location = new System.Drawing.Point(79, 6);
+            this.labSourceCondition.MaximumSize = new System.Drawing.Size(814, 14);
             this.labSourceCondition.Name = "labSourceCondition";
-            this.labSourceCondition.Size = new System.Drawing.Size(698, 13);
+            this.labSourceCondition.Size = new System.Drawing.Size(641, 14);
             this.labSourceCondition.TabIndex = 1;
             this.labSourceCondition.Text = "无";
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(11, 6);
+            this.labelControl1.Location = new System.Drawing.Point(13, 6);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(60, 13);
+            this.labelControl1.Size = new System.Drawing.Size(60, 14);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "视图条件：";
             // 
@@ -390,7 +379,7 @@
             this.ComboxSex,
             this.ViewPrictureEdit,
             this.repositoryItemCheckEdit1});
-            this.gridViewControl.Size = new System.Drawing.Size(625, 336);
+            this.gridViewControl.Size = new System.Drawing.Size(730, 362);
             this.gridViewControl.TabIndex = 21;
             this.gridViewControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.mGridDefaultViewAll,
@@ -404,7 +393,6 @@
             this.mGridDefaultViewAll.Appearance.GroupRow.Options.UseFont = true;
             this.mGridDefaultViewAll.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colGoodsOriginalCode,
-            this.colSourceName,
             this.colPurchaseUser,
             this.colSaledUser,
             this.colShopPhone,
@@ -419,7 +407,9 @@
             this.colGoodsName,
             this.colGoodsColor,
             this.colGoodsQuality,
+            this.colSourceName,
             this.colGoodsStatus,
+            this.colGoosPaid,
             this.colGoodsDesc,
             this.colPayType,
             this.colGoodsPrimePrice,
@@ -442,7 +432,6 @@
             this.colConsignStartDate,
             this.colCustomerName,
             this.colCustomerPhone,
-            this.colGoosPaid,
             this.colGoodsPayCharge});
             this.mGridDefaultViewAll.GridControl = this.gridViewControl;
             this.mGridDefaultViewAll.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
@@ -486,6 +475,8 @@
             this.colSourceName.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
             this.colSourceName.Name = "colSourceName";
             this.colSourceName.OptionsColumn.ReadOnly = true;
+            this.colSourceName.Visible = true;
+            this.colSourceName.VisibleIndex = 8;
             // 
             // colPurchaseUser
             // 
@@ -549,8 +540,6 @@
             this.colGoodsImage.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
             this.colGoodsImage.ImageIndex = 3;
             this.colGoodsImage.Name = "colGoodsImage";
-            this.colGoodsImage.Visible = true;
-            this.colGoodsImage.VisibleIndex = 1;
             // 
             // ViewPrictureEdit
             // 
@@ -568,7 +557,7 @@
             this.colShop.Name = "colShop";
             this.colShop.OptionsColumn.ReadOnly = true;
             this.colShop.Visible = true;
-            this.colShop.VisibleIndex = 2;
+            this.colShop.VisibleIndex = 1;
             // 
             // colGoodsCode
             // 
@@ -577,7 +566,7 @@
             this.colGoodsCode.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
             this.colGoodsCode.Name = "colGoodsCode";
             this.colGoodsCode.Visible = true;
-            this.colGoodsCode.VisibleIndex = 3;
+            this.colGoodsCode.VisibleIndex = 2;
             this.colGoodsCode.Width = 100;
             // 
             // colCategory
@@ -588,7 +577,7 @@
             this.colCategory.Name = "colCategory";
             this.colCategory.OptionsColumn.ReadOnly = true;
             this.colCategory.Visible = true;
-            this.colCategory.VisibleIndex = 4;
+            this.colCategory.VisibleIndex = 3;
             // 
             // colGoodsName
             // 
@@ -597,7 +586,7 @@
             this.colGoodsName.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
             this.colGoodsName.Name = "colGoodsName";
             this.colGoodsName.Visible = true;
-            this.colGoodsName.VisibleIndex = 5;
+            this.colGoodsName.VisibleIndex = 4;
             // 
             // colGoodsColor
             // 
@@ -606,7 +595,7 @@
             this.colGoodsColor.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
             this.colGoodsColor.Name = "colGoodsColor";
             this.colGoodsColor.Visible = true;
-            this.colGoodsColor.VisibleIndex = 6;
+            this.colGoodsColor.VisibleIndex = 5;
             // 
             // colGoodsQuality
             // 
@@ -615,7 +604,7 @@
             this.colGoodsQuality.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
             this.colGoodsQuality.Name = "colGoodsQuality";
             this.colGoodsQuality.Visible = true;
-            this.colGoodsQuality.VisibleIndex = 7;
+            this.colGoodsQuality.VisibleIndex = 6;
             // 
             // colGoodsStatus
             // 
@@ -624,7 +613,7 @@
             this.colGoodsStatus.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
             this.colGoodsStatus.Name = "colGoodsStatus";
             this.colGoodsStatus.Visible = true;
-            this.colGoodsStatus.VisibleIndex = 8;
+            this.colGoodsStatus.VisibleIndex = 7;
             // 
             // colGoodsDesc
             // 
@@ -783,6 +772,8 @@
             this.colConsignStartDate.Caption = "寄售开始时间";
             this.colConsignStartDate.FieldName = "Goods.ConsignStartDate";
             this.colConsignStartDate.Name = "colConsignStartDate";
+            this.colConsignStartDate.Visible = true;
+            this.colConsignStartDate.VisibleIndex = 28;
             // 
             // colCustomerName
             // 
@@ -802,6 +793,8 @@
             this.colGoosPaid.FieldName = "GoodsPaid.Name";
             this.colGoosPaid.GroupInterval = DevExpress.XtraGrid.ColumnGroupInterval.DisplayText;
             this.colGoosPaid.Name = "colGoosPaid";
+            this.colGoosPaid.Visible = true;
+            this.colGoosPaid.VisibleIndex = 29;
             // 
             // colGoodsPayCharge
             // 
@@ -810,6 +803,20 @@
             this.colGoodsPayCharge.Name = "colGoodsPayCharge";
             this.colGoodsPayCharge.Visible = true;
             this.colGoodsPayCharge.VisibleIndex = 17;
+            // 
+            // image16
+            // 
+            this.image16.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("image16.ImageStream")));
+            this.image16.Images.SetKeyName(0, "Pic_16.png");
+            this.image16.Images.SetKeyName(1, "Simple_Pic_16.png");
+            this.image16.Images.SetKeyName(2, "Simple_Pic1_16.png");
+            this.image16.Images.SetKeyName(3, "Simple_Pic2_16.png");
+            this.image16.Images.SetKeyName(4, "Report_Month_16.png");
+            this.image16.Images.SetKeyName(5, "Report_Week_16.png");
+            this.image16.Images.SetKeyName(6, "Map_32.png");
+            this.image16.Images.SetKeyName(7, "ViewFormat_Card_16.png");
+            this.image16.Images.SetKeyName(8, "card-file.png");
+            this.image16.Images.SetKeyName(9, "Reprot_Performance_16.png");
             // 
             // ComboxGoodStatus
             // 
@@ -1539,7 +1546,7 @@
             this.layoutViewField_layoutViewColumn36_2.Location = new System.Drawing.Point(0, 220);
             this.layoutViewField_layoutViewColumn36_2.Name = "layoutViewField_layoutViewColumn36_2";
             this.layoutViewField_layoutViewColumn36_2.Size = new System.Drawing.Size(637, 20);
-            this.layoutViewField_layoutViewColumn36_2.TextSize = new System.Drawing.Size(52, 13);
+            this.layoutViewField_layoutViewColumn36_2.TextSize = new System.Drawing.Size(52, 14);
             this.layoutViewField_layoutViewColumn36_2.TextToControlDistance = 5;
             // 
             // layoutViewColumn9
@@ -1556,7 +1563,7 @@
             this.layoutViewField_colShop.Location = new System.Drawing.Point(256, 0);
             this.layoutViewField_colShop.Name = "layoutViewField_colShop";
             this.layoutViewField_colShop.Size = new System.Drawing.Size(381, 20);
-            this.layoutViewField_colShop.TextSize = new System.Drawing.Size(52, 13);
+            this.layoutViewField_colShop.TextSize = new System.Drawing.Size(52, 14);
             this.layoutViewField_colShop.TextToControlDistance = 5;
             // 
             // layoutViewColumn10
@@ -1572,7 +1579,7 @@
             this.layoutViewField_colGoodsCode.Location = new System.Drawing.Point(0, 0);
             this.layoutViewField_colGoodsCode.Name = "layoutViewField_colGoodsCode";
             this.layoutViewField_colGoodsCode.Size = new System.Drawing.Size(256, 20);
-            this.layoutViewField_colGoodsCode.TextSize = new System.Drawing.Size(52, 13);
+            this.layoutViewField_colGoodsCode.TextSize = new System.Drawing.Size(52, 14);
             this.layoutViewField_colGoodsCode.TextToControlDistance = 5;
             // 
             // layoutViewColumn11
@@ -1589,7 +1596,7 @@
             this.layoutViewField_colCategory.Location = new System.Drawing.Point(256, 20);
             this.layoutViewField_colCategory.Name = "layoutViewField_colCategory";
             this.layoutViewField_colCategory.Size = new System.Drawing.Size(381, 20);
-            this.layoutViewField_colCategory.TextSize = new System.Drawing.Size(52, 13);
+            this.layoutViewField_colCategory.TextSize = new System.Drawing.Size(52, 14);
             this.layoutViewField_colCategory.TextToControlDistance = 5;
             // 
             // layoutViewColumn12
@@ -1623,7 +1630,7 @@
             this.layoutViewField_colGoodsName.Location = new System.Drawing.Point(256, 40);
             this.layoutViewField_colGoodsName.Name = "layoutViewField_colGoodsName";
             this.layoutViewField_colGoodsName.Size = new System.Drawing.Size(381, 20);
-            this.layoutViewField_colGoodsName.TextSize = new System.Drawing.Size(52, 13);
+            this.layoutViewField_colGoodsName.TextSize = new System.Drawing.Size(52, 14);
             this.layoutViewField_colGoodsName.TextToControlDistance = 5;
             // 
             // layoutViewColumn14
@@ -1655,7 +1662,7 @@
             this.layoutViewField_colGoodsQuality.Location = new System.Drawing.Point(256, 80);
             this.layoutViewField_colGoodsQuality.Name = "layoutViewField_colGoodsQuality";
             this.layoutViewField_colGoodsQuality.Size = new System.Drawing.Size(381, 20);
-            this.layoutViewField_colGoodsQuality.TextSize = new System.Drawing.Size(52, 13);
+            this.layoutViewField_colGoodsQuality.TextSize = new System.Drawing.Size(52, 14);
             this.layoutViewField_colGoodsQuality.TextToControlDistance = 5;
             // 
             // layoutViewColumn16
@@ -1672,7 +1679,7 @@
             this.layoutViewField_colGoodsStatus.Location = new System.Drawing.Point(256, 60);
             this.layoutViewField_colGoodsStatus.Name = "layoutViewField_colGoodsStatus";
             this.layoutViewField_colGoodsStatus.Size = new System.Drawing.Size(381, 20);
-            this.layoutViewField_colGoodsStatus.TextSize = new System.Drawing.Size(52, 13);
+            this.layoutViewField_colGoodsStatus.TextSize = new System.Drawing.Size(52, 14);
             this.layoutViewField_colGoodsStatus.TextToControlDistance = 5;
             // 
             // layoutViewColumn17
@@ -1688,7 +1695,7 @@
             this.layoutViewField_colGoodsDesc.Location = new System.Drawing.Point(0, 200);
             this.layoutViewField_colGoodsDesc.Name = "layoutViewField_colGoodsDesc";
             this.layoutViewField_colGoodsDesc.Size = new System.Drawing.Size(637, 20);
-            this.layoutViewField_colGoodsDesc.TextSize = new System.Drawing.Size(52, 13);
+            this.layoutViewField_colGoodsDesc.TextSize = new System.Drawing.Size(52, 14);
             this.layoutViewField_colGoodsDesc.TextToControlDistance = 5;
             // 
             // layoutViewColumn18
@@ -1737,7 +1744,7 @@
             this.layoutViewField_colGoodsMarkPrice.Location = new System.Drawing.Point(256, 100);
             this.layoutViewField_colGoodsMarkPrice.Name = "layoutViewField_colGoodsMarkPrice";
             this.layoutViewField_colGoodsMarkPrice.Size = new System.Drawing.Size(381, 20);
-            this.layoutViewField_colGoodsMarkPrice.TextSize = new System.Drawing.Size(52, 13);
+            this.layoutViewField_colGoodsMarkPrice.TextSize = new System.Drawing.Size(52, 14);
             this.layoutViewField_colGoodsMarkPrice.TextToControlDistance = 5;
             // 
             // layoutViewColumn21
@@ -1817,7 +1824,7 @@
             this.layoutViewField_layoutViewColumn1.Location = new System.Drawing.Point(0, 240);
             this.layoutViewField_layoutViewColumn1.Name = "layoutViewField_layoutViewColumn1";
             this.layoutViewField_layoutViewColumn1.Size = new System.Drawing.Size(637, 20);
-            this.layoutViewField_layoutViewColumn1.TextSize = new System.Drawing.Size(52, 13);
+            this.layoutViewField_layoutViewColumn1.TextSize = new System.Drawing.Size(52, 14);
             this.layoutViewField_layoutViewColumn1.TextToControlDistance = 5;
             // 
             // layoutViewColumn25
@@ -1849,7 +1856,7 @@
             this.layoutViewField_colGoodsCreateDate.Location = new System.Drawing.Point(256, 120);
             this.layoutViewField_colGoodsCreateDate.Name = "layoutViewField_colGoodsCreateDate";
             this.layoutViewField_colGoodsCreateDate.Size = new System.Drawing.Size(381, 20);
-            this.layoutViewField_colGoodsCreateDate.TextSize = new System.Drawing.Size(52, 13);
+            this.layoutViewField_colGoodsCreateDate.TextSize = new System.Drawing.Size(52, 14);
             this.layoutViewField_colGoodsCreateDate.TextToControlDistance = 5;
             // 
             // layoutViewColumn27
@@ -1913,7 +1920,7 @@
             this.layoutViewField_colSupplierName.Location = new System.Drawing.Point(256, 140);
             this.layoutViewField_colSupplierName.Name = "layoutViewField_colSupplierName";
             this.layoutViewField_colSupplierName.Size = new System.Drawing.Size(381, 20);
-            this.layoutViewField_colSupplierName.TextSize = new System.Drawing.Size(52, 13);
+            this.layoutViewField_colSupplierName.TextSize = new System.Drawing.Size(52, 14);
             this.layoutViewField_colSupplierName.TextToControlDistance = 5;
             // 
             // layoutViewColumn31
@@ -1929,7 +1936,7 @@
             this.layoutViewField_colSupplierPhone.Location = new System.Drawing.Point(256, 180);
             this.layoutViewField_colSupplierPhone.Name = "layoutViewField_colSupplierPhone";
             this.layoutViewField_colSupplierPhone.Size = new System.Drawing.Size(381, 20);
-            this.layoutViewField_colSupplierPhone.TextSize = new System.Drawing.Size(52, 13);
+            this.layoutViewField_colSupplierPhone.TextSize = new System.Drawing.Size(52, 14);
             this.layoutViewField_colSupplierPhone.TextToControlDistance = 5;
             // 
             // layoutViewColumn32
@@ -1961,7 +1968,7 @@
             this.layoutViewField_colSupplierBankCard.Location = new System.Drawing.Point(256, 160);
             this.layoutViewField_colSupplierBankCard.Name = "layoutViewField_colSupplierBankCard";
             this.layoutViewField_colSupplierBankCard.Size = new System.Drawing.Size(381, 20);
-            this.layoutViewField_colSupplierBankCard.TextSize = new System.Drawing.Size(52, 13);
+            this.layoutViewField_colSupplierBankCard.TextSize = new System.Drawing.Size(52, 14);
             this.layoutViewField_colSupplierBankCard.TextToControlDistance = 5;
             // 
             // layoutViewColumn34
@@ -2428,7 +2435,7 @@
             this.ViewTypeContainer.Dock = System.Windows.Forms.DockStyle.Left;
             this.ViewTypeContainer.Location = new System.Drawing.Point(0, 0);
             this.ViewTypeContainer.Name = "ViewTypeContainer";
-            this.ViewTypeContainer.Size = new System.Drawing.Size(147, 370);
+            this.ViewTypeContainer.Size = new System.Drawing.Size(171, 398);
             this.ViewTypeContainer.TabIndex = 22;
             // 
             // mNavBarControl
@@ -2443,11 +2450,12 @@
             this.mNavBarControl.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
             this.btnDefaultView,
             this.btnAdvBandedView,
-            this.btnCardView});
+            this.btnCardView,
+            this.btnDashBoard});
             this.mNavBarControl.Location = new System.Drawing.Point(2, 2);
             this.mNavBarControl.Name = "mNavBarControl";
             this.mNavBarControl.OptionsNavPane.ExpandedWidth = 186;
-            this.mNavBarControl.Size = new System.Drawing.Size(146, 366);
+            this.mNavBarControl.Size = new System.Drawing.Size(170, 394);
             this.mNavBarControl.SmallImages = this.image16;
             this.mNavBarControl.StoreDefaultPaintStyleName = true;
             this.mNavBarControl.TabIndex = 1;
@@ -2462,7 +2470,8 @@
             this.NavBtnSystemViewGroup.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.btnDefaultView),
             new DevExpress.XtraNavBar.NavBarItemLink(this.btnAdvBandedView),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.btnCardView)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.btnCardView),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.btnDashBoard)});
             this.NavBtnSystemViewGroup.Name = "NavBtnSystemViewGroup";
             this.NavBtnSystemViewGroup.SmallImageIndex = 6;
             // 
@@ -2478,6 +2487,7 @@
             this.btnAdvBandedView.Caption = "聚合视图";
             this.btnAdvBandedView.Name = "btnAdvBandedView";
             this.btnAdvBandedView.SmallImageIndex = 4;
+            this.btnAdvBandedView.Visible = false;
             this.btnAdvBandedView.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.btnAdvBandedView_LinkClicked);
             // 
             // btnCardView
@@ -2485,7 +2495,13 @@
             this.btnCardView.Caption = "卡片视图";
             this.btnCardView.Name = "btnCardView";
             this.btnCardView.SmallImageIndex = 7;
+            this.btnCardView.Visible = false;
             this.btnCardView.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.btnCardView_LinkClicked);
+            // 
+            // btnDashBoard
+            // 
+            this.btnDashBoard.Caption = "";
+            this.btnDashBoard.Name = "btnDashBoard";
             // 
             // NavBtnCustomerViewGroup
             // 
@@ -2501,16 +2517,16 @@
             this.ViewContainer.Controls.Add(this.gridViewControl);
             this.ViewContainer.Controls.Add(this.panelControl1);
             this.ViewContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ViewContainer.Location = new System.Drawing.Point(147, 0);
+            this.ViewContainer.Location = new System.Drawing.Point(171, 0);
             this.ViewContainer.Name = "ViewContainer";
-            this.ViewContainer.Size = new System.Drawing.Size(629, 370);
+            this.ViewContainer.Size = new System.Drawing.Size(734, 398);
             this.ViewContainer.TabIndex = 23;
             // 
             // FmGoodsMainView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(776, 370);
+            this.ClientSize = new System.Drawing.Size(905, 398);
             this.Controls.Add(this.ViewContainer);
             this.Controls.Add(this.ViewTypeContainer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -2519,13 +2535,13 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.viewMainGoodsInfosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.image32)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.image16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mGridDefaultViewAll)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ViewPrictureEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.image16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ComboxGoodStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ComboxSex)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
@@ -2586,7 +2602,6 @@
         #endregion
 
         private DevExpress.Utils.ImageCollection image32;
-        private DevExpress.Utils.ImageCollection image16;
         private System.Windows.Forms.BindingSource viewMainGoodsInfosBindingSource;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.LabelControl labSourceCondition;
@@ -2815,5 +2830,7 @@
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_layoutViewColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn ccGoodsPayCharge;
         private DevExpress.XtraGrid.Columns.GridColumn colGoodsPayCharge;
+        private DevExpress.XtraNavBar.NavBarItem btnDashBoard;
+        private DevExpress.Utils.ImageCollection image16;
     }
 }

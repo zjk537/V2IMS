@@ -121,7 +121,7 @@
             this.Controls.Add(this.lblTotalPrice);
             this.Controls.Add(this.labStartDate);
             this.Name = "FmGoodsSaledConfirm";
-            this.Text = "出售确认";
+            this.Text = "售出确认";
             this.Controls.SetChildIndex(this.labStartDate, 0);
             this.Controls.SetChildIndex(this.lblTotalPrice, 0);
             this.Controls.SetChildIndex(this.labelControl1, 0);

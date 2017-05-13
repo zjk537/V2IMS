@@ -94,6 +94,7 @@
     <Reference Include="DevExpress.XtraRichEdit.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraTreeList.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraVerticalGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="NPOI">
@@ -156,12 +157,6 @@
     </Compile>
     <Compile Include="DemoUpdatePwd.Designer.cs">
       <DependentUpon>DemoUpdatePwd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FmLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FmLogin.Designer.cs">
-      <DependentUpon>FmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="FmProgressBar.cs">
       <SubType>Form</SubType>
@@ -271,9 +266,6 @@
     <EmbeddedResource Include="DemoUser.resx">
       <DependentUpon>DemoUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FmLogin.resx">
-      <DependentUpon>FmLogin.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FmProgressBar.resx">
       <DependentUpon>FmProgressBar.cs</DependentUpon>
     </EmbeddedResource>
@@ -290,6 +282,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="DemoMain.resx">
       <DependentUpon>DemoMain.cs</DependentUpon>

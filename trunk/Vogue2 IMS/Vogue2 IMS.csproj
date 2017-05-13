@@ -60,6 +60,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.BonusSkins.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v11.1.Core, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.CodeRush.Common, Version=11.1.4.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\refrence\DevExpress.CodeRush.Common.dll</HintPath>
@@ -79,6 +80,8 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v11.1.UI, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -118,6 +121,12 @@
       <DependentUpon>FmProgressBar.cs</DependentUpon>
     </Compile>
     <Compile Include="Common\UICommon.cs" />
+    <Compile Include="FmBI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmBI.Designer.cs">
+      <DependentUpon>FmBI.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -251,6 +260,12 @@
     <Compile Include="SystemManager\FmSystemConfigView.Designer.cs">
       <DependentUpon>FmSystemConfigView.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UCGoodsTotal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCGoodsTotal.Designer.cs">
+      <DependentUpon>UCGoodsTotal.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserManager\FmUpdatedPwd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -275,6 +290,9 @@
       <DependentUpon>FmProgressBar.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="FmBI.resx">
+      <DependentUpon>FmBI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -284,6 +302,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GoodsManager\FmGoodsAdd.resx">
       <DependentUpon>FmGoodsAdd.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="GoodsManager\FmGoodsAdd.zh-CN.resx">
       <DependentUpon>FmGoodsAdd.cs</DependentUpon>
@@ -366,6 +385,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SystemManager\FmSystemConfigView.resx">
       <DependentUpon>FmSystemConfigView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCGoodsTotal.resx">
+      <DependentUpon>UCGoodsTotal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserManager\FmUpdatedPwd.resx">
       <DependentUpon>FmUpdatedPwd.cs</DependentUpon>
@@ -468,7 +490,14 @@
     <Content Include="Images\SpreadTime_16.png" />
     <Content Include="Images\SpreadTime_32.png" />
     <Content Include="Images\Update_32.png" />
+    <None Include="Resources\paper-bag.png" />
+    <None Include="Resources\shopping.png" />
+    <None Include="Resources\shopping_bag.png" />
+    <None Include="Resources\shopping-basket-full.png" />
+    <None Include="Resources\timg %281%29.jpg" />
+    <None Include="Resources\timg.jpg" />
     <Content Include="权限备注说明.txt" />
+    <None Include="Properties\DataSources\Vogue2_IMS.Business.ViewModel.ViewMainGoodsInfos.datasource" />
     <None Include="Resources\login_V2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

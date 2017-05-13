@@ -106,6 +106,7 @@
     <Compile Include="SharedVariables.cs" />
     <Compile Include="ShopBusiness.cs" />
     <Compile Include="SupplierBusiness.cs" />
+    <Compile Include="ViewModel\ViewDashboard.cs" />
     <Compile Include="ViewModel\ViewMainGoodsInfos.cs" />
     <Compile Include="UserBusiness.cs" />
     <Compile Include="ViewModel\ViewQueryGoodsInfo.cs" />

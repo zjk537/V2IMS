@@ -66,6 +66,26 @@ namespace Vogue2_IMS.Business
             }, null, "GetGoodses.Convert", true);
         }
 
+
+        public List<ViewDashboard> GetDashboardTotal(ViewQuaryTotal query)
+        {
+            ResultValue result = DoFunctionWithLog<ResultValue>(() =>
+            {
+                var functionParms = new FunctionParms();
+                functionParms.FunctionName = "uspGetDashboardTotal";
+                functionParms.Pams = query.GetPams();
+
+                var results = Service.ServiceManager.Instance.DataService.FuncGetResults(functionParms);
+                return results;
+            }, new ResultValue(), "GetGoodses.uspGetGoodses", false);
+
+            return DoFunctionWithLog<List<ViewDashboard>>(() =>
+            {
+                return ConvertToList<ViewDashboard>(result);
+
+            }, null, "ViewDashboard.Convert", true);
+        }
+
         /// <summary>
         /// 获取需要预警的商品信息
         /// </summary>

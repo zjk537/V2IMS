@@ -23,6 +23,7 @@ using Vogue2_IMS.UserManager;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraBars;
 using System.Drawing;
+using System.Configuration;
 
 namespace Vogue2_IMS
 {
@@ -88,10 +89,11 @@ namespace Vogue2_IMS
         {
             mRibbonPageViews.Add(rPageGoodsManager, mFmGoodsMainView);//商品管理
             mRibbonPageViews.Add(rPageSystemConfig, mFmSystemConfigView);//系统设置
-            mRibbonPageViews.Add(rPageUserManager, mFmUserView);//用户管理 
+            mRibbonPageViews.Add(rPageUserManager, mFmUserView);//用户管理
+            mRibbonPageViews.Add(rPageHome, mFmBI);
 
             ribbon.SelectedPage = null;
-            ribbon.SelectedPage = rPageGoodsManager;
+            ribbon.SelectedPage = rPageHome;          
         }
 
         /// <summary>
@@ -102,7 +104,7 @@ namespace Vogue2_IMS
             get
             {
                 if (mFmGoodsMainView.DefaultQueryInfo == null)
-                    mFmGoodsMainView.DefaultQueryInfo = GetViewDateQuery(QueryDateRange.ThisWeek);
+                    mFmGoodsMainView.DefaultQueryInfo = new ViewQueryGoodsInfo() { DateRange = QueryDateRange.ThisWeek };
 
                 return mFmGoodsMainView.DefaultQueryInfo;
             }
@@ -153,6 +155,9 @@ namespace Vogue2_IMS
             }
             finally
             {
+
+                this.MainRibbonControl.Pages.Remove(this.MainPage);
+
                 if (waitloginHandler != null)
                 {
                     waitloginHandler.Set();
@@ -203,14 +208,167 @@ namespace Vogue2_IMS
                     });
 
                     this.rPageSystemConfig.Groups.Insert(0, this.MainThemePageGroup);
-
-                    this.MainRibbonControl.Pages.Remove(this.MainPage);
                 }
 
                 return _FmSystemConfigView;
             }
             set { _FmSystemConfigView = value; }
         }
+
+        #endregion
+
+        #region Home
+
+        FmBI _fmBI = null;
+        FmBI mFmBI
+        {
+            get
+            {
+                if (_fmBI == null)
+                {
+                    _fmBI = new FmBI();
+                    _fmBI.Load += FmBI_Load;
+               
+                    this.rPageHome.Groups.Insert(0, this.MainThemePageGroup);
+
+                    _fmBI.TotalJSCQ.Click += UCGoodsTotalJSCQ_Click;
+                    _fmBI.TotalJSKC.Click += UCGoodsTotalJSKC_Click;
+                    _fmBI.TotalJSWDK.Click += UCGoodsTotalJSWDK_Click;
+                    _fmBI.TotalZYCQ.Click += UCGoodsTotalZYCQ_Click;
+                    _fmBI.TotalZYKC.Click += UCGoodsTotalZYKC_Click;
+                    _fmBI.TotalZYWDK.Click += UCGoodsTotalZYWDK_Click;
+                }
+               
+                return _fmBI;
+            }
+            set { _fmBI = value; }
+        }
+
+        private void RefreshGoodsViewByDashboard(ViewCondition condition)
+        {
+            mFmGoodsMainView.Condition = condition;
+            mFmGoodsMainView.DefaultQueryInfo = new ViewQueryGoodsInfo() { DateRange = QueryDateRange.AllYear10 };
+            StartRefreshGoodsView(this, null);
+        }
+
+        private void UCGoodsTotalJSCQ_Click(object sender, EventArgs e)
+        {
+            RefreshGoodsViewByDashboard(ViewCondition.JSChaoQi);
+            ribbon.SelectedPage = rPageGoodsManager;
+        }
+        private void UCGoodsTotalJSKC_Click(object sender, EventArgs e)
+        {
+            RefreshGoodsViewByDashboard(ViewCondition.JSZaiKu); 
+            ribbon.SelectedPage = rPageGoodsManager;
+        }
+        private void UCGoodsTotalJSWDK_Click(object sender, EventArgs e)
+        {
+            RefreshGoodsViewByDashboard(ViewCondition.JSWeiDaKuan);
+            ribbon.SelectedPage = rPageGoodsManager;
+        }
+        private void UCGoodsTotalZYCQ_Click(object sender, EventArgs e)
+        {
+            RefreshGoodsViewByDashboard(ViewCondition.ZYChaoQi);
+            ribbon.SelectedPage = rPageGoodsManager;
+        }
+        private void UCGoodsTotalZYKC_Click(object sender, EventArgs e)
+        {
+            RefreshGoodsViewByDashboard(ViewCondition.ZYZaiKu);
+            ribbon.SelectedPage = rPageGoodsManager;
+        }
+        private void UCGoodsTotalZYWDK_Click(object sender, EventArgs e)
+        {
+            RefreshGoodsViewByDashboard(ViewCondition.ZYWeiDaKuan);
+            ribbon.SelectedPage = rPageGoodsManager;
+        }
+
+        private void FmBI_Load(object sender, EventArgs e)
+        {
+            StartRefreshBIView(this, null);                       
+        }
+
+        private void StartRefreshBIView(object sender, CusEventArgs e)
+        {
+            mFmBI.Enabled = false; 
+
+            Task task = new Task(() =>
+            {
+                if (!isLoaded)
+                {
+                    Thread.Sleep(500);
+                }
+                try
+                {
+                    string endDateStr = ConfigurationManager.AppSettings["DashBoardEndDate"];
+                    string daySpanStr = ConfigurationManager.AppSettings["DashBoardDaySpan"];
+                    int daySpan = 0 - (string.IsNullOrEmpty(daySpanStr) ? 7 : Convert.ToInt32(daySpanStr));
+                    var endDate = string.IsNullOrEmpty(endDateStr) ? DateTime.Now : Convert.ToDateTime(endDateStr);
+
+                    var queryDateInfo = GetBIViewDateQuery(QueryDateRange.Customer);  
+                    queryDateInfo.SalesEndDate = endDate;
+                    queryDateInfo.SalesStartDate = queryDateInfo.SalesEndDate.Value.AddDays(daySpan);
+                
+                    mFmBI.SalesDataSource = GoodsBusiness.Instance.GetGoodses(queryDateInfo);
+
+                    var viewQuaryTotal = new ViewQuaryTotal();
+                    string jhTimeOutDaySpanStr = ConfigurationManager.AppSettings["JinHuoTimeoutDaySpan"];
+                    int jhTimeOutDaySpan = 0 - (string.IsNullOrEmpty(daySpanStr) ? 180 : Convert.ToInt32(jhTimeOutDaySpanStr));
+                    viewQuaryTotal.DaySpan = jhTimeOutDaySpan;
+                    viewQuaryTotal.EndDate=endDate;
+                    viewQuaryTotal.StartDate = viewQuaryTotal.EndDate.Value.AddDays(daySpan);
+
+                    var viewDasboardSourceList=GoodsBusiness.Instance.GetDashboardTotal(viewQuaryTotal);
+                    mFmBI.ViewDasboardSource = (viewDasboardSourceList == null || viewDasboardSourceList.Count == 0) ? null : viewDasboardSourceList.First();
+                    string str = string.Empty;
+                }
+                catch
+                {
+                    mFmBI.SalesDataSource = new List<ViewMainGoodsInfos>();
+                    throw;
+                }
+                finally
+                {
+                    //mFmBI.DataSource = new List<ViewMainGoodsInfos>();
+                }
+
+            });
+
+            task.Start();
+        }
+
+        /// <summary>
+        /// 获取（全记录）时间查询条件 
+        /// </summary>
+        /// <param name="day"></param>
+        /// <returns></returns>
+        private ViewQueryGoodsInfo GetBIViewDateQuery(QueryDateRange dateRange)
+        {
+            var dateNow = DateTime.Now;
+            var startDate = DateTime.Now;
+
+            if (dateRange == QueryDateRange.ThisWeek)
+                startDate = dateNow.AddDays(1 - Convert.ToInt32(dateNow.DayOfWeek.ToString("d")));
+
+            if (dateRange == QueryDateRange.ThisMonth)
+                startDate = dateNow.AddDays(1 - dateNow.Day);
+
+            if (dateRange == QueryDateRange.ThisQuarter)
+                startDate = dateNow.AddMonths(0 - (dateNow.Month - 1) % 3).AddDays(1 - dateNow.Day);
+
+            if (dateRange == QueryDateRange.ThisYear)
+                startDate = new DateTime(dateNow.Year, 1, 1);
+
+            if (dateRange == QueryDateRange.AllYear10)
+                startDate = new DateTime(dateNow.Year - 10, 1, 1);
+
+            return new ViewQueryGoodsInfo() { DateRange = dateRange, SalesStartDate = startDate, SalesEndDate = dateNow };
+            //return new ViewQueryGoodsInfo() { DateRange = dateRange, StartPurchaseDate = startDate, StartSaledDate = startDate, EndPurchaseDate = dateNow, EndSaledDate = dateNow };
+        }
+
+        private void btnDasbhoard_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            StartRefreshBIView(this, null);
+        }        
 
         #endregion
 
@@ -269,6 +427,8 @@ namespace Vogue2_IMS
                 if (_FmGoodsMainView == null)
                 {
                     _FmGoodsMainView = new FmGoodsMainView();
+                    _FmGoodsMainView.Load += mFmGoodsMainView_Load;
+
                     _FmGoodsMainView.TopLevel = false;
                     _FmGoodsMainView.Dock = DockStyle.Fill;
                     _FmGoodsMainView.GridDefaultView.SelectionChanged += new DevExpress.Data.SelectionChangedEventHandler(GridDefaultView_SelectionChanged);
@@ -290,10 +450,10 @@ namespace Vogue2_IMS
                     _FmGoodsMainView.GridDefaultView.MouseDown += new MouseEventHandler(GridDefaultView_MouseDown);
                     //_FmGoodsMainView.GridLayoutView.MouseDown += new MouseEventHandler(GridDefaultView_MouseDown);
                     _FmGoodsMainView.GridAdvBandedView.MouseDown += new MouseEventHandler(GridDefaultView_MouseDown);
-                    PurchaseGoodsBusiness.Instance.OnPurchaseGoodsUpdated += new EventHandler<CusEventArgs>(StartRefreshView);
-                    SaleGoodsBusiness.Instance.OnSaledGoodsUpdated += new EventHandler<CusEventArgs>(StartRefreshView);
+                    PurchaseGoodsBusiness.Instance.OnPurchaseGoodsUpdated += new EventHandler<CusEventArgs>(StartRefreshGoodsView);
+                    SaleGoodsBusiness.Instance.OnSaledGoodsUpdated += new EventHandler<CusEventArgs>(StartRefreshGoodsView);
 
-                    StartRefreshView(this, null);
+                   // StartRefreshView(this, null);
                 }
 
                 return _FmGoodsMainView;
@@ -301,7 +461,12 @@ namespace Vogue2_IMS
             set { _FmGoodsMainView = value; }
         }
 
-        private void StartRefreshView(object sender, CusEventArgs e)
+        private void mFmGoodsMainView_Load(object sender, EventArgs e)
+        {
+            StartRefreshGoodsView(this, null);
+        }
+
+        private void StartRefreshGoodsView(object sender, CusEventArgs e)
         {
             mFmGoodsMainView.Enabled = false;
 
@@ -313,17 +478,19 @@ namespace Vogue2_IMS
                     {
                         Thread.Sleep(500);
                     }
-                    if (mCurrentQueryInfo.DateRange != QueryDateRange.Customer)
-                    {
-                        var queryDateInfo = GetViewDateQuery(mCurrentQueryInfo.DateRange);
-                        //mCurrentQueryInfo.StartPurchaseDate = mCurrentQueryInfo.StartSaledDate = queryDateInfo.StartPurchaseDate;
-                        //mCurrentQueryInfo.EndPurchaseDate = mCurrentQueryInfo.EndSaledDate = queryDateInfo.EndPurchaseDate;
 
-                        mCurrentQueryInfo.StartDate = queryDateInfo.StartDate;
-                        mCurrentQueryInfo.EndDate = queryDateInfo.EndDate;
+                    //mCurrentQueryInfo.DateRange = mCurrentQueryInfo.DateRange;
+                    //if (mCurrentQueryInfo.DateRange != QueryDateRange.Customer)
+                    //{
+                    //    var queryDateInfo = GetViewDateQuery(mCurrentQueryInfo.DateRange);
+                    //    //mCurrentQueryInfo.StartPurchaseDate = mCurrentQueryInfo.StartSaledDate = queryDateInfo.StartPurchaseDate;
+                    //    //mCurrentQueryInfo.EndPurchaseDate = mCurrentQueryInfo.EndSaledDate = queryDateInfo.EndPurchaseDate;
 
-                        mCurrentQueryInfo = mCurrentQueryInfo;
-                    }
+                    //    mCurrentQueryInfo.StartDate = queryDateInfo.StartDate;
+                    //    mCurrentQueryInfo.EndDate = queryDateInfo.EndDate;
+
+                    //    mCurrentQueryInfo = mCurrentQueryInfo;
+                    //}
 
                     mFmGoodsMainView.DataSource = GoodsBusiness.Instance.GetGoodses(mCurrentQueryInfo);
                 }
@@ -338,34 +505,34 @@ namespace Vogue2_IMS
             task.Start();
         }
 
-        /// <summary>
-        /// 获取（全记录）时间查询条件 
-        /// </summary>
-        /// <param name="day"></param>
-        /// <returns></returns>
-        private ViewQueryGoodsInfo GetViewDateQuery(QueryDateRange dateRange)
-        {
-            var dateNow = DateTime.Now;
-            var startDate = DateTime.Now;
+        ///// <summary>
+        ///// 获取（全记录）时间查询条件 
+        ///// </summary>
+        ///// <param name="day"></param>
+        ///// <returns></returns>
+        //private ViewQueryGoodsInfo GetViewDateQuery(QueryDateRange dateRange)
+        //{
+        //    var dateNow = DateTime.Now;
+        //    var startDate = DateTime.Now;
 
-            if (dateRange == QueryDateRange.ThisWeek)
-                startDate = dateNow.AddDays(1 - Convert.ToInt32(dateNow.DayOfWeek.ToString("d")));
+        //    if (dateRange == QueryDateRange.ThisWeek)
+        //        startDate = dateNow.AddDays(1 - Convert.ToInt32(dateNow.DayOfWeek.ToString("d")));
 
-            if (dateRange == QueryDateRange.ThisMonth)
-                startDate = dateNow.AddDays(1 - dateNow.Day);
+        //    if (dateRange == QueryDateRange.ThisMonth)
+        //        startDate = dateNow.AddDays(1 - dateNow.Day);
 
-            if (dateRange == QueryDateRange.ThisQuarter)
-                startDate = dateNow.AddMonths(0 - (dateNow.Month - 1) % 3).AddDays(1 - dateNow.Day);
+        //    if (dateRange == QueryDateRange.ThisQuarter)
+        //        startDate = dateNow.AddMonths(0 - (dateNow.Month - 1) % 3).AddDays(1 - dateNow.Day);
 
-            if (dateRange == QueryDateRange.ThisYear)
-                startDate = new DateTime(dateNow.Year, 1, 1);
+        //    if (dateRange == QueryDateRange.ThisYear)
+        //        startDate = new DateTime(dateNow.Year, 1, 1);
 
-            if (dateRange == QueryDateRange.AllYear10)
-                startDate = new DateTime(dateNow.Year - 10, 1, 1);
+        //    if (dateRange == QueryDateRange.AllYear10)
+        //        startDate = new DateTime(dateNow.Year - 10, 1, 1);
 
-            return new ViewQueryGoodsInfo() { DateRange = dateRange, StartDate = startDate, EndDate = dateNow };
-            //return new ViewQueryGoodsInfo() { DateRange = dateRange, StartPurchaseDate = startDate, StartSaledDate = startDate, EndPurchaseDate = dateNow, EndSaledDate = dateNow };
-        }
+        //    return new ViewQueryGoodsInfo() { DateRange = dateRange, StartDate = startDate, EndDate = dateNow };
+        //    //return new ViewQueryGoodsInfo() { DateRange = dateRange, StartPurchaseDate = startDate, StartSaledDate = startDate, EndPurchaseDate = dateNow, EndSaledDate = dateNow };
+        //}
 
         #region Warning Message Box
 
@@ -844,7 +1011,7 @@ namespace Vogue2_IMS
 
         private void btnViewRefrence_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            StartRefreshView(this, null);
+            StartRefreshGoodsView(this, null);
         }
 
         private void BtnQueryThisWeek_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -852,42 +1019,42 @@ namespace Vogue2_IMS
             mCurrentQueryInfo.DateRange = QueryDateRange.ThisWeek;
             //DateTime.Now.DayOfWeek
 
-            mCurrentQueryInfo = GetViewDateQuery(mCurrentQueryInfo.DateRange);
+            //mCurrentQueryInfo = GetViewDateQuery(mCurrentQueryInfo.DateRange);
 
-            StartRefreshView(this, null);
+            StartRefreshGoodsView(this, null);
         }
 
         private void BtnQueryThisMonth_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             mCurrentQueryInfo.DateRange = QueryDateRange.ThisMonth;
 
-            mCurrentQueryInfo = GetViewDateQuery(mCurrentQueryInfo.DateRange);
+            //mCurrentQueryInfo = GetViewDateQuery(mCurrentQueryInfo.DateRange);
 
-            StartRefreshView(this, null);
+            StartRefreshGoodsView(this, null);
         }
 
         private void BtnQueryThisQuarter_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             mCurrentQueryInfo.DateRange = QueryDateRange.ThisQuarter;
 
-            mCurrentQueryInfo = GetViewDateQuery(mCurrentQueryInfo.DateRange);
-            StartRefreshView(this, null);
+            //mCurrentQueryInfo = GetViewDateQuery(mCurrentQueryInfo.DateRange);
+            StartRefreshGoodsView(this, null);
         }
 
         private void BtnQueryThisYear_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             mCurrentQueryInfo.DateRange = QueryDateRange.ThisYear;
 
-            mCurrentQueryInfo = GetViewDateQuery(mCurrentQueryInfo.DateRange);
-            StartRefreshView(this, null);
+            //mCurrentQueryInfo = GetViewDateQuery(mCurrentQueryInfo.DateRange);
+            StartRefreshGoodsView(this, null);
         }
 
         private void BtnQueryAll_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             mCurrentQueryInfo.DateRange = QueryDateRange.AllYear10;
 
-            mCurrentQueryInfo = GetViewDateQuery(mCurrentQueryInfo.DateRange);
-            StartRefreshView(this, null);
+            //mCurrentQueryInfo = GetViewDateQuery(mCurrentQueryInfo.DateRange);
+            StartRefreshGoodsView(this, null);
         }
 
         private void BtnQueryCustomer_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -911,7 +1078,7 @@ namespace Vogue2_IMS
 
                 mCurrentQueryInfo = temp;
                 mCurrentQueryInfo.DateRange = QueryDateRange.Customer;
-                StartRefreshView(this, null);
+                StartRefreshGoodsView(this, null);
             }
         }
 
@@ -1131,6 +1298,7 @@ namespace Vogue2_IMS
         #endregion
 
 
-        #endregion
+        #endregion       
+
     }
 }

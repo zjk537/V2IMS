@@ -74,6 +74,7 @@ namespace Vogue2_IMS.SystemManager
                 {
                     mButtonDelete.ItemClick += new ItemClickEventHandler(ButtonDelete_ItemClick);
                     mButtonDelete.Enabled = false;
+                    mButtonDelete.Visibility = BarItemVisibility.Never;
                 }
             }
         }

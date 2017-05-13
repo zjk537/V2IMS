@@ -193,9 +193,9 @@
             this.ComboxStatus.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.ComboxStatus.Properties.Items.AddRange(new object[] {
-            "2.预定",
-            "3.出售",
-            "4.取回"});
+            "预定",
+            "售出",
+            "取回"});
             this.ComboxStatus.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.ComboxStatus.Size = new System.Drawing.Size(166, 20);
             this.ComboxStatus.TabIndex = 1032;

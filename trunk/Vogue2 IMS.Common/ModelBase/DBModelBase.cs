@@ -105,6 +105,7 @@ namespace Vogue2_IMS.Common.ModelBase
                         if (!dataDic.ContainsKey(dbField.ColumnName)) continue;
 
                         proInfo.SetValue(this, ConvertTo(dataDic[dbField.ColumnName], proInfo.Name, proInfo.PropertyType), null);
+                       
                         //proInfo.SetValue(this, ConvertTo(false, proInfo.Name + "Specify", typeof(bool)), null);
                         var proInfoSpecify = tType.GetProperty(proInfo.Name + "Specify");
                         if (proInfoSpecify != null)
