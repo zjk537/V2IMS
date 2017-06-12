@@ -11,270 +11,315 @@ using System.Collections.Generic;
 
 namespace Vogue2_IMS.OrderManager
 {
-    public partial class FmGoodsInfo : Common.FormBase.FormSimpleDialogBase
+    public partial class FmGoodsInfo : DevExpress.XtraEditors.XtraForm
     {
-        SourceType mRKType = SourceType.JiShou;
+        public bool IsPrint { get { return ckbprinted.Checked; } }
+        string mRKType = ConfigManager.JiShou;
+
         private string formText = "";
         /// <summary>
         /// 编辑对象
         /// </summary>
-        PurchaseGoodsInfo newPurchaseGoodsInfo = new PurchaseGoodsInfo();
+        ProCustInfo newProCustInfo = new ProCustInfo();
         /// <summary>
         /// 原始对象（仅在处于编辑时有值）
         /// </summary>
-        PurchaseGoodsInfo mPurchaseGoodsInfo = null;
+        ProCustInfo mProBaseInfo = null;
 
         /// <summary>
         /// 编辑好的对象
         /// </summary>
-        public PurchaseGoodsInfo PurchaseGoodsInfo
+        public ProCustInfo ProAddInfo
         {
             get
             {
-                return newPurchaseGoodsInfo;
+                return newProCustInfo;
             }
         }
 
-        public FmGoodsInfo(SourceType rkType)
+        List<WebUserInfo> users = new List<WebUserInfo>();
+
+        public FmGoodsInfo(string rkType)
             : base()
         {
             InitializeComponent();
             mRKType = rkType;
             InitializeControls();
-            newPurchaseGoodsInfo.Goods.SourceType = (int)mRKType;
-            newPurchaseGoodsInfo.LoginUser = SharedVariables.Instance.LoginUser.User;
-            newPurchaseGoodsInfo.PurchaseRecord.Operator = SharedVariables.Instance.LoginUser.User.Name;
+            newProCustInfo.type = mRKType;
+            newProCustInfo.uid = ConfigManager.LoginUser.uid;
+            newProCustInfo.uname = ConfigManager.LoginUser.username;
+            newProCustInfo.uuid = ConfigManager.LoginUser.uid;
+            newProCustInfo.uuname = ConfigManager.LoginUser.username; 
         }
 
-        public FmGoodsInfo(DialogResult btn_Ok_Dialog, DialogResult btn_Cancel_Dialog)
-            : base(btn_Ok_Dialog, btn_Cancel_Dialog)
-        {
-            InitializeComponent();
-            InitializeControls();
-        }
-
-        public FmGoodsInfo(PurchaseGoodsInfo purchaseGoodsViewInfo)
+        public FmGoodsInfo(ProInfo protInfo)
             : base()
         {
             InitializeComponent();
-            InitializeControls(purchaseGoodsViewInfo);
+            InitializeControls(protInfo);
         }
 
-        private void InitializeControls(PurchaseGoodsInfo purchaseGoodsViewInfo = null)
+        private void InitializeControls(ProInfo proinfo = null)
         {
-            if (purchaseGoodsViewInfo != null)
+            users = UserWebBusiness.GetUserInfoList();
+            if (proinfo != null)
             {
-                newPurchaseGoodsInfo = purchaseGoodsViewInfo.Clone();
+                var probaseinfo = GoodsWebBusiness.GetProBaseInfo(proinfo.proid.Value);
+                newProCustInfo = probaseinfo as ProCustInfo;
+                newProCustInfo.cust = proinfo.Cust;
 
-                mPurchaseGoodsInfo = purchaseGoodsViewInfo;
-                this.mRKType = (SourceType)mPurchaseGoodsInfo.Goods.SourceType;
+                mProBaseInfo = newProCustInfo.Clone();
+                newProCustInfo.JUser = users.Find(a => { return a.id == mProBaseInfo.uuid; });
+
+                this.mRKType = mProBaseInfo.type;
             }
 
-            this.ComboxCategoryType.Properties.Items.AddRange(Business.SharedVariables.Instance.CategoryInfos);
-            this.ComboxPayType.Properties.Items.AddRange(Business.SharedVariables.Instance.PayTypeInfos);
-            this.ComboxGoodsOperator.Properties.Items.AddRange(Business.SharedVariables.Instance.UserInfos);
-            this.ComBoxPaid.Properties.Items.AddRange(Business.SharedVariables.GoodsPaids);
+            this.custsex.Properties.Items.Clear();
+
+            this.custsex.Properties.Items.AddRange(new List<string>() { "男", "女" });
+            this.profenlei.Properties.Items.AddRange(GoodsWebBusiness.GetProFenLeis());
+            this.propaytype.Properties.Items.AddRange(ConfigManager.ProPayType);
+            this.projuser.Properties.Items.AddRange(users);
+            this.propaystatus.Properties.Items.AddRange(ConfigManager.ProPayStatus);
+
 
             ControlsBinding();
         }
 
         private void ControlsBinding()
         {
-            if (mPurchaseGoodsInfo == null)
+            #region form title 
+
+            if (mProBaseInfo == null)
             {
                 formText = "商品详情-添加";
             }
             else
             {
                 formText = "商品详情";
-                switch ((GoodsStatus)mPurchaseGoodsInfo.Goods.Status)
+                if (mProBaseInfo.status == ConfigManager.ZaiKu)
                 {
-                    case GoodsStatus.In:
-                        formText += "-编辑";
-                        SetControlStatus(true);
-                        break;
-                    case GoodsStatus.Catch:
-                        SetControlStatus(false);
-                        formText = "[已预定] " + formText;
-                        break;
-                    case GoodsStatus.Saled:
-                        SetControlStatus(false);
-                        formText = "[已售出] " + formText;
-                        break;
-                    case GoodsStatus.GetOut:
-                        SetControlStatus(false);
-                        formText = "[已取回] " + formText;
-                        break;
+                    formText += "-编辑";
+                    SetControlStatus(true);
                 }
+                if (mProBaseInfo.status == ConfigManager.ShouChu)
+                {
+                    SetControlStatus(false);
+                    formText = "[已售出] " + formText;                 
+                }
+                if (mProBaseInfo.status == ConfigManager.YuDing)
+                {
+                    SetControlStatus(false);
+                    formText = "[已预定] " + formText; 
+                }
+                if (mProBaseInfo.status == ConfigManager.QuHui)
+                {
+                    SetControlStatus(false);
+                    formText = "[已取回] " + formText;
+                }           
             }
+            #endregion
 
             this.Text = formText;
-            this.Btn_OK.Click += btnOk_Click;
-            labelControl9.Text = mRKType == SourceType.JinHuo ? "打款状态" : "结束时间";
+            labelControl9.Text = mRKType == ConfigManager.JinHuo ? "打款状态" : "结束时间";
 
-            DateEnd.Visible = mRKType == SourceType.JiShou;
-            ComBoxPaid.Visible = mRKType == SourceType.JinHuo;
-            //ComBoxPaid.SelectedIndex = 0;
+            endtime.Visible = mRKType == ConfigManager.JiShou;
+            propaystatus.Visible = mRKType == ConfigManager.JinHuo;
 
-            GoodsInfo goods = newPurchaseGoodsInfo.Goods;
-            GoodsOriginalCodeTxt.DataBindings.Add("Text", goods, "OriginalCode");//bindSource.Goods.OriginalCode
-            GoodsNameTxt.DataBindings.Add("Text", goods, "Name");//bindSource.Goods.Name
-            GoodsColorTxt.DataBindings.Add("Text", goods, "Color");//bindSource.Goods.Color
-            GoodsQualityTxt.DataBindings.Add("Text", goods, "Quality");//bindSource.Goods.Quality
-            //GoodsPrimePriceTxt.DataBindings.Add("Text", newPurchaseGoodsInfo, "Goods.PrimePrice.Value"); //bindSource.Goods.PrimePrice;
-            //GoodsMarkPriceTxt.DataBindings.Add("Text", newPurchaseGoodsInfo, "Goods.MarkPrice.Value"); //bindSource.Goods.MarkPrice.Value
-            GoodsPartsTxt.DataBindings.Add("Text", goods, "Parts");//bindSource.Goods.Parts;
-            GoodsDescTxt.DataBindings.Add("Text", goods, "Desc");//bindSource.Goods.Desc
-            //GoodsPictureImage.DataBindings.Add("EditValue", newPurchaseGoodsInfo, "GoodsImageBytes");
-            //DateEnd.DataBindings.Add("EditValue", newPurchaseGoodsInfo, "Goods.ConsignEndDate.Value");//bindSource.Goods.ConsignEndDate
+            BindCustMsg();
 
-            GoodsPictureImage.EditValue = this.GetGoodsLargeImage();
+            profenlei.DataBindings.Add("Text", newProCustInfo, "fenlei");
+            projcode.DataBindings.Add("Text", newProCustInfo, "jcode");
+            proname.DataBindings.Add("Text", newProCustInfo, "name");
+            procolor.DataBindings.Add("Text", newProCustInfo, "color");
+            prochengse.DataBindings.Add("Text", newProCustInfo, "chengse");
+            prochima.DataBindings.Add("Text", newProCustInfo, "chima");
+            projiankuan.DataBindings.Add("Text", newProCustInfo, "jiankuan");
+            proyaowei.DataBindings.Add("Text", newProCustInfo, "yaowei");
+            proxiongwei.DataBindings.Add("Text", newProCustInfo, "xiongwei");
+            protunwei.DataBindings.Add("Text", newProCustInfo, "tunwei");
+            proyichang.DataBindings.Add("Text", newProCustInfo, "yichang");
+            proxiuchang.DataBindings.Add("Text", newProCustInfo, "xiuchang");
+            prokuchang.DataBindings.Add("Text", newProCustInfo, "kuchang");
 
-            var purchaseRecord = newPurchaseGoodsInfo.PurchaseRecord;
+            projuser.DataBindings.Add("EditValue", newProCustInfo, "JUser");
+            
+            probujian.DataBindings.Add("Text", newProCustInfo, "bujian");
+            proremark.DataBindings.Add("Text", newProCustInfo, "remark");
 
-            ComboxCategoryType.DataBindings.Add("EditValue", newPurchaseGoodsInfo, "Category");
-            ComboxGoodsOperator.DataBindings.Add("Text", purchaseRecord, "Operator");
-            ComboxPayType.DataBindings.Add("EditValue", newPurchaseGoodsInfo, "PayType");
-            //ComBoxPaid.DataBindings.Add("EditValue", newPurchaseGoodsInfo, "GoodsPaid");
-            if (this.mRKType == SourceType.JinHuo)
+            proimage.EditValue = this.GetGoodsLargeImage();
+
+            propaytype.DataBindings.Add("EditValue", newProCustInfo, "paytype");
+
+            if (this.mRKType == ConfigManager.JinHuo)
             {
-                ComBoxPaid.SelectedIndex = 0;
-                ComBoxPaid.Enabled = false;
+                propaystatus.Text ="已打款";
+                propaystatus.Enabled = false;
             }
             else
             {
-                ComBoxPaid.SelectedIndex = 1;
+                propaystatus.SelectedIndex = 1;
             }
-            GoodsPrimePriceTxt.EditValue = newPurchaseGoodsInfo.Goods.PrimePrice ?? 0;
-            GoodsMarkPriceTxt.EditValue = newPurchaseGoodsInfo.Goods.MarkPrice ?? 0;
-            DateEnd.EditValue = newPurchaseGoodsInfo.Goods.ConsignEndDate.HasValue ? newPurchaseGoodsInfo.Goods.ConsignEndDate.Value.ToString("yyyy/MM/dd") : "";
+            projiage.EditValue = newProCustInfo.jiage ?? 0;
+            prosjiage.EditValue = newProCustInfo.sjiage ?? 0;
+            endtime.EditValue = newProCustInfo.endtime.HasValue ? newProCustInfo.endtime.Value.ToString("yyyy/MM/dd") : "";
+        }
+
+        private void BindCustMsg(bool isRefresh=false)
+        {
+            if (!isRefresh)
+            {
+                custname.DataBindings.Add("Text", newProCustInfo.cust, "name");
+                custphone.DataBindings.Add("Text", newProCustInfo.cust, "phone");
+                custsex.DataBindings.Add("Text", newProCustInfo.cust, "sex");
+                custidcard.DataBindings.Add("Text", newProCustInfo.cust, "idcard");
+                custyhname.DataBindings.Add("Text", newProCustInfo.cust, "yhname");
+                custyhcard.DataBindings.Add("Text", newProCustInfo.cust, "yhcard");
+                custdizhi.DataBindings.Add("Text", newProCustInfo.cust, "dizhi");
+
+            }
+            else
+            {
+                custname.DataBindings.Clear();
+                custphone.DataBindings.Clear();
+                custsex.DataBindings.Clear();
+                custidcard.DataBindings.Clear();
+                custyhname.DataBindings.Clear();
+                custyhcard.DataBindings.Clear();
+                custdizhi.DataBindings.Clear();
+
+                BindCustMsg();
+            }
+          
         }
 
         private byte[] GetGoodsLargeImage()
         {
-            if (newPurchaseGoodsInfo.Goods.Id > 0 && string.IsNullOrEmpty(newPurchaseGoodsInfo.Goods.Image))
+            if (newProCustInfo.id.HasValue && newProCustInfo.id.Value > 0 )
             {
-                newPurchaseGoodsInfo.Goods.Image = GoodsBusiness.Instance.GetGoodsImage(newPurchaseGoodsInfo.Goods.Id);
+               newProCustInfo.image = GoodsBusiness.Instance.GetGoodsImage(newProCustInfo.id.Value);
             }
-            if (!string.IsNullOrEmpty(newPurchaseGoodsInfo.Goods.Image))
-                return Convert.FromBase64String(newPurchaseGoodsInfo.Goods.Image);
+            if (!string.IsNullOrEmpty(newProCustInfo.image))
+            {
+                return Convert.FromBase64String(newProCustInfo.image);
+            }
 
             return new List<byte>().ToArray();
         }
 
         private void SetControlStatus(bool status)
         {
-            status = status && SharedVariables.Instance.LoginUser.User.RoleId == SharedVariables.AdminRoleId;
-            this.ComboxPayType.Enabled =
-            this.ComBoxPaid.Enabled =
-            this.ComboxGoodsOperator.Enabled =
-            this.ComboxCategoryType.Enabled =
-            this.GoodsColorTxt.Enabled =
-            this.GoodsDescTxt.Enabled =
-            this.GoodsMarkPriceTxt.Enabled =
-            this.GoodsNameTxt.Enabled =
-            this.GoodsOriginalCodeTxt.Enabled =
-            this.GoodsPartsTxt.Enabled =
-            this.GoodsPrimePriceTxt.Enabled =
-                //this.GoodsPictureImage.Enabled =
-            this.GoodsQualityTxt.Enabled =
-            this.DateEnd.Enabled =
-            this.Btn_OK.Enabled = status;
-
-            this.Btn_OK.Enabled =
-            this.GoodsPartsTxt.Enabled =
-            this.GoodsDescTxt.Enabled = status || SharedVariables.Instance.LoginUser.User.RoleId == SharedVariables.PMRoleId;
+            //this.status = status;// && SharedVariables.Instance.LoginUser.User.RoleId == SharedVariables.AdminRoleId;
+            this.propaytype.Enabled =
+            this.propaystatus.Enabled =
+            this.projuser.Enabled =
+            this.profenlei.Enabled =
+            this.procolor.Enabled =
+            this.proremark.Enabled =
+            this.prosjiage.Enabled =
+            this.proname.Enabled =
+            this.projcode.Enabled =
+            this.probujian.Enabled =
+            this.projiage.Enabled =
+                this.proimage.Enabled =
+            this.prochengse.Enabled =
+            this.endtime.Enabled =
+          
+            this.probujian.Enabled =
+            this.proremark.Enabled = status;// || SharedVariables.Instance.LoginUser.User.RoleId == SharedVariables.PMRoleId;
         }
 
         private bool ValidatFail()
         {
             mErrorProvider.ClearErrors();
-            //double validationTryDouble = 0;
             decimal validationTryDecimal = 0;
-            if (this.ComboxCategoryType.SelectedIndex < 0)
+
+            #region cust
+
+            if (string.IsNullOrEmpty(this.custname.Text))
             {
-                mErrorProvider.SetError(this.ComboxCategoryType, "请选择类别", ErrorType.Warning);
+                mErrorProvider.SetError(this.custname, "供应商名称不能为空", ErrorType.Warning);
             }
-            if (string.IsNullOrEmpty(this.GoodsOriginalCodeTxt.Text.Trim()))
+            if (string.IsNullOrEmpty(this.custphone.Text))
             {
-                mErrorProvider.SetError(this.GoodsOriginalCodeTxt, "不能为空", ErrorType.Warning);
+                mErrorProvider.SetError(this.custphone, "联系方式不能为空", ErrorType.Warning);
             }
-            if (string.IsNullOrEmpty(this.GoodsNameTxt.Text.Trim()))
+            if (string.IsNullOrEmpty(this.custyhname.Text))
             {
-                mErrorProvider.SetError(this.GoodsNameTxt, "不能为空", ErrorType.Warning);
+                mErrorProvider.SetError(this.custyhname, "开户行不能为空", ErrorType.Warning);
+            }
+            if (string.IsNullOrEmpty(this.custyhcard.Text))
+            {
+                mErrorProvider.SetError(this.custyhcard, "银行卡号不能为空", ErrorType.Warning);
+            }
+            if (string.IsNullOrEmpty(this.custidcard.Text))
+            {
+                mErrorProvider.SetError(this.custidcard, "证件号码不能为空", ErrorType.Warning);
+            }
+
+            if (custsex.SelectedIndex < 0)
+            {
+                custsex.SelectedIndex = 0;
+            }
+
+            this.newProCustInfo.cust.sex = custsex.Text;
+
+            #endregion
+
+            if (string.IsNullOrEmpty(this.profenlei.Text))
+            {
+                mErrorProvider.SetError(this.profenlei, "请选择或者输入类别", ErrorType.Warning);
+            }
+            if (string.IsNullOrEmpty(this.projcode.Text.Trim()))
+            {
+                mErrorProvider.SetError(this.projcode, "不能为空", ErrorType.Warning);
+            }
+            if (string.IsNullOrEmpty(this.proname.Text.Trim()))
+            {
+                mErrorProvider.SetError(this.proname, "不能为空", ErrorType.Warning);
             }
             //商品颜色默认：未知          
             //商品成色默认：未知           
-            if (this.ComboxPayType.SelectedIndex < 0)
+            if (string.IsNullOrEmpty(this.propaytype.Text))
             {
-                mErrorProvider.SetError(this.ComboxPayType, "请选择付款方式", ErrorType.Warning);
+                mErrorProvider.SetError(this.propaytype, "请选择付款方式", ErrorType.Warning);
             }
 
-            if (GoodsPrimePriceTxt.EditValue == null || !decimal.TryParse(GoodsPrimePriceTxt.EditValue.ToString().Trim(), out validationTryDecimal))
+            if (projiage.EditValue == null || !decimal.TryParse(projiage.EditValue.ToString().Trim(), out validationTryDecimal))
             {
-                mErrorProvider.SetError(this.GoodsPrimePriceTxt, "请输入正确的价格", ErrorType.Warning);
+                mErrorProvider.SetError(this.projiage, "请输入正确的价格", ErrorType.Warning);
             }
-            else newPurchaseGoodsInfo.Goods.PrimePrice = validationTryDecimal;
+            else newProCustInfo.jiage = validationTryDecimal;
 
-            if (GoodsMarkPriceTxt.EditValue == null || !decimal.TryParse(GoodsMarkPriceTxt.EditValue.ToString(), out validationTryDecimal))
+            if (prosjiage.EditValue == null || !decimal.TryParse(prosjiage.EditValue.ToString(), out validationTryDecimal))
             {
-                mErrorProvider.SetError(this.GoodsMarkPriceTxt, "请输入正确的价格", ErrorType.Warning);
+                mErrorProvider.SetError(this.prosjiage, "请输入正确的价格", ErrorType.Warning);
             }
-            else newPurchaseGoodsInfo.Goods.MarkPrice = validationTryDecimal;
+            else newProCustInfo.sjiage = validationTryDecimal;
 
-            if (string.IsNullOrEmpty(this.ComboxGoodsOperator.Text.Trim()))
+            //if (string.IsNullOrEmpty(this.projuser.Text.Trim()))
+            if (this.projuser.SelectedItem == null)
             {
-                mErrorProvider.SetError(this.ComboxGoodsOperator, "请选择经手人", ErrorType.Warning);
+                mErrorProvider.SetError(this.projuser, "请选择经手人", ErrorType.Warning);
             }
-            if (mRKType == SourceType.JiShou && (this.DateEnd.EditValue == null || this.DateEnd.EditValue.Equals("")))
+            else
             {
-                mErrorProvider.SetError(this.DateEnd, "请输入寄售结束时间", ErrorType.Warning);
+                newProCustInfo.JUser = this.projuser.SelectedItem as WebUserInfo;
             }
 
-            //配件默认：为空         
-            //描述默认：为空 
-            //商品图片默认：为空
-            //if (GoodsPictureImage.IsLoading)
-            //{
-            //    ErrorProvider.SetError(this.GoodsPictureImage, "请选择商品图片", ErrorType.Warning);
-            //}
+            if (mRKType == ConfigManager.JiShou && (this.endtime.EditValue == null || this.endtime.EditValue.Equals("")))
+            {
+                mErrorProvider.SetError(this.endtime, "请输入寄售结束时间", ErrorType.Warning);
+            }
+
 
             return mErrorProvider.HasErrors;
         }
 
-        private void btnOk_Click(object sender, EventArgs e)
-        {
-            if (!ValidatFail())
-            {
-                if (string.IsNullOrEmpty(DateEnd.EditValue.ToString()))
-                    newPurchaseGoodsInfo.Goods.ConsignEndDate = null;
-                else
-                    newPurchaseGoodsInfo.Goods.ConsignEndDate = (this.DateEnd.EditValue == null || this.DateEnd.EditValue.Equals("")) ? new Nullable<DateTime>() : Convert.ToDateTime(DateEnd.EditValue);
-                //进货为已打款1，寄售为未打款2
-                newPurchaseGoodsInfo.Goods.Paid = ((GoodsPaidInfo)ComBoxPaid.EditValue).Id;
-
-                if (!newPurchaseGoodsInfo.Equals(mPurchaseGoodsInfo))
-                {
-
-                    newPurchaseGoodsInfo.Goods.IdSpecify = true;
-                    if (mPurchaseGoodsInfo != null) mPurchaseGoodsInfo = newPurchaseGoodsInfo.Clone();
-
-                    this.DialogResult = DialogResult.OK;
-                }
-                else
-                {
-                    if (XtraMessageBox.Show("商品信息无更新，继续编辑请点击Y退出点击N", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
-                    {
-                        this.DialogResult = DialogResult.Cancel;
-                    }
-                }
-            }
-        }
-
         private void GoodsPictureImage_DoubleClick(object sender, EventArgs e)
         {
-            GoodsPictureImage.LoadImage();
-            newPurchaseGoodsInfo.GoodsImageBytes = (byte[])GoodsPictureImage.EditValue;
+            proimage.LoadImage();
+           // newProCustInfo.imagebytes = (byte[])proimage.EditValue;
         }
 
         private void ComboxEdit_SelectedIndexChanged(object sender, EventArgs e)
@@ -284,9 +329,9 @@ namespace Vogue2_IMS.OrderManager
 
         private void TextEdit_TextChanged(object sender, EventArgs e)
         {
-            if (((Control)sender) == GoodsNameTxt)
+            if (((Control)sender) == proname)
             {
-                this.Text = formText + (string.IsNullOrEmpty(GoodsNameTxt.Text) ? "" : "-" + GoodsNameTxt.Text);
+                this.Text = formText + (string.IsNullOrEmpty(proname.Text) ? "" : "-" + proname.Text);
             }
 
             ValidatFail();
@@ -297,6 +342,47 @@ namespace Vogue2_IMS.OrderManager
             ((TextEdit)sender).SelectAll();
         }
 
+        private void pictureEdit1_DoubleClick(object sender, EventArgs e)
+        {
+          
+        }
 
+        private void pictureEdit1_Click(object sender, EventArgs e)
+        {
+            newProCustInfo.cust = GoodsWebBusiness.GetCustInfoList(custphone.Text.Trim());
+            BindCustMsg(true);
+        }
+
+
+        private void btnOk_Click(object sender, EventArgs e)
+        {
+            if (!ValidatFail())
+            {
+                if (string.IsNullOrEmpty(endtime.EditValue.ToString()))
+                {
+                    newProCustInfo.endtime = null;
+                }
+                else
+                {
+                    newProCustInfo.endtime = (this.endtime.EditValue == null || this.endtime.EditValue.Equals(""))
+                        ? new Nullable<DateTime>()
+                        : Convert.ToDateTime(endtime.EditValue);
+                }
+
+                //进货为已打款1，寄售为未打款2
+                newProCustInfo.paystatus = propaystatus.Text;
+
+                if (mProBaseInfo != null)
+                {
+                    GoodsWebBusiness.ProEdit(newProCustInfo);
+                }
+                else
+                {
+                    GoodsWebBusiness.ProAdd(newProCustInfo);
+                }
+
+                this.DialogResult = DialogResult.OK;
+            }
+        }
     }
 }

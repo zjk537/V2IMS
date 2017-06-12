@@ -215,9 +215,10 @@ namespace Vogue2_IMS
             this.ribbon.MaxItemId = 182;
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rPageHome,
-            this.rPageUserManager,
+            //this.rPageUserManager,
             this.rPageGoodsManager,
-            this.rPageSystemConfig});
+            //this.rPageSystemConfig
+            });
             this.ribbon.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemComboBox1,
             this.repositoryItemDateEdit1,

@@ -84,10 +84,10 @@ namespace Vogue2_IMS.SystemManager
             try
             {
                 RoleBusiness.Instance.UpdateRoleColumns(roleId, this.ListEnabledColumn);
-                if (roleId == SharedVariables.Instance.LoginUser.User.RoleId)
-                {
-                    SharedVariables.Instance.LoginUser.ResetRoleColumns();
-                }
+                //if (roleId == SharedVariables.Instance.LoginUser.User.RoleId)
+                //{
+                //    SharedVariables.Instance.LoginUser.ResetRoleColumns();
+                //}
                 this.Close();
             }
             catch (Exception ex)

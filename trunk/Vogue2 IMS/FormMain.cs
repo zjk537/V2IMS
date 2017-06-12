@@ -28,7 +28,8 @@ using System.Configuration;
 namespace Vogue2_IMS
 {
     public partial class FormMain : RibbonFormSimpleDialogBase
-    {
+    {   
+
         #region About Log In
 
         private ManualResetEvent waitInitializeHandler = new ManualResetEvent(false);
@@ -88,8 +89,8 @@ namespace Vogue2_IMS
         private void RegiserView()
         {
             mRibbonPageViews.Add(rPageGoodsManager, mFmGoodsMainView);//商品管理
-            mRibbonPageViews.Add(rPageSystemConfig, mFmSystemConfigView);//系统设置
-            mRibbonPageViews.Add(rPageUserManager, mFmUserView);//用户管理
+            //mRibbonPageViews.Add(rPageSystemConfig, mFmSystemConfigView);//系统设置
+            //mRibbonPageViews.Add(rPageUserManager, mFmUserView);//用户管理
             mRibbonPageViews.Add(rPageHome, mFmBI);
 
             ribbon.SelectedPage = null;
@@ -99,12 +100,12 @@ namespace Vogue2_IMS
         /// <summary>
         /// 视图当前查询条件 
         /// </summary>
-        private ViewQueryGoodsInfo mCurrentQueryInfo
+        private ProListRequest mCurrentQueryInfo
         {
             get
             {
                 if (mFmGoodsMainView.DefaultQueryInfo == null)
-                    mFmGoodsMainView.DefaultQueryInfo = new ViewQueryGoodsInfo() { DateRange = QueryDateRange.ThisWeek };
+                    mFmGoodsMainView.DefaultQueryInfo = new ProListRequest() { DateRange = QueryDateRange.ThisWeek };
 
                 return mFmGoodsMainView.DefaultQueryInfo;
             }
@@ -137,21 +138,25 @@ namespace Vogue2_IMS
                 {
                     this.WindowState = FormWindowState.Maximized;
                     this.ShowInTaskbar = true;
-                    this.Text += string.Format("[{0}-{1}]", SharedVariables.Instance.RoleInfos.FirstOrDefault(r => r.Id == SharedVariables.Instance.LoginUser.User.RoleId).Name, SharedVariables.Instance.LoginUser.User.Name);
+                    this.Text += string.Format("{0}", ConfigManager.LoginUser.username);
                     RegiserView();
                     // 起线程取预警消息
-                    SCWarning();
+                    //SCWarning();
                     //LoadWarningMessages();
-                    btnPayment.Enabled = SharedVariables.Instance.LoginUser.User.RoleId <= SharedVariables.PMRoleId;
-                    this.btnAddBuyGoods.Enabled =
-                    this.btnAddConsignmentGoods.Enabled = !(SharedVariables.Instance.LoginUser.User.RoleId > SharedVariables.PMRoleId);
-                    btnImport.Enabled = SharedVariables.Instance.LoginUser.User.RoleId == SharedVariables.PMRoleId;
-                    this.btnRollBackGoods.Enabled = SharedVariables.Instance.LoginUser.User.RoleId == SharedVariables.AdminRoleId;
+                    //btnPayment.Enabled = SharedVariables.Instance.LoginUser.User.RoleId <= SharedVariables.PMRoleId;
+                    //this.btnAddBuyGoods.Enabled =
+                    //this.btnAddConsignmentGoods.Enabled = !(SharedVariables.Instance.LoginUser.User.RoleId > SharedVariables.PMRoleId);
+                    //btnImport.Enabled = SharedVariables.Instance.LoginUser.User.RoleId == SharedVariables.PMRoleId;
+                    //this.btnRollBackGoods.Enabled = SharedVariables.Instance.LoginUser.User.RoleId == SharedVariables.AdminRoleId;
                 }
                 else
                 {
                     Application.Exit();
                 }
+            }
+            catch
+            {
+                throw;
             }
             finally
             {
@@ -247,7 +252,7 @@ namespace Vogue2_IMS
         private void RefreshGoodsViewByDashboard(ViewCondition condition)
         {
             mFmGoodsMainView.Condition = condition;
-            mFmGoodsMainView.DefaultQueryInfo = new ViewQueryGoodsInfo() { DateRange = QueryDateRange.AllYear10 };
+            mFmGoodsMainView.DefaultQueryInfo = new ProListRequest() { DateRange = QueryDateRange.AllYear10 };
             StartRefreshGoodsView(this, null);
         }
 
@@ -387,7 +392,7 @@ namespace Vogue2_IMS
                     _FmUserView.BtnResetPwd = BtnUserRestorePwd;
                     _FmUserView.BtnUpdate = BtnUserMondify;
 
-                    BtnUserLoginName.Caption = SharedVariables.Instance.LoginUser.User.Name;
+                    BtnUserLoginName.Caption = ConfigManager.LoginUser.username;
                 }
 
                 return _FmUserView;
@@ -401,7 +406,7 @@ namespace Vogue2_IMS
 
         private void btnUserUpdateSelf_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            new FmUserInfo(new UserShopRoleInfo() { User = SharedVariables.Instance.LoginUser.User }).ShowDialog();
+            //new FmUserInfo(new UserShopRoleInfo() { User = SharedVariables.Instance.LoginUser.User }).ShowDialog();
         }
 
         private void btnUserUpdatePwd_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -479,60 +484,20 @@ namespace Vogue2_IMS
                         Thread.Sleep(500);
                     }
 
-                    //mCurrentQueryInfo.DateRange = mCurrentQueryInfo.DateRange;
-                    //if (mCurrentQueryInfo.DateRange != QueryDateRange.Customer)
-                    //{
-                    //    var queryDateInfo = GetViewDateQuery(mCurrentQueryInfo.DateRange);
-                    //    //mCurrentQueryInfo.StartPurchaseDate = mCurrentQueryInfo.StartSaledDate = queryDateInfo.StartPurchaseDate;
-                    //    //mCurrentQueryInfo.EndPurchaseDate = mCurrentQueryInfo.EndSaledDate = queryDateInfo.EndPurchaseDate;
-
-                    //    mCurrentQueryInfo.StartDate = queryDateInfo.StartDate;
-                    //    mCurrentQueryInfo.EndDate = queryDateInfo.EndDate;
-
-                    //    mCurrentQueryInfo = mCurrentQueryInfo;
-                    //}
-
-                    mFmGoodsMainView.DataSource = GoodsBusiness.Instance.GetGoodses(mCurrentQueryInfo);
+                    //var datesource = GoodsWebBusiness.GetProInfoList();
+                    mFmGoodsMainView.DefaultQueryInfo = mCurrentQueryInfo;
+                    mFmGoodsMainView.DataSource = GoodsWebBusiness.GetProInfoList(mCurrentQueryInfo); //GoodsBusiness.Instance.GetGoodses(mCurrentQueryInfo);
                 }
                 finally
                 {
-                    if (mFmGoodsMainView.DataSource == null) mFmGoodsMainView.DataSource = new List<ViewMainGoodsInfos>();
+                    if (mFmGoodsMainView.DataSource == null) mFmGoodsMainView.DataSource = new List<ProInfo>();
 
                     MainViewSource_Changed();
                 }
             });
 
             task.Start();
-        }
-
-        ///// <summary>
-        ///// 获取（全记录）时间查询条件 
-        ///// </summary>
-        ///// <param name="day"></param>
-        ///// <returns></returns>
-        //private ViewQueryGoodsInfo GetViewDateQuery(QueryDateRange dateRange)
-        //{
-        //    var dateNow = DateTime.Now;
-        //    var startDate = DateTime.Now;
-
-        //    if (dateRange == QueryDateRange.ThisWeek)
-        //        startDate = dateNow.AddDays(1 - Convert.ToInt32(dateNow.DayOfWeek.ToString("d")));
-
-        //    if (dateRange == QueryDateRange.ThisMonth)
-        //        startDate = dateNow.AddDays(1 - dateNow.Day);
-
-        //    if (dateRange == QueryDateRange.ThisQuarter)
-        //        startDate = dateNow.AddMonths(0 - (dateNow.Month - 1) % 3).AddDays(1 - dateNow.Day);
-
-        //    if (dateRange == QueryDateRange.ThisYear)
-        //        startDate = new DateTime(dateNow.Year, 1, 1);
-
-        //    if (dateRange == QueryDateRange.AllYear10)
-        //        startDate = new DateTime(dateNow.Year - 10, 1, 1);
-
-        //    return new ViewQueryGoodsInfo() { DateRange = dateRange, StartDate = startDate, EndDate = dateNow };
-        //    //return new ViewQueryGoodsInfo() { DateRange = dateRange, StartPurchaseDate = startDate, StartSaledDate = startDate, EndPurchaseDate = dateNow, EndSaledDate = dateNow };
-        //}
+        }   
 
         #region Warning Message Box
 
@@ -547,7 +512,7 @@ namespace Vogue2_IMS
             int goodsCount = (int)warMsgDict["GoodsCount"];
             DateTime startDate = (DateTime)warMsgDict["MinDate"];
             DateTime endDate = (DateTime)warMsgDict["MaxDate"];
-            FmWarningMessageBox fmWarning = new FmWarningMessageBox(this, SharedVariables.Instance.LoginUser.User.Name, goodsCount, startDate, endDate);
+            FmWarningMessageBox fmWarning = new FmWarningMessageBox(this, ConfigManager.LoginUser.username, goodsCount, startDate, endDate);
             fmWarning.linkViewInfo_Clicked += new EventHandler(linkViewInfo_Click);
 
             warMsgDict.Clear();
@@ -557,8 +522,8 @@ namespace Vogue2_IMS
 
         private void linkViewInfo_Click(object sender, EventArgs e)
         {
-            mFmGoodsMainView.DataSource = GoodsBusiness.Instance.GetWarningGoods(WarningType.JSWarning, (int)(DateTime.Now - DateTime.Now.AddYears(-10)).TotalDays);
-            MainViewSource_Changed();
+            //mFmGoodsMainView.DataSource = GoodsBusiness.Instance.GetWarningGoods(WarningType.JSWarning, (int)(DateTime.Now - DateTime.Now.AddYears(-10)).TotalDays);
+            //MainViewSource_Changed();
         }
 
         #endregion
@@ -619,16 +584,16 @@ namespace Vogue2_IMS
 
         #region View Event
 
-        private List<ViewMainGoodsInfos> GetSelectedGoodsInfos()
+        private List<ProInfo> GetSelectedGoodsInfos()
         {
             var gridMainView = mFmGoodsMainView.MainView;
             if (gridMainView.SelectedRowsCount > 0)
             {
-                List<ViewMainGoodsInfos> mainGoodsInfos = new List<ViewMainGoodsInfos>();
+                var mainGoodsInfos = new List<ProInfo>();
                 int[] rowIndexs = gridMainView.GetSelectedRows();
                 foreach (var rowIndex in rowIndexs)
                 {
-                    var mainGoodsInfo = gridMainView.GetRow(rowIndex) as ViewMainGoodsInfos;
+                    var mainGoodsInfo = gridMainView.GetRow(rowIndex) as ProInfo;
                     mainGoodsInfos.Add(mainGoodsInfo);
                 }
                 return mainGoodsInfos;
@@ -636,10 +601,10 @@ namespace Vogue2_IMS
             return null;
         }
 
-        private List<ViewMainGoodsInfos> GetCheckedGoodsInfos()
+        private List<ProInfo> GetCheckedGoodsInfos()
         {
             var gridMainView = mFmGoodsMainView.MainView;
-            List<ViewMainGoodsInfos> chkedGoodsInfos = new List<ViewMainGoodsInfos>();
+            var chkedGoodsInfos = new List<ProInfo>();
             for (var i = 0; i < gridMainView.RowCount; i++)
             {
                 var rowObj = gridMainView.GetRow(i);
@@ -647,7 +612,7 @@ namespace Vogue2_IMS
                 {
                     continue;
                 }
-                var mainGoodsInfo = gridMainView.GetRow(i) as ViewMainGoodsInfos;
+                var mainGoodsInfo = gridMainView.GetRow(i) as ProInfo;
                 if (mainGoodsInfo.CheckEdit)
                 {
                     chkedGoodsInfos.Add(mainGoodsInfo);
@@ -662,37 +627,37 @@ namespace Vogue2_IMS
 
         private void btnUpdateGoods_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            try
-            {
-                if (mFmGoodsMainView.MainView.SelectedRowsCount > 0)
-                {
-                    var goodsInfo = mFmGoodsMainView.MainView.GetRow(mFmGoodsMainView.MainView.GetSelectedRows()[0]) as ViewMainGoodsInfos;
-                    if (goodsInfo == null) return;
+            //try
+            //{
+            //    if (mFmGoodsMainView.MainView.SelectedRowsCount > 0)
+            //    {
+            //        var goodsInfo = mFmGoodsMainView.MainView.GetRow(mFmGoodsMainView.MainView.GetSelectedRows()[0]) as ProInfo;
+            //        if (goodsInfo == null) return;
 
-                    if (goodsInfo.GoodsStatus == GoodsStatus.In)
-                    {
-                        var fmGoodsInfo = new FmGoodsInfo(goodsInfo.GetPurchaseRecordInfo());
-                        if (fmGoodsInfo.ShowDialog() == DialogResult.OK)
-                        {
-                            var result = fmGoodsInfo.PurchaseGoodsInfo;
-                            Business.PurchaseGoodsBusiness.Instance.UpdatePurchaseGoods(result);
-                        }
-                    }
-                    else if (goodsInfo.GoodsStatus == GoodsStatus.Catch)
-                    {
-                        var fmGoodsInfo = new FmGoodsSaledMondify(goodsInfo.GetSaledGoodsInfo());
-                        if (fmGoodsInfo.ShowDialog() == DialogResult.OK)
-                        {
-                            var result = fmGoodsInfo.SaledGoodsInfo;
-                            Business.SaleGoodsBusiness.Instance.UpdateSaledGoods(result);
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                XtraMessageBox.Show(String.Format("更新失败:\r\n{0}", ex.ToString()), "提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //        if (goodsInfo.pros == GoodsStatus.In)
+            //        {
+            //            var fmGoodsInfo = new FmGoodsInfo(goodsInfo);
+            //            if (fmGoodsInfo.ShowDialog() == DialogResult.OK)
+            //            {
+            //                var result = fmGoodsInfo.PurchaseGoodsInfo;
+            //                Business.PurchaseGoodsBusiness.Instance.UpdatePurchaseGoods(result);
+            //            }
+            //        }
+            //        else if (goodsInfo.GoodsStatus == GoodsStatus.Catch)
+            //        {
+            //            var fmGoodsInfo = new FmGoodsSaledMondify(goodsInfo.GetSaledGoodsInfo());
+            //            if (fmGoodsInfo.ShowDialog() == DialogResult.OK)
+            //            {
+            //                var result = fmGoodsInfo.SaledGoodsInfo;
+            //                Business.SaleGoodsBusiness.Instance.UpdateSaledGoods(result);
+            //            }
+            //        }
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    XtraMessageBox.Show(String.Format("更新失败:\r\n{0}", ex.ToString()), "提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
 
         private void btnPayment_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -702,7 +667,7 @@ namespace Vogue2_IMS
 
             var tempGoodsInfos = mainGoodsInfos.Where(info =>
             {
-                return info.Goods.SourceType == (int)SourceType.JiShou && info.Goods.Status == (int)GoodsStatus.In;
+                return info.protype == ConfigManager.JiShou && info.prostatus == ConfigManager.ZaiKu;
             }).ToList();
 
             if (tempGoodsInfos.Count > 0)
@@ -711,7 +676,7 @@ namespace Vogue2_IMS
                 StringBuilder sb = new StringBuilder();
                 tempGoodsInfos.ForEach(info =>
                 {
-                    sb.AppendFormat("【{0}】 {1}\r\n", info.Goods.Code, info.Goods.Name);
+                    sb.AppendFormat("【{0}】 {1}\r\n", info.procode, info.proname);
                 });
                 if (XtraMessageBox.Show(string.Format(noticeMsg, sb.ToString()), "提示", MessageBoxButtons.YesNo) == DialogResult.No)
                     return;
@@ -722,35 +687,14 @@ namespace Vogue2_IMS
                     return;
             }
 
-            var purchaseGoodsInfos = mainGoodsInfos.Select(info =>
-            {
-                var goodsInfo = info.GetPurchaseRecordInfo();
-                goodsInfo.Goods.Paid = (int)GoodsPaid.HasPaid;
-                return goodsInfo;
-            }).ToList();
-
-            Business.PurchaseGoodsBusiness.Instance.BatchUpdatePurchaseGoods(purchaseGoodsInfos);
-
-            //if (mFmGoodsMainView.MainView.SelectedRowsCount > 0)
+            //var purchaseGoodsInfos = mainGoodsInfos.Select(info =>
             //{
-            //    var rowIndexs = mFmGoodsMainView.MainView.GetSelectedRows();
-            //    foreach (var rowIndex in rowIndexs)
-            //    {
-            //        var purchaseInfo = (mFmGoodsMainView.MainView.GetRow(rowIndex) as ViewMainGoodsInfos).GetPurchaseRecordInfo();
-            //        if (purchaseInfo.Goods.SourceType == (int)SourceType.JiShou
-            //                && purchaseInfo.Goods.Status == (int)GoodsStatus.In
-            //                && XtraMessageBox.Show(string.Format("{0} {1} \r\n此寄售商品尚未售出,是否打款?"
-            //               , purchaseInfo.Goods.Code, purchaseInfo.Goods.Name), "提示"
-            //                 , MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
-            //        {
-            //            continue;
-            //        }
+            //    //var goodsInfo = info.GetPurchaseRecordInfo();
+            //    //goodsInfo.Goods.Paid = (int)GoodsPaid.HasPaid;
+            //    return goodsInfo;
+            //}).ToList();
 
-            //        purchaseInfo.GoodsPaid = new GoodsPaidInfo() { Id = (int)GoodsPaid.HasPaid };//已付款
-
-            //        Business.PurchaseGoodsBusiness.Instance.UpdatePurchaseGoods(purchaseInfo);
-            //    }
-            //}
+            //Business.PurchaseGoodsBusiness.Instance.BatchUpdatePurchaseGoods(purchaseGoodsInfos);
         }
 
         private void btnRollBackGoods_ItemClick(object sender, ItemClickEventArgs e)
@@ -762,9 +706,9 @@ namespace Vogue2_IMS
                 var rollBackEnabledGoods = new List<SaledGoodsInfo>();
                 chkedMainGoodsInfos.ForEach(goods =>
                 {
-                    if (goods.Goods.Status == (int)GoodsStatus.Saled
-                            || goods.Goods.Status == (int)GoodsStatus.Catch)
-                        rollBackEnabledGoods.Add(goods.GetSaledGoodsInfo());
+                    if (goods.prostatus == ConfigManager.ShouChu
+                            || goods.prostatus == ConfigManager.YuDing)
+                        rollBackEnabledGoods.Add(null);
                 });
 
                 if (rollBackEnabledGoods.Count > 0 &&
@@ -781,7 +725,7 @@ namespace Vogue2_IMS
                                                     goods.Goods.Prepay,
                                                     goods.Goods.Discount,
                                                     DateTime.Now.ToString("yyyy-MM-dd hh:mm"));
-                        goods.SaledRecord.UserId = SharedVariables.Instance.LoginUser.User.Id;
+                        goods.SaledRecord.UserId = ConfigManager.LoginUser.uid;
 
                         goods.Goods.SalePrice = 0;
                         goods.Goods.Prepay = 0;
@@ -793,21 +737,21 @@ namespace Vogue2_IMS
             }
         }
 
-
         private void btnJS_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var fmGoodsAdd = new FmGoodsAdd(SourceType.JiShou);
-            fmGoodsAdd.WindowState = FormWindowState.Maximized;
+            //var fmGoodsAdd = new FmGoodsAdd(SourceType.JiShou);
+            //fmGoodsAdd.WindowState = FormWindowState.Maximized;
 
-            fmGoodsAdd.ShowDialog();
+            //fmGoodsAdd.ShowDialog();
+
+            var fmProInfo = new FmGoodsInfo(ConfigManager.JiShou);
+            fmProInfo.ShowDialog();
         }
 
         private void btnJH_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var fmGoodsAdd = new FmGoodsAdd(SourceType.JinHuo);
-            fmGoodsAdd.WindowState = FormWindowState.Maximized;
-
-            fmGoodsAdd.ShowDialog();
+            var fmProInfo = new FmGoodsInfo(ConfigManager.JinHuo);
+            fmProInfo.ShowDialog();
         }
 
         private void btnCK_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -815,7 +759,7 @@ namespace Vogue2_IMS
             try
             {
                 var chkedMainGoodsInfos = this.GetCheckedGoodsInfos();
-                List<SaledGoodsInfo> chkedGoodsInfos = chkedMainGoodsInfos.Select(goods => goods.GetSaledGoodsInfo()).ToList();
+                List<SaledGoodsInfo> chkedGoodsInfos = null;// chkedMainGoodsInfos.Select(goods => null).ToList();
                 var fmGoodsSaled = new FmGoodsSaled(chkedGoodsInfos);
                 fmGoodsSaled.WindowState = FormWindowState.Maximized;
 
@@ -833,19 +777,19 @@ namespace Vogue2_IMS
             if (e.RowHandle >= 0)
             {
                 var gridMainView = mFmGoodsMainView.MainView;
-                var mainGoodsInfo = gridMainView.GetRow(e.RowHandle) as ViewMainGoodsInfos;
+                var mainGoodsInfo = gridMainView.GetRow(e.RowHandle) as ProInfo;
 
                 if (mainGoodsInfo == null) return;
 
-                if (mainGoodsInfo.GoodsStatus == GoodsStatus.Saled)
+                if (mainGoodsInfo.prostatus == ConfigManager.ShouChu)
                 {
                     e.Appearance.ForeColor = Color.Red;
                 }
-                if (mainGoodsInfo.GoodsStatus == GoodsStatus.GetOut)
+                if (mainGoodsInfo.prostatus == ConfigManager.QuHui)
                 {
                     e.Appearance.ForeColor = Color.SeaGreen;
                 }
-                if (mainGoodsInfo.GoodsStatus == GoodsStatus.Catch)
+                if (mainGoodsInfo.prostatus == ConfigManager.YuDing)
                 {
                     e.Appearance.ForeColor = Color.Blue;
                 }
@@ -863,7 +807,7 @@ namespace Vogue2_IMS
                 // 包含取回和已售出的商品时，商品售出按钮不可用
                 this.btnSaleGoods.Enabled = chkedGoodsInfos.Count(goods =>
                 {
-                    return goods.Goods.Status == (int)GoodsStatus.Saled || goods.Goods.Status == (int)GoodsStatus.GetOut;
+                    return goods.prostatus == ConfigManager.ShouChu || goods.prostatus == ConfigManager.QuHui;
                 }) == 0;
             }
         }
@@ -878,22 +822,22 @@ namespace Vogue2_IMS
             }
 
             btnUpdateGoods.Enabled = false;
-            btnPayment.Enabled = listSelectedGoods.Count(goods => goods.Goods.Code.StartsWith("ZY")) == 0 ||
-                    listSelectedGoods.Count(goods => goods.Goods.Paid == (int)GoodsPaid.HasPaid) == listSelectedGoods.Count;
+            btnPayment.Enabled = listSelectedGoods.Count(goods => goods.procode.StartsWith("ZY")) == 0 ||
+                    listSelectedGoods.Count(goods => goods.propaystatus == ConfigManager.YiDaKuan) == listSelectedGoods.Count;
 
             if (listSelectedGoods.Count == 1)
             {
                 var curGoods = listSelectedGoods.FirstOrDefault();
-                btnUpdateGoods.Enabled = (curGoods.GoodsStatus == GoodsStatus.In || curGoods.GoodsStatus == GoodsStatus.Catch);
-                BtnPrintXS.Enabled = curGoods.GoodsStatus != GoodsStatus.In;
-                BtnPrintJH.Enabled = curGoods.Goods.SourceType == (int)SourceType.JinHuo;
-                BtnPrintJS.Enabled = curGoods.Goods.SourceType == (int)SourceType.JiShou;
+                btnUpdateGoods.Enabled = (curGoods.prostatus == ConfigManager.ZaiKu || curGoods.prostatus == ConfigManager.YuDing);
+                BtnPrintXS.Enabled = curGoods.prostatus == ConfigManager.ZaiKu;
+                BtnPrintJH.Enabled = curGoods.protype == ConfigManager.JinHuo;
+                BtnPrintJS.Enabled = curGoods.protype == ConfigManager.JiShou;
                 return;
             }
 
-            BtnPrintXS.Enabled = listSelectedGoods.Count == listSelectedGoods.Count(item => item.GoodsStatus != GoodsStatus.In);
-            BtnPrintJH.Enabled = listSelectedGoods.Count == listSelectedGoods.Count(item => item.Goods.SourceType == (int)SourceType.JinHuo);
-            BtnPrintJS.Enabled = listSelectedGoods.Count == listSelectedGoods.Count(item => item.Goods.SourceType == (int)SourceType.JiShou);
+            BtnPrintXS.Enabled = listSelectedGoods.Count == listSelectedGoods.Count(item => item.prostatus != ConfigManager.ZaiKu);
+            BtnPrintJH.Enabled = listSelectedGoods.Count == listSelectedGoods.Count(item => item.protype == ConfigManager.JinHuo);
+            BtnPrintJS.Enabled = listSelectedGoods.Count == listSelectedGoods.Count(item => item.protype == ConfigManager.JiShou);
         }
 
         private void GridDefaultView_MouseDown(object sender, MouseEventArgs e)
@@ -907,26 +851,26 @@ namespace Vogue2_IMS
                 {
                     if (!hInfo.InRowCell) return;
                     //取得选定行信息  
-                    var goodsInfo = gridMainView.GetRow(hInfo.RowHandle) as ViewMainGoodsInfos;
+                    var goodsInfo = gridMainView.GetRow(hInfo.RowHandle) as ProInfo;
 
                     if (goodsInfo == null) return;
 
-                    if (goodsInfo.GoodsStatus != GoodsStatus.In && SharedVariables.Instance.LoginUser.User.RoleId == (int)SharedVariables.AdminRoleId)
+                    var dialogresult = DialogResult.Cancel;
+
+                    if (goodsInfo.prostatus != ConfigManager.ZaiKu)
                     {
-                        var fmSaledGoods = new FmGoodsSaledMondify(goodsInfo.GetSaledGoodsInfo());
-                        if (fmSaledGoods.ShowDialog() == DialogResult.OK)
-                        {
-                            var result = fmSaledGoods.SaledGoodsInfo;
-                            Business.SaleGoodsBusiness.Instance.UpdateSaledGoods(result);
-                        }
-                        return;
+                        var fmGoodsSales = new FmGoodsSaledMondify(goodsInfo);
+                        dialogresult = fmGoodsSales.ShowDialog();
+                    }
+                    else
+                    {
+                        var fmGoodsInfo = new FmGoodsInfo(goodsInfo);
+                        dialogresult = fmGoodsInfo.ShowDialog();
                     }
 
-                    var fmGoodsInfo = new FmGoodsInfo(goodsInfo.GetPurchaseRecordInfo());
-                    if (fmGoodsInfo.ShowDialog() == DialogResult.OK)
+                    if (dialogresult == DialogResult.OK)
                     {
-                        var result = fmGoodsInfo.PurchaseGoodsInfo;
-                        Business.PurchaseGoodsBusiness.Instance.UpdatePurchaseGoods(result);
+                        StartRefreshGoodsView(this, null);
                     }
                 }
             }
@@ -963,38 +907,27 @@ namespace Vogue2_IMS
 
                     mFmGoodsMainView.DataSource.ForEach(source =>
                     {
-                        if (source.Goods.SourceType == (int)SourceType.JinHuo)
+                        if (source.protype == ConfigManager.JinHuo)
                         {
-                            if (source.GoodsStatus == GoodsStatus.In)
-                                sumJHPrimice += source.Goods.PrimePrice.HasValue ? source.Goods.PrimePrice.Value : 0;
+                            if (source.prostatus == ConfigManager.ZaiKu)
+                                sumJHPrimice += source.projiage.HasValue ? source.projiage.Value : 0;
 
-                            if (source.GoodsStatus == GoodsStatus.Saled)
+                            if (source.prostatus == ConfigManager.ShouChu)
                             {
-                                sumJHSaled += source.Goods.SalePrice.HasValue ? source.Goods.SalePrice.Value : 0;
-                                // 这里有问题，因为商品销售记录可能多次，但source只取出最近一次销售记录情况，所以可能会漏掉一些
-                                if (!string.IsNullOrEmpty(source.SaledRecord.BatchId) && !dictJHCharge.ContainsKey(source.SaledRecord.BatchId))
-                                {
-                                    dictJHCharge.Add(source.SaledRecord.BatchId,
-                                                     source.SaledRecord.PayCharge.HasValue ? source.SaledRecord.PayCharge.Value : 0);
-                                }
+                                sumJHSaled += source.prosjiage.HasValue ? source.prosjiage.Value : 0; 
                             }
 
 
                         }
                         else
                         {
-                            if (source.GoodsStatus == GoodsStatus.In)
-                                sumJSPrimice += source.Goods.PrimePrice.HasValue ? source.Goods.PrimePrice.Value : 0;
+                            if (source.prostatus == ConfigManager.ZaiKu)
+                                sumJHPrimice += source.projiage.HasValue ? source.projiage.Value : 0;
 
-                            if (source.GoodsStatus == GoodsStatus.Saled)
+                            if (source.prostatus == ConfigManager.ShouChu)
                             {
-                                sumJSSaled += source.Goods.SalePrice.HasValue ? source.Goods.SalePrice.Value : 0;
-                                // 这里有问题，因为商品销售记录可能多次，但source只取出最近一次销售记录情况，所以可能会漏掉一些
-                                if (!string.IsNullOrEmpty(source.SaledRecord.BatchId) && !dictJSCharge.ContainsKey(source.SaledRecord.BatchId))
-                                {
-                                    dictJSCharge.Add(source.SaledRecord.BatchId,
-                                                     source.SaledRecord.PayCharge.HasValue ? source.SaledRecord.PayCharge.Value : 0);
-                                }
+                                sumJHSaled += source.prosjiage.HasValue ? source.prosjiage.Value : 0;
+
                             }
                         }
                     });
@@ -1017,18 +950,13 @@ namespace Vogue2_IMS
         private void BtnQueryThisWeek_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             mCurrentQueryInfo.DateRange = QueryDateRange.ThisWeek;
-            //DateTime.Now.DayOfWeek
-
-            //mCurrentQueryInfo = GetViewDateQuery(mCurrentQueryInfo.DateRange);
-
+          
             StartRefreshGoodsView(this, null);
         }
 
         private void BtnQueryThisMonth_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             mCurrentQueryInfo.DateRange = QueryDateRange.ThisMonth;
-
-            //mCurrentQueryInfo = GetViewDateQuery(mCurrentQueryInfo.DateRange);
 
             StartRefreshGoodsView(this, null);
         }
@@ -1037,7 +965,6 @@ namespace Vogue2_IMS
         {
             mCurrentQueryInfo.DateRange = QueryDateRange.ThisQuarter;
 
-            //mCurrentQueryInfo = GetViewDateQuery(mCurrentQueryInfo.DateRange);
             StartRefreshGoodsView(this, null);
         }
 
@@ -1045,15 +972,12 @@ namespace Vogue2_IMS
         {
             mCurrentQueryInfo.DateRange = QueryDateRange.ThisYear;
 
-            //mCurrentQueryInfo = GetViewDateQuery(mCurrentQueryInfo.DateRange);
             StartRefreshGoodsView(this, null);
         }
 
         private void BtnQueryAll_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            mCurrentQueryInfo.DateRange = QueryDateRange.AllYear10;
-
-            //mCurrentQueryInfo = GetViewDateQuery(mCurrentQueryInfo.DateRange);
+            mCurrentQueryInfo.DateRange = QueryDateRange.AllYear10;        
             StartRefreshGoodsView(this, null);
         }
 
@@ -1061,20 +985,14 @@ namespace Vogue2_IMS
         {
             FmGoodsQueryCustomer fmQueryCustomer = new FmGoodsQueryCustomer();
 
-            //fmQueryCustomer.StartDate = mCurrentQueryInfo.StartPurchaseDate.HasValue ? mCurrentQueryInfo.StartPurchaseDate.Value : DateTime.Now;
-            //fmQueryCustomer.EndDate = mCurrentQueryInfo.EndPurchaseDate.HasValue ? mCurrentQueryInfo.EndPurchaseDate.Value : DateTime.Now;
-
-            fmQueryCustomer.StartDate = mCurrentQueryInfo.StartDate.HasValue ? mCurrentQueryInfo.StartDate.Value : DateTime.Now;
-            fmQueryCustomer.EndDate = mCurrentQueryInfo.EndDate.HasValue ? mCurrentQueryInfo.EndDate.Value : DateTime.Now;
+            fmQueryCustomer.StartDate = mCurrentQueryInfo.stime.HasValue ? mCurrentQueryInfo.stime.Value : DateTime.Now;
+            fmQueryCustomer.EndDate = mCurrentQueryInfo.etime.HasValue ? mCurrentQueryInfo.etime.Value : DateTime.Now;
 
             if (fmQueryCustomer.ShowDialog() == DialogResult.OK)
             {
-                ViewQueryGoodsInfo temp = new ViewQueryGoodsInfo();
-                //temp.StartPurchaseDate = temp.StartSaledDate = fmQueryCustomer.StartDate;
-                //temp.EndPurchaseDate = temp.EndSaledDate = fmQueryCustomer.EndDate;
-
-                temp.StartDate = fmQueryCustomer.StartDate;
-                temp.EndDate = fmQueryCustomer.EndDate;
+                var temp = new ProListRequest();             
+                temp.stime = fmQueryCustomer.StartDate;
+                temp.etime = fmQueryCustomer.EndDate;
 
                 mCurrentQueryInfo = temp;
                 mCurrentQueryInfo.DateRange = QueryDateRange.Customer;
@@ -1203,23 +1121,23 @@ namespace Vogue2_IMS
             var listSelectedGoods = GetSelectedGoodsInfos();
             if (listSelectedGoods == null) return;
 
-            if (listSelectedGoods.Count(item => item.Goods.SourceType != (int)SourceType.JinHuo) > 0)
+            if (listSelectedGoods.Count(item => item.protype == ConfigManager.JinHuo) > 0)
             {
                 XtraMessageBox.Show("进货回单里不能包含寄售商品!");
                 return;
             }
             List<PurchaseJhGoodsOrderInfo> listJHGoods = new List<PurchaseJhGoodsOrderInfo>();
-            var totalPrice = listSelectedGoods.Sum(item => item.Goods.PrimePrice);
+            var totalPrice = listSelectedGoods.Sum(item => item.projiage);
             listSelectedGoods.ForEach(item =>
             {
-                listJHGoods.Add(new PurchaseJhGoodsOrderInfo(item.GetPurchaseRecordInfo(), 1)
-                {
-                    TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0.00
-                });
-                listJHGoods.Add(new PurchaseJhGoodsOrderInfo(item.GetPurchaseRecordInfo(), 2)
-                {
-                    TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0.00
-                });
+                //listJHGoods.Add(new PurchaseJhGoodsOrderInfo(item.GetPurchaseRecordInfo(), 1)
+                //{
+                //    TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0.00
+                //});
+                //listJHGoods.Add(new PurchaseJhGoodsOrderInfo(item.GetPurchaseRecordInfo(), 2)
+                //{
+                //    TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0.00
+                //});
             });
             var receiptView = new FmReceiptView();
             receiptView.InitializeReceiptView<PurchaseJhGoodsOrderInfo>(listJHGoods);
@@ -1231,23 +1149,23 @@ namespace Vogue2_IMS
             var listSelectedGoods = GetSelectedGoodsInfos();
             if (listSelectedGoods == null) return;
 
-            if (listSelectedGoods.Count(item => item.Goods.SourceType != (int)SourceType.JiShou) > 0)
+            if (listSelectedGoods.Count(item => item.protype == ConfigManager.JiShou) > 0)
             {
                 XtraMessageBox.Show("寄售回单里不能包含自有商品!");
                 return;
             }
             List<PurchaseJsGoodsOrderInfo> listJsGoods = new List<PurchaseJsGoodsOrderInfo>();
-            var totalPrice = listSelectedGoods.Sum(item => item.Goods.PrimePrice);
+            var totalPrice = listSelectedGoods.Sum(item => item.projiage);
             listSelectedGoods.ForEach(item =>
             {
-                listJsGoods.Add(new PurchaseJsGoodsOrderInfo(item.GetPurchaseRecordInfo(), 1)
-                {
-                    TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0.00
-                });
-                listJsGoods.Add(new PurchaseJsGoodsOrderInfo(item.GetPurchaseRecordInfo(), 2)
-                {
-                    TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0.00
-                });
+                //listJsGoods.Add(new PurchaseJsGoodsOrderInfo(item.GetPurchaseRecordInfo(), 1)
+                //{
+                //    TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0.00
+                //});
+                //listJsGoods.Add(new PurchaseJsGoodsOrderInfo(item.GetPurchaseRecordInfo(), 2)
+                //{
+                //    TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0.00
+                //});
             });
             var receiptView = new FmReceiptView();
             receiptView.InitializeReceiptView<PurchaseJsGoodsOrderInfo>(listJsGoods);
@@ -1259,30 +1177,30 @@ namespace Vogue2_IMS
             var listSelectedGoods = GetSelectedGoodsInfos();
             if (listSelectedGoods == null) return;
 
-            if (listSelectedGoods.Count(item => item.GoodsStatus == GoodsStatus.In) > 0)
+            if (listSelectedGoods.Count(item => item.prostatus == ConfigManager.ZaiKu) > 0)
             {
                 XtraMessageBox.Show("未售出商品不能在此处打印销售回单!");
                 return;
             }
 
             var listSaledOrderInfo = new List<SaledGoodsOrderInfo>();
-            var totalMarkPrice = listSelectedGoods.Sum(record => record.Goods.MarkPrice);
-            var totalPrice = listSelectedGoods.Sum(record => record.Goods.SalePrice);
-            var totalDiscount = listSelectedGoods.Sum(record => record.Goods.Discount);
+            var totalMarkPrice = listSelectedGoods.Sum(record => record.probjiage);
+            var totalPrice = listSelectedGoods.Sum(record => record.prosjiage);
+            var totalDiscount = listSelectedGoods.Sum(record => record.prozhekou);
             listSelectedGoods.ForEach(goods =>
             {
-                listSaledOrderInfo.Add(new SaledGoodsOrderInfo(goods.GetSaledGoodsInfo(), 1)
-                {
-                    TotalMarkPrice = totalMarkPrice.HasValue ? totalMarkPrice.Value : (decimal)0,
-                    TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0,
-                    TotalDiscount = totalDiscount.HasValue ? totalDiscount.Value : (decimal)0
-                });
-                listSaledOrderInfo.Add(new SaledGoodsOrderInfo(goods.GetSaledGoodsInfo(), 2)
-                {
-                    TotalMarkPrice = totalMarkPrice.HasValue ? totalMarkPrice.Value : (decimal)0,
-                    TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0,
-                    TotalDiscount = totalDiscount.HasValue ? totalDiscount.Value : (decimal)0
-                });
+                //listSaledOrderInfo.Add(new SaledGoodsOrderInfo(goods.GetSaledGoodsInfo(), 1)
+                //{
+                //    TotalMarkPrice = totalMarkPrice.HasValue ? totalMarkPrice.Value : (decimal)0,
+                //    TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0,
+                //    TotalDiscount = totalDiscount.HasValue ? totalDiscount.Value : (decimal)0
+                //});
+                //listSaledOrderInfo.Add(new SaledGoodsOrderInfo(goods.GetSaledGoodsInfo(), 2)
+                //{
+                //    TotalMarkPrice = totalMarkPrice.HasValue ? totalMarkPrice.Value : (decimal)0,
+                //    TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0,
+                //    TotalDiscount = totalDiscount.HasValue ? totalDiscount.Value : (decimal)0
+                //});
             });
 
             var receiptView = new FmReceiptView();

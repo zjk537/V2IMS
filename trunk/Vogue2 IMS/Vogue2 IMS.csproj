@@ -490,12 +490,15 @@
     <Content Include="Images\SpreadTime_16.png" />
     <Content Include="Images\SpreadTime_32.png" />
     <Content Include="Images\Update_32.png" />
+    <None Include="Properties\DataSources\Vogue2_IMS.Business.ProBaseInfo.datasource" />
+    <None Include="Properties\DataSources\Vogue2_IMS.Business.ProInfo.datasource" />
     <None Include="Resources\paper-bag.png" />
     <None Include="Resources\shopping.png" />
     <None Include="Resources\shopping_bag.png" />
     <None Include="Resources\shopping-basket-full.png" />
     <None Include="Resources\timg %281%29.jpg" />
     <None Include="Resources\timg.jpg" />
+    <None Include="Resources\search_d.png" />
     <Content Include="权限备注说明.txt" />
     <None Include="Properties\DataSources\Vogue2_IMS.Business.ViewModel.ViewMainGoodsInfos.datasource" />
     <None Include="Resources\login_V2.png">

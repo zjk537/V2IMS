@@ -25,12 +25,12 @@ namespace Vogue2_IMS.GoodsManager
     {
         #region property
 
-        List<ViewMainGoodsInfos> _DataSource = new List<ViewMainGoodsInfos>();
-        public List<ViewMainGoodsInfos> DataSource
+        List<ProInfo> _DataSource = new List<ProInfo>();
+        public List<ProInfo> DataSource
         {
             get
             {
-                if (_DataSource == null) _DataSource = new List<ViewMainGoodsInfos>();
+                if (_DataSource == null) _DataSource = new List<ProInfo>();
 
                 return _DataSource;
             }
@@ -87,7 +87,7 @@ namespace Vogue2_IMS.GoodsManager
 
         #endregion
 
-        public FmGoodsMainView()
+        public FmGoodsMainView(bool fromConfig=false)
         {
             InitializeComponent();
             InitializeNavBar();
@@ -95,10 +95,11 @@ namespace Vogue2_IMS.GoodsManager
             gridViewControl.DataSource = DataSource;
 
             DevViewDefine.ResetToNormalView(GridDefaultView, false, true, false);
-            DevViewDefine.ResetToNormalView(GridLayoutView, false, true, false);
-            DevViewDefine.ResetToNormalView(GridAdvBandedView, false, true, false);
+            //DevViewDefine.ResetToNormalView(GridLayoutView, false, true, false);
+            //DevViewDefine.ResetToNormalView(GridAdvBandedView, false, true, false);
 
-            SetDefaultMainView();
+            if (!fromConfig)
+                SetDefaultMainView();
 
             if (MainView != null)
             {
@@ -106,7 +107,6 @@ namespace Vogue2_IMS.GoodsManager
                 MainView.ActiveFilterString = GetViewConditionStr(Condition);
             }
         }
-
 
         public void RefreshData()
         {
@@ -140,7 +140,7 @@ namespace Vogue2_IMS.GoodsManager
             get
             {
                 return Path.Combine(SharedVariables.Instance.LayoutXmlPath, string.Format("UserSystemDefaultLayout.{0}.{1}.{2}.xml",
-                     SharedVariables.Instance.LoginUser.User.Name, this.Name, this.MainView.Name));
+                     ConfigManager.LoginUser.username, this.Name, this.MainView.Name));
             }
         }
 
@@ -157,7 +157,7 @@ namespace Vogue2_IMS.GoodsManager
 
                     foreach (var file in filesTemp)
                     {
-                        if (file.Contains(string.Format("CustomerLayout.{0}.{1}", SharedVariables.Instance.LoginUser.User.Name, this.Name)))
+                        if (file.Contains(string.Format("CustomerLayout.{0}.{1}", ConfigManager.LoginUser.username, this.Name)))
                             using (StringReader strReader = new StringReader(File.ReadAllText(file, Encoding.Unicode)))
                             {
                                 try
@@ -191,7 +191,7 @@ namespace Vogue2_IMS.GoodsManager
             }
             else
             {
-                customerViewTemp.UserName = SharedVariables.Instance.LoginUser.User.Name;
+                customerViewTemp.UserName = ConfigManager.LoginUser.username;
                 customerViewTemp.FromUIName = this.Name;
                 customerViewTemp.BaseViewName = MainView.Name;
                 
@@ -238,7 +238,7 @@ namespace Vogue2_IMS.GoodsManager
             {
                 if (!File.Exists(UserSystemViewLayoutFile))
                 {
-                    var tempThis = new FmGoodsMainView();
+                    var tempThis = new FmGoodsMainView(true);
                     if (MainView.Name == GridDefaultView.Name)
                     {
                         tempThis.MainView = tempThis.GridDefaultView;
@@ -320,8 +320,8 @@ namespace Vogue2_IMS.GoodsManager
 
         #region Default View
 
-        ViewQueryGoodsInfo mDefaultQueryInfo = null;
-        public ViewQueryGoodsInfo DefaultQueryInfo
+        ProListRequest mDefaultQueryInfo = null;
+        public ProListRequest DefaultQueryInfo
         {
             get { return mDefaultQueryInfo; }
             set
@@ -339,7 +339,7 @@ namespace Vogue2_IMS.GoodsManager
             }
         }
  
-        string DefaultViewPath { get { return Path.Combine(SharedVariables.Instance.LayoutXmlPath, string.Format("DefaultMainViewSet.{0}.{1}.config", this.Name,SharedVariables.Instance.LoginUser.User.Name)); } }
+        string DefaultViewPath { get { return Path.Combine(SharedVariables.Instance.LayoutXmlPath, string.Format("DefaultMainViewSet.{0}.{1}.config", this.Name,ConfigManager.LoginUser.username)); } }
 
         /// <summary>
         /// 保存默认视图选项
@@ -516,6 +516,11 @@ namespace Vogue2_IMS.GoodsManager
 
             return returnStr;
         }
+
+        private void viewMainGoodsInfosBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
     [Serializable]
@@ -537,7 +542,7 @@ namespace Vogue2_IMS.GoodsManager
 
         public string DefaultMainViewName { get; set; }
 
-        public ViewQueryGoodsInfo DefaultQuery { get; set; }
+        public ProListRequest DefaultQuery { get; set; }
     }
 
     [Serializable]

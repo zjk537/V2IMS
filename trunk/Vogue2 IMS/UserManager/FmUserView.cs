@@ -42,7 +42,7 @@ namespace Vogue2_IMS.UserManager
                 if (btnAdd != null)
                 {
                     btnAdd.ItemClick += new ItemClickEventHandler(btnAdd_ItemClick);
-                    btnAdd.Enabled = SharedVariables.Instance.LoginUser.User.RoleId == SharedVariables.AdminRoleId;
+                    //btnAdd.Enabled = SharedVariables.Instance.LoginUser.User.RoleId == SharedVariables.AdminRoleId;
                 }
             }
         }
@@ -110,10 +110,10 @@ namespace Vogue2_IMS.UserManager
 
                     XtraMessageBox.Show("密码重置成功，默认为123456", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    if (SelectedUser.User.Id == SharedVariables.Instance.LoginUser.User.Id)
-                    {
-                        SharedVariables.Instance.LoginUser.User.Pwd = SelectedUser.User.Pwd;
-                    }
+                    //if (SelectedUser.User.Id == SharedVariables.Instance.LoginUser.User.Id)
+                    //{
+                    //    SharedVariables.Instance.LoginUser.User.Pwd = SelectedUser.User.Pwd;
+                    //}
 
                 }
                 catch(Exception ex)
@@ -163,7 +163,7 @@ namespace Vogue2_IMS.UserManager
             {
                 //SelectedUser = UserGridDefautlView.GetRow(UserGridDefautlView.GetSelectedRows().First()) as UserShopRoleInfo;
                 var selectUser = SelectedUser.User;
-                var loginUser = SharedVariables.Instance.LoginUser.User;
+                var loginUser = ConfigManager.LoginUser; //SharedVariables.Instance.LoginUser.User;
 
                 //btnResetPwd.Enabled = loginUser.RoleId == SharedVariables.AdminRoleId
                 //    || (loginUser.RoleId == SharedVariables.PMRoleId &&
@@ -185,17 +185,17 @@ namespace Vogue2_IMS.UserManager
             {
                 //SelectedUser = UserGridDefautlView.GetRow(UserGridDefautlView.GetSelectedRows().First()) as UserShopRoleInfo;
                 var selectUser = SelectedUser.User;
-                var loginUser = SharedVariables.Instance.LoginUser.User;
+                var loginUser = ConfigManager.LoginUser; ;
 
-                btnResetPwd.Enabled = loginUser.RoleId == SharedVariables.AdminRoleId
-                    || (loginUser.RoleId == SharedVariables.PMRoleId &&
-                        selectUser.ShopId == loginUser.ShopId && loginUser.Id != selectUser.Id);
+                //btnResetPwd.Enabled = loginUser.RoleId == SharedVariables.AdminRoleId
+                //    || (loginUser.RoleId == SharedVariables.PMRoleId &&
+                //        selectUser.ShopId == loginUser.ShopId && loginUser.Id != selectUser.Id);
 
-                btnUpdate.Enabled = loginUser.RoleId == SharedVariables.AdminRoleId
-                    || (loginUser.RoleId == SharedVariables.PMRoleId &&
-                        selectUser.ShopId == loginUser.ShopId);
+                //btnUpdate.Enabled = loginUser.RoleId == SharedVariables.AdminRoleId
+                //    || (loginUser.RoleId == SharedVariables.PMRoleId &&
+                //        selectUser.ShopId == loginUser.ShopId);
 
-                BtnAdd.Enabled = loginUser.RoleId == SharedVariables.AdminRoleId;
+                //BtnAdd.Enabled = loginUser.RoleId == SharedVariables.AdminRoleId;
             }
         }
     }

@@ -25,10 +25,10 @@ namespace Vogue2_IMS.UserManager
             string newPwd = TxtNewPwd.Text.Trim();
             string newPwd2 = TxtNewPwd2.Text.Trim();
 
-            if (!oldPwd.Equals(SharedVariables.Instance.LoginUser.User.Pwd))
-            {
-                mErrorProvider.SetError(TxtOldPwd, "原始密码不符", ErrorType.Warning);
-            }
+            //if (!oldPwd.Equals(SharedVariables.Instance.LoginUser.User.Pwd))
+            //{
+            //    mErrorProvider.SetError(TxtOldPwd, "原始密码不符", ErrorType.Warning);
+            //}
 
             if (string.IsNullOrEmpty(newPwd))
             {
@@ -52,9 +52,9 @@ namespace Vogue2_IMS.UserManager
         {
             if (!ValidatorFail())
             {
-                SharedVariables.Instance.LoginUser.User.IdSpecify = true;
-                SharedVariables.Instance.LoginUser.User.Pwd = TxtNewPwd.Text;
-                UserBusiness.Instance.UpdateUser(SharedVariables.Instance.LoginUser.User);
+                //SharedVariables.Instance.LoginUser.User.IdSpecify = true;
+                //SharedVariables.Instance.LoginUser.User.Pwd = TxtNewPwd.Text;
+                //UserBusiness.Instance.UpdateUser(SharedVariables.Instance.LoginUser.User);
 
                 this.DialogResult = System.Windows.Forms.DialogResult.OK;
             }

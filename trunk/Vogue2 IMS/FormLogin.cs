@@ -54,14 +54,17 @@ namespace Vogue2_IMS
         {
             if (!ValidatingFail())
             {
-                UserInfo user = UserBusiness.Instance.GetUserByName(this.TxtUserName.Text.Trim(), this.TxtPwd.Text.Trim());
-                if (user == null)
+                try
                 {
-                    XtraMessageBox.Show("用户名或密码不正确，请重新输入！");
+
+                    ConfigManager.Login(this.TxtUserName.Text.Trim(), this.TxtPwd.Text.Trim());
+                }
+                catch (Exception ex)
+                {
+                    XtraMessageBox.Show(ex.Message);
                     return;
                 }
-
-                SharedVariables.Instance.LoginUser.User = user;
+              
 
                 new LoginHandler(Login).BeginInvoke(new AsyncCallback(LoginCallBack), null);
             }

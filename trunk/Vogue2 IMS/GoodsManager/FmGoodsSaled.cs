@@ -52,8 +52,8 @@ namespace Vogue2_IMS.GoodsManager
                     if (string.IsNullOrEmpty(saledGoodsInfo.SaledRecord.Operator))
                     {
                         saledGoodsInfo.SaledRecord.CreatedDate = DateTime.Now;
-                        saledGoodsInfo.SaledRecord.UserId = SharedVariables.Instance.LoginUser.User.Id;
-                        saledGoodsInfo.SaledRecord.Operator = SharedVariables.Instance.LoginUser.User.Name;
+                        saledGoodsInfo.SaledRecord.UserId = ConfigManager.LoginUser.uid; //SharedVariables.Instance.LoginUser.User.Id;
+                        saledGoodsInfo.SaledRecord.Operator = ConfigManager.LoginUser.username; //SharedVariables.Instance.LoginUser.User.Name;
                     }
                 });
             InitializeComponentExtend();
@@ -215,7 +215,7 @@ namespace Vogue2_IMS.GoodsManager
                     i++;
                     goods.PayType = selectedPayType;
                     goods.SaledRecord.PayCharge = i == 1 ? (goods.SaledRecord.PayCharge.HasValue ? goods.SaledRecord.PayCharge.Value + bankCharge : bankCharge) : 0;
-                    goods.SaledRecord.UserId = SharedVariables.Instance.LoginUser.User.Id;
+                    goods.SaledRecord.UserId = ConfigManager.LoginUser.uid; //SharedVariables.Instance.LoginUser.User.Id;
                     goods.SaledRecord.CustomerName = txtCustomerName.Text.Trim();
                     goods.SaledRecord.CustomerPhone = txtCustomerPhone.Text.Trim();
                     //在库商品，改为售出状态， 
@@ -320,13 +320,13 @@ namespace Vogue2_IMS.GoodsManager
             {
                 var dataIndex = MainView.GetDataSourceRowIndex(MainView.GetSelectedRows()[0]);
 
-                FmGoodsSaledMondify goodsInfo = new FmGoodsSaledMondify(mListGoods[dataIndex]);
-                if (goodsInfo.ShowDialog() == DialogResult.OK)
-                {
-                    mListGoods[dataIndex] = goodsInfo.SaledGoodsInfo;
-                    MainView.RefreshData();
-                    ListGoods_CollectionChanged(mListGoods, null);
-                }
+                //FmGoodsSaledMondify goodsInfo = new FmGoodsSaledMondify(mListGoods[dataIndex]);
+                //if (goodsInfo.ShowDialog() == DialogResult.OK)
+                //{
+                //    mListGoods[dataIndex] = goodsInfo.SaledGoodsInfo;
+                //    MainView.RefreshData();
+                //    ListGoods_CollectionChanged(mListGoods, null);
+                //}
             }
         }
 
@@ -349,12 +349,12 @@ namespace Vogue2_IMS.GoodsManager
                     //取得选定行信息  
                     var goodsInfo = gridMainView.GetRow(hInfo.RowHandle) as SaledGoodsInfo;
 
-                    var fmGoodsInfo = new FmGoodsSaledMondify(goodsInfo);
-                    if (fmGoodsInfo.ShowDialog() == DialogResult.OK)
-                    {
-                        var result = fmGoodsInfo.SaledGoodsInfo;
-                        Business.SaleGoodsBusiness.Instance.UpdateSaledGoods(result);
-                    }
+                    //var fmGoodsInfo = new FmGoodsSaledMondify(goodsInfo);
+                    //if (fmGoodsInfo.ShowDialog() == DialogResult.OK)
+                    //{
+                    //    var result = fmGoodsInfo.SaledGoodsInfo;
+                    //    Business.SaleGoodsBusiness.Instance.UpdateSaledGoods(result);
+                    //}
                 }
             }
         }
@@ -399,8 +399,8 @@ namespace Vogue2_IMS.GoodsManager
                             {
                                 CreatedDate = DateTime.Now,
                                 GoodsId = goods.Id,
-                                UserId = SharedVariables.Instance.LoginUser.User.Id,
-                                Operator = SharedVariables.Instance.LoginUser.User.Name,
+                                UserId = ConfigManager.LoginUser.uid, //SharedVariables.Instance.LoginUser.User.Id,
+                                Operator = ConfigManager.LoginUser.username,
                             }
                         };
 

@@ -16,108 +16,108 @@ namespace Vogue2_IMS.GoodsManager
         /// <summary>
         /// 编辑对象
         /// </summary>
-        SaledGoodsInfo newSaledGoodsInfo = new SaledGoodsInfo();
-        GoodsInfo newGoodsInfo = new GoodsInfo();
+        ProSalesInfo newProSalesInfo = new ProSalesInfo();
+        ProInfo ProInfo = new ProInfo();
         /// <summary>
         /// 原始对象（仅在处于编辑时有值）
         /// </summary>
         //GoodsInfo mGoodsInfo = null;
-        SaledGoodsInfo mSaledGoodsInfo = new SaledGoodsInfo();
+        ProSalesInfo mProSalesInfo = new ProSalesInfo();
         /// <summary>
         /// 编辑好的对象
         /// </summary>
-        public SaledGoodsInfo SaledGoodsInfo
+        public ProSalesInfo SaledGoodsInfo
         {
             get
             {
-                return newSaledGoodsInfo;
+                return newProSalesInfo;
             }
         }
 
-        public FmGoodsSaledMondify(GoodsInfo goodsInfo)
+        public FmGoodsSaledMondify(ProInfo proInfo)
         {
             InitializeComponent();
 
-            InitializeControls(new SaledGoodsInfo()
-            {
-                Goods = goodsInfo,
-                LoginUser = SharedVariables.Instance.LoginUser.User
-            });
+            this.ProInfo = proInfo;
+            newProSalesInfo = this.ProInfo.ProSalesInfo;
+            mProSalesInfo = this.ProInfo.ProSalesInfo;
+
+            InitializeControls();
         }
 
-        public FmGoodsSaledMondify(SaledGoodsInfo saledGoodsInfo)
+        private void InitializeControls()
         {
-            InitializeComponent();
-
-            InitializeControls(saledGoodsInfo);
-        }
-
-        private void InitializeControls(SaledGoodsInfo saledGoodsInfo = null)
-        {
-            if (saledGoodsInfo != null)
-            {
-                newSaledGoodsInfo = saledGoodsInfo.Clone();
-                //newSaledGoodsInfo.SaledRecord.Operator = SharedVariables.Instance.LoginUser.User.Name;
-                mSaledGoodsInfo = saledGoodsInfo;
-            }
-
-            this.ComboxGoodsOperator.Properties.Items.AddRange(Business.SharedVariables.Instance.UserInfos);
-            //this.ComboxPayType.Properties.Items.AddRange(Business.SharedVariables.Instance.PayTypeInfos);
+            this.outjuser.Properties.Items.AddRange(UserWebBusiness.GetUserInfoList());
+            this.paystatus.Properties.Items.AddRange(ConfigManager.ProPayStatus);
 
             ControlsBinding();
         }
 
         private void ControlsBinding()
         {
-            //this.Text = mPurchaseGoodsInfo == null ? "商品详情-添加" : "商品详情-编辑";
             this.Btn_OK.Click += btnOk_Click;
 
-            newSaledGoodsInfo.Goods.Discount = newSaledGoodsInfo.Goods.Discount ?? 0;
-            newSaledGoodsInfo.Goods.MarkPrice = newSaledGoodsInfo.Goods.MarkPrice ?? 0;
-            newSaledGoodsInfo.Goods.Prepay = newSaledGoodsInfo.Goods.Prepay ?? 0;
-            newSaledGoodsInfo.Goods.SalePrice = newSaledGoodsInfo.Goods.SalePrice ?? 0;
+            profenlei.DataBindings.Add("Text", newProSalesInfo, "fenlei");
+            projcode.DataBindings.Add("Text", newProSalesInfo, "jcode");
+            proname.DataBindings.Add("Text", newProSalesInfo, "jpname");
+            probjiage.DataBindings.Add("Text", newProSalesInfo, "bjiage");
 
-            var goods = newSaledGoodsInfo.Goods;
-            TxtGoodsCode.DataBindings.Add("Text", goods, "Code");
-            TxtGoodsName.DataBindings.Add("Text", goods, "Name");
+            outcustname.DataBindings.Add("Text", newProSalesInfo, "custname");
+            outcustphone.DataBindings.Add("Text", newProSalesInfo, "custphone");
+            zhekou.DataBindings.Add("Text", newProSalesInfo, "zhekou");
+            sjiage.DataBindings.Add("Text", newProSalesInfo, "jpsjiage");
+            paystatus.DataBindings.Add("Text", newProSalesInfo, "paytype");
+            yufu.DataBindings.Add("Text", newProSalesInfo, "yufu");
+            outjuser.DataBindings.Add("Text", newProSalesInfo, "juname");  
 
-            var category = newSaledGoodsInfo.Category;
-            TxtGoodsCategory.DataBindings.Add("Text", category, "Name");
+            //newProSalesInfo.Goods.Discount = newProSalesInfo.Goods.Discount ?? 0;
+            //newProSalesInfo.Goods.MarkPrice = newProSalesInfo.Goods.MarkPrice ?? 0;
+            //newProSalesInfo.Goods.Prepay = newProSalesInfo.Goods.Prepay ?? 0;
+            //newProSalesInfo.Goods.SalePrice = newProSalesInfo.Goods.SalePrice ?? 0;
 
-            var saledRecord = newSaledGoodsInfo.SaledRecord;
-            ComboxGoodsOperator.DataBindings.Add("Text", saledRecord, "Operator");
-            if (string.IsNullOrEmpty(ComboxGoodsOperator.Text))
-                ComboxGoodsOperator.Text = SharedVariables.Instance.LoginUser.User.Name;
+            //var goods = newProSalesInfo.Goods;
+            //projcode.DataBindings.Add("Text", goods, "Code");
+            //proname.DataBindings.Add("Text", goods, "Name");
 
-            //ComboxPayType.DataBindings.Add("EditValue", newSaledGoodsInfo, "PayType");
+            //var category = newProSalesInfo.Category;
+            //profenlei.DataBindings.Add("Text", category, "Name");
 
-            //TxtGoodsDiscount.DataBindings.Add("EditValue", newSaledGoodsInfo, "Goods.Discount.Value");
-            TxtGoodsMarkPrice.EditValue = newSaledGoodsInfo.Goods.MarkPrice;
-            TxtGoodsDiscount.EditValue = newSaledGoodsInfo.Goods.Discount;
-            TxtGoodsPrepay.EditValue = newSaledGoodsInfo.Goods.Prepay;
-            TxtRealSaled.EditValue = newSaledGoodsInfo.Goods.MarkPrice - newSaledGoodsInfo.Goods.Discount;
-            //GoodsPictureImage.EditValue = newSaledGoodsInfo.GoodsImageBytes;
-            TxtGoodsDiscount.EditValue = newSaledGoodsInfo.Goods.Discount.HasValue ? newSaledGoodsInfo.Goods.Discount.Value : (decimal)0;
-            GoodsPictureImage.EditValue = this.GetGoodsLargeImage();
-            TxtRealSaled.Enabled =
-            TxtGoodsDiscount.Enabled =
-            ComboxStatus.Enabled =
-            ComboxGoodsOperator.Enabled = SharedVariables.Instance.LoginUser.User.RoleId == (int)SharedVariables.AdminRoleId
-                                        || (newSaledGoodsInfo.Goods.Status != (int)GoodsStatus.Catch 
-                                        || newSaledGoodsInfo.Goods.StatusSpecify);//预订商品不可编辑
+            //var saledRecord = newProSalesInfo.SaledRecord;
+            //outjuser.DataBindings.Add("Text", saledRecord, "Operator");
+            //if (string.IsNullOrEmpty(outjuser.Text))
+            //    outjuser.Text = ConfigManager.LoginUser.username; //SharedVariables.Instance.LoginUser.User.Name;
 
-            var index = newSaledGoodsInfo.Goods.Status - (int)GoodsStatus.Catch;
-            ComboxStatus.SelectedIndex = index < 0 ? 1 : index;//默认售出
+            ////ComboxPayType.DataBindings.Add("EditValue", newSaledGoodsInfo, "PayType");
+
+            ////TxtGoodsDiscount.DataBindings.Add("EditValue", newSaledGoodsInfo, "Goods.Discount.Value");
+            //probjiage.EditValue = newProSalesInfo.bjiage;
+            //zhekou.EditValue = newProSalesInfo.Goods.Discount;
+            //yufu.EditValue = newProSalesInfo.Goods.Prepay;
+            //sjiage.EditValue = newProSalesInfo.Goods.MarkPrice - newProSalesInfo.Goods.Discount;
+            ////GoodsPictureImage.EditValue = newSaledGoodsInfo.GoodsImageBytes;
+            //zhekou.EditValue = newProSalesInfo.Goods.Discount.HasValue ? newProSalesInfo.Goods.Discount.Value : (decimal)0;
+            //GoodsPictureImage.EditValue = this.GetGoodsLargeImage();
+            //sjiage.Enabled =
+            //zhekou.Enabled =
+            //paystatus.Enabled =
+            //outjuser.Enabled = 
+            ////SharedVariables.Instance.LoginUser.User.RoleId == (int)SharedVariables.AdminRoleId
+            ////                            || 
+            //                            (newProSalesInfo.Goods.Status != (int)GoodsStatus.Catch 
+            //                            || newProSalesInfo.Goods.StatusSpecify);//预订商品不可编辑
+
+            //var index = newProSalesInfo.Goods.Status - (int)GoodsStatus.Catch;
+            //paystatus.SelectedIndex = index < 0 ? 1 : index;//默认售出
         }
 
         private byte[] GetGoodsLargeImage()
         {
-            if (newSaledGoodsInfo.Goods.Id > 0 && string.IsNullOrEmpty(newSaledGoodsInfo.Goods.Image))
-            {
-                newSaledGoodsInfo.Goods.Image = GoodsBusiness.Instance.GetGoodsImage(newSaledGoodsInfo.Goods.Id);
-            }
-            if (!string.IsNullOrEmpty(newSaledGoodsInfo.Goods.Image))
-                return Convert.FromBase64String(newSaledGoodsInfo.Goods.Image);
+        //    if (newProSalesInfo.Goods.Id > 0 && string.IsNullOrEmpty(newProSalesInfo.Goods.Image))
+        //    {
+        //        newProSalesInfo.Goods.Image = GoodsBusiness.Instance.GetGoodsImage(newProSalesInfo.Goods.Id);
+        //    }
+        //    if (!string.IsNullOrEmpty(newProSalesInfo.Goods.Image))
+        //        return Convert.FromBase64String(newProSalesInfo.Goods.Image);
 
             return new List<byte>().ToArray();
         }
@@ -126,35 +126,31 @@ namespace Vogue2_IMS.GoodsManager
         {
             mErrorProvider.ClearErrors();
 
-            if (newSaledGoodsInfo.Goods.Discount + newSaledGoodsInfo.Goods.SalePrice != (newSaledGoodsInfo.Goods.MarkPrice ?? 0))
+            if (newProSalesInfo.zhekou + newProSalesInfo.jpsjiage != newProSalesInfo.bjiage)
             {
-                mErrorProvider.SetError(this.TxtGoodsDiscount, "请调整折扣", ErrorType.Warning);
-                mErrorProvider.SetError(this.TxtRealSaled, "请调整实售价格", ErrorType.Warning);
+                mErrorProvider.SetError(this.zhekou, "请调整折扣", ErrorType.Warning);
+                mErrorProvider.SetError(this.sjiage, "请调整实售价格", ErrorType.Warning);
             }
 
-            if (newSaledGoodsInfo.Goods.Prepay > newSaledGoodsInfo.Goods.SalePrice)
+            if (newProSalesInfo.yufu > newProSalesInfo.jpsjiage)
             {
-                mErrorProvider.SetError(this.TxtGoodsPrepay, "预付应该<=实售", ErrorType.Warning);
+                mErrorProvider.SetError(this.yufu, "预付应该<=实售", ErrorType.Warning);
             }
 
             //预付每次累加还是始终为总和???
-            if (newSaledGoodsInfo.Goods.Prepay < (mSaledGoodsInfo.Goods.Prepay ?? 0))
+            if (newProSalesInfo.yufu < mProSalesInfo.yufu)
             {
-                mErrorProvider.SetError(this.TxtGoodsPrepay, "小于上次预付", ErrorType.Warning);
+                mErrorProvider.SetError(this.yufu, "小于上次预付", ErrorType.Warning);
             }
-
-            newSaledGoodsInfo.Goods.PrepaySpecify = newSaledGoodsInfo.Goods.Prepay == (mSaledGoodsInfo.Goods.Prepay ?? 0);
-
-            if (ComboxStatus.SelectedIndex < 0)
+          
+            if (string.IsNullOrEmpty(paystatus.Text))
             {
-                mErrorProvider.SetError(this.ComboxStatus, "请选择售出方式", ErrorType.Warning);
-            }
-            else newSaledGoodsInfo.Goods.Status = SharedVariables.GoodsStatusName.IndexOf(ComboxStatus.Text.Trim());
+                mErrorProvider.SetError(this.paystatus, "请选择售出方式", ErrorType.Warning);
+            }          
 
-
-            if (string.IsNullOrEmpty(this.ComboxGoodsOperator.Text.Trim()))
+            if (string.IsNullOrEmpty(this.outjuser.Text.Trim()))
             {
-                mErrorProvider.SetError(this.ComboxGoodsOperator, "请选择经手人", ErrorType.Warning);
+                mErrorProvider.SetError(this.outjuser, "请选择经手人", ErrorType.Warning);
             }
 
             return mErrorProvider.HasErrors;
@@ -165,49 +161,34 @@ namespace Vogue2_IMS.GoodsManager
             if (!ValidatFail())
             {
                 //商品被取回不修改任何当前信息
-                if (newSaledGoodsInfo.Goods.Status == (int)GoodsStatus.GetOut)
-                {
-                    newSaledGoodsInfo = new SaledGoodsInfo() { Goods = mSaledGoodsInfo.Goods };
-                    newSaledGoodsInfo.Goods.Status = (int)GoodsStatus.GetOut;
-                }
-                else
+                if (newProSalesInfo.paytype!= ConfigManager.QuHui)
                 {
                     //???是否预付款完成修改商品状态为售出                    
-                    if (newSaledGoodsInfo.Goods.Prepay == newSaledGoodsInfo.Goods.SalePrice)
+                    if (newProSalesInfo.yufu == newProSalesInfo.jpsjiage)
                     {
-                        newSaledGoodsInfo.Goods.Status = (int)GoodsStatus.Saled;
+                        newProSalesInfo.paytype = ConfigManager.ShouChu;
                     }
                 }
 
-                if (!newSaledGoodsInfo.Equals(mSaledGoodsInfo))
-                {
-                    mSaledGoodsInfo = newSaledGoodsInfo.Clone();
+                GoodsWebBusiness.ProOut(newProSalesInfo);
 
-                    this.DialogResult = DialogResult.OK;
-                }
-                else
-                {
-                    if (XtraMessageBox.Show("商品信息无更新，继续编辑请点击Y退出点击N", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
-                    {
-                        this.DialogResult = DialogResult.Cancel;
-                    }
-                }
+                this.DialogResult = DialogResult.OK;
             }
         }
 
         private void TextEdit_TextChanged(object sender, EventArgs e)
         {
-            newSaledGoodsInfo.Goods.Discount = (decimal)TxtGoodsDiscount.EditValue;
-            newSaledGoodsInfo.Goods.SalePrice = (decimal)TxtRealSaled.EditValue;
-            newSaledGoodsInfo.Goods.Prepay = (decimal)TxtGoodsPrepay.EditValue;
+            //newProSalesInfo.Goods.Discount = (decimal)zhekou.EditValue;
+            //newProSalesInfo.Goods.SalePrice = (decimal)sjiage.EditValue;
+            //newProSalesInfo.Goods.Prepay = (decimal)yufu.EditValue;
 
-            if (sender == TxtRealSaled)
+            if (sender == sjiage)
             {
-                TxtGoodsDiscount.EditValue = newSaledGoodsInfo.Goods.MarkPrice - newSaledGoodsInfo.Goods.SalePrice;
+                zhekou.EditValue = newProSalesInfo.bjiage - newProSalesInfo.jpsjiage;
             }
-            if (sender == TxtGoodsDiscount)
+            if (sender == zhekou)
             {
-                TxtRealSaled.EditValue = newSaledGoodsInfo.Goods.MarkPrice - newSaledGoodsInfo.Goods.Discount;
+                sjiage.EditValue = newProSalesInfo.bjiage - newProSalesInfo.zhekou;
             }
 
             ValidatFail();
@@ -219,5 +200,7 @@ namespace Vogue2_IMS.GoodsManager
 
             ValidatFail();
         }
+
+   
     }
 }

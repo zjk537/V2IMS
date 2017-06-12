@@ -127,7 +127,7 @@ namespace Vogue2_IMS.Business.BusinessModel
             {
                 if (mShop == null)
                 {
-                    mShop = SharedVariables.Instance.ShopInfos.FirstOrDefault(shop => shop.Id == SharedVariables.Instance.LoginUser.User.ShopId);
+                    //mShop = SharedVariables.Instance.ShopInfos.FirstOrDefault(shop => shop.Id == SharedVariables.Instance.LoginUser.User.ShopId);
                 }
                 mShop = mShop ?? new ShopInfo();
                 return mShop;

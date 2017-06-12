@@ -693,7 +693,7 @@ namespace Vogue2_IMS.GoodsManager
             this.layoutViewField_cardColCatetory.Location = new System.Drawing.Point(228, 20);
             this.layoutViewField_cardColCatetory.Name = "layoutViewField_cardColCatetory";
             this.layoutViewField_cardColCatetory.Size = new System.Drawing.Size(328, 20);
-            this.layoutViewField_cardColCatetory.TextSize = new System.Drawing.Size(52, 13);
+            this.layoutViewField_cardColCatetory.TextSize = new System.Drawing.Size(52, 14);
             this.layoutViewField_cardColCatetory.TextToControlDistance = 5;
             // 
             // layoutViewColumn2
@@ -709,7 +709,7 @@ namespace Vogue2_IMS.GoodsManager
             this.layoutViewField_cardColGoodsCode.Location = new System.Drawing.Point(228, 0);
             this.layoutViewField_cardColGoodsCode.Name = "layoutViewField_cardColGoodsCode";
             this.layoutViewField_cardColGoodsCode.Size = new System.Drawing.Size(328, 20);
-            this.layoutViewField_cardColGoodsCode.TextSize = new System.Drawing.Size(52, 13);
+            this.layoutViewField_cardColGoodsCode.TextSize = new System.Drawing.Size(52, 14);
             this.layoutViewField_cardColGoodsCode.TextToControlDistance = 5;
             // 
             // layoutViewColumn3
@@ -725,7 +725,7 @@ namespace Vogue2_IMS.GoodsManager
             this.layoutViewField_cardColGoodsName.Location = new System.Drawing.Point(228, 40);
             this.layoutViewField_cardColGoodsName.Name = "layoutViewField_cardColGoodsName";
             this.layoutViewField_cardColGoodsName.Size = new System.Drawing.Size(328, 20);
-            this.layoutViewField_cardColGoodsName.TextSize = new System.Drawing.Size(52, 13);
+            this.layoutViewField_cardColGoodsName.TextSize = new System.Drawing.Size(52, 14);
             this.layoutViewField_cardColGoodsName.TextToControlDistance = 5;
             // 
             // layoutViewColumn4
@@ -741,7 +741,7 @@ namespace Vogue2_IMS.GoodsManager
             this.layoutViewField_cardColGoodsColor.Location = new System.Drawing.Point(228, 60);
             this.layoutViewField_cardColGoodsColor.Name = "layoutViewField_cardColGoodsColor";
             this.layoutViewField_cardColGoodsColor.Size = new System.Drawing.Size(328, 20);
-            this.layoutViewField_cardColGoodsColor.TextSize = new System.Drawing.Size(52, 13);
+            this.layoutViewField_cardColGoodsColor.TextSize = new System.Drawing.Size(52, 14);
             this.layoutViewField_cardColGoodsColor.TextToControlDistance = 5;
             // 
             // layoutViewColumn5
@@ -757,7 +757,7 @@ namespace Vogue2_IMS.GoodsManager
             this.layoutViewField_cardColGoodsQuality.Location = new System.Drawing.Point(228, 80);
             this.layoutViewField_cardColGoodsQuality.Name = "layoutViewField_cardColGoodsQuality";
             this.layoutViewField_cardColGoodsQuality.Size = new System.Drawing.Size(328, 20);
-            this.layoutViewField_cardColGoodsQuality.TextSize = new System.Drawing.Size(52, 13);
+            this.layoutViewField_cardColGoodsQuality.TextSize = new System.Drawing.Size(52, 14);
             this.layoutViewField_cardColGoodsQuality.TextToControlDistance = 5;
             // 
             // layoutViewColumn6
@@ -773,7 +773,7 @@ namespace Vogue2_IMS.GoodsManager
             this.layoutViewField_cardColGoodsStatus.Location = new System.Drawing.Point(228, 100);
             this.layoutViewField_cardColGoodsStatus.Name = "layoutViewField_cardColGoodsStatus";
             this.layoutViewField_cardColGoodsStatus.Size = new System.Drawing.Size(328, 20);
-            this.layoutViewField_cardColGoodsStatus.TextSize = new System.Drawing.Size(52, 13);
+            this.layoutViewField_cardColGoodsStatus.TextSize = new System.Drawing.Size(52, 14);
             this.layoutViewField_cardColGoodsStatus.TextToControlDistance = 5;
             // 
             // layoutViewColumn7
@@ -823,7 +823,7 @@ namespace Vogue2_IMS.GoodsManager
             this.layoutViewField_cardColGoodsDesc.Location = new System.Drawing.Point(0, 120);
             this.layoutViewField_cardColGoodsDesc.Name = "layoutViewField_cardColGoodsDesc";
             this.layoutViewField_cardColGoodsDesc.Size = new System.Drawing.Size(862, 20);
-            this.layoutViewField_cardColGoodsDesc.TextSize = new System.Drawing.Size(52, 13);
+            this.layoutViewField_cardColGoodsDesc.TextSize = new System.Drawing.Size(52, 14);
             this.layoutViewField_cardColGoodsDesc.TextToControlDistance = 5;
             // 
             // layoutViewColumn10
@@ -839,7 +839,7 @@ namespace Vogue2_IMS.GoodsManager
             this.layoutViewField_cardColGoodsMarkPrice.Location = new System.Drawing.Point(556, 0);
             this.layoutViewField_cardColGoodsMarkPrice.Name = "layoutViewField_cardColGoodsMarkPrice";
             this.layoutViewField_cardColGoodsMarkPrice.Size = new System.Drawing.Size(306, 20);
-            this.layoutViewField_cardColGoodsMarkPrice.TextSize = new System.Drawing.Size(52, 13);
+            this.layoutViewField_cardColGoodsMarkPrice.TextSize = new System.Drawing.Size(52, 14);
             this.layoutViewField_cardColGoodsMarkPrice.TextToControlDistance = 5;
             // 
             // layoutViewColumn11
@@ -855,7 +855,7 @@ namespace Vogue2_IMS.GoodsManager
             this.layoutViewField_cardColGoodsDiscount.Location = new System.Drawing.Point(556, 20);
             this.layoutViewField_cardColGoodsDiscount.Name = "layoutViewField_cardColGoodsDiscount";
             this.layoutViewField_cardColGoodsDiscount.Size = new System.Drawing.Size(306, 20);
-            this.layoutViewField_cardColGoodsDiscount.TextSize = new System.Drawing.Size(52, 13);
+            this.layoutViewField_cardColGoodsDiscount.TextSize = new System.Drawing.Size(52, 14);
             this.layoutViewField_cardColGoodsDiscount.TextToControlDistance = 5;
             // 
             // layoutViewColumn12
@@ -872,7 +872,7 @@ namespace Vogue2_IMS.GoodsManager
             this.layoutViewField_cardColPayType.Location = new System.Drawing.Point(556, 100);
             this.layoutViewField_cardColPayType.Name = "layoutViewField_cardColPayType";
             this.layoutViewField_cardColPayType.Size = new System.Drawing.Size(306, 20);
-            this.layoutViewField_cardColPayType.TextSize = new System.Drawing.Size(52, 13);
+            this.layoutViewField_cardColPayType.TextSize = new System.Drawing.Size(52, 14);
             this.layoutViewField_cardColPayType.TextToControlDistance = 5;
             // 
             // layoutViewColumn13
@@ -888,7 +888,7 @@ namespace Vogue2_IMS.GoodsManager
             this.layoutViewField_cardColGoodsPrepay.Location = new System.Drawing.Point(556, 60);
             this.layoutViewField_cardColGoodsPrepay.Name = "layoutViewField_cardColGoodsPrepay";
             this.layoutViewField_cardColGoodsPrepay.Size = new System.Drawing.Size(306, 20);
-            this.layoutViewField_cardColGoodsPrepay.TextSize = new System.Drawing.Size(52, 13);
+            this.layoutViewField_cardColGoodsPrepay.TextSize = new System.Drawing.Size(52, 14);
             this.layoutViewField_cardColGoodsPrepay.TextToControlDistance = 5;
             // 
             // layoutViewColumn14
@@ -904,7 +904,7 @@ namespace Vogue2_IMS.GoodsManager
             this.layoutViewField_cardColGoodsSalePrice.Location = new System.Drawing.Point(556, 40);
             this.layoutViewField_cardColGoodsSalePrice.Name = "layoutViewField_cardColGoodsSalePrice";
             this.layoutViewField_cardColGoodsSalePrice.Size = new System.Drawing.Size(306, 20);
-            this.layoutViewField_cardColGoodsSalePrice.TextSize = new System.Drawing.Size(52, 13);
+            this.layoutViewField_cardColGoodsSalePrice.TextSize = new System.Drawing.Size(52, 14);
             this.layoutViewField_cardColGoodsSalePrice.TextToControlDistance = 5;
             // 
             // layoutViewColumn15
@@ -920,7 +920,7 @@ namespace Vogue2_IMS.GoodsManager
             this.layoutViewField_cardColSaledRecordOperator.Location = new System.Drawing.Point(556, 80);
             this.layoutViewField_cardColSaledRecordOperator.Name = "layoutViewField_cardColSaledRecordOperator";
             this.layoutViewField_cardColSaledRecordOperator.Size = new System.Drawing.Size(306, 20);
-            this.layoutViewField_cardColSaledRecordOperator.TextSize = new System.Drawing.Size(52, 13);
+            this.layoutViewField_cardColSaledRecordOperator.TextSize = new System.Drawing.Size(52, 14);
             this.layoutViewField_cardColSaledRecordOperator.TextToControlDistance = 5;
             // 
             // layoutViewColumn16

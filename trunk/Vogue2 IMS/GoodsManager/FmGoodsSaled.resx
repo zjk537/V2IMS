@@ -232,7 +232,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ribbon.Size" type="System.Drawing.Size, System.Drawing">
-    <value>974, 147</value>
+    <value>1136, 148</value>
   </data>
   <data name="&gt;&gt;ribbon.Name" xml:space="preserve">
     <value>ribbon</value>
@@ -358,7 +358,7 @@
     <value>True</value>
   </data>
   <data name="txtGoodsCode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 20</value>
+    <value>173, 21</value>
   </data>
   <data name="txtGoodsCode.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -380,7 +380,7 @@
     <value>Top, Right</value>
   </data>
   <data name="txtCustomerPhone.Location" type="System.Drawing.Point, System.Drawing">
-    <value>697, 10</value>
+    <value>859, 10</value>
   </data>
   <data name="txtCustomerPhone.Properties.NullValuePrompt" xml:space="preserve">
     <value>&lt;不可为空&gt;</value>
@@ -389,7 +389,7 @@
     <value>True</value>
   </data>
   <data name="txtCustomerPhone.Size" type="System.Drawing.Size, System.Drawing">
-    <value>244, 20</value>
+    <value>244, 21</value>
   </data>
   <data name="txtCustomerPhone.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -410,7 +410,7 @@
     <value>Top, Right</value>
   </data>
   <data name="txtCustomerName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>488, 10</value>
+    <value>650, 10</value>
   </data>
   <data name="txtCustomerName.Properties.NullValuePrompt" xml:space="preserve">
     <value>&lt;不可为空&gt;</value>
@@ -419,7 +419,7 @@
     <value>True</value>
   </data>
   <data name="txtCustomerName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 20</value>
+    <value>132, 21</value>
   </data>
   <data name="txtCustomerName.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -440,10 +440,10 @@
     <value>Top, Right</value>
   </data>
   <data name="labelControl5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>634, 13</value>
+    <value>796, 13</value>
   </data>
   <data name="labelControl5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 13</value>
+    <value>48, 14</value>
   </data>
   <data name="labelControl5.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
@@ -467,10 +467,10 @@
     <value>Top, Right</value>
   </data>
   <data name="labelCustomer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>434, 13</value>
+    <value>596, 13</value>
   </data>
   <data name="labelCustomer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 13</value>
+    <value>48, 14</value>
   </data>
   <data name="labelCustomer.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
@@ -494,10 +494,10 @@
     <value>Top</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 147</value>
+    <value>0, 148</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>974, 40</value>
+    <value>1136, 40</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -518,7 +518,7 @@
     <value>Fill</value>
   </data>
   <data name="GridViewGoodsInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 187</value>
+    <value>0, 188</value>
   </data>
   <data name="gridColumn23.Caption" xml:space="preserve">
     <value>图片</value>
@@ -713,7 +713,7 @@
     <value>72</value>
   </data>
   <data name="GridViewGoodsInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>974, 279</value>
+    <value>1136, 314</value>
   </data>
   <data name="GridViewGoodsInfo.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -1214,10 +1214,10 @@
     <value>39</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>7, 14</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>974, 466</value>
+    <value>1136, 502</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterParent</value>

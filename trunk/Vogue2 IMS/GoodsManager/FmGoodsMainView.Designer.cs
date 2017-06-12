@@ -38,23 +38,32 @@
             this.gridViewControl = new DevExpress.XtraGrid.GridControl();
             this.mGridDefaultViewAll = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colGoodsOriginalCode = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSourceName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPurchaseUser = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSaledUser = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colShopPhone = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colShopAddress = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSupplierSex = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGoodsParts = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colChk = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGoodsImage = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ViewPrictureEdit = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
+            this.colChk = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colShop = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGoodsCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCategory = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGoodsName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGoodsColor = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGoodsQuality = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colprochima = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colprojiankuan = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colproyaowei = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colproxiongwei = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colprotunwei = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colproyichang = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colprokuchang = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colproxiuchang = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSourceName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGoodsStatus = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colGoosPaid = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGoodsDesc = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPayType = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGoodsPrimePrice = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -77,7 +86,6 @@
             this.colConsignStartDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCustomerName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCustomerPhone = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colGoosPaid = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGoodsPayCharge = new DevExpress.XtraGrid.Columns.GridColumn();
             this.image16 = new DevExpress.Utils.ImageCollection(this.components);
             this.ComboxGoodStatus = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
@@ -326,7 +334,8 @@
             // 
             // viewMainGoodsInfosBindingSource
             // 
-            this.viewMainGoodsInfosBindingSource.DataSource = typeof(Vogue2_IMS.Business.ViewModel.ViewMainGoodsInfos);
+            this.viewMainGoodsInfosBindingSource.DataSource = typeof(Vogue2_IMS.Business.ProInfo);
+            this.viewMainGoodsInfosBindingSource.CurrentChanged += new System.EventHandler(this.viewMainGoodsInfosBindingSource_CurrentChanged);
             // 
             // image32
             // 
@@ -399,14 +408,22 @@
             this.colShopAddress,
             this.colSupplierSex,
             this.colGoodsParts,
-            this.colChk,
             this.colGoodsImage,
+            this.colChk,
             this.colShop,
             this.colGoodsCode,
             this.colCategory,
             this.colGoodsName,
             this.colGoodsColor,
             this.colGoodsQuality,
+            this.colprochima,
+            this.colprojiankuan,
+            this.colproyaowei,
+            this.colproxiongwei,
+            this.colprotunwei,
+            this.colproyichang,
+            this.colprokuchang,
+            this.colproxiuchang,
             this.colSourceName,
             this.colGoodsStatus,
             this.colGoosPaid,
@@ -436,10 +453,9 @@
             this.mGridDefaultViewAll.GridControl = this.gridViewControl;
             this.mGridDefaultViewAll.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "", null, "           商品数合计：{0}个"),
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Goods.PrimePrice", null, "          进价汇总：￥{0:N2}"),
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Goods.SalePrice", null, "          售出汇总：￥{0:N2}"),
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Goods.Discount", null, "          折扣汇总：￥{0:N2}"),
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SaledRecord.PayCharge.Value", null, "          手续费汇总：￥{0:N2}")});
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "projiage", null, "          进价汇总：￥{0:N2}"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "prosjiage", null, "          售出汇总：￥{0:N2}"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "prozhekou", null, "          折扣汇总：￥{0:N2}")});
             this.mGridDefaultViewAll.Images = this.image16;
             this.mGridDefaultViewAll.IndicatorWidth = 20;
             this.mGridDefaultViewAll.Name = "mGridDefaultViewAll";
@@ -464,24 +480,14 @@
             // colGoodsOriginalCode
             // 
             this.colGoodsOriginalCode.Caption = "原厂编码";
-            this.colGoodsOriginalCode.FieldName = "Goods.OriginalCode";
+            this.colGoodsOriginalCode.FieldName = "projcode";
             this.colGoodsOriginalCode.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
             this.colGoodsOriginalCode.Name = "colGoodsOriginalCode";
-            // 
-            // colSourceName
-            // 
-            this.colSourceName.Caption = "来源";
-            this.colSourceName.FieldName = "SourceName";
-            this.colSourceName.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
-            this.colSourceName.Name = "colSourceName";
-            this.colSourceName.OptionsColumn.ReadOnly = true;
-            this.colSourceName.Visible = true;
-            this.colSourceName.VisibleIndex = 8;
             // 
             // colPurchaseUser
             // 
             this.colPurchaseUser.Caption = "入库录入人";
-            this.colPurchaseUser.FieldName = "PurchaseUser";
+            this.colPurchaseUser.FieldName = "proinuname";
             this.colPurchaseUser.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
             this.colPurchaseUser.Name = "colPurchaseUser";
             this.colPurchaseUser.OptionsColumn.ReadOnly = true;
@@ -489,7 +495,7 @@
             // colSaledUser
             // 
             this.colSaledUser.Caption = "出库录入人";
-            this.colSaledUser.FieldName = "SaledUser";
+            this.colSaledUser.FieldName = "prooutuname";
             this.colSaledUser.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
             this.colSaledUser.Name = "colSaledUser";
             this.colSaledUser.OptionsColumn.ReadOnly = true;
@@ -497,46 +503,33 @@
             // colShopPhone
             // 
             this.colShopPhone.Caption = "店铺通讯";
-            this.colShopPhone.FieldName = "Shop.Phone";
             this.colShopPhone.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
             this.colShopPhone.Name = "colShopPhone";
             // 
             // colShopAddress
             // 
             this.colShopAddress.Caption = "店铺地址";
-            this.colShopAddress.FieldName = "Shop.Address";
             this.colShopAddress.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
             this.colShopAddress.Name = "colShopAddress";
             // 
             // colSupplierSex
             // 
             this.colSupplierSex.Caption = "性别";
-            this.colSupplierSex.FieldName = "SupplierSexName";
+            this.colSupplierSex.FieldName = "custsex";
             this.colSupplierSex.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
             this.colSupplierSex.Name = "colSupplierSex";
             // 
             // colGoodsParts
             // 
             this.colGoodsParts.Caption = "配件";
-            this.colGoodsParts.FieldName = "Goods.Parts";
+            this.colGoodsParts.FieldName = "probujian";
             this.colGoodsParts.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
             this.colGoodsParts.Name = "colGoodsParts";
-            // 
-            // colChk
-            // 
-            this.colChk.Caption = " ";
-            this.colChk.FieldName = "CheckEdit";
-            this.colChk.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
-            this.colChk.Name = "colChk";
-            this.colChk.Visible = true;
-            this.colChk.VisibleIndex = 0;
-            this.colChk.Width = 30;
             // 
             // colGoodsImage
             // 
             this.colGoodsImage.Caption = "图片";
             this.colGoodsImage.ColumnEdit = this.ViewPrictureEdit;
-            this.colGoodsImage.FieldName = "GoodsImageBytes";
             this.colGoodsImage.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
             this.colGoodsImage.ImageIndex = 3;
             this.colGoodsImage.Name = "colGoodsImage";
@@ -549,10 +542,19 @@
             this.ViewPrictureEdit.PictureStoreMode = DevExpress.XtraEditors.Controls.PictureStoreMode.ByteArray;
             this.ViewPrictureEdit.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
             // 
+            // colChk
+            // 
+            this.colChk.Caption = " ";
+            this.colChk.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
+            this.colChk.Name = "colChk";
+            this.colChk.Visible = true;
+            this.colChk.VisibleIndex = 0;
+            this.colChk.Width = 30;
+            // 
             // colShop
             // 
             this.colShop.Caption = "店铺";
-            this.colShop.FieldName = "Shop.Name";
+            this.colShop.FieldName = "prodepname";
             this.colShop.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
             this.colShop.Name = "colShop";
             this.colShop.OptionsColumn.ReadOnly = true;
@@ -562,7 +564,7 @@
             // colGoodsCode
             // 
             this.colGoodsCode.Caption = "编码";
-            this.colGoodsCode.FieldName = "Goods.Code";
+            this.colGoodsCode.FieldName = "procode";
             this.colGoodsCode.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
             this.colGoodsCode.Name = "colGoodsCode";
             this.colGoodsCode.Visible = true;
@@ -572,7 +574,7 @@
             // colCategory
             // 
             this.colCategory.Caption = "类别";
-            this.colCategory.FieldName = "Category.Name";
+            this.colCategory.FieldName = "profenlei";
             this.colCategory.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
             this.colCategory.Name = "colCategory";
             this.colCategory.OptionsColumn.ReadOnly = true;
@@ -582,7 +584,7 @@
             // colGoodsName
             // 
             this.colGoodsName.Caption = "名称";
-            this.colGoodsName.FieldName = "Goods.Name";
+            this.colGoodsName.FieldName = "proname";
             this.colGoodsName.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
             this.colGoodsName.Name = "colGoodsName";
             this.colGoodsName.Visible = true;
@@ -591,7 +593,7 @@
             // colGoodsColor
             // 
             this.colGoodsColor.Caption = "颜色";
-            this.colGoodsColor.FieldName = "Goods.Color";
+            this.colGoodsColor.FieldName = "procolor";
             this.colGoodsColor.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
             this.colGoodsColor.Name = "colGoodsColor";
             this.colGoodsColor.Visible = true;
@@ -600,25 +602,108 @@
             // colGoodsQuality
             // 
             this.colGoodsQuality.Caption = "成色";
-            this.colGoodsQuality.FieldName = "Goods.Quality";
+            this.colGoodsQuality.FieldName = "prochengse";
             this.colGoodsQuality.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
             this.colGoodsQuality.Name = "colGoodsQuality";
             this.colGoodsQuality.Visible = true;
             this.colGoodsQuality.VisibleIndex = 6;
             // 
+            // colprochima
+            // 
+            this.colprochima.Caption = "尺码";
+            this.colprochima.FieldName = "prochima";
+            this.colprochima.Name = "colprochima";
+            this.colprochima.Visible = true;
+            this.colprochima.VisibleIndex = 15;
+            // 
+            // colprojiankuan
+            // 
+            this.colprojiankuan.Caption = "肩宽";
+            this.colprojiankuan.FieldName = "projiankuan";
+            this.colprojiankuan.Name = "colprojiankuan";
+            this.colprojiankuan.Visible = true;
+            this.colprojiankuan.VisibleIndex = 16;
+            // 
+            // colproyaowei
+            // 
+            this.colproyaowei.Caption = "腰围";
+            this.colproyaowei.FieldName = "proyaowei";
+            this.colproyaowei.Name = "colproyaowei";
+            this.colproyaowei.Visible = true;
+            this.colproyaowei.VisibleIndex = 17;
+            // 
+            // colproxiongwei
+            // 
+            this.colproxiongwei.Caption = "胸围";
+            this.colproxiongwei.FieldName = "proxiongwei";
+            this.colproxiongwei.Name = "colproxiongwei";
+            this.colproxiongwei.Visible = true;
+            this.colproxiongwei.VisibleIndex = 18;
+            // 
+            // colprotunwei
+            // 
+            this.colprotunwei.Caption = "臀围";
+            this.colprotunwei.FieldName = "protunwei";
+            this.colprotunwei.Name = "colprotunwei";
+            this.colprotunwei.Visible = true;
+            this.colprotunwei.VisibleIndex = 19;
+            // 
+            // colproyichang
+            // 
+            this.colproyichang.Caption = "衣长";
+            this.colproyichang.FieldName = "proyichang";
+            this.colproyichang.Name = "colproyichang";
+            this.colproyichang.Visible = true;
+            this.colproyichang.VisibleIndex = 20;
+            // 
+            // colprokuchang
+            // 
+            this.colprokuchang.Caption = "裤长";
+            this.colprokuchang.FieldName = "prokuchang";
+            this.colprokuchang.Name = "colprokuchang";
+            this.colprokuchang.Visible = true;
+            this.colprokuchang.VisibleIndex = 21;
+            // 
+            // colproxiuchang
+            // 
+            this.colproxiuchang.Caption = "袖长";
+            this.colproxiuchang.FieldName = "proxiuchang";
+            this.colproxiuchang.Name = "colproxiuchang";
+            this.colproxiuchang.Visible = true;
+            this.colproxiuchang.VisibleIndex = 22;
+            // 
+            // colSourceName
+            // 
+            this.colSourceName.Caption = "来源";
+            this.colSourceName.FieldName = "protype";
+            this.colSourceName.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
+            this.colSourceName.Name = "colSourceName";
+            this.colSourceName.OptionsColumn.ReadOnly = true;
+            this.colSourceName.Visible = true;
+            this.colSourceName.VisibleIndex = 8;
+            // 
             // colGoodsStatus
             // 
             this.colGoodsStatus.Caption = "状态";
-            this.colGoodsStatus.FieldName = "GoodsStatusName";
+            this.colGoodsStatus.FieldName = "prostatus";
             this.colGoodsStatus.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
             this.colGoodsStatus.Name = "colGoodsStatus";
             this.colGoodsStatus.Visible = true;
             this.colGoodsStatus.VisibleIndex = 7;
             // 
+            // colGoosPaid
+            // 
+            this.colGoosPaid.Caption = "打款状态";
+            this.colGoosPaid.FieldName = "propaystatus";
+            this.colGoosPaid.GroupInterval = DevExpress.XtraGrid.ColumnGroupInterval.DisplayText;
+            this.colGoosPaid.Name = "colGoosPaid";
+            this.colGoosPaid.Visible = true;
+            this.colGoosPaid.VisibleIndex = 37;
+            // 
             // colGoodsDesc
             // 
             this.colGoodsDesc.Caption = "描述";
-            this.colGoodsDesc.FieldName = "Goods.Desc";
+            this.colGoodsDesc.FieldName = "proremark";
             this.colGoodsDesc.Name = "colGoodsDesc";
             this.colGoodsDesc.Visible = true;
             this.colGoodsDesc.VisibleIndex = 9;
@@ -626,7 +711,6 @@
             // colPayType
             // 
             this.colPayType.Caption = "付款类型";
-            this.colPayType.FieldName = "PurchasePayType.Name";
             this.colPayType.Name = "colPayType";
             this.colPayType.OptionsColumn.ReadOnly = true;
             this.colPayType.Visible = true;
@@ -635,7 +719,7 @@
             // colGoodsPrimePrice
             // 
             this.colGoodsPrimePrice.Caption = "进价";
-            this.colGoodsPrimePrice.FieldName = "Goods.PrimePrice";
+            this.colGoodsPrimePrice.FieldName = "projiage";
             this.colGoodsPrimePrice.Name = "colGoodsPrimePrice";
             this.colGoodsPrimePrice.Visible = true;
             this.colGoodsPrimePrice.VisibleIndex = 11;
@@ -643,7 +727,7 @@
             // colGoodsMarkPrice
             // 
             this.colGoodsMarkPrice.Caption = "标价";
-            this.colGoodsMarkPrice.FieldName = "Goods.MarkPrice";
+            this.colGoodsMarkPrice.FieldName = "probjiage";
             this.colGoodsMarkPrice.Name = "colGoodsMarkPrice";
             this.colGoodsMarkPrice.Visible = true;
             this.colGoodsMarkPrice.VisibleIndex = 12;
@@ -651,7 +735,7 @@
             // colPurchaseOperator
             // 
             this.colPurchaseOperator.Caption = "进货经手人";
-            this.colPurchaseOperator.FieldName = "PurchaseRecord.Operator";
+            this.colPurchaseOperator.FieldName = "proinuname";
             this.colPurchaseOperator.Name = "colPurchaseOperator";
             this.colPurchaseOperator.Visible = true;
             this.colPurchaseOperator.VisibleIndex = 13;
@@ -659,7 +743,7 @@
             // colSaledPayType
             // 
             this.colSaledPayType.Caption = "收款类型";
-            this.colSaledPayType.FieldName = "SaledPayType.Name";
+            this.colSaledPayType.FieldName = "prooutpaytype";
             this.colSaledPayType.GroupInterval = DevExpress.XtraGrid.ColumnGroupInterval.DisplayText;
             this.colSaledPayType.Name = "colSaledPayType";
             this.colSaledPayType.Visible = true;
@@ -668,141 +752,131 @@
             // colGoodsSalePrice
             // 
             this.colGoodsSalePrice.Caption = "实售价";
-            this.colGoodsSalePrice.FieldName = "Goods.SalePrice";
+            this.colGoodsSalePrice.FieldName = "prosjiage";
             this.colGoodsSalePrice.Name = "colGoodsSalePrice";
             this.colGoodsSalePrice.Visible = true;
-            this.colGoodsSalePrice.VisibleIndex = 15;
+            this.colGoodsSalePrice.VisibleIndex = 23;
             // 
             // colGoodsDisCount
             // 
             this.colGoodsDisCount.Caption = "折扣金额";
-            this.colGoodsDisCount.FieldName = "Goods.Discount";
+            this.colGoodsDisCount.FieldName = "prozhekou";
             this.colGoodsDisCount.Name = "colGoodsDisCount";
             this.colGoodsDisCount.Visible = true;
-            this.colGoodsDisCount.VisibleIndex = 16;
+            this.colGoodsDisCount.VisibleIndex = 24;
             // 
             // colGoodsPrepay
             // 
             this.colGoodsPrepay.Caption = "预付款";
-            this.colGoodsPrepay.FieldName = "Goods.Prepay";
+            this.colGoodsPrepay.FieldName = "proyufu";
             this.colGoodsPrepay.Name = "colGoodsPrepay";
             this.colGoodsPrepay.Visible = true;
-            this.colGoodsPrepay.VisibleIndex = 18;
+            this.colGoodsPrepay.VisibleIndex = 26;
             // 
             // colGoodsCreateDate
             // 
             this.colGoodsCreateDate.Caption = "进货时间";
-            this.colGoodsCreateDate.FieldName = "Goods.CreatedDate";
+            this.colGoodsCreateDate.FieldName = "proinaddtime.Value";
             this.colGoodsCreateDate.Name = "colGoodsCreateDate";
             this.colGoodsCreateDate.Visible = true;
-            this.colGoodsCreateDate.VisibleIndex = 19;
+            this.colGoodsCreateDate.VisibleIndex = 27;
             // 
             // colGOodsSaledDate
             // 
             this.colGOodsSaledDate.Caption = "售出时间";
-            this.colGOodsSaledDate.FieldName = "Goods.SaledDate.Value";
+            this.colGOodsSaledDate.FieldName = "prooutaddtime.Value";
             this.colGOodsSaledDate.Name = "colGOodsSaledDate";
             this.colGOodsSaledDate.Visible = true;
-            this.colGOodsSaledDate.VisibleIndex = 20;
+            this.colGOodsSaledDate.VisibleIndex = 28;
             // 
             // colGoodsLastUpdatedDate
             // 
             this.colGoodsLastUpdatedDate.Caption = "最近更新时间";
-            this.colGoodsLastUpdatedDate.FieldName = "Goods.UpdatedDate.Value";
+            this.colGoodsLastUpdatedDate.FieldName = "proupdatetime.Value";
             this.colGoodsLastUpdatedDate.Name = "colGoodsLastUpdatedDate";
             this.colGoodsLastUpdatedDate.Visible = true;
-            this.colGoodsLastUpdatedDate.VisibleIndex = 21;
+            this.colGoodsLastUpdatedDate.VisibleIndex = 29;
             // 
             // colSaledOperator
             // 
             this.colSaledOperator.Caption = "售出经手人";
-            this.colSaledOperator.FieldName = "SaledRecord.Operator";
+            this.colSaledOperator.FieldName = "prooutjuname";
             this.colSaledOperator.Name = "colSaledOperator";
             this.colSaledOperator.Visible = true;
-            this.colSaledOperator.VisibleIndex = 22;
+            this.colSaledOperator.VisibleIndex = 30;
             // 
             // colSupplierName
             // 
             this.colSupplierName.Caption = "供应商";
-            this.colSupplierName.FieldName = "Supplier.Name";
+            this.colSupplierName.FieldName = "custname";
             this.colSupplierName.Name = "colSupplierName";
             this.colSupplierName.Visible = true;
-            this.colSupplierName.VisibleIndex = 23;
+            this.colSupplierName.VisibleIndex = 31;
             // 
             // colSupplierPhone
             // 
             this.colSupplierPhone.Caption = "联系方式";
-            this.colSupplierPhone.FieldName = "Supplier.Phone";
+            this.colSupplierPhone.FieldName = "custphone";
             this.colSupplierPhone.Name = "colSupplierPhone";
             this.colSupplierPhone.Visible = true;
-            this.colSupplierPhone.VisibleIndex = 24;
+            this.colSupplierPhone.VisibleIndex = 32;
             // 
             // colSupplierBankName
             // 
             this.colSupplierBankName.Caption = "开户行";
-            this.colSupplierBankName.FieldName = "Supplier.BankName";
+            this.colSupplierBankName.FieldName = "custyhname";
             this.colSupplierBankName.Name = "colSupplierBankName";
             this.colSupplierBankName.Visible = true;
-            this.colSupplierBankName.VisibleIndex = 25;
+            this.colSupplierBankName.VisibleIndex = 33;
             // 
             // colSupplierBankCard
             // 
             this.colSupplierBankCard.Caption = "卡号";
-            this.colSupplierBankCard.FieldName = "Supplier.BankCard";
+            this.colSupplierBankCard.FieldName = "custyhcard";
             this.colSupplierBankCard.Name = "colSupplierBankCard";
             this.colSupplierBankCard.Visible = true;
-            this.colSupplierBankCard.VisibleIndex = 26;
+            this.colSupplierBankCard.VisibleIndex = 34;
             // 
             // colSupplierIdCard
             // 
             this.colSupplierIdCard.Caption = "证件号";
-            this.colSupplierIdCard.FieldName = "Supplier.IdCard";
+            this.colSupplierIdCard.FieldName = "custidcard";
             this.colSupplierIdCard.Name = "colSupplierIdCard";
             this.colSupplierIdCard.Visible = true;
-            this.colSupplierIdCard.VisibleIndex = 27;
+            this.colSupplierIdCard.VisibleIndex = 35;
             // 
             // colConsignEndDate
             // 
             this.colConsignEndDate.Caption = "寄售结束时间";
-            this.colConsignEndDate.FieldName = "Goods.ConsignEndDate";
+            this.colConsignEndDate.FieldName = "proendtime.Value";
             this.colConsignEndDate.Name = "colConsignEndDate";
             // 
             // colConsignStartDate
             // 
             this.colConsignStartDate.Caption = "寄售开始时间";
-            this.colConsignStartDate.FieldName = "Goods.ConsignStartDate";
+            this.colConsignStartDate.FieldName = "prostarttime.Value";
             this.colConsignStartDate.Name = "colConsignStartDate";
             this.colConsignStartDate.Visible = true;
-            this.colConsignStartDate.VisibleIndex = 28;
+            this.colConsignStartDate.VisibleIndex = 36;
             // 
             // colCustomerName
             // 
             this.colCustomerName.Caption = "顾客姓名";
-            this.colCustomerName.FieldName = "SaledRecord.CustomerName";
+            this.colCustomerName.FieldName = "prooutcustname";
             this.colCustomerName.Name = "colCustomerName";
             // 
             // colCustomerPhone
             // 
             this.colCustomerPhone.Caption = "顾客联系方式";
-            this.colCustomerPhone.FieldName = "SaledRecord.CustomerPhone";
+            this.colCustomerPhone.FieldName = "prooutcustphone";
             this.colCustomerPhone.Name = "colCustomerPhone";
-            // 
-            // colGoosPaid
-            // 
-            this.colGoosPaid.Caption = "打款状态";
-            this.colGoosPaid.FieldName = "GoodsPaid.Name";
-            this.colGoosPaid.GroupInterval = DevExpress.XtraGrid.ColumnGroupInterval.DisplayText;
-            this.colGoosPaid.Name = "colGoosPaid";
-            this.colGoosPaid.Visible = true;
-            this.colGoosPaid.VisibleIndex = 29;
             // 
             // colGoodsPayCharge
             // 
             this.colGoodsPayCharge.Caption = "手续费";
-            this.colGoodsPayCharge.FieldName = "SaledRecord.PayCharge.Value";
             this.colGoodsPayCharge.Name = "colGoodsPayCharge";
             this.colGoodsPayCharge.Visible = true;
-            this.colGoodsPayCharge.VisibleIndex = 17;
+            this.colGoodsPayCharge.VisibleIndex = 25;
             // 
             // image16
             // 
@@ -2832,5 +2906,13 @@
         private DevExpress.XtraGrid.Columns.GridColumn colGoodsPayCharge;
         private DevExpress.XtraNavBar.NavBarItem btnDashBoard;
         private DevExpress.Utils.ImageCollection image16;
+        private DevExpress.XtraGrid.Columns.GridColumn colprochima;
+        private DevExpress.XtraGrid.Columns.GridColumn colprojiankuan;
+        private DevExpress.XtraGrid.Columns.GridColumn colproyaowei;
+        private DevExpress.XtraGrid.Columns.GridColumn colproxiongwei;
+        private DevExpress.XtraGrid.Columns.GridColumn colprotunwei;
+        private DevExpress.XtraGrid.Columns.GridColumn colproyichang;
+        private DevExpress.XtraGrid.Columns.GridColumn colprokuchang;
+        private DevExpress.XtraGrid.Columns.GridColumn colproxiuchang;
     }
 }

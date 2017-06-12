@@ -8,52 +8,7 @@ using Vogue2_IMS.Model.DataModel;
 namespace Vogue2_IMS.Business.ViewModel
 {
     public class ViewQueryGoodsInfo : DBModelBase
-    {
-        /// <summary>
-        /// GoodsInfo 商品信息
-        /// </summary>
-        GoodsInfo mGoods = new GoodsInfo();
-        public GoodsInfo Goods
-        {
-            get
-            {
-                if (mGoods == null) mGoods = new GoodsInfo();
-
-                return mGoods;
-            }
-            set { mGoods = value; }
-        }
-
-        PurchaseRecordInfo mPurchaseRecord = null;
-        /// <summary>
-        /// Get Or Set PurchaseRecordInfo 入库信息
-        /// </summary>
-        public PurchaseRecordInfo PurchaseRecord
-        {
-            get
-            {
-                if (mPurchaseRecord == null) mPurchaseRecord = new PurchaseRecordInfo();
-
-                return mPurchaseRecord;
-            }
-            set { mPurchaseRecord = value; }
-        }
-
-        SaledRecordInfo mSaledRecord = null;
-        /// <summary>
-        ///  Get Or Set SaledRecordInfo 出库信息
-        /// </summary>
-        public SaledRecordInfo SaledRecord
-        {
-            get
-            {
-                if (mSaledRecord == null) mSaledRecord = new SaledRecordInfo();
-
-                return mSaledRecord;
-            }
-            set { mSaledRecord = value; }
-        }
-
+    {  
         private DateTime? startDate = null;
         public bool StartDateSpecify { get; set; }
         /// <summary>
@@ -69,23 +24,6 @@ namespace Vogue2_IMS.Business.ViewModel
         /// </summary>
         [DBFieldAttribute("EndDate")]
         public DateTime? EndDate { get { return endDate; } set { endDate = value; EndDateSpecify = true; } }
-
-
-        //private DateTime? startPurchaseDate = null;
-        //public bool StartPurchaseDateSpecify { get; set; }
-        ///// <summary>
-        ///// 获取或设置 进货起始时间
-        ///// </summary>
-        //[DBFieldAttribute("StartPurchaseDate")]
-        //public DateTime? StartPurchaseDate { get { return startPurchaseDate; } set { startPurchaseDate = value; StartPurchaseDateSpecify = true; } }
-
-        //private DateTime? endPurchaseDate = null;
-        //public bool EndPurchaseDateSpecify { get; set; }
-        ///// <summary>
-        ///// 获取或设置 进货结束时间
-        ///// </summary>
-        //[DBFieldAttribute("EndPurchaseDate")]
-        //public DateTime? EndPurchaseDate { get { return endPurchaseDate; } set { endPurchaseDate = value; EndPurchaseDateSpecify = true; } }
 
         private DateTime? salesStartDate = null;
         public bool SalesStartDateSpecify { get; set; }

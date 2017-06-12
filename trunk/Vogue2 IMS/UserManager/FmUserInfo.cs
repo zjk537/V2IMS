@@ -126,7 +126,7 @@ namespace Vogue2_IMS.UserManager
             //TxtAgainPwd.Text = mNewUserShopRoleInfoInfo.User.Pwd;
 
             ComboxSex.SelectedIndex = mNewUserShopRoleInfoInfo.User.Sex.Value;
-            ComboxShop.Enabled = ComboxRole.Enabled = SharedVariables.Instance.LoginUser.User.RoleId == SharedVariables.AdminRoleId;
+            //ComboxShop.Enabled = ComboxRole.Enabled = SharedVariables.Instance.LoginUser.User.RoleId == SharedVariables.AdminRoleId;
 
             TxtLogUserName.Enabled = TxtLogUserPwd.Enabled = mUserShopRoleInfo == null;
 
