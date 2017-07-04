@@ -34,20 +34,26 @@ namespace Vogue2_IMS.GoodsManager
             }
         }
 
+        List<WebUserInfo> users = new List<WebUserInfo>();
+
         public FmGoodsSaledMondify(ProInfo proInfo)
         {
             InitializeComponent();
 
+            users = UserWebBusiness.GetUserInfoList();
+
             this.ProInfo = proInfo;
             newProSalesInfo = this.ProInfo.ProSalesInfo;
             mProSalesInfo = this.ProInfo.ProSalesInfo;
+
+            newProSalesInfo.JUser = users.Find(a => { return a.id == newProSalesInfo.juid; });
 
             InitializeControls();
         }
 
         private void InitializeControls()
         {
-            this.outjuser.Properties.Items.AddRange(UserWebBusiness.GetUserInfoList());
+            this.outjuser.Properties.Items.AddRange(users);
             this.paystatus.Properties.Items.AddRange(ConfigManager.ProPayStatus);
 
             ControlsBinding();
@@ -58,17 +64,17 @@ namespace Vogue2_IMS.GoodsManager
             this.Btn_OK.Click += btnOk_Click;
 
             profenlei.DataBindings.Add("Text", newProSalesInfo, "fenlei");
-            projcode.DataBindings.Add("Text", newProSalesInfo, "jcode");
+            projcode.DataBindings.Add("Text", newProSalesInfo, "jpid");
             proname.DataBindings.Add("Text", newProSalesInfo, "jpname");
             probjiage.DataBindings.Add("Text", newProSalesInfo, "bjiage");
 
             outcustname.DataBindings.Add("Text", newProSalesInfo, "custname");
             outcustphone.DataBindings.Add("Text", newProSalesInfo, "custphone");
-            zhekou.DataBindings.Add("Text", newProSalesInfo, "zhekou");
-            sjiage.DataBindings.Add("Text", newProSalesInfo, "jpsjiage");
+            zhekou.DataBindings.Add("EditValue", newProSalesInfo, "zhekou");
+            sjiage.DataBindings.Add("EditValue", newProSalesInfo, "jpsjiage");
             paystatus.DataBindings.Add("Text", newProSalesInfo, "paytype");
-            yufu.DataBindings.Add("Text", newProSalesInfo, "yufu");
-            outjuser.DataBindings.Add("Text", newProSalesInfo, "juname");  
+            yufu.DataBindings.Add("EditValue", newProSalesInfo, "yufu");
+            outjuser.DataBindings.Add("EditValue", newProSalesInfo, "JUser");  
 
             //newProSalesInfo.Goods.Discount = newProSalesInfo.Goods.Discount ?? 0;
             //newProSalesInfo.Goods.MarkPrice = newProSalesInfo.Goods.MarkPrice ?? 0;
@@ -146,11 +152,16 @@ namespace Vogue2_IMS.GoodsManager
             if (string.IsNullOrEmpty(paystatus.Text))
             {
                 mErrorProvider.SetError(this.paystatus, "请选择售出方式", ErrorType.Warning);
-            }          
+            }
 
-            if (string.IsNullOrEmpty(this.outjuser.Text.Trim()))
+            //if (string.IsNullOrEmpty(this.projuser.Text.Trim()))
+            if (this.outjuser.SelectedItem == null)
             {
                 mErrorProvider.SetError(this.outjuser, "请选择经手人", ErrorType.Warning);
+            }
+            else
+            {
+                newProSalesInfo.JUser = this.outjuser.SelectedItem as WebUserInfo;
             }
 
             return mErrorProvider.HasErrors;
@@ -178,10 +189,10 @@ namespace Vogue2_IMS.GoodsManager
 
         private void TextEdit_TextChanged(object sender, EventArgs e)
         {
-            //newProSalesInfo.Goods.Discount = (decimal)zhekou.EditValue;
-            //newProSalesInfo.Goods.SalePrice = (decimal)sjiage.EditValue;
-            //newProSalesInfo.Goods.Prepay = (decimal)yufu.EditValue;
-
+            newProSalesInfo.zhekou = (decimal)zhekou.EditValue;
+            newProSalesInfo.jpsjiage = (decimal)sjiage.EditValue;
+            newProSalesInfo.yufu = (decimal)yufu.EditValue;
+            ;
             if (sender == sjiage)
             {
                 zhekou.EditValue = newProSalesInfo.bjiage - newProSalesInfo.jpsjiage;

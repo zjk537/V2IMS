@@ -69,7 +69,7 @@ namespace Vogue2_IMS.OrderManager
                 newProCustInfo.cust = proinfo.Cust;
 
                 mProBaseInfo = newProCustInfo.Clone();
-                newProCustInfo.JUser = users.Find(a => { return a.id == mProBaseInfo.uuid; });
+                newProCustInfo.JUser = users.Find(a => { return a.id == mProBaseInfo.juid; });
 
                 this.mRKType = mProBaseInfo.type;
             }

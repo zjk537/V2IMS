@@ -215,10 +215,7 @@ namespace Vogue2_IMS
             this.ribbon.MaxItemId = 182;
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rPageHome,
-            //this.rPageUserManager,
-            this.rPageGoodsManager,
-            //this.rPageSystemConfig
-            });
+            this.rPageGoodsManager});
             this.ribbon.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemComboBox1,
             this.repositoryItemDateEdit1,
@@ -232,7 +229,7 @@ namespace Vogue2_IMS
             this.repositoryItemPictureEdit2,
             this.repositoryItemTextEdit5,
             this.repositoryItemTextEdit6});
-            this.ribbon.SelectedPage = this.rPageHome;
+            this.ribbon.SelectedPage = this.rPageGoodsManager;
             resources.ApplyResources(this.ribbon, "ribbon");
             this.ribbon.Toolbar.ShowCustomizeItem = false;
             this.ribbon.SelectedPageChanged += new System.EventHandler(this.ribbon_SelectedPageChanged);
@@ -309,6 +306,7 @@ namespace Vogue2_IMS
             this.btnUpdateGoods.Name = "btnUpdateGoods";
             this.btnUpdateGoods.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)
                         | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.btnUpdateGoods.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.btnUpdateGoods.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnUpdateGoods_ItemClick);
             // 
             // btnPayment
@@ -682,6 +680,7 @@ namespace Vogue2_IMS
             this.btnImport.Id = 170;
             this.btnImport.LargeImageIndex = 34;
             this.btnImport.Name = "btnImport";
+            this.btnImport.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.btnImport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnImport_ItemClick);
             // 
             // btnDefaultView

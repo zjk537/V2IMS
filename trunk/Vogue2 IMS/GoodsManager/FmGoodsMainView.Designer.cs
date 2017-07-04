@@ -35,6 +35,16 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.labSourceCondition = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.image16 = new DevExpress.Utils.ImageCollection(this.components);
+            this.ViewTypeContainer = new DevExpress.XtraEditors.PanelControl();
+            this.mNavBarControl = new DevExpress.XtraNavBar.NavBarControl();
+            this.NavBtnSystemViewGroup = new DevExpress.XtraNavBar.NavBarGroup();
+            this.btnDefaultView = new DevExpress.XtraNavBar.NavBarItem();
+            this.btnAdvBandedView = new DevExpress.XtraNavBar.NavBarItem();
+            this.btnCardView = new DevExpress.XtraNavBar.NavBarItem();
+            this.btnDashBoard = new DevExpress.XtraNavBar.NavBarItem();
+            this.NavBtnCustomerViewGroup = new DevExpress.XtraNavBar.NavBarGroup();
+            this.ViewContainer = new DevExpress.XtraEditors.PanelControl();
             this.gridViewControl = new DevExpress.XtraGrid.GridControl();
             this.mGridDefaultViewAll = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colGoodsOriginalCode = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -87,10 +97,11 @@
             this.colCustomerName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCustomerPhone = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGoodsPayCharge = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.image16 = new DevExpress.Utils.ImageCollection(this.components);
             this.ComboxGoodStatus = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.ComboxSex = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
+            this.repositoryItemCheckEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.mGridAdvBandedViewAll = new DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView();
             this.商品信息 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.bcCheckEdit = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -260,26 +271,24 @@
             this.ccConsignStartDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ccCustomerName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ccCustomerPhone = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ViewTypeContainer = new DevExpress.XtraEditors.PanelControl();
-            this.mNavBarControl = new DevExpress.XtraNavBar.NavBarControl();
-            this.NavBtnSystemViewGroup = new DevExpress.XtraNavBar.NavBarGroup();
-            this.btnDefaultView = new DevExpress.XtraNavBar.NavBarItem();
-            this.btnAdvBandedView = new DevExpress.XtraNavBar.NavBarItem();
-            this.btnCardView = new DevExpress.XtraNavBar.NavBarItem();
-            this.btnDashBoard = new DevExpress.XtraNavBar.NavBarItem();
-            this.NavBtnCustomerViewGroup = new DevExpress.XtraNavBar.NavBarGroup();
-            this.ViewContainer = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.viewMainGoodsInfosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.image32)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.image16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ViewTypeContainer)).BeginInit();
+            this.ViewTypeContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mNavBarControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ViewContainer)).BeginInit();
+            this.ViewContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mGridDefaultViewAll)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ViewPrictureEdit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.image16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ComboxGoodStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ComboxSex)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mGridAdvBandedViewAll)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mGridLayoutView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colGoodsOriginalCode)).BeginInit();
@@ -325,11 +334,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_layoutViewColumn35_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewCard1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mGridCardViewAll)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ViewTypeContainer)).BeginInit();
-            this.ViewTypeContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mNavBarControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ViewContainer)).BeginInit();
-            this.ViewContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // viewMainGoodsInfosBindingSource
@@ -376,6 +380,113 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "视图条件：";
             // 
+            // image16
+            // 
+            this.image16.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("image16.ImageStream")));
+            this.image16.Images.SetKeyName(0, "Pic_16.png");
+            this.image16.Images.SetKeyName(1, "Simple_Pic_16.png");
+            this.image16.Images.SetKeyName(2, "Simple_Pic1_16.png");
+            this.image16.Images.SetKeyName(3, "Simple_Pic2_16.png");
+            this.image16.Images.SetKeyName(4, "Report_Month_16.png");
+            this.image16.Images.SetKeyName(5, "Report_Week_16.png");
+            this.image16.Images.SetKeyName(6, "Map_32.png");
+            this.image16.Images.SetKeyName(7, "ViewFormat_Card_16.png");
+            this.image16.Images.SetKeyName(8, "card-file.png");
+            this.image16.Images.SetKeyName(9, "Reprot_Performance_16.png");
+            // 
+            // ViewTypeContainer
+            // 
+            this.ViewTypeContainer.Controls.Add(this.mNavBarControl);
+            this.ViewTypeContainer.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ViewTypeContainer.Location = new System.Drawing.Point(0, 0);
+            this.ViewTypeContainer.Name = "ViewTypeContainer";
+            this.ViewTypeContainer.Size = new System.Drawing.Size(171, 398);
+            this.ViewTypeContainer.TabIndex = 22;
+            // 
+            // mNavBarControl
+            // 
+            this.mNavBarControl.ActiveGroup = this.NavBtnSystemViewGroup;
+            this.mNavBarControl.BackColor = System.Drawing.Color.Transparent;
+            this.mNavBarControl.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.mNavBarControl.Dock = System.Windows.Forms.DockStyle.Left;
+            this.mNavBarControl.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
+            this.NavBtnSystemViewGroup,
+            this.NavBtnCustomerViewGroup});
+            this.mNavBarControl.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
+            this.btnDefaultView,
+            this.btnAdvBandedView,
+            this.btnCardView,
+            this.btnDashBoard});
+            this.mNavBarControl.Location = new System.Drawing.Point(2, 2);
+            this.mNavBarControl.Name = "mNavBarControl";
+            this.mNavBarControl.OptionsNavPane.ExpandedWidth = 186;
+            this.mNavBarControl.Size = new System.Drawing.Size(170, 394);
+            this.mNavBarControl.SmallImages = this.image16;
+            this.mNavBarControl.StoreDefaultPaintStyleName = true;
+            this.mNavBarControl.TabIndex = 1;
+            this.mNavBarControl.Resize += new System.EventHandler(this.mNavBarControl_Resize);
+            // 
+            // NavBtnSystemViewGroup
+            // 
+            this.NavBtnSystemViewGroup.Caption = "系统视图";
+            this.NavBtnSystemViewGroup.Expanded = true;
+            this.NavBtnSystemViewGroup.GroupCaptionUseImage = DevExpress.XtraNavBar.NavBarImage.Small;
+            this.NavBtnSystemViewGroup.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsList;
+            this.NavBtnSystemViewGroup.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.btnDefaultView),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.btnAdvBandedView),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.btnCardView),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.btnDashBoard)});
+            this.NavBtnSystemViewGroup.Name = "NavBtnSystemViewGroup";
+            this.NavBtnSystemViewGroup.SmallImageIndex = 6;
+            // 
+            // btnDefaultView
+            // 
+            this.btnDefaultView.Caption = "默认视图";
+            this.btnDefaultView.Name = "btnDefaultView";
+            this.btnDefaultView.SmallImageIndex = 5;
+            this.btnDefaultView.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.btnDefaultView_LinkClicked);
+            // 
+            // btnAdvBandedView
+            // 
+            this.btnAdvBandedView.Caption = "聚合视图";
+            this.btnAdvBandedView.Name = "btnAdvBandedView";
+            this.btnAdvBandedView.SmallImageIndex = 4;
+            this.btnAdvBandedView.Visible = false;
+            this.btnAdvBandedView.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.btnAdvBandedView_LinkClicked);
+            // 
+            // btnCardView
+            // 
+            this.btnCardView.Caption = "卡片视图";
+            this.btnCardView.Name = "btnCardView";
+            this.btnCardView.SmallImageIndex = 7;
+            this.btnCardView.Visible = false;
+            this.btnCardView.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.btnCardView_LinkClicked);
+            // 
+            // btnDashBoard
+            // 
+            this.btnDashBoard.Caption = "";
+            this.btnDashBoard.Name = "btnDashBoard";
+            // 
+            // NavBtnCustomerViewGroup
+            // 
+            this.NavBtnCustomerViewGroup.Caption = "自定义视图";
+            this.NavBtnCustomerViewGroup.Expanded = true;
+            this.NavBtnCustomerViewGroup.GroupCaptionUseImage = DevExpress.XtraNavBar.NavBarImage.Small;
+            this.NavBtnCustomerViewGroup.LargeImageIndex = 7;
+            this.NavBtnCustomerViewGroup.Name = "NavBtnCustomerViewGroup";
+            this.NavBtnCustomerViewGroup.SmallImageIndex = 8;
+            // 
+            // ViewContainer
+            // 
+            this.ViewContainer.Controls.Add(this.gridViewControl);
+            this.ViewContainer.Controls.Add(this.panelControl1);
+            this.ViewContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ViewContainer.Location = new System.Drawing.Point(171, 0);
+            this.ViewContainer.Name = "ViewContainer";
+            this.ViewContainer.Size = new System.Drawing.Size(734, 398);
+            this.ViewContainer.TabIndex = 23;
+            // 
             // gridViewControl
             // 
             this.gridViewControl.DataSource = this.viewMainGoodsInfosBindingSource;
@@ -387,7 +498,9 @@
             this.ComboxGoodStatus,
             this.ComboxSex,
             this.ViewPrictureEdit,
-            this.repositoryItemCheckEdit1});
+            this.repositoryItemCheckEdit1,
+            this.repositoryItemComboBox1,
+            this.repositoryItemCheckEdit2});
             this.gridViewControl.Size = new System.Drawing.Size(730, 362);
             this.gridViewControl.TabIndex = 21;
             this.gridViewControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -545,6 +658,7 @@
             // colChk
             // 
             this.colChk.Caption = " ";
+            this.colChk.FieldName = "CheckEdit";
             this.colChk.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
             this.colChk.Name = "colChk";
             this.colChk.Visible = true;
@@ -878,20 +992,6 @@
             this.colGoodsPayCharge.Visible = true;
             this.colGoodsPayCharge.VisibleIndex = 25;
             // 
-            // image16
-            // 
-            this.image16.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("image16.ImageStream")));
-            this.image16.Images.SetKeyName(0, "Pic_16.png");
-            this.image16.Images.SetKeyName(1, "Simple_Pic_16.png");
-            this.image16.Images.SetKeyName(2, "Simple_Pic1_16.png");
-            this.image16.Images.SetKeyName(3, "Simple_Pic2_16.png");
-            this.image16.Images.SetKeyName(4, "Report_Month_16.png");
-            this.image16.Images.SetKeyName(5, "Report_Week_16.png");
-            this.image16.Images.SetKeyName(6, "Map_32.png");
-            this.image16.Images.SetKeyName(7, "ViewFormat_Card_16.png");
-            this.image16.Images.SetKeyName(8, "card-file.png");
-            this.image16.Images.SetKeyName(9, "Reprot_Performance_16.png");
-            // 
             // ComboxGoodStatus
             // 
             this.ComboxGoodStatus.AutoHeight = false;
@@ -922,6 +1022,18 @@
             // 
             this.repositoryItemCheckEdit1.AutoHeight = false;
             this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
+            // 
+            // repositoryItemComboBox1
+            // 
+            this.repositoryItemComboBox1.AutoHeight = false;
+            this.repositoryItemComboBox1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemComboBox1.Name = "repositoryItemComboBox1";
+            // 
+            // repositoryItemCheckEdit2
+            // 
+            this.repositoryItemCheckEdit2.AutoHeight = false;
+            this.repositoryItemCheckEdit2.Name = "repositoryItemCheckEdit2";
             // 
             // mGridAdvBandedViewAll
             // 
@@ -2503,99 +2615,6 @@
             this.ccCustomerPhone.FieldName = "SaledRecord.CustomerPhone";
             this.ccCustomerPhone.Name = "ccCustomerPhone";
             // 
-            // ViewTypeContainer
-            // 
-            this.ViewTypeContainer.Controls.Add(this.mNavBarControl);
-            this.ViewTypeContainer.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ViewTypeContainer.Location = new System.Drawing.Point(0, 0);
-            this.ViewTypeContainer.Name = "ViewTypeContainer";
-            this.ViewTypeContainer.Size = new System.Drawing.Size(171, 398);
-            this.ViewTypeContainer.TabIndex = 22;
-            // 
-            // mNavBarControl
-            // 
-            this.mNavBarControl.ActiveGroup = this.NavBtnSystemViewGroup;
-            this.mNavBarControl.BackColor = System.Drawing.Color.Transparent;
-            this.mNavBarControl.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.mNavBarControl.Dock = System.Windows.Forms.DockStyle.Left;
-            this.mNavBarControl.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
-            this.NavBtnSystemViewGroup,
-            this.NavBtnCustomerViewGroup});
-            this.mNavBarControl.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
-            this.btnDefaultView,
-            this.btnAdvBandedView,
-            this.btnCardView,
-            this.btnDashBoard});
-            this.mNavBarControl.Location = new System.Drawing.Point(2, 2);
-            this.mNavBarControl.Name = "mNavBarControl";
-            this.mNavBarControl.OptionsNavPane.ExpandedWidth = 186;
-            this.mNavBarControl.Size = new System.Drawing.Size(170, 394);
-            this.mNavBarControl.SmallImages = this.image16;
-            this.mNavBarControl.StoreDefaultPaintStyleName = true;
-            this.mNavBarControl.TabIndex = 1;
-            this.mNavBarControl.Resize += new System.EventHandler(this.mNavBarControl_Resize);
-            // 
-            // NavBtnSystemViewGroup
-            // 
-            this.NavBtnSystemViewGroup.Caption = "系统视图";
-            this.NavBtnSystemViewGroup.Expanded = true;
-            this.NavBtnSystemViewGroup.GroupCaptionUseImage = DevExpress.XtraNavBar.NavBarImage.Small;
-            this.NavBtnSystemViewGroup.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsList;
-            this.NavBtnSystemViewGroup.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.btnDefaultView),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.btnAdvBandedView),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.btnCardView),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.btnDashBoard)});
-            this.NavBtnSystemViewGroup.Name = "NavBtnSystemViewGroup";
-            this.NavBtnSystemViewGroup.SmallImageIndex = 6;
-            // 
-            // btnDefaultView
-            // 
-            this.btnDefaultView.Caption = "默认视图";
-            this.btnDefaultView.Name = "btnDefaultView";
-            this.btnDefaultView.SmallImageIndex = 5;
-            this.btnDefaultView.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.btnDefaultView_LinkClicked);
-            // 
-            // btnAdvBandedView
-            // 
-            this.btnAdvBandedView.Caption = "聚合视图";
-            this.btnAdvBandedView.Name = "btnAdvBandedView";
-            this.btnAdvBandedView.SmallImageIndex = 4;
-            this.btnAdvBandedView.Visible = false;
-            this.btnAdvBandedView.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.btnAdvBandedView_LinkClicked);
-            // 
-            // btnCardView
-            // 
-            this.btnCardView.Caption = "卡片视图";
-            this.btnCardView.Name = "btnCardView";
-            this.btnCardView.SmallImageIndex = 7;
-            this.btnCardView.Visible = false;
-            this.btnCardView.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.btnCardView_LinkClicked);
-            // 
-            // btnDashBoard
-            // 
-            this.btnDashBoard.Caption = "";
-            this.btnDashBoard.Name = "btnDashBoard";
-            // 
-            // NavBtnCustomerViewGroup
-            // 
-            this.NavBtnCustomerViewGroup.Caption = "自定义视图";
-            this.NavBtnCustomerViewGroup.Expanded = true;
-            this.NavBtnCustomerViewGroup.GroupCaptionUseImage = DevExpress.XtraNavBar.NavBarImage.Small;
-            this.NavBtnCustomerViewGroup.LargeImageIndex = 7;
-            this.NavBtnCustomerViewGroup.Name = "NavBtnCustomerViewGroup";
-            this.NavBtnCustomerViewGroup.SmallImageIndex = 8;
-            // 
-            // ViewContainer
-            // 
-            this.ViewContainer.Controls.Add(this.gridViewControl);
-            this.ViewContainer.Controls.Add(this.panelControl1);
-            this.ViewContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ViewContainer.Location = new System.Drawing.Point(171, 0);
-            this.ViewContainer.Name = "ViewContainer";
-            this.ViewContainer.Size = new System.Drawing.Size(734, 398);
-            this.ViewContainer.TabIndex = 23;
-            // 
             // FmGoodsMainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -2612,13 +2631,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.image16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ViewTypeContainer)).EndInit();
+            this.ViewTypeContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.mNavBarControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ViewContainer)).EndInit();
+            this.ViewContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridViewControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mGridDefaultViewAll)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ViewPrictureEdit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.image16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ComboxGoodStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ComboxSex)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mGridAdvBandedViewAll)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mGridLayoutView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_colGoodsOriginalCode)).EndInit();
@@ -2664,11 +2690,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_layoutViewColumn35_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewCard1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mGridCardViewAll)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ViewTypeContainer)).EndInit();
-            this.ViewTypeContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.mNavBarControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ViewContainer)).EndInit();
-            this.ViewContainer.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2679,61 +2700,46 @@
         private System.Windows.Forms.BindingSource viewMainGoodsInfosBindingSource;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.LabelControl labSourceCondition;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.PanelControl ViewTypeContainer;
+        private DevExpress.XtraEditors.PanelControl ViewContainer;
+        private DevExpress.XtraNavBar.NavBarControl mNavBarControl;
+        private DevExpress.XtraNavBar.NavBarGroup NavBtnSystemViewGroup;
+        private DevExpress.XtraNavBar.NavBarGroup NavBtnCustomerViewGroup;
+        private DevExpress.XtraNavBar.NavBarItem btnDefaultView;
+        private DevExpress.XtraNavBar.NavBarItem btnAdvBandedView;
+        private DevExpress.XtraNavBar.NavBarItem btnCardView;
+        private DevExpress.XtraNavBar.NavBarItem btnDashBoard;
+        private DevExpress.Utils.ImageCollection image16;
         private DevExpress.XtraGrid.GridControl gridViewControl;
-        private DevExpress.XtraGrid.Views.Card.CardView mGridCardViewAll;
-        private DevExpress.XtraGrid.Columns.GridColumn cardColShop;
-        private DevExpress.XtraGrid.Columns.GridColumn cardColGoodsCode;
-        private DevExpress.XtraGrid.Columns.GridColumn cardColCategory;
-        private DevExpress.XtraGrid.Columns.GridColumn cardColGoodsName;
-        private DevExpress.XtraGrid.Columns.GridColumn cardColGoodsColor;
-        private DevExpress.XtraGrid.Columns.GridColumn cardColGoodsQuality;
-        private DevExpress.XtraGrid.Columns.GridColumn cardColGoodsStatus;
-        private DevExpress.XtraEditors.Repository.RepositoryItemComboBox ComboxGoodStatus;
-        private DevExpress.XtraGrid.Columns.GridColumn cardColGoodsImage;
-        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit ViewPrictureEdit;
-        private DevExpress.XtraGrid.Columns.GridColumn cardColGoodsDesc;
-        private DevExpress.XtraGrid.Columns.GridColumn cardColPayType;
-        private DevExpress.XtraGrid.Columns.GridColumn cardColGoodsPrimePrice;
-        private DevExpress.XtraGrid.Columns.GridColumn cardColGoodsMarkPrice;
-        private DevExpress.XtraGrid.Columns.GridColumn cardColPurchaseOperator;
-        private DevExpress.XtraGrid.Columns.GridColumn cardColSaledPayType;
-        private DevExpress.XtraGrid.Columns.GridColumn cardColGoodsSalePrice;
-        private DevExpress.XtraGrid.Columns.GridColumn cardColGoodsDisCount;
-        private DevExpress.XtraGrid.Columns.GridColumn cardColGoodsPrepay;
-        private DevExpress.XtraGrid.Columns.GridColumn cardColGoodsCreateDate;
-        private DevExpress.XtraGrid.Columns.GridColumn cardColGoodsSaledDate;
-        private DevExpress.XtraGrid.Columns.GridColumn cardColGoodsLastUpdatedDate;
-        private DevExpress.XtraGrid.Columns.GridColumn cardColSaledOperator;
-        private DevExpress.XtraGrid.Columns.GridColumn cardColSupplierName;
-        private DevExpress.XtraGrid.Columns.GridColumn cardColSupplierPhone;
-        private DevExpress.XtraGrid.Columns.GridColumn cardColSuplierBankName;
-        private DevExpress.XtraGrid.Columns.GridColumn cardColSupplierBankCard;
-        private DevExpress.XtraGrid.Columns.GridColumn cardColSupplierIdCard;
-        private DevExpress.XtraGrid.Columns.GridColumn cardColGoodsOriginalCode;
-        private DevExpress.XtraGrid.Columns.GridColumn cardColSourceName;
-        private DevExpress.XtraGrid.Columns.GridColumn cardColPurchaseUser;
-        private DevExpress.XtraGrid.Columns.GridColumn cardColSaledUser;
-        private DevExpress.XtraGrid.Columns.GridColumn cardColShopPhone;
-        private DevExpress.XtraGrid.Columns.GridColumn cardColShopAddress;
-        private DevExpress.XtraGrid.Columns.GridColumn cardColSupplierSex;
-        private DevExpress.XtraEditors.Repository.RepositoryItemComboBox ComboxSex;
-        private DevExpress.XtraGrid.Columns.GridColumn cardColGoodsParts;
         private DevExpress.XtraGrid.Views.Grid.GridView mGridDefaultViewAll;
         private DevExpress.XtraGrid.Columns.GridColumn colGoodsOriginalCode;
-        private DevExpress.XtraGrid.Columns.GridColumn colSourceName;
         private DevExpress.XtraGrid.Columns.GridColumn colPurchaseUser;
         private DevExpress.XtraGrid.Columns.GridColumn colSaledUser;
         private DevExpress.XtraGrid.Columns.GridColumn colShopPhone;
         private DevExpress.XtraGrid.Columns.GridColumn colShopAddress;
         private DevExpress.XtraGrid.Columns.GridColumn colSupplierSex;
         private DevExpress.XtraGrid.Columns.GridColumn colGoodsParts;
+        private DevExpress.XtraGrid.Columns.GridColumn colGoodsImage;
+        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit ViewPrictureEdit;
+        private DevExpress.XtraGrid.Columns.GridColumn colChk;
         private DevExpress.XtraGrid.Columns.GridColumn colShop;
         private DevExpress.XtraGrid.Columns.GridColumn colGoodsCode;
         private DevExpress.XtraGrid.Columns.GridColumn colCategory;
-        private DevExpress.XtraGrid.Columns.GridColumn colGoodsImage;
         private DevExpress.XtraGrid.Columns.GridColumn colGoodsName;
         private DevExpress.XtraGrid.Columns.GridColumn colGoodsColor;
         private DevExpress.XtraGrid.Columns.GridColumn colGoodsQuality;
+        private DevExpress.XtraGrid.Columns.GridColumn colprochima;
+        private DevExpress.XtraGrid.Columns.GridColumn colprojiankuan;
+        private DevExpress.XtraGrid.Columns.GridColumn colproyaowei;
+        private DevExpress.XtraGrid.Columns.GridColumn colproxiongwei;
+        private DevExpress.XtraGrid.Columns.GridColumn colprotunwei;
+        private DevExpress.XtraGrid.Columns.GridColumn colproyichang;
+        private DevExpress.XtraGrid.Columns.GridColumn colprokuchang;
+        private DevExpress.XtraGrid.Columns.GridColumn colproxiuchang;
+        private DevExpress.XtraGrid.Columns.GridColumn colSourceName;
+        private DevExpress.XtraGrid.Columns.GridColumn colGoodsStatus;
+        private DevExpress.XtraGrid.Columns.GridColumn colGoosPaid;
         private DevExpress.XtraGrid.Columns.GridColumn colGoodsDesc;
         private DevExpress.XtraGrid.Columns.GridColumn colPayType;
         private DevExpress.XtraGrid.Columns.GridColumn colGoodsPrimePrice;
@@ -2752,8 +2758,19 @@
         private DevExpress.XtraGrid.Columns.GridColumn colSupplierBankName;
         private DevExpress.XtraGrid.Columns.GridColumn colSupplierBankCard;
         private DevExpress.XtraGrid.Columns.GridColumn colSupplierIdCard;
+        private DevExpress.XtraGrid.Columns.GridColumn colConsignEndDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colConsignStartDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colCustomerName;
+        private DevExpress.XtraGrid.Columns.GridColumn colCustomerPhone;
+        private DevExpress.XtraGrid.Columns.GridColumn colGoodsPayCharge;
+        private DevExpress.XtraEditors.Repository.RepositoryItemComboBox ComboxGoodStatus;
+        private DevExpress.XtraEditors.Repository.RepositoryItemComboBox ComboxSex;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit2;
         private DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView mGridAdvBandedViewAll;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand 商品信息;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bcCheckEdit;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn badColShop;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn badColShopPhone;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn badColShopAddress;
@@ -2772,6 +2789,7 @@
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn badColGoodsMarkPrice;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn badColGoodsSalePrice;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn badColGoodsDisCount;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bcGoodsPayCharge;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn badColGoodsPrepay;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn badColSaledOperator;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn badColPayType;
@@ -2789,130 +2807,135 @@
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn badColSaledUser;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn badColGoodsParts;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn badColGoodslastUpdatedDate;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bcConsignEndDate;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bcConsignStartDate;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bcCustomerName;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bcCustomerPhone;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn1;
         private DevExpress.XtraGrid.Views.Layout.LayoutView mGridLayoutView;
         private DevExpress.XtraGrid.Columns.LayoutViewColumn lcOriginalCode;
-        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn2;
-        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn3;
-        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn4;
-        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn5;
-        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn6;
-        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn7;
-        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn8;
-        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn9;
-        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn10;
-        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn11;
-        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn12;
-        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn13;
-        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn14;
-        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn15;
-        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn16;
-        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn17;
-        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn18;
-        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn19;
-        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn20;
-        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn21;
-        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn22;
-        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn23;
-        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn24;
-        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn25;
-        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn26;
-        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn27;
-        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn28;
-        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn29;
-        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn30;
-        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn31;
-        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn32;
-        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn33;
-        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn34;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colGoodsOriginalCode;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn2;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colSourceName;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn3;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colPurchaseUser;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn4;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colSaledUser;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn5;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colShopPhone;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn6;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colShopAddress;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn7;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colSupplierSex;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn8;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colGoodsParts;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn lcCheckEdit;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_layoutViewColumn36_2;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn9;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colShop;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn10;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colGoodsCode;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn11;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colCategory;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn12;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colGoodsImage;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn13;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colGoodsName;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn14;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colGoodsColor;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn15;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colGoodsQuality;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn16;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colGoodsStatus;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn17;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colGoodsDesc;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn18;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colPayType;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn19;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colGoodsPrimePrice;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn20;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colGoodsMarkPrice;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn21;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colPurchaseOperator;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn22;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colSaledPayType;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn23;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colGoodsSalePrice;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn24;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colGoodsDisCount;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn lcGoodsPayCharge;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_layoutViewColumn1;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn25;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colGoodsPrepay;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn26;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colGoodsCreateDate;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn27;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colGOodsSaledDate;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn28;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colGoodsLastUpdatedDate;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn29;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colSaledOperator;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn30;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colSupplierName;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn31;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colSupplierPhone;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn32;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colSupplierBankName;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn33;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colSupplierBankCard;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn34;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_colSupplierIdCard;
-        private DevExpress.XtraGrid.Views.Layout.LayoutViewCard layoutViewCard1;
-        private DevExpress.XtraGrid.Columns.GridColumn colGoodsStatus;
-        private DevExpress.XtraGrid.Columns.GridColumn colConsignEndDate;
-        private DevExpress.XtraGrid.Columns.GridColumn colConsignStartDate;
         private DevExpress.XtraGrid.Columns.LayoutViewColumn lcConsignStartDate;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_layoutViewColumn35;
         private DevExpress.XtraGrid.Columns.LayoutViewColumn lcConsignEndDate;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_layoutViewColumn36;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bcConsignEndDate;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bcConsignStartDate;
-        private DevExpress.XtraGrid.Columns.GridColumn ccConsignEndDate;
-        private DevExpress.XtraGrid.Columns.GridColumn ccConsignStartDate;
-        private DevExpress.XtraGrid.Columns.GridColumn colCustomerName;
-        private DevExpress.XtraGrid.Columns.GridColumn colCustomerPhone;
         private DevExpress.XtraGrid.Columns.LayoutViewColumn lcCustomerName;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_layoutViewColumn35_1;
         private DevExpress.XtraGrid.Columns.LayoutViewColumn lcCustomerPhone;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_layoutViewColumn36_1;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bcCustomerName;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bcCustomerPhone;
-        private DevExpress.XtraGrid.Columns.GridColumn ccCustomerName;
-        private DevExpress.XtraGrid.Columns.GridColumn ccCustomerPhone;
-        private DevExpress.XtraGrid.Columns.GridColumn colGoosPaid;
         private DevExpress.XtraGrid.Columns.LayoutViewColumn layoutViewColumn35;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_layoutViewColumn35_2;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn1;
-        private DevExpress.XtraEditors.PanelControl ViewTypeContainer;
-        private DevExpress.XtraEditors.PanelControl ViewContainer;
-        private DevExpress.XtraNavBar.NavBarControl mNavBarControl;
-        private DevExpress.XtraNavBar.NavBarGroup NavBtnSystemViewGroup;
-        private DevExpress.XtraNavBar.NavBarGroup NavBtnCustomerViewGroup;
-        private DevExpress.XtraNavBar.NavBarItem btnDefaultView;
-        private DevExpress.XtraNavBar.NavBarItem btnAdvBandedView;
-        private DevExpress.XtraNavBar.NavBarItem btnCardView;
-        private DevExpress.XtraGrid.Columns.GridColumn colChk;
-        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
-        private DevExpress.XtraGrid.Columns.LayoutViewColumn lcCheckEdit;
-        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_layoutViewColumn36_2;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bcCheckEdit;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewCard layoutViewCard1;
+        private DevExpress.XtraGrid.Views.Card.CardView mGridCardViewAll;
         private DevExpress.XtraGrid.Columns.GridColumn ccCheckEdit;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bcGoodsPayCharge;
-        private DevExpress.XtraGrid.Columns.LayoutViewColumn lcGoodsPayCharge;
-        private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_layoutViewColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn cardColShop;
+        private DevExpress.XtraGrid.Columns.GridColumn cardColGoodsCode;
+        private DevExpress.XtraGrid.Columns.GridColumn cardColCategory;
+        private DevExpress.XtraGrid.Columns.GridColumn cardColGoodsName;
+        private DevExpress.XtraGrid.Columns.GridColumn cardColGoodsColor;
+        private DevExpress.XtraGrid.Columns.GridColumn cardColGoodsQuality;
+        private DevExpress.XtraGrid.Columns.GridColumn cardColGoodsStatus;
+        private DevExpress.XtraGrid.Columns.GridColumn cardColGoodsImage;
+        private DevExpress.XtraGrid.Columns.GridColumn cardColGoodsDesc;
+        private DevExpress.XtraGrid.Columns.GridColumn cardColPayType;
+        private DevExpress.XtraGrid.Columns.GridColumn cardColGoodsPrimePrice;
+        private DevExpress.XtraGrid.Columns.GridColumn cardColGoodsMarkPrice;
+        private DevExpress.XtraGrid.Columns.GridColumn cardColPurchaseOperator;
+        private DevExpress.XtraGrid.Columns.GridColumn cardColSaledPayType;
+        private DevExpress.XtraGrid.Columns.GridColumn cardColGoodsSalePrice;
+        private DevExpress.XtraGrid.Columns.GridColumn cardColGoodsDisCount;
         private DevExpress.XtraGrid.Columns.GridColumn ccGoodsPayCharge;
-        private DevExpress.XtraGrid.Columns.GridColumn colGoodsPayCharge;
-        private DevExpress.XtraNavBar.NavBarItem btnDashBoard;
-        private DevExpress.Utils.ImageCollection image16;
-        private DevExpress.XtraGrid.Columns.GridColumn colprochima;
-        private DevExpress.XtraGrid.Columns.GridColumn colprojiankuan;
-        private DevExpress.XtraGrid.Columns.GridColumn colproyaowei;
-        private DevExpress.XtraGrid.Columns.GridColumn colproxiongwei;
-        private DevExpress.XtraGrid.Columns.GridColumn colprotunwei;
-        private DevExpress.XtraGrid.Columns.GridColumn colproyichang;
-        private DevExpress.XtraGrid.Columns.GridColumn colprokuchang;
-        private DevExpress.XtraGrid.Columns.GridColumn colproxiuchang;
+        private DevExpress.XtraGrid.Columns.GridColumn cardColGoodsPrepay;
+        private DevExpress.XtraGrid.Columns.GridColumn cardColGoodsCreateDate;
+        private DevExpress.XtraGrid.Columns.GridColumn cardColGoodsSaledDate;
+        private DevExpress.XtraGrid.Columns.GridColumn cardColGoodsLastUpdatedDate;
+        private DevExpress.XtraGrid.Columns.GridColumn cardColSaledOperator;
+        private DevExpress.XtraGrid.Columns.GridColumn cardColSupplierName;
+        private DevExpress.XtraGrid.Columns.GridColumn cardColSupplierPhone;
+        private DevExpress.XtraGrid.Columns.GridColumn cardColSuplierBankName;
+        private DevExpress.XtraGrid.Columns.GridColumn cardColSupplierBankCard;
+        private DevExpress.XtraGrid.Columns.GridColumn cardColSupplierIdCard;
+        private DevExpress.XtraGrid.Columns.GridColumn cardColGoodsOriginalCode;
+        private DevExpress.XtraGrid.Columns.GridColumn cardColSourceName;
+        private DevExpress.XtraGrid.Columns.GridColumn cardColPurchaseUser;
+        private DevExpress.XtraGrid.Columns.GridColumn cardColSaledUser;
+        private DevExpress.XtraGrid.Columns.GridColumn cardColShopPhone;
+        private DevExpress.XtraGrid.Columns.GridColumn cardColShopAddress;
+        private DevExpress.XtraGrid.Columns.GridColumn cardColSupplierSex;
+        private DevExpress.XtraGrid.Columns.GridColumn cardColGoodsParts;
+        private DevExpress.XtraGrid.Columns.GridColumn ccConsignEndDate;
+        private DevExpress.XtraGrid.Columns.GridColumn ccConsignStartDate;
+        private DevExpress.XtraGrid.Columns.GridColumn ccCustomerName;
+        private DevExpress.XtraGrid.Columns.GridColumn ccCustomerPhone;
     }
 }

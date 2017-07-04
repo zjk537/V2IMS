@@ -70,6 +70,7 @@
             this.custyhcard = new DevExpress.XtraEditors.TextEdit();
             this.custdizhi = new DevExpress.XtraEditors.TextEdit();
             this.custname = new DevExpress.XtraEditors.TextEdit();
+            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
@@ -94,7 +95,6 @@
             this.ckbprinted = new DevExpress.XtraEditors.CheckEdit();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.btnOk = new DevExpress.XtraEditors.SimpleButton();
-            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             ((System.ComponentModel.ISupportInitialize)(this.prosjiage.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.probujian.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proremark.Properties)).BeginInit();
@@ -126,6 +126,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.custyhcard.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.custdizhi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.custname.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -137,7 +138,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ckbprinted.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // prosjiage
@@ -219,6 +219,7 @@
             this.mErrorProvider.SetIconAlignment(this.prochengse, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.prochengse.Location = new System.Drawing.Point(69, 89);
             this.prochengse.Name = "prochengse";
+            this.prochengse.Properties.NullText = "默认为空";
             this.prochengse.Properties.NullValuePrompt = "默认为空";
             this.prochengse.Properties.NullValuePromptShowForEmptyValue = true;
             this.prochengse.Size = new System.Drawing.Size(135, 21);
@@ -231,6 +232,7 @@
             this.mErrorProvider.SetIconAlignment(this.procolor, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.procolor.Location = new System.Drawing.Point(278, 62);
             this.procolor.Name = "procolor";
+            this.procolor.Properties.NullText = "默认为空";
             this.procolor.Properties.NullValuePrompt = "默认为空";
             this.procolor.Properties.NullValuePromptShowForEmptyValue = true;
             this.procolor.Size = new System.Drawing.Size(135, 21);
@@ -430,9 +432,9 @@
             this.prochima.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.prochima.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.prochima.Properties.Mask.EditMask = "c";
-            this.prochima.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.prochima.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.prochima.Properties.MaxLength = 9;
+            this.prochima.Properties.NullText = "默认为空";
             this.prochima.Properties.NullValuePrompt = "数字格式<必填>";
             this.prochima.Properties.NullValuePromptShowForEmptyValue = true;
             this.prochima.Size = new System.Drawing.Size(135, 21);
@@ -447,10 +449,10 @@
             this.proxiongwei.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.proxiongwei.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.proxiongwei.Properties.Mask.EditMask = "c";
-            this.proxiongwei.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.proxiongwei.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.proxiongwei.Properties.MaxLength = 9;
-            this.proxiongwei.Properties.NullValuePrompt = "数字格式<必填>";
+            this.proxiongwei.Properties.NullText = "默认为空";
+            this.proxiongwei.Properties.NullValuePrompt = "<必填>";
             this.proxiongwei.Properties.NullValuePromptShowForEmptyValue = true;
             this.proxiongwei.Size = new System.Drawing.Size(135, 21);
             this.proxiongwei.TabIndex = 1006;
@@ -461,6 +463,8 @@
             this.mErrorProvider.SetIconAlignment(this.proyaowei, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.proyaowei.Location = new System.Drawing.Point(278, 116);
             this.proyaowei.Name = "proyaowei";
+            this.proyaowei.Properties.Mask.EditMask = "c";
+            this.proyaowei.Properties.NullText = "默认为空";
             this.proyaowei.Properties.NullValuePrompt = "默认为空";
             this.proyaowei.Properties.NullValuePromptShowForEmptyValue = true;
             this.proyaowei.Size = new System.Drawing.Size(135, 21);
@@ -472,6 +476,8 @@
             this.mErrorProvider.SetIconAlignment(this.projiankuan, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.projiankuan.Location = new System.Drawing.Point(69, 116);
             this.projiankuan.Name = "projiankuan";
+            this.projiankuan.Properties.Mask.EditMask = "c";
+            this.projiankuan.Properties.NullText = "默认为空";
             this.projiankuan.Properties.NullValuePrompt = "<必填>";
             this.projiankuan.Properties.NullValuePromptShowForEmptyValue = true;
             this.projiankuan.Size = new System.Drawing.Size(135, 21);
@@ -486,9 +492,9 @@
             this.prokuchang.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.prokuchang.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.prokuchang.Properties.Mask.EditMask = "c";
-            this.prokuchang.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.prokuchang.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.prokuchang.Properties.MaxLength = 9;
+            this.prokuchang.Properties.NullText = "默认为空";
             this.prokuchang.Properties.NullValuePrompt = "数字格式<必填>";
             this.prokuchang.Properties.NullValuePromptShowForEmptyValue = true;
             this.prokuchang.Size = new System.Drawing.Size(135, 21);
@@ -500,6 +506,7 @@
             this.mErrorProvider.SetIconAlignment(this.proxiuchang, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.proxiuchang.Location = new System.Drawing.Point(278, 170);
             this.proxiuchang.Name = "proxiuchang";
+            this.proxiuchang.Properties.NullText = "默认为空";
             this.proxiuchang.Properties.NullValuePrompt = "默认为空";
             this.proxiuchang.Properties.NullValuePromptShowForEmptyValue = true;
             this.proxiuchang.Size = new System.Drawing.Size(135, 21);
@@ -511,6 +518,7 @@
             this.mErrorProvider.SetIconAlignment(this.proyichang, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.proyichang.Location = new System.Drawing.Point(69, 170);
             this.proyichang.Name = "proyichang";
+            this.proyichang.Properties.NullText = "默认为空";
             this.proyichang.Properties.NullValuePrompt = "<必填>";
             this.proyichang.Properties.NullValuePromptShowForEmptyValue = true;
             this.proyichang.Size = new System.Drawing.Size(135, 21);
@@ -525,10 +533,10 @@
             this.protunwei.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.protunwei.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.protunwei.Properties.Mask.EditMask = "c";
-            this.protunwei.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.protunwei.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.protunwei.Properties.MaxLength = 9;
-            this.protunwei.Properties.NullValuePrompt = "数字格式<必填>";
+            this.protunwei.Properties.NullText = "默认为空";
+            this.protunwei.Properties.NullValuePrompt = "<必填>";
             this.protunwei.Properties.NullValuePromptShowForEmptyValue = true;
             this.protunwei.Size = new System.Drawing.Size(135, 21);
             this.protunwei.TabIndex = 1008;
@@ -646,6 +654,22 @@
             this.custname.TabIndex = 1007;
             this.custname.TextChanged += new System.EventHandler(this.TextEdit_TextChanged);
             this.custname.Enter += new System.EventHandler(this.TextEdit_Enter);
+            // 
+            // pictureEdit1
+            // 
+            this.pictureEdit1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureEdit1.EditValue = global::Vogue2_IMS.Properties.Resources.search_d;
+            this.mErrorProvider.SetIconAlignment(this.pictureEdit1, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
+            this.pictureEdit1.Location = new System.Drawing.Point(441, 30);
+            this.pictureEdit1.Name = "pictureEdit1";
+            this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.pictureEdit1.Properties.NullText = "双击选择图片";
+            this.pictureEdit1.Properties.PictureStoreMode = DevExpress.XtraEditors.Controls.PictureStoreMode.ByteArray;
+            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.pictureEdit1.Size = new System.Drawing.Size(24, 21);
+            this.pictureEdit1.TabIndex = 1;
+            this.pictureEdit1.ToolTip = "查找供货方";
+            this.pictureEdit1.Click += new System.EventHandler(this.pictureEdit1_Click);
             // 
             // groupControl1
             // 
@@ -911,22 +935,6 @@
             this.btnOk.Text = "确定(&S)";
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
-            // pictureEdit1
-            // 
-            this.pictureEdit1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureEdit1.EditValue = global::Vogue2_IMS.Properties.Resources.search_d;
-            this.mErrorProvider.SetIconAlignment(this.pictureEdit1, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.pictureEdit1.Location = new System.Drawing.Point(441, 30);
-            this.pictureEdit1.Name = "pictureEdit1";
-            this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.pictureEdit1.Properties.NullText = "双击选择图片";
-            this.pictureEdit1.Properties.PictureStoreMode = DevExpress.XtraEditors.Controls.PictureStoreMode.ByteArray;
-            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.pictureEdit1.Size = new System.Drawing.Size(24, 21);
-            this.pictureEdit1.TabIndex = 1;
-            this.pictureEdit1.ToolTip = "查找供货方";
-            this.pictureEdit1.Click += new System.EventHandler(this.pictureEdit1_Click);
-            // 
             // FmGoodsInfo
             // 
             this.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
@@ -973,6 +981,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.custyhcard.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.custdizhi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.custname.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
@@ -987,7 +996,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ckbprinted.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

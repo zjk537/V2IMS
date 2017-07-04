@@ -201,9 +201,7 @@
             this.outcustphone.Name = "outcustphone";
             this.outcustphone.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.outcustphone.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.outcustphone.Properties.Mask.EditMask = "c";
-            this.outcustphone.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.outcustphone.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.outcustphone.Properties.NullText = "<必填>";
             this.outcustphone.Properties.NullValuePrompt = "数字格式";
             this.outcustphone.Properties.NullValuePromptShowForEmptyValue = true;
             this.outcustphone.Size = new System.Drawing.Size(166, 21);
@@ -226,10 +224,8 @@
             this.outcustname.Name = "outcustname";
             this.outcustname.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.outcustname.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.outcustname.Properties.Mask.EditMask = "c";
-            this.outcustname.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.outcustname.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.outcustname.Properties.NullValuePrompt = "数字格式";
+            this.outcustname.Properties.NullText = "<必填>";
+            this.outcustname.Properties.NullValuePrompt = "<必填>";
             this.outcustname.Properties.NullValuePromptShowForEmptyValue = true;
             this.outcustname.Size = new System.Drawing.Size(166, 21);
             this.outcustname.TabIndex = 1008;

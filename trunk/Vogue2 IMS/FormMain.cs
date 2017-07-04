@@ -758,12 +758,15 @@ namespace Vogue2_IMS
         {
             try
             {
-                var chkedMainGoodsInfos = this.GetCheckedGoodsInfos();
-                List<SaledGoodsInfo> chkedGoodsInfos = null;// chkedMainGoodsInfos.Select(goods => null).ToList();
-                var fmGoodsSaled = new FmGoodsSaled(chkedGoodsInfos);
-                fmGoodsSaled.WindowState = FormWindowState.Maximized;
-
-                fmGoodsSaled.ShowDialog();
+                  var gridMainView = mFmGoodsMainView.MainView;
+                  if (gridMainView.SelectedRowsCount > 0)
+                  {
+                      var dialogresult = DialogResult.Cancel;
+                      int[] rowIndexs = gridMainView.GetSelectedRows();
+                      var fmGoodsSales = new FmGoodsSaledMondify(gridMainView.GetRow(0) as ProInfo);
+                      dialogresult = fmGoodsSales.ShowDialog();
+                  }
+              
             }
             catch (Exception ex)
             {

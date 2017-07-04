@@ -10,103 +10,359 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="GoodsJsSource">
+    <DataSet Name="ProInfo">
       <Fields>
-        <Field Name="Color">
-          <DataField>Color</DataField>
+        <Field Name="CheckEdit">
+          <DataField>CheckEdit</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="Cust">
+          <DataField>Cust</DataField>
+          <rd:TypeName>Vogue2_IMS.Business.CustInfo</rd:TypeName>
+        </Field>
+        <Field Name="custaddtime">
+          <DataField>custaddtime</DataField>
+          <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="custdizhi">
+          <DataField>custdizhi</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="ConsignEndDate">
-          <DataField>ConsignEndDate</DataField>
+        <Field Name="custid">
+          <DataField>custid</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="custidcard">
+          <DataField>custidcard</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="ConsignStartDate">
-          <DataField>ConsignStartDate</DataField>
+        <Field Name="custjuid">
+          <DataField>custjuid</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="custjuname">
+          <DataField>custjuname</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Desc">
-          <DataField>Desc</DataField>
+        <Field Name="custname">
+          <DataField>custname</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="GoodsCode">
-          <DataField>GoodsCode</DataField>
+        <Field Name="custphone">
+          <DataField>custphone</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="GoodsImageBytes">
-          <DataField>GoodsImageBytes</DataField>
-          <rd:TypeName>System.Byte[]</rd:TypeName>
-        </Field>
-        <Field Name="Id">
-          <DataField>Id</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="Name">
-          <DataField>Name</DataField>
+        <Field Name="custremark">
+          <DataField>custremark</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Operator">
-          <DataField>Operator</DataField>
+        <Field Name="custsex">
+          <DataField>custsex</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="OrderType">
-          <DataField>OrderType</DataField>
+        <Field Name="custstatus">
+          <DataField>custstatus</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="custtype">
+          <DataField>custtype</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="OriginalCode">
-          <DataField>OriginalCode</DataField>
+        <Field Name="custuid">
+          <DataField>custuid</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="custuname">
+          <DataField>custuname</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Parts">
-          <DataField>Parts</DataField>
+        <Field Name="custupdatetime">
+          <DataField>custupdatetime</DataField>
+          <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="custuuid">
+          <DataField>custuuid</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="custuuname">
+          <DataField>custuuname</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="PrimePrice">
-          <DataField>PrimePrice</DataField>
+        <Field Name="custyhcard">
+          <DataField>custyhcard</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="PurchaseGoodsInfo">
-          <DataField>PurchaseGoodsInfo</DataField>
-          <rd:TypeName>Vogue2_IMS.Business.BusinessModel.PurchaseGoodsInfo</rd:TypeName>
-        </Field>
-        <Field Name="Quality">
-          <DataField>Quality</DataField>
+        <Field Name="custyhname">
+          <DataField>custyhname</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="ShopName">
-          <DataField>ShopName</DataField>
+        <Field Name="proaddtime">
+          <DataField>proaddtime</DataField>
+          <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="probjiage">
+          <DataField>probjiage</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="probujian">
+          <DataField>probujian</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="ShopPhone">
-          <DataField>ShopPhone</DataField>
+        <Field Name="prochengse">
+          <DataField>prochengse</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="SpplierBankCard">
-          <DataField>SpplierBankCard</DataField>
+        <Field Name="prochima">
+          <DataField>prochima</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="SpplierBankName">
-          <DataField>SpplierBankName</DataField>
+        <Field Name="procode">
+          <DataField>procode</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="SpplierIdCard">
-          <DataField>SpplierIdCard</DataField>
+        <Field Name="procolor">
+          <DataField>procolor</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="SupplierName">
-          <DataField>SupplierName</DataField>
+        <Field Name="prodepid">
+          <DataField>prodepid</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="prodepname">
+          <DataField>prodepname</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="SupplierPhone">
-          <DataField>SupplierPhone</DataField>
+        <Field Name="proendtime">
+          <DataField>proendtime</DataField>
+          <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="profenlei">
+          <DataField>profenlei</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="TotalPrice">
-          <DataField>TotalPrice</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
+        <Field Name="proid">
+          <DataField>proid</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
         </Field>
-        <Field Name="TotalPriceZH">
-          <DataField>TotalPriceZH</DataField>
+        <Field Name="proinaddtime">
+          <DataField>proinaddtime</DataField>
+          <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="proinid">
+          <DataField>proinid</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="proinjpid">
+          <DataField>proinjpid</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="proinjpjiage">
+          <DataField>proinjpjiage</DataField>
           <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="proinjpname">
+          <DataField>proinjpname</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="proinjuid">
+          <DataField>proinjuid</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="proinjuname">
+          <DataField>proinjuname</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="proinremark">
+          <DataField>proinremark</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="proinuid">
+          <DataField>proinuid</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="proinuname">
+          <DataField>proinuname</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="proinupdatetime">
+          <DataField>proinupdatetime</DataField>
+          <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="proinuuid">
+          <DataField>proinuuid</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="proinuuname">
+          <DataField>proinuuname</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="projcode">
+          <DataField>projcode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="projcustid">
+          <DataField>projcustid</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="projcustname">
+          <DataField>projcustname</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="projiage">
+          <DataField>projiage</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="projiankuan">
+          <DataField>projiankuan</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="prokuchang">
+          <DataField>prokuchang</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="proname">
+          <DataField>proname</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="prooutaddtime">
+          <DataField>prooutaddtime</DataField>
+          <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="prooutbeizhu">
+          <DataField>prooutbeizhu</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="prooutcustname">
+          <DataField>prooutcustname</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="prooutcustphone">
+          <DataField>prooutcustphone</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="prooutid">
+          <DataField>prooutid</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="prooutjpid">
+          <DataField>prooutjpid</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="prooutjpname">
+          <DataField>prooutjpname</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="prooutjpsjiage">
+          <DataField>prooutjpsjiage</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="prooutjuid">
+          <DataField>prooutjuid</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="prooutjuname">
+          <DataField>prooutjuname</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="prooutpaytype">
+          <DataField>prooutpaytype</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="prooutuid">
+          <DataField>prooutuid</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="prooutuname">
+          <DataField>prooutuname</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="prooutupdatetime">
+          <DataField>prooutupdatetime</DataField>
+          <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="prooutuuid">
+          <DataField>prooutuuid</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="prooutuuname">
+          <DataField>prooutuuname</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="propaystatus">
+          <DataField>propaystatus</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="proremark">
+          <DataField>proremark</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ProSalesInfo">
+          <DataField>ProSalesInfo</DataField>
+          <rd:TypeName>Vogue2_IMS.Business.ProSalesInfo</rd:TypeName>
+        </Field>
+        <Field Name="prosjiage">
+          <DataField>prosjiage</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="prostarttime">
+          <DataField>prostarttime</DataField>
+          <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="prostatus">
+          <DataField>prostatus</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="protunwei">
+          <DataField>protunwei</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="protype">
+          <DataField>protype</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="prouid">
+          <DataField>prouid</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="prouname">
+          <DataField>prouname</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="proupdatetime">
+          <DataField>proupdatetime</DataField>
+          <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="prouuid">
+          <DataField>prouuid</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="prouuname">
+          <DataField>prouuname</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="proxiongwei">
+          <DataField>proxiongwei</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="proxiuchang">
+          <DataField>proxiuchang</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="proyaowei">
+          <DataField>proyaowei</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="proyichang">
+          <DataField>proyichang</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="proyufu">
+          <DataField>proyufu</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="prozhekou">
+          <DataField>prozhekou</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
         </Field>
       </Fields>
       <Query>
@@ -114,9 +370,9 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <rd:DataSetInfo>
-        <rd:DataSetName>Vogue2_IMS.Business.BusinessModel</rd:DataSetName>
-        <rd:TableName>PurchaseJsGoodsOrderInfo</rd:TableName>
-        <rd:ObjectDataSourceType>Vogue2_IMS.Business.BusinessModel.PurchaseJsGoodsOrderInfo, Vogue2 IMS.Business, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:DataSetName>Vogue2_IMS.Business</rd:DataSetName>
+        <rd:TableName>ProInfo</rd:TableName>
+        <rd:ObjectDataSourceType>Vogue2_IMS.Business.ProInfo, Vogue2 IMS.Business, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
@@ -230,14 +486,14 @@
                                                 </TablixCell>
                                                 <TablixCell>
                                                   <CellContents>
-                                                    <Textbox Name="GoodsCode">
+                                                    <Textbox Name="procode">
                                                       <CanGrow>true</CanGrow>
                                                       <KeepTogether>true</KeepTogether>
                                                       <Paragraphs>
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                              <Value>=Fields!GoodsCode.Value</Value>
+                                                              <Value>=Fields!procode.Value</Value>
                                                               <Style>
                                                                 <FontFamily>微软雅黑</FontFamily>
                                                                 <FontSize>9pt</FontSize>
@@ -249,7 +505,7 @@
                                                           </Style>
                                                         </Paragraph>
                                                       </Paragraphs>
-                                                      <rd:DefaultName>GoodsCode</rd:DefaultName>
+                                                      <rd:DefaultName>procode</rd:DefaultName>
                                                       <Style>
                                                         <Border>
                                                           <Color>LightGrey</Color>
@@ -302,14 +558,14 @@
                                                 </TablixCell>
                                                 <TablixCell>
                                                   <CellContents>
-                                                    <Textbox Name="OriginalCode">
+                                                    <Textbox Name="projcode">
                                                       <CanGrow>true</CanGrow>
                                                       <KeepTogether>true</KeepTogether>
                                                       <Paragraphs>
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                              <Value>=Fields!OriginalCode.Value</Value>
+                                                              <Value>=Fields!projcode.Value</Value>
                                                               <Style>
                                                                 <FontFamily>微软雅黑</FontFamily>
                                                                 <FontSize>9pt</FontSize>
@@ -321,7 +577,7 @@
                                                           </Style>
                                                         </Paragraph>
                                                       </Paragraphs>
-                                                      <rd:DefaultName>OriginalCode</rd:DefaultName>
+                                                      <rd:DefaultName>projcode</rd:DefaultName>
                                                       <Style>
                                                         <Border>
                                                           <Color>LightGrey</Color>
@@ -379,14 +635,14 @@
                                                 </TablixCell>
                                                 <TablixCell>
                                                   <CellContents>
-                                                    <Textbox Name="Name">
+                                                    <Textbox Name="proname">
                                                       <CanGrow>true</CanGrow>
                                                       <KeepTogether>true</KeepTogether>
                                                       <Paragraphs>
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                              <Value>=Fields!Name.Value</Value>
+                                                              <Value>=Fields!proname.Value</Value>
                                                               <Style>
                                                                 <FontFamily>微软雅黑</FontFamily>
                                                                 <FontSize>9pt</FontSize>
@@ -398,7 +654,7 @@
                                                           </Style>
                                                         </Paragraph>
                                                       </Paragraphs>
-                                                      <rd:DefaultName>Name</rd:DefaultName>
+                                                      <rd:DefaultName>proname</rd:DefaultName>
                                                       <Style>
                                                         <Border>
                                                           <Color>LightGrey</Color>
@@ -451,14 +707,14 @@
                                                 </TablixCell>
                                                 <TablixCell>
                                                   <CellContents>
-                                                    <Textbox Name="PrimePrice">
+                                                    <Textbox Name="projiage">
                                                       <CanGrow>true</CanGrow>
                                                       <KeepTogether>true</KeepTogether>
                                                       <Paragraphs>
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                              <Value>=Fields!PrimePrice.Value</Value>
+                                                              <Value>=Fields!projiage.Value</Value>
                                                               <Style>
                                                                 <FontFamily>微软雅黑</FontFamily>
                                                                 <FontSize>9pt</FontSize>
@@ -470,7 +726,7 @@
                                                           </Style>
                                                         </Paragraph>
                                                       </Paragraphs>
-                                                      <rd:DefaultName>PrimePrice</rd:DefaultName>
+                                                      <rd:DefaultName>projiage</rd:DefaultName>
                                                       <Style>
                                                         <Border>
                                                           <Color>LightGrey</Color>
@@ -528,14 +784,14 @@
                                                 </TablixCell>
                                                 <TablixCell>
                                                   <CellContents>
-                                                    <Textbox Name="Color">
+                                                    <Textbox Name="procolor">
                                                       <CanGrow>true</CanGrow>
                                                       <KeepTogether>true</KeepTogether>
                                                       <Paragraphs>
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                              <Value>=Fields!Color.Value</Value>
+                                                              <Value>=Fields!procolor.Value</Value>
                                                               <Style>
                                                                 <FontFamily>微软雅黑</FontFamily>
                                                                 <FontSize>9pt</FontSize>
@@ -547,7 +803,7 @@
                                                           </Style>
                                                         </Paragraph>
                                                       </Paragraphs>
-                                                      <rd:DefaultName>Color</rd:DefaultName>
+                                                      <rd:DefaultName>procolor</rd:DefaultName>
                                                       <Style>
                                                         <Border>
                                                           <Color>LightGrey</Color>
@@ -600,14 +856,14 @@
                                                 </TablixCell>
                                                 <TablixCell>
                                                   <CellContents>
-                                                    <Textbox Name="ConsignStartDate">
+                                                    <Textbox Name="prostarttime">
                                                       <CanGrow>true</CanGrow>
                                                       <KeepTogether>true</KeepTogether>
                                                       <Paragraphs>
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                              <Value>=Fields!ConsignStartDate.Value</Value>
+                                                              <Value>=Fields!prostarttime.Value</Value>
                                                               <Style>
                                                                 <FontFamily>微软雅黑</FontFamily>
                                                                 <FontSize>9pt</FontSize>
@@ -619,7 +875,7 @@
                                                           </Style>
                                                         </Paragraph>
                                                       </Paragraphs>
-                                                      <rd:DefaultName>ConsignStartDate</rd:DefaultName>
+                                                      <rd:DefaultName>prostarttime</rd:DefaultName>
                                                       <Style>
                                                         <Border>
                                                           <Color>LightGrey</Color>
@@ -677,14 +933,14 @@
                                                 </TablixCell>
                                                 <TablixCell>
                                                   <CellContents>
-                                                    <Textbox Name="Quality">
+                                                    <Textbox Name="prochengse">
                                                       <CanGrow>true</CanGrow>
                                                       <KeepTogether>true</KeepTogether>
                                                       <Paragraphs>
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                              <Value>=Fields!Quality.Value</Value>
+                                                              <Value>=Fields!prochengse.Value</Value>
                                                               <Style>
                                                                 <FontFamily>微软雅黑</FontFamily>
                                                                 <FontSize>9pt</FontSize>
@@ -696,7 +952,7 @@
                                                           </Style>
                                                         </Paragraph>
                                                       </Paragraphs>
-                                                      <rd:DefaultName>Quality</rd:DefaultName>
+                                                      <rd:DefaultName>prochengse</rd:DefaultName>
                                                       <Style>
                                                         <Border>
                                                           <Color>LightGrey</Color>
@@ -749,14 +1005,14 @@
                                                 </TablixCell>
                                                 <TablixCell>
                                                   <CellContents>
-                                                    <Textbox Name="ConsignEndDate">
+                                                    <Textbox Name="proendtime">
                                                       <CanGrow>true</CanGrow>
                                                       <KeepTogether>true</KeepTogether>
                                                       <Paragraphs>
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                              <Value>=Fields!ConsignEndDate.Value</Value>
+                                                              <Value>=Fields!proendtime.Value</Value>
                                                               <Style>
                                                                 <FontFamily>微软雅黑</FontFamily>
                                                                 <FontSize>9pt</FontSize>
@@ -768,7 +1024,7 @@
                                                           </Style>
                                                         </Paragraph>
                                                       </Paragraphs>
-                                                      <rd:DefaultName>ConsignEndDate</rd:DefaultName>
+                                                      <rd:DefaultName>proendtime</rd:DefaultName>
                                                       <Style>
                                                         <Border>
                                                           <Color>LightGrey</Color>
@@ -826,14 +1082,14 @@
                                                 </TablixCell>
                                                 <TablixCell>
                                                   <CellContents>
-                                                    <Textbox Name="Desc">
+                                                    <Textbox Name="proremark">
                                                       <CanGrow>true</CanGrow>
                                                       <KeepTogether>true</KeepTogether>
                                                       <Paragraphs>
                                                         <Paragraph>
                                                           <TextRuns>
                                                             <TextRun>
-                                                              <Value>=Fields!Desc.Value</Value>
+                                                              <Value>=Fields!proremark.Value</Value>
                                                               <Style>
                                                                 <FontFamily>微软雅黑</FontFamily>
                                                                 <FontSize>9pt</FontSize>
@@ -845,7 +1101,7 @@
                                                           </Style>
                                                         </Paragraph>
                                                       </Paragraphs>
-                                                      <rd:DefaultName>Desc</rd:DefaultName>
+                                                      <rd:DefaultName>proremark</rd:DefaultName>
                                                       <Style>
                                                         <Border>
                                                           <Color>LightGrey</Color>
@@ -888,7 +1144,7 @@
                                             </TablixMember>
                                           </TablixMembers>
                                         </TablixRowHierarchy>
-                                        <DataSetName>GoodsJsSource</DataSetName>
+                                        <DataSetName>ProInfo</DataSetName>
                                         <ZIndex>1</ZIndex>
                                         <Style>
                                           <Border>
@@ -922,7 +1178,7 @@
                               </TablixMember>
                             </TablixMembers>
                           </TablixRowHierarchy>
-                          <DataSetName>GoodsJsSource</DataSetName>
+                          <DataSetName>ProInfo</DataSetName>
                           <Top>0.03175cm</Top>
                           <Left>0.07565cm</Left>
                           <Height>3.20502cm</Height>
@@ -1011,7 +1267,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>GoodsJsSource</DataSetName>
+        <DataSetName>ProInfo</DataSetName>
         <Top>0.17639cm</Top>
         <Left>1.00282cm</Left>
         <Height>3.28369cm</Height>
@@ -1157,7 +1413,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=First(Fields!SupplierName.Value, "GoodsJsSource")</Value>
+                  <Value>=First(Fields!custname.Value, "ProInfo")</Value>
                   <Style>
                     <FontFamily>微软雅黑</FontFamily>
                     <FontSize>9pt</FontSize>
@@ -1192,7 +1448,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=First(Fields!SpplierBankName.Value, "GoodsJsSource")</Value>
+                  <Value>=First(Fields!custyhname.Value, "ProInfo")</Value>
                   <Style>
                     <FontFamily>微软雅黑</FontFamily>
                     <FontSize>9pt</FontSize>
@@ -1227,7 +1483,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=First(Fields!SpplierBankCard.Value, "GoodsJsSource")</Value>
+                  <Value>=First(Fields!custyhcard.Value, "ProInfo")</Value>
                   <Style>
                     <FontFamily>微软雅黑</FontFamily>
                     <FontSize>9pt</FontSize>
@@ -1262,7 +1518,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=First(Fields!SupplierPhone.Value, "GoodsJsSource")</Value>
+                  <Value>=First(Fields!custphone.Value, "ProInfo")</Value>
                   <Style>
                     <FontFamily>微软雅黑</FontFamily>
                     <FontSize>9pt</FontSize>
@@ -1297,7 +1553,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=First(Fields!SpplierIdCard.Value, "GoodsJsSource")</Value>
+                  <Value>=First(Fields!custidcard.Value, "ProInfo")</Value>
                   <Style>
                     <FontFamily>微软雅黑</FontFamily>
                     <FontSize>9pt</FontSize>
@@ -1579,7 +1835,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=CDec(First(Fields!TotalPrice.Value, "GoodsJsSource"))</Value>
+                  <Value>=CDec(First(Fields!projiage.Value, "ProInfo"))</Value>
                   <Style>
                     <FontFamily>微软雅黑</FontFamily>
                     <FontSize>9pt</FontSize>
@@ -1684,7 +1940,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=First(Fields!Operator.Value, "GoodsJsSource")</Value>
+                  <Value>=First(Fields!custjuname.Value, "ProInfo")</Value>
                   <Style>
                     <FontFamily>微软雅黑</FontFamily>
                     <FontSize>9pt</FontSize>
@@ -1754,7 +2010,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>="賣包 "&amp; First(Fields!ShopName.Value, "GoodsJsSource") &amp;"   TEL: "&amp; First(Fields!ShopPhone.Value, "GoodsJsSource")</Value>
+                  <Value>="賣包 "&amp; First(Fields!prodepname.Value, "ProInfo") &amp;"   TEL: "&amp; First(Fields!ShopPhone.Value, "GoodsJsSource")</Value>
                   <Style>
                     <FontFamily>微软雅黑</FontFamily>
                     <FontSize>9pt</FontSize>
