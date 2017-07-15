@@ -343,45 +343,45 @@ namespace Vogue2_IMS.OrderManager
 
         private void Print(List<PurchaseGoodsInfo> newGoodsList)
         {
-            if (newGoodsList == null || newGoodsList.Count == 0) return;
+            //if (newGoodsList == null || newGoodsList.Count == 0) return;
 
-            var totalPrice = newGoodsList.Sum(record => record.Goods.PrimePrice);
-            var receiptView = new FmReceiptView();
+            //var totalPrice = newGoodsList.Sum(record => record.Goods.PrimePrice);
+            //var receiptView = new FmReceiptView();
 
-            if (this.mRKType == SourceType.JinHuo)
-            {
-                List<PurchaseJhGoodsOrderInfo> jhOrderList = new List<PurchaseJhGoodsOrderInfo>();
-                newGoodsList.ForEach(record =>
-                {
-                    jhOrderList.Add(new PurchaseJhGoodsOrderInfo(record, 1)
-                    {
-                        TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0.00
-                    });
-                    jhOrderList.Add(new PurchaseJhGoodsOrderInfo(record, 2)
-                    {
-                        TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0.00
-                    });
-                });
-                receiptView.InitializeReceiptView<PurchaseJhGoodsOrderInfo>(jhOrderList);
-            }
-            else if (this.mRKType == SourceType.JiShou)
-            {
-                List<PurchaseJsGoodsOrderInfo> jsOrderList = new List<PurchaseJsGoodsOrderInfo>();
-                newGoodsList.ForEach(record =>
-                {
-                    jsOrderList.Add(new PurchaseJsGoodsOrderInfo(record, 1)
-                    {
-                        TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0.00
-                    });
-                    jsOrderList.Add(new PurchaseJsGoodsOrderInfo(record, 2)
-                    {
-                        TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0.00
-                    });
-                });
-                receiptView.InitializeReceiptView<PurchaseJsGoodsOrderInfo>(jsOrderList);
-            }
+            //if (this.mRKType == SourceType.JinHuo)
+            //{
+            //    List<PurchaseJhGoodsOrderInfo> jhOrderList = new List<PurchaseJhGoodsOrderInfo>();
+            //    newGoodsList.ForEach(record =>
+            //    {
+            //        jhOrderList.Add(new PurchaseJhGoodsOrderInfo(record, 1)
+            //        {
+            //            TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0.00
+            //        });
+            //        jhOrderList.Add(new PurchaseJhGoodsOrderInfo(record, 2)
+            //        {
+            //            TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0.00
+            //        });
+            //    });
+            //    receiptView.InitializeReceiptView<PurchaseJhGoodsOrderInfo>(jhOrderList);
+            //}
+            //else if (this.mRKType == SourceType.JiShou)
+            //{
+            //    List<PurchaseJsGoodsOrderInfo> jsOrderList = new List<PurchaseJsGoodsOrderInfo>();
+            //    newGoodsList.ForEach(record =>
+            //    {
+            //        jsOrderList.Add(new PurchaseJsGoodsOrderInfo(record, 1)
+            //        {
+            //            TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0.00
+            //        });
+            //        jsOrderList.Add(new PurchaseJsGoodsOrderInfo(record, 2)
+            //        {
+            //            TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0.00
+            //        });
+            //    });
+            //    receiptView.InitializeReceiptView<PurchaseJsGoodsOrderInfo>(jsOrderList);
+            //}
 
-            receiptView.ShowDialog();
+            //receiptView.ShowDialog();
         }
 
         private void btnDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

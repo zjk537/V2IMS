@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.prosjiage = new DevExpress.XtraEditors.TextEdit();
+            this.probjiage = new DevExpress.XtraEditors.TextEdit();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.probujian = new DevExpress.XtraEditors.TextEdit();
             this.proremark = new DevExpress.XtraEditors.TextEdit();
@@ -95,7 +95,7 @@
             this.ckbprinted = new DevExpress.XtraEditors.CheckEdit();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.btnOk = new DevExpress.XtraEditors.SimpleButton();
-            ((System.ComponentModel.ISupportInitialize)(this.prosjiage.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.probjiage.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.probujian.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proremark.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projiage.Properties)).BeginInit();
@@ -140,25 +140,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.ckbprinted.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // prosjiage
+            // probjiage
             // 
-            this.prosjiage.EnterMoveNextControl = true;
-            this.mErrorProvider.SetIconAlignment(this.prosjiage, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.prosjiage.Location = new System.Drawing.Point(68, 57);
-            this.prosjiage.Name = "prosjiage";
-            this.prosjiage.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.prosjiage.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.prosjiage.Properties.Mask.EditMask = "c";
-            this.prosjiage.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.prosjiage.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.prosjiage.Properties.MaxLength = 9;
-            this.prosjiage.Properties.NullValuePrompt = "数字格式";
-            this.prosjiage.Properties.NullValuePromptShowForEmptyValue = true;
-            this.prosjiage.Size = new System.Drawing.Size(133, 21);
-            this.prosjiage.TabIndex = 7;
-            this.prosjiage.EditValueChanged += new System.EventHandler(this.TextEdit_TextChanged);
-            this.prosjiage.TextChanged += new System.EventHandler(this.TextEdit_TextChanged);
-            this.prosjiage.Enter += new System.EventHandler(this.TextEdit_Enter);
+            this.probjiage.EnterMoveNextControl = true;
+            this.mErrorProvider.SetIconAlignment(this.probjiage, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
+            this.probjiage.Location = new System.Drawing.Point(68, 57);
+            this.probjiage.Name = "probjiage";
+            this.probjiage.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.probjiage.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.probjiage.Properties.Mask.EditMask = "c";
+            this.probjiage.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.probjiage.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.probjiage.Properties.NullValuePrompt = "数字格式";
+            this.probjiage.Properties.NullValuePromptShowForEmptyValue = true;
+            this.probjiage.Size = new System.Drawing.Size(133, 21);
+            this.probjiage.TabIndex = 26;
+            this.probjiage.EditValueChanged += new System.EventHandler(this.TextEdit_TextChanged);
+            this.probjiage.TextChanged += new System.EventHandler(this.TextEdit_TextChanged);
+            this.probjiage.Enter += new System.EventHandler(this.TextEdit_Enter);
             // 
             // labelControl11
             // 
@@ -177,11 +176,13 @@
             this.probujian.Properties.NullValuePrompt = "默认为空";
             this.probujian.Properties.NullValuePromptShowForEmptyValue = true;
             this.probujian.Size = new System.Drawing.Size(345, 21);
-            this.probujian.TabIndex = 11;
+            this.probujian.TabIndex = 22;
             this.probujian.Enter += new System.EventHandler(this.TextEdit_Enter);
             // 
             // proremark
             // 
+            this.proremark.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)));
             this.proremark.EnterMoveNextControl = true;
             this.mErrorProvider.SetIconAlignment(this.proremark, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.proremark.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -191,7 +192,7 @@
             this.proremark.Properties.NullValuePrompt = "默认为空";
             this.proremark.Properties.NullValuePromptShowForEmptyValue = true;
             this.proremark.Size = new System.Drawing.Size(345, 52);
-            this.proremark.TabIndex = 12;
+            this.proremark.TabIndex = 23;
             this.proremark.Enter += new System.EventHandler(this.TextEdit_Enter);
             // 
             // projiage
@@ -205,11 +206,10 @@
             this.projiage.Properties.Mask.EditMask = "c";
             this.projiage.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.projiage.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.projiage.Properties.MaxLength = 9;
             this.projiage.Properties.NullValuePrompt = "数字格式<必填>";
             this.projiage.Properties.NullValuePromptShowForEmptyValue = true;
             this.projiage.Size = new System.Drawing.Size(132, 21);
-            this.projiage.TabIndex = 6;
+            this.projiage.TabIndex = 25;
             this.projiage.TextChanged += new System.EventHandler(this.TextEdit_TextChanged);
             this.projiage.Enter += new System.EventHandler(this.TextEdit_Enter);
             // 
@@ -223,7 +223,7 @@
             this.prochengse.Properties.NullValuePrompt = "默认为空";
             this.prochengse.Properties.NullValuePromptShowForEmptyValue = true;
             this.prochengse.Size = new System.Drawing.Size(135, 21);
-            this.prochengse.TabIndex = 4;
+            this.prochengse.TabIndex = 12;
             this.prochengse.Enter += new System.EventHandler(this.TextEdit_Enter);
             // 
             // procolor
@@ -236,7 +236,7 @@
             this.procolor.Properties.NullValuePrompt = "默认为空";
             this.procolor.Properties.NullValuePromptShowForEmptyValue = true;
             this.procolor.Size = new System.Drawing.Size(135, 21);
-            this.procolor.TabIndex = 3;
+            this.procolor.TabIndex = 11;
             this.procolor.Enter += new System.EventHandler(this.TextEdit_Enter);
             // 
             // proname
@@ -248,7 +248,7 @@
             this.proname.Properties.NullValuePrompt = "<必填>";
             this.proname.Properties.NullValuePromptShowForEmptyValue = true;
             this.proname.Size = new System.Drawing.Size(135, 21);
-            this.proname.TabIndex = 2;
+            this.proname.TabIndex = 10;
             this.proname.TextChanged += new System.EventHandler(this.TextEdit_TextChanged);
             this.proname.Enter += new System.EventHandler(this.TextEdit_Enter);
             // 
@@ -261,7 +261,7 @@
             this.projcode.Properties.NullValuePrompt = "<必填>";
             this.projcode.Properties.NullValuePromptShowForEmptyValue = true;
             this.projcode.Size = new System.Drawing.Size(135, 21);
-            this.projcode.TabIndex = 1;
+            this.projcode.TabIndex = 9;
             this.projcode.TextChanged += new System.EventHandler(this.TextEdit_TextChanged);
             this.projcode.Enter += new System.EventHandler(this.TextEdit_Enter);
             // 
@@ -354,7 +354,7 @@
             this.profenlei.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.profenlei.Size = new System.Drawing.Size(135, 21);
-            this.profenlei.TabIndex = 0;
+            this.profenlei.TabIndex = 8;
             this.profenlei.SelectedIndexChanged += new System.EventHandler(this.ComboxEdit_SelectedIndexChanged);
             // 
             // propaytype
@@ -366,7 +366,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.propaytype.Properties.ExportMode = DevExpress.XtraEditors.Repository.ExportMode.DisplayText;
             this.propaytype.Size = new System.Drawing.Size(133, 21);
-            this.propaytype.TabIndex = 5;
+            this.propaytype.TabIndex = 24;
             this.propaytype.SelectedIndexChanged += new System.EventHandler(this.ComboxEdit_SelectedIndexChanged);
             // 
             // projuser
@@ -378,7 +378,7 @@
             this.projuser.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.projuser.Size = new System.Drawing.Size(135, 21);
-            this.projuser.TabIndex = 10;
+            this.projuser.TabIndex = 21;
             this.projuser.SelectedIndexChanged += new System.EventHandler(this.ComboxEdit_SelectedIndexChanged);
             // 
             // mErrorProvider
@@ -393,7 +393,7 @@
             this.propaystatus.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.propaystatus.Size = new System.Drawing.Size(133, 21);
-            this.propaystatus.TabIndex = 8;
+            this.propaystatus.TabIndex = 27;
             // 
             // endtime
             // 
@@ -433,12 +433,11 @@
             this.prochima.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.prochima.Properties.Mask.EditMask = "c";
             this.prochima.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.prochima.Properties.MaxLength = 9;
             this.prochima.Properties.NullText = "默认为空";
-            this.prochima.Properties.NullValuePrompt = "数字格式<必填>";
+            this.prochima.Properties.NullValuePrompt = "默认为空";
             this.prochima.Properties.NullValuePromptShowForEmptyValue = true;
             this.prochima.Size = new System.Drawing.Size(135, 21);
-            this.prochima.TabIndex = 1000;
+            this.prochima.TabIndex = 13;
             // 
             // proxiongwei
             // 
@@ -450,12 +449,11 @@
             this.proxiongwei.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.proxiongwei.Properties.Mask.EditMask = "c";
             this.proxiongwei.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.proxiongwei.Properties.MaxLength = 9;
             this.proxiongwei.Properties.NullText = "默认为空";
-            this.proxiongwei.Properties.NullValuePrompt = "<必填>";
+            this.proxiongwei.Properties.NullValuePrompt = "默认为空";
             this.proxiongwei.Properties.NullValuePromptShowForEmptyValue = true;
             this.proxiongwei.Size = new System.Drawing.Size(135, 21);
-            this.proxiongwei.TabIndex = 1006;
+            this.proxiongwei.TabIndex = 16;
             // 
             // proyaowei
             // 
@@ -468,7 +466,7 @@
             this.proyaowei.Properties.NullValuePrompt = "默认为空";
             this.proyaowei.Properties.NullValuePromptShowForEmptyValue = true;
             this.proyaowei.Size = new System.Drawing.Size(135, 21);
-            this.proyaowei.TabIndex = 1003;
+            this.proyaowei.TabIndex = 15;
             // 
             // projiankuan
             // 
@@ -478,10 +476,10 @@
             this.projiankuan.Name = "projiankuan";
             this.projiankuan.Properties.Mask.EditMask = "c";
             this.projiankuan.Properties.NullText = "默认为空";
-            this.projiankuan.Properties.NullValuePrompt = "<必填>";
+            this.projiankuan.Properties.NullValuePrompt = "默认为空";
             this.projiankuan.Properties.NullValuePromptShowForEmptyValue = true;
             this.projiankuan.Size = new System.Drawing.Size(135, 21);
-            this.projiankuan.TabIndex = 1002;
+            this.projiankuan.TabIndex = 14;
             // 
             // prokuchang
             // 
@@ -493,12 +491,11 @@
             this.prokuchang.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.prokuchang.Properties.Mask.EditMask = "c";
             this.prokuchang.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.prokuchang.Properties.MaxLength = 9;
             this.prokuchang.Properties.NullText = "默认为空";
-            this.prokuchang.Properties.NullValuePrompt = "数字格式<必填>";
+            this.prokuchang.Properties.NullValuePrompt = "默认为空";
             this.prokuchang.Properties.NullValuePromptShowForEmptyValue = true;
             this.prokuchang.Size = new System.Drawing.Size(135, 21);
-            this.prokuchang.TabIndex = 1014;
+            this.prokuchang.TabIndex = 20;
             // 
             // proxiuchang
             // 
@@ -510,7 +507,7 @@
             this.proxiuchang.Properties.NullValuePrompt = "默认为空";
             this.proxiuchang.Properties.NullValuePromptShowForEmptyValue = true;
             this.proxiuchang.Size = new System.Drawing.Size(135, 21);
-            this.proxiuchang.TabIndex = 1011;
+            this.proxiuchang.TabIndex = 19;
             // 
             // proyichang
             // 
@@ -519,10 +516,10 @@
             this.proyichang.Location = new System.Drawing.Point(69, 170);
             this.proyichang.Name = "proyichang";
             this.proyichang.Properties.NullText = "默认为空";
-            this.proyichang.Properties.NullValuePrompt = "<必填>";
+            this.proyichang.Properties.NullValuePrompt = "默认为空";
             this.proyichang.Properties.NullValuePromptShowForEmptyValue = true;
             this.proyichang.Size = new System.Drawing.Size(135, 21);
-            this.proyichang.TabIndex = 1010;
+            this.proyichang.TabIndex = 18;
             // 
             // protunwei
             // 
@@ -534,12 +531,11 @@
             this.protunwei.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.protunwei.Properties.Mask.EditMask = "c";
             this.protunwei.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.protunwei.Properties.MaxLength = 9;
             this.protunwei.Properties.NullText = "默认为空";
-            this.protunwei.Properties.NullValuePrompt = "<必填>";
+            this.protunwei.Properties.NullValuePrompt = "默认为空";
             this.protunwei.Properties.NullValuePromptShowForEmptyValue = true;
             this.protunwei.Size = new System.Drawing.Size(135, 21);
-            this.protunwei.TabIndex = 1008;
+            this.protunwei.TabIndex = 17;
             // 
             // custphone
             // 
@@ -550,11 +546,11 @@
             this.custphone.Name = "custphone";
             this.custphone.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.custphone.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.custphone.Properties.MaxLength = 9;
+            this.custphone.Properties.MaxLength = 5000;
             this.custphone.Properties.NullValuePrompt = "<必填>";
             this.custphone.Properties.NullValuePromptShowForEmptyValue = true;
             this.custphone.Size = new System.Drawing.Size(165, 21);
-            this.custphone.TabIndex = 6;
+            this.custphone.TabIndex = 2;
             this.custphone.TextChanged += new System.EventHandler(this.TextEdit_TextChanged);
             this.custphone.Enter += new System.EventHandler(this.TextEdit_Enter);
             // 
@@ -567,16 +563,18 @@
             this.custyhname.Name = "custyhname";
             this.custyhname.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.custyhname.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.custyhname.Properties.MaxLength = 9;
+            this.custyhname.Properties.MaxLength = 5000;
             this.custyhname.Properties.NullValuePrompt = "<必填>";
             this.custyhname.Properties.NullValuePromptShowForEmptyValue = true;
             this.custyhname.Size = new System.Drawing.Size(135, 21);
-            this.custyhname.TabIndex = 7;
+            this.custyhname.TabIndex = 5;
             this.custyhname.TextChanged += new System.EventHandler(this.TextEdit_TextChanged);
             this.custyhname.Enter += new System.EventHandler(this.TextEdit_Enter);
             // 
             // custidcard
             // 
+            this.custidcard.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.custidcard.EditValue = "";
             this.custidcard.EnterMoveNextControl = true;
             this.mErrorProvider.SetIconAlignment(this.custidcard, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
@@ -584,11 +582,11 @@
             this.custidcard.Name = "custidcard";
             this.custidcard.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.custidcard.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.custidcard.Properties.MaxLength = 9;
+            this.custidcard.Properties.MaxLength = 5000;
             this.custidcard.Properties.NullValuePrompt = "<必填>";
             this.custidcard.Properties.NullValuePromptShowForEmptyValue = true;
             this.custidcard.Size = new System.Drawing.Size(191, 21);
-            this.custidcard.TabIndex = 1000;
+            this.custidcard.TabIndex = 4;
             this.custidcard.TextChanged += new System.EventHandler(this.TextEdit_TextChanged);
             this.custidcard.Enter += new System.EventHandler(this.TextEdit_Enter);
             // 
@@ -604,7 +602,7 @@
             "男",
             "女"});
             this.custsex.Size = new System.Drawing.Size(135, 21);
-            this.custsex.TabIndex = 1002;
+            this.custsex.TabIndex = 3;
             // 
             // custyhcard
             // 
@@ -616,16 +614,18 @@
             this.custyhcard.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.custyhcard.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.custyhcard.Properties.Mask.EditMask = "c";
-            this.custyhcard.Properties.MaxLength = 9;
+            this.custyhcard.Properties.MaxLength = 5000;
             this.custyhcard.Properties.NullValuePrompt = "<必填>";
             this.custyhcard.Properties.NullValuePromptShowForEmptyValue = true;
             this.custyhcard.Size = new System.Drawing.Size(187, 21);
-            this.custyhcard.TabIndex = 1004;
+            this.custyhcard.TabIndex = 6;
             this.custyhcard.TextChanged += new System.EventHandler(this.TextEdit_TextChanged);
             this.custyhcard.Enter += new System.EventHandler(this.TextEdit_Enter);
             // 
             // custdizhi
             // 
+            this.custdizhi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.custdizhi.EnterMoveNextControl = true;
             this.mErrorProvider.SetIconAlignment(this.custdizhi, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.custdizhi.Location = new System.Drawing.Point(517, 57);
@@ -633,10 +633,10 @@
             this.custdizhi.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.custdizhi.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.custdizhi.Properties.Mask.EditMask = "c";
-            this.custdizhi.Properties.MaxLength = 9;
+            this.custdizhi.Properties.MaxLength = 5000;
             this.custdizhi.Properties.NullValuePromptShowForEmptyValue = true;
             this.custdizhi.Size = new System.Drawing.Size(413, 21);
-            this.custdizhi.TabIndex = 1006;
+            this.custdizhi.TabIndex = 7;
             // 
             // custname
             // 
@@ -647,11 +647,11 @@
             this.custname.Name = "custname";
             this.custname.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.custname.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.custname.Properties.MaxLength = 9;
+            this.custname.Properties.MaxLength = 5000;
             this.custname.Properties.NullValuePrompt = "<必填>";
             this.custname.Properties.NullValuePromptShowForEmptyValue = true;
             this.custname.Size = new System.Drawing.Size(135, 21);
-            this.custname.TabIndex = 1007;
+            this.custname.TabIndex = 1;
             this.custname.TextChanged += new System.EventHandler(this.TextEdit_TextChanged);
             this.custname.Enter += new System.EventHandler(this.TextEdit_Enter);
             // 
@@ -757,9 +757,10 @@
             // 
             // groupControl2
             // 
+            this.groupControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl2.Controls.Add(this.projiage);
             this.groupControl2.Controls.Add(this.labelControl11);
-            this.groupControl2.Controls.Add(this.prosjiage);
+            this.groupControl2.Controls.Add(this.probjiage);
             this.groupControl2.Controls.Add(this.propaytype);
             this.groupControl2.Controls.Add(this.propaystatus);
             this.groupControl2.Controls.Add(this.labelControl3);
@@ -774,6 +775,8 @@
             // 
             // groupControl3
             // 
+            this.groupControl3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl3.Controls.Add(this.labelControl1);
             this.groupControl3.Controls.Add(this.labelControl8);
             this.groupControl3.Controls.Add(this.probujian);
@@ -814,6 +817,9 @@
             // 
             // groupControl4
             // 
+            this.groupControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl4.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.groupControl4.Controls.Add(this.pictureEdit1);
             this.groupControl4.Controls.Add(this.custname);
@@ -913,7 +919,8 @@
             this.ckbprinted.Name = "ckbprinted";
             this.ckbprinted.Properties.Caption = "完成后打印";
             this.ckbprinted.Size = new System.Drawing.Size(88, 19);
-            this.ckbprinted.TabIndex = 1000;
+            this.ckbprinted.TabIndex = 28;
+            this.ckbprinted.Visible = false;
             // 
             // btnCancel
             // 
@@ -922,7 +929,7 @@
             this.btnCancel.Location = new System.Drawing.Point(877, 8);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 26);
-            this.btnCancel.TabIndex = 999;
+            this.btnCancel.TabIndex = 30;
             this.btnCancel.Text = "取消(&Q)";
             // 
             // btnOk
@@ -931,7 +938,7 @@
             this.btnOk.Location = new System.Drawing.Point(788, 8);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(75, 26);
-            this.btnOk.TabIndex = 998;
+            this.btnOk.TabIndex = 29;
             this.btnOk.Text = "确定(&S)";
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
@@ -949,8 +956,9 @@
             this.Controls.Add(this.groupControl1);
             this.MinimumSize = new System.Drawing.Size(601, 377);
             this.Name = "FmGoodsInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "商品详情-添加";
-            ((System.ComponentModel.ISupportInitialize)(this.prosjiage.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.probjiage.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.probujian.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proremark.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projiage.Properties)).EndInit();
@@ -1002,7 +1010,7 @@
 
         #endregion
 
-        private DevExpress.XtraEditors.TextEdit prosjiage;
+        private DevExpress.XtraEditors.TextEdit probjiage;
         private DevExpress.XtraEditors.LabelControl labelControl11;
         private DevExpress.XtraEditors.TextEdit probujian;
         private DevExpress.XtraEditors.TextEdit proremark;

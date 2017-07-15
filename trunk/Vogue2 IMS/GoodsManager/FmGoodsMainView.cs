@@ -492,25 +492,25 @@ namespace Vogue2_IMS.GoodsManager
             switch(condition)
             {
                 case ViewCondition.ZYWeiDaKuan:
-                    returnStr = "[GoodsStatusName] = '售出' And [SourceName] = '进货' And [GoodsPaid.Name] = '未打款'";
+                    returnStr = "[prostatus] = '售出' And [protype] = '进货' And [propaystatus] = '未打款'";
                     break;
                 case ViewCondition.ZYZaiKu:
-                    returnStr = "[GoodsStatusName] = '在库' And [SourceName] = '进货'";
+                    returnStr = "[prostatus] = '在库' And [protype] = '进货'";
                     break;
                 case ViewCondition.ZYChaoQi:
                     var daySpanStr = ConfigurationManager.AppSettings["JinHuoTimeoutDaySpan"];
                     var daySpan = string.IsNullOrEmpty(daySpanStr) ? 180 : Convert.ToInt32(daySpanStr);
 
-                    returnStr = "[GoodsStatusName] = '在库' And [SourceName] = '进货' And [Goods.UpdatedDate.Value] <= '" + DateTime.Now.AddDays(0 - daySpan).ToShortDateString() + "'";
+                    returnStr = "[prostatus] = '在库' And [protype] = '进货' And [proupdatetime.Value] <= '" + DateTime.Now.AddDays(0 - daySpan).ToShortDateString() + "'";
                     break;
                 case ViewCondition.JSWeiDaKuan:
-                    returnStr = "[GoodsStatusName] = '售出' And [SourceName] = '寄售' And [GoodsPaid.Name] = '未打款'";
+                    returnStr = "[prostatus] = '售出' And [protype] = '寄售' And [propaystatus] = '未打款'";
                     break;
                 case ViewCondition.JSZaiKu:
-                    returnStr = "[GoodsStatusName] = '在库' And [SourceName] = '寄售'";
+                    returnStr = "[prostatus] = '在库' And [protype] = '寄售'";
                     break;
                 case ViewCondition.JSChaoQi:
-                    returnStr = "[GoodsStatusName] = '在库' And [SourceName] = '寄售' and [Goods.ConsignEndDate]" + "< '" + DateTime.Now.ToShortDateString() + "'";
+                    returnStr = "[prostatus] = '在库' And [protype] = '寄售' and [proendtime.Value]" + "< '" + DateTime.Now.ToShortDateString() + "'";
                     break;
             }
 

@@ -12,16 +12,27 @@ namespace Vogue2_IMS.Business
         private static string _urlProDetail = " http://120.27.21.93:8080/api.php/pc/pro/detail";
         private static string _urlProAdd = " http://120.27.21.93:8080/api.php/pc/pro/add";
         private static string _urlProEdit = " http://120.27.21.93:8080/api.php/pc/pro/edit";
-        private static string _urlCustList = " http://120.27.21.93:8080/api.php/pc/cust/detail";
+        private static string _urlCustList = " http://120.27.21.93:8080/api.php/pc/cust/lists";
         private static string _urlProOut = " http://120.27.21.93:8080/api.php/pc/proout/add";
         private static string _urlProTongJi = " http://120.27.21.93:8080/api.php/pc/pro/tongji";
 
         private static string _urlProQuHui = " http://120.27.21.93:8080/api.php/pc/pro/quhui";
         private static string _urlProTuiHuo = " http://120.27.21.93:8080/api.php/pc/pro/tuihuo";
-        private static string _urlProDaKuan = " http://120.27.21.93:8080/api.php/pc/pro/tuihuo";
+        private static string _urlProDaKuan = " http://120.27.21.93:8080/api.php/pc/pro/dakuan";
 
         private static string _urlProGetImages = " http://120.27.21.93:8080/api.php/pc/pro/getimages";
-        
+        private static string _urlProgettypes = "http://120.27.21.93:8080/api.php/pc/pro/gettypes";
+
+        public static List<string> GetProImages(int proid)
+        {
+            var result = new List<string>();
+            var repsone = WebServiceHelper.HttpPost<object, string[]>(_urlProGetImages, new { attid = proid });
+
+            if (repsone != null && repsone.Length > 0)
+                result.AddRange(repsone);
+
+            return result;
+        }
 
         public static DashBoard GetProTongJi(DashBoardRequest request)
         {
@@ -42,7 +53,7 @@ namespace Vogue2_IMS.Business
                     result.AddRange(data.list);
                     theEnd = data.IsEnd;
 
-                    request.pageIndex = theEnd ? request.pageIndex : data.NextPageIndex;
+                    request.pageIndex += theEnd ? 0 : 1;
                 }
                 else
                 {
@@ -60,10 +71,10 @@ namespace Vogue2_IMS.Business
 
         public static CustInfo GetCustInfoList(string phone)
         {
-            var repsone = WebServiceHelper.HttpPost<string, CustInfo[]>(_urlCustList, phone);
+            var repsone = WebServiceHelper.HttpPost<object, CustListRepsone>(_urlCustList, new { keys = phone });
 
-            if (repsone != null && repsone.Length > 0)
-                return repsone.First();
+            if (repsone != null && repsone.list != null && repsone.list.Count() > 0)
+                return repsone.list.First();
 
             return new CustInfo();
         }
@@ -71,7 +82,7 @@ namespace Vogue2_IMS.Business
         public static List<string> GetProFenLeis()
         {
             var result = new List<string>();
-            var repsone = WebServiceHelper.HttpPost<string, string[]>(_urlCustList,null);
+            var repsone = WebServiceHelper.HttpPost<string, string[]>(_urlProgettypes, null);
 
             if (repsone != null && repsone.Length > 0)
                 result.AddRange(repsone);
@@ -136,7 +147,25 @@ namespace Vogue2_IMS.Business
         public string keys { get; set; }
         public DateTime? stime { get; set; }
         public DateTime? etime { get; set; }
-        public int pageIndex { get; set; }
+        public DateTime? ostime { get; set; }
+        public DateTime? oetime { get; set; }
+        private int _pageIndex = 1;
+        public int pageIndex { get { return _pageIndex; } set { _pageIndex = value; } }
+
+        public ProListRequest Clone()
+        {
+            return new ProListRequest()
+            {
+                sort = this.sort,
+                keys = this.keys,
+                stime = this.stime,
+                etime = this.etime,
+                ostime = this.ostime,
+                oetime = this.oetime,
+                pageIndex = this.pageIndex
+
+            };
+        }
 
 
         private QueryDateRange dateRange = QueryDateRange.Customer;
@@ -203,7 +232,7 @@ namespace Vogue2_IMS.Business
             }
         }
 
-        public int NextPageIndex { get { return pageSize++; } }
+       // public int NextPageIndex { get { retun 1; } }
     }
     public class ProInfo
     {
@@ -212,6 +241,7 @@ namespace Vogue2_IMS.Business
         public int? proid { get; set; }
         public int? prodepid { get; set; }
         public string prodepname { get; set; }
+        public string prodepphone { get; set; }
         public string proname { get; set; }
         public string profenlei { get; set; }
         public string procode { get; set; }
@@ -251,6 +281,7 @@ namespace Vogue2_IMS.Business
         public string proinjpname { get; set; }
         public string proinjpjiage { get; set; }
         public string proinremark { get; set; }
+        public string proinpaytype { get; set; }
         public int? proinjuid { get; set; }
         public string proinjuname { get; set; }
         public int? proinuid { get; set; }
@@ -324,6 +355,26 @@ namespace Vogue2_IMS.Business
             } 
         }
 
+        public List<string> images { get; set; }
+
+        public byte[] imagebytes
+        {
+            get
+            {
+                if (images != null && images.Count() > 0)
+                {
+                    var imageStr = images.FirstOrDefault();
+                    var imageStrs = imageStr.Split(',');
+                    if (imageStrs.Length > 1)
+                    {
+                        return Convert.FromBase64String(imageStrs[1]);
+                    }
+                }
+
+                return new List<byte>().ToArray();
+            }          
+        }
+
         public ProSalesInfo ProSalesInfo
         {
             get {
@@ -340,7 +391,7 @@ namespace Vogue2_IMS.Business
                     custphone = prooutcustphone,
                     juname = prooutjuname,
                     juid = prooutjuid,
-                    paytype=prostatus
+                    status=prostatus
                 };
             }
         }
@@ -386,7 +437,7 @@ namespace Vogue2_IMS.Business
         public int? uuid { get; set; }
         public string uuname { get; set; }
         public DateTime? updatetime { get; set; }
-        public string image { get; set; }
+        public List<string> images { get; set; }
 
         public T Clone<T>() where T : ProBaseInfo,new()
         {
@@ -425,24 +476,44 @@ namespace Vogue2_IMS.Business
                 uuid = uuid,
                 uuname = uuname,
                 updatetime = updatetime,
-                image = image
+                images = images
             };
         }
 
+        private string imgStrFormat = string.Empty;
+        private string imageType = string.Empty;
+        public string ImgStrFormat
+        {
+            get
+            {
+                return imageType;
+            }
+            set
+            {
+                imageType = value;
+            }
+        }
         public byte[] imagebytes
         {
             get
             {
-                if (!string.IsNullOrEmpty(image))
+                if(images!=null &&images.Count()>0)
                 {
-                    return Convert.FromBase64String(image);
+                    var imageStr = images.FirstOrDefault();
+                    var imageStrs = imageStr.Split(',');
+                    if (imageStrs.Length > 1)
+                    {
+                        return Convert.FromBase64String(imageStrs[1]);
+                    }
                 }
 
                 return new List<byte>().ToArray();
             }
             set
             {
-                image = Convert.ToBase64String(value);
+                images = new List<string>();
+
+                images.Add(string.Format("data:{0};base64,{1}", ImgStrFormat, Convert.ToBase64String(value)));
             }
         }
     }
@@ -465,7 +536,7 @@ namespace Vogue2_IMS.Business
                 if (mJuser != null)
                 {
                     this.juid = mJuser.id;
-                    this.juname = mJuser.username;
+                    this.juname = mJuser.truename;
                 }
             }
         }
@@ -531,6 +602,25 @@ namespace Vogue2_IMS.Business
         }
     }
 
+    public class CustListRepsone
+    {
+        public CustInfo[] list { get; set; }
+
+        public int totalCount { get; set; }
+        public int pageIndex { get; set; }
+        public int pageSize { get; set; }
+
+        public bool IsEnd
+        {
+            get
+            {
+                return pageIndex * pageSize >= totalCount;
+            }
+        }
+
+        public int NextPageIndex { get { return pageSize++; } }
+    }
+
     public class ProSalesInfo
     {
         private WebUserInfo mJuser = null;
@@ -543,7 +633,7 @@ namespace Vogue2_IMS.Business
                 if (mJuser != null)
                 {
                     this.juid = mJuser.id;
-                    this.juname = mJuser.username;
+                    this.juname = mJuser.truename;
                 }
             }
         }
@@ -559,9 +649,49 @@ namespace Vogue2_IMS.Business
         public string custname { get; set; }
         public string custphone { get; set; }
         public string beizhu { get; set; }
-        public string paytype { get; set; }
+        public string status { get; set; }
         public string juname { get; set; }
         public int? juid { get; set; }
+
+        public List<string> images { get; set; }
+
+        private string imgStrFormat = string.Empty;
+        private string imageType = string.Empty;
+        public string ImgStrFormat
+        {
+            get
+            {
+                return imageType;
+            }
+            set
+            {
+                imageType = value;
+            }
+        }
+        public byte[] imagebytes
+        {
+            get
+            {
+                if (images != null && images.Count() > 0)
+                {
+                    var imageStr = images.FirstOrDefault();
+                    var imageStrs = imageStr.Split(',');
+                    if (imageStrs.Length > 1)
+                    {
+                        return Convert.FromBase64String(imageStrs[1]);
+                    }
+                }
+
+                return new List<byte>().ToArray();
+            }
+            set
+            {
+                images = new List<string>();
+
+                images.Add(string.Format("data:{0};base64,{1}", ImgStrFormat, Convert.ToBase64String(value)));
+            }
+        }
+
     }
 
     public class DashBoardRequest

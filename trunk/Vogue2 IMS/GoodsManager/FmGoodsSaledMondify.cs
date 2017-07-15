@@ -46,6 +46,7 @@ namespace Vogue2_IMS.GoodsManager
             newProSalesInfo = this.ProInfo.ProSalesInfo;
             mProSalesInfo = this.ProInfo.ProSalesInfo;
 
+            newProSalesInfo.images = GoodsWebBusiness.GetProImages(proInfo.proid.Value);
             newProSalesInfo.JUser = users.Find(a => { return a.id == newProSalesInfo.juid; });
 
             InitializeControls();
@@ -54,8 +55,6 @@ namespace Vogue2_IMS.GoodsManager
         private void InitializeControls()
         {
             this.outjuser.Properties.Items.AddRange(users);
-            this.paystatus.Properties.Items.AddRange(ConfigManager.ProPayStatus);
-
             ControlsBinding();
         }
 
@@ -72,61 +71,18 @@ namespace Vogue2_IMS.GoodsManager
             outcustphone.DataBindings.Add("Text", newProSalesInfo, "custphone");
             zhekou.DataBindings.Add("EditValue", newProSalesInfo, "zhekou");
             sjiage.DataBindings.Add("EditValue", newProSalesInfo, "jpsjiage");
-            paystatus.DataBindings.Add("Text", newProSalesInfo, "paytype");
+            paystatus.DataBindings.Add("Text", newProSalesInfo, "status");
             yufu.DataBindings.Add("EditValue", newProSalesInfo, "yufu");
-            outjuser.DataBindings.Add("EditValue", newProSalesInfo, "JUser");  
+            outjuser.DataBindings.Add("EditValue", newProSalesInfo, "JUser");
 
-            //newProSalesInfo.Goods.Discount = newProSalesInfo.Goods.Discount ?? 0;
-            //newProSalesInfo.Goods.MarkPrice = newProSalesInfo.Goods.MarkPrice ?? 0;
-            //newProSalesInfo.Goods.Prepay = newProSalesInfo.Goods.Prepay ?? 0;
-            //newProSalesInfo.Goods.SalePrice = newProSalesInfo.Goods.SalePrice ?? 0;
+            GoodsPictureImage.EditValue = newProSalesInfo.imagebytes;
 
-            //var goods = newProSalesInfo.Goods;
-            //projcode.DataBindings.Add("Text", goods, "Code");
-            //proname.DataBindings.Add("Text", goods, "Name");
+            zhekou.TextChanged += TextEdit_TextChanged;
+            sjiage.TextChanged += TextEdit_TextChanged;
 
-            //var category = newProSalesInfo.Category;
-            //profenlei.DataBindings.Add("Text", category, "Name");
-
-            //var saledRecord = newProSalesInfo.SaledRecord;
-            //outjuser.DataBindings.Add("Text", saledRecord, "Operator");
-            //if (string.IsNullOrEmpty(outjuser.Text))
-            //    outjuser.Text = ConfigManager.LoginUser.username; //SharedVariables.Instance.LoginUser.User.Name;
-
-            ////ComboxPayType.DataBindings.Add("EditValue", newSaledGoodsInfo, "PayType");
-
-            ////TxtGoodsDiscount.DataBindings.Add("EditValue", newSaledGoodsInfo, "Goods.Discount.Value");
-            //probjiage.EditValue = newProSalesInfo.bjiage;
-            //zhekou.EditValue = newProSalesInfo.Goods.Discount;
-            //yufu.EditValue = newProSalesInfo.Goods.Prepay;
-            //sjiage.EditValue = newProSalesInfo.Goods.MarkPrice - newProSalesInfo.Goods.Discount;
-            ////GoodsPictureImage.EditValue = newSaledGoodsInfo.GoodsImageBytes;
-            //zhekou.EditValue = newProSalesInfo.Goods.Discount.HasValue ? newProSalesInfo.Goods.Discount.Value : (decimal)0;
-            //GoodsPictureImage.EditValue = this.GetGoodsLargeImage();
-            //sjiage.Enabled =
-            //zhekou.Enabled =
-            //paystatus.Enabled =
-            //outjuser.Enabled = 
-            ////SharedVariables.Instance.LoginUser.User.RoleId == (int)SharedVariables.AdminRoleId
-            ////                            || 
-            //                            (newProSalesInfo.Goods.Status != (int)GoodsStatus.Catch 
-            //                            || newProSalesInfo.Goods.StatusSpecify);//预订商品不可编辑
-
-            //var index = newProSalesInfo.Goods.Status - (int)GoodsStatus.Catch;
-            //paystatus.SelectedIndex = index < 0 ? 1 : index;//默认售出
+            yufu.TextChanged += TextEdit_TextChanged;
         }
 
-        private byte[] GetGoodsLargeImage()
-        {
-        //    if (newProSalesInfo.Goods.Id > 0 && string.IsNullOrEmpty(newProSalesInfo.Goods.Image))
-        //    {
-        //        newProSalesInfo.Goods.Image = GoodsBusiness.Instance.GetGoodsImage(newProSalesInfo.Goods.Id);
-        //    }
-        //    if (!string.IsNullOrEmpty(newProSalesInfo.Goods.Image))
-        //        return Convert.FromBase64String(newProSalesInfo.Goods.Image);
-
-            return new List<byte>().ToArray();
-        }
 
         private bool ValidatFail()
         {
@@ -172,12 +128,12 @@ namespace Vogue2_IMS.GoodsManager
             if (!ValidatFail())
             {
                 //商品被取回不修改任何当前信息
-                if (newProSalesInfo.paytype!= ConfigManager.QuHui)
+                if (newProSalesInfo.status!= ConfigManager.QuHui)
                 {
                     //???是否预付款完成修改商品状态为售出                    
                     if (newProSalesInfo.yufu == newProSalesInfo.jpsjiage)
                     {
-                        newProSalesInfo.paytype = ConfigManager.ShouChu;
+                        newProSalesInfo.status = ConfigManager.ShouChu;
                     }
                 }
 
@@ -189,16 +145,19 @@ namespace Vogue2_IMS.GoodsManager
 
         private void TextEdit_TextChanged(object sender, EventArgs e)
         {
-            newProSalesInfo.zhekou = (decimal)zhekou.EditValue;
-            newProSalesInfo.jpsjiage = (decimal)sjiage.EditValue;
+           
             newProSalesInfo.yufu = (decimal)yufu.EditValue;
             ;
             if (sender == sjiage)
             {
+                newProSalesInfo.zhekou = (decimal)zhekou.EditValue;
+                newProSalesInfo.jpsjiage = (decimal)sjiage.EditValue;
                 zhekou.EditValue = newProSalesInfo.bjiage - newProSalesInfo.jpsjiage;
             }
             if (sender == zhekou)
             {
+                newProSalesInfo.zhekou = (decimal)zhekou.EditValue;
+                newProSalesInfo.jpsjiage = (decimal)sjiage.EditValue;
                 sjiage.EditValue = newProSalesInfo.bjiage - newProSalesInfo.zhekou;
             }
 

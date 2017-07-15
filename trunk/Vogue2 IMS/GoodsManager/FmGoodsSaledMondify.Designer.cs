@@ -88,7 +88,7 @@
             this.proname.Properties.NullValuePrompt = "<必填>";
             this.proname.Properties.NullValuePromptShowForEmptyValue = true;
             this.proname.Size = new System.Drawing.Size(166, 19);
-            this.proname.TabIndex = 1000;
+            this.proname.TabIndex = 3;
             // 
             // projcode
             // 
@@ -101,7 +101,7 @@
             this.projcode.Properties.NullValuePrompt = "<必填>";
             this.projcode.Properties.NullValuePromptShowForEmptyValue = true;
             this.projcode.Size = new System.Drawing.Size(166, 19);
-            this.projcode.TabIndex = 999;
+            this.projcode.TabIndex = 2;
             // 
             // labelControl8
             // 
@@ -141,7 +141,7 @@
             this.profenlei.Properties.NullValuePrompt = "<必填>";
             this.profenlei.Properties.NullValuePromptShowForEmptyValue = true;
             this.profenlei.Size = new System.Drawing.Size(166, 19);
-            this.profenlei.TabIndex = 1005;
+            this.profenlei.TabIndex = 1;
             // 
             // probjiage
             // 
@@ -159,7 +159,7 @@
             this.probjiage.Properties.NullValuePrompt = "数字格式";
             this.probjiage.Properties.NullValuePromptShowForEmptyValue = true;
             this.probjiage.Size = new System.Drawing.Size(166, 19);
-            this.probjiage.TabIndex = 1006;
+            this.probjiage.TabIndex = 4;
             // 
             // labelControl11
             // 
@@ -205,7 +205,7 @@
             this.outcustphone.Properties.NullValuePrompt = "数字格式";
             this.outcustphone.Properties.NullValuePromptShowForEmptyValue = true;
             this.outcustphone.Size = new System.Drawing.Size(166, 21);
-            this.outcustphone.TabIndex = 1034;
+            this.outcustphone.TabIndex = 6;
             // 
             // labelControl9
             // 
@@ -228,7 +228,7 @@
             this.outcustname.Properties.NullValuePrompt = "<必填>";
             this.outcustname.Properties.NullValuePromptShowForEmptyValue = true;
             this.outcustname.Size = new System.Drawing.Size(166, 21);
-            this.outcustname.TabIndex = 1008;
+            this.outcustname.TabIndex = 5;
             // 
             // labelControl6
             // 
@@ -254,7 +254,7 @@
             "取回"});
             this.paystatus.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.paystatus.Size = new System.Drawing.Size(166, 21);
-            this.paystatus.TabIndex = 1032;
+            this.paystatus.TabIndex = 9;
             this.paystatus.SelectedIndexChanged += new System.EventHandler(this.ComboxEdit_SelectedIndexChanged);
             // 
             // labelControl5
@@ -276,7 +276,7 @@
             this.outjuser.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.outjuser.Size = new System.Drawing.Size(166, 21);
-            this.outjuser.TabIndex = 1030;
+            this.outjuser.TabIndex = 12;
             this.outjuser.SelectedIndexChanged += new System.EventHandler(this.ComboxEdit_SelectedIndexChanged);
             // 
             // labelControl10
@@ -309,8 +309,7 @@
             this.yufu.Properties.NullValuePrompt = "数字格式";
             this.yufu.Properties.NullValuePromptShowForEmptyValue = true;
             this.yufu.Size = new System.Drawing.Size(166, 21);
-            this.yufu.TabIndex = 1028;
-            this.yufu.TextChanged += new System.EventHandler(this.TextEdit_TextChanged);
+            this.yufu.TabIndex = 10;
             // 
             // labelControl4
             // 
@@ -342,8 +341,7 @@
             this.sjiage.Properties.NullValuePrompt = "数字格式";
             this.sjiage.Properties.NullValuePromptShowForEmptyValue = true;
             this.sjiage.Size = new System.Drawing.Size(166, 21);
-            this.sjiage.TabIndex = 1026;
-            this.sjiage.TextChanged += new System.EventHandler(this.TextEdit_TextChanged);
+            this.sjiage.TabIndex = 8;
             // 
             // labelControl3
             // 
@@ -375,8 +373,7 @@
             this.zhekou.Properties.NullValuePrompt = "数字格式";
             this.zhekou.Properties.NullValuePromptShowForEmptyValue = true;
             this.zhekou.Size = new System.Drawing.Size(166, 21);
-            this.zhekou.TabIndex = 1024;
-            this.zhekou.TextChanged += new System.EventHandler(this.TextEdit_TextChanged);
+            this.zhekou.TabIndex = 7;
             // 
             // labelControl2
             // 

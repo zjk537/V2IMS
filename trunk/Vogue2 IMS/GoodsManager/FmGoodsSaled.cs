@@ -251,31 +251,31 @@ namespace Vogue2_IMS.GoodsManager
 
         private void Print(List<SaledGoodsInfo> listSaledGoods)
         {
-            if (listSaledGoods == null || listSaledGoods.Count == 0) return;
+            //if (listSaledGoods == null || listSaledGoods.Count == 0) return;
 
-            var listSaledOrderInfo = new List<SaledGoodsOrderInfo>();
-            var totalMarkPrice = listSaledGoods.Sum(record => record.Goods.MarkPrice);
-            var totalPrice = listSaledGoods.Sum(record => record.Goods.SalePrice);
-            var totalDiscount = listSaledGoods.Sum(record => record.Goods.Discount);
-            listSaledGoods.ForEach(goods =>
-            {
-                listSaledOrderInfo.Add(new SaledGoodsOrderInfo(goods, 1)
-                {
-                    TotalMarkPrice = totalMarkPrice.HasValue ? totalMarkPrice.Value : (decimal)0,
-                    TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0,
-                    TotalDiscount = totalDiscount.HasValue ? totalDiscount.Value : (decimal)0
-                });
-                listSaledOrderInfo.Add(new SaledGoodsOrderInfo(goods, 2)
-                {
-                    TotalMarkPrice = totalMarkPrice.HasValue ? totalMarkPrice.Value : (decimal)0,
-                    TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0,
-                    TotalDiscount = totalDiscount.HasValue ? totalDiscount.Value : (decimal)0
-                });
-            });
+            //var listSaledOrderInfo = new List<SaledGoodsOrderInfo>();
+            //var totalMarkPrice = listSaledGoods.Sum(record => record.Goods.MarkPrice);
+            //var totalPrice = listSaledGoods.Sum(record => record.Goods.SalePrice);
+            //var totalDiscount = listSaledGoods.Sum(record => record.Goods.Discount);
+            //listSaledGoods.ForEach(goods =>
+            //{
+            //    listSaledOrderInfo.Add(new SaledGoodsOrderInfo(goods, 1)
+            //    {
+            //        TotalMarkPrice = totalMarkPrice.HasValue ? totalMarkPrice.Value : (decimal)0,
+            //        TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0,
+            //        TotalDiscount = totalDiscount.HasValue ? totalDiscount.Value : (decimal)0
+            //    });
+            //    listSaledOrderInfo.Add(new SaledGoodsOrderInfo(goods, 2)
+            //    {
+            //        TotalMarkPrice = totalMarkPrice.HasValue ? totalMarkPrice.Value : (decimal)0,
+            //        TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0,
+            //        TotalDiscount = totalDiscount.HasValue ? totalDiscount.Value : (decimal)0
+            //    });
+            //});
 
-            var receiptView = new FmReceiptView();
-            receiptView.InitializeReceiptView<SaledGoodsOrderInfo>(listSaledOrderInfo);
-            receiptView.ShowDialog();
+            //var receiptView = new FmReceiptView();
+            //receiptView.InitializeReceiptView<SaledGoodsOrderInfo>(listSaledOrderInfo);
+            //receiptView.ShowDialog();
         }
 
         private void btnPrint_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

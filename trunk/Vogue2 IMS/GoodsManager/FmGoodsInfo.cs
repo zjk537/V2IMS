@@ -8,6 +8,7 @@ using Vogue2_IMS.Business;
 using Vogue2_IMS.Model.DataModel;
 using Vogue2_IMS.Common;
 using System.Collections.Generic;
+using System.Drawing.Imaging;
 
 namespace Vogue2_IMS.OrderManager
 {
@@ -67,9 +68,11 @@ namespace Vogue2_IMS.OrderManager
                 var probaseinfo = GoodsWebBusiness.GetProBaseInfo(proinfo.proid.Value);
                 newProCustInfo = probaseinfo as ProCustInfo;
                 newProCustInfo.cust = proinfo.Cust;
-
+                newProCustInfo.paytype = proinfo.proinpaytype;
                 mProBaseInfo = newProCustInfo.Clone();
-                newProCustInfo.JUser = users.Find(a => { return a.id == mProBaseInfo.juid; });
+                newProCustInfo.JUser = users.Find(a => { return a.id == proinfo.proinjuid; });
+
+                newProCustInfo.images = GoodsWebBusiness.GetProImages(proinfo.proid.Value);
 
                 this.mRKType = mProBaseInfo.type;
             }
@@ -147,7 +150,7 @@ namespace Vogue2_IMS.OrderManager
             probujian.DataBindings.Add("Text", newProCustInfo, "bujian");
             proremark.DataBindings.Add("Text", newProCustInfo, "remark");
 
-            proimage.EditValue = this.GetGoodsLargeImage();
+            proimage.EditValue = newProCustInfo.imagebytes;
 
             propaytype.DataBindings.Add("EditValue", newProCustInfo, "paytype");
 
@@ -161,7 +164,7 @@ namespace Vogue2_IMS.OrderManager
                 propaystatus.SelectedIndex = 1;
             }
             projiage.EditValue = newProCustInfo.jiage ?? 0;
-            prosjiage.EditValue = newProCustInfo.sjiage ?? 0;
+            probjiage.EditValue = newProCustInfo.bjiage ?? 0;
             endtime.EditValue = newProCustInfo.endtime.HasValue ? newProCustInfo.endtime.Value.ToString("yyyy/MM/dd") : "";
         }
 
@@ -195,13 +198,19 @@ namespace Vogue2_IMS.OrderManager
 
         private byte[] GetGoodsLargeImage()
         {
+            var imgStr = string.Empty;
             if (newProCustInfo.id.HasValue && newProCustInfo.id.Value > 0 )
             {
-               newProCustInfo.image = GoodsBusiness.Instance.GetGoodsImage(newProCustInfo.id.Value);
+                imgStr = GoodsBusiness.Instance.GetGoodsImage(newProCustInfo.id.Value);
             }
-            if (!string.IsNullOrEmpty(newProCustInfo.image))
+
+
+            if (!string.IsNullOrEmpty(imgStr))
             {
-                return Convert.FromBase64String(newProCustInfo.image);
+                newProCustInfo.images = newProCustInfo.images == null ? new List<string>() : newProCustInfo.images;
+                newProCustInfo.images.Add(imgStr);
+
+                return Convert.FromBase64String(imgStr);
             }
 
             return new List<byte>().ToArray();
@@ -216,7 +225,7 @@ namespace Vogue2_IMS.OrderManager
             this.profenlei.Enabled =
             this.procolor.Enabled =
             this.proremark.Enabled =
-            this.prosjiage.Enabled =
+            this.probjiage.Enabled =
             this.proname.Enabled =
             this.projcode.Enabled =
             this.probujian.Enabled =
@@ -291,11 +300,11 @@ namespace Vogue2_IMS.OrderManager
             }
             else newProCustInfo.jiage = validationTryDecimal;
 
-            if (prosjiage.EditValue == null || !decimal.TryParse(prosjiage.EditValue.ToString(), out validationTryDecimal))
+            if (probjiage.EditValue == null || !decimal.TryParse(probjiage.EditValue.ToString(), out validationTryDecimal))
             {
-                mErrorProvider.SetError(this.prosjiage, "请输入正确的价格", ErrorType.Warning);
+                mErrorProvider.SetError(this.probjiage, "请输入正确的价格", ErrorType.Warning);
             }
-            else newProCustInfo.sjiage = validationTryDecimal;
+            else newProCustInfo.bjiage = validationTryDecimal;
 
             //if (string.IsNullOrEmpty(this.projuser.Text.Trim()))
             if (this.projuser.SelectedItem == null)
@@ -319,7 +328,19 @@ namespace Vogue2_IMS.OrderManager
         private void GoodsPictureImage_DoubleClick(object sender, EventArgs e)
         {
             proimage.LoadImage();
-           // newProCustInfo.imagebytes = (byte[])proimage.EditValue;
+
+            var imgguid = proimage.Image.RawFormat.Guid;
+            var type = string.Empty;
+            foreach (ImageCodecInfo codec in ImageCodecInfo.GetImageDecoders())
+            {
+                if (codec.FormatID == imgguid)
+                    type= codec.MimeType;
+            }
+
+            //var imgStrFormat = string.Format("data:{0};base64,", type);
+            newProCustInfo.ImgStrFormat = type;
+
+            newProCustInfo.imagebytes = (byte[])proimage.EditValue;
         }
 
         private void ComboxEdit_SelectedIndexChanged(object sender, EventArgs e)

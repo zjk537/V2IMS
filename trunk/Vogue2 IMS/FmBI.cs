@@ -19,14 +19,14 @@ namespace Vogue2_IMS
 {
     public partial class FmBI : DevExpress.XtraEditors.XtraForm
     {
-        List<ViewMainGoodsInfos> salesDataSource = new List<ViewMainGoodsInfos>();
-        public List<ViewMainGoodsInfos> SalesDataSource
+        List<ProInfo> salesDataSource = new List<ProInfo>();
+        public List<ProInfo> SalesDataSource
         {
             get
             {
                 if (salesDataSource == null)
                 {
-                    salesDataSource = new List<ViewMainGoodsInfos>();
+                    salesDataSource = new List<ProInfo>();
                 }
 
                 return salesDataSource;
@@ -53,43 +53,43 @@ namespace Vogue2_IMS
             }
         }
 
-        ViewDashboard viewDasboardSource = new ViewDashboard();
-        public ViewDashboard ViewDasboardSource
+        DashBoard viewDasboardSource = new DashBoard();
+        public DashBoard ViewDasboardSource
         {
             get { return viewDasboardSource; }
             set
             {
-                viewDasboardSource = value == null ? new ViewDashboard() : value;
+                viewDasboardSource = value == null ? new DashBoard() : value;
 
                 if (this.InvokeRequired)
                 {
                     this.BeginInvoke(new MethodInvoker(delegate()
                     {
-                        this.ucGoodsTotalJiHuo.Title.Text = viewDasboardSource.JinHuoLiang.ToString();
-                        this.ucGoodsTotalShouChu.Title.Text = viewDasboardSource.XiaoShouLiang.ToString();
+                        this.ucGoodsTotalJiHuo.Title.Text = viewDasboardSource.jinhuoliang.ToString();
+                        this.ucGoodsTotalShouChu.Title.Text = viewDasboardSource.xiaoshouliang.ToString();
 
-                        this.ucTotalJSWDK.Title.Text = viewDasboardSource.JSWeiDaKuan.ToString();
-                        this.ucTotalJSKC.Title.Text = viewDasboardSource.JSKuCun.ToString();
-                        this.ucTotalJSCQ.Title.Text = viewDasboardSource.JSChaoQi.ToString();
+                        this.ucTotalJSWDK.Title.Text = viewDasboardSource.jsweidakuan.ToString();
+                        this.ucTotalJSKC.Title.Text = viewDasboardSource.jskucun.ToString();
+                        this.ucTotalJSCQ.Title.Text = viewDasboardSource.jschaoqi.ToString();
 
-                        this.ucTotalZYWDK.Title.Text = viewDasboardSource.JHWeiDaKuan.ToString();
-                        this.ucTotalZYKC.Title.Text = viewDasboardSource.JHKuCun.ToString();
-                        this.ucTotalZYCQ.Title.Text = viewDasboardSource.JHChaoQi.ToString();
+                        this.ucTotalZYWDK.Title.Text = viewDasboardSource.jhweidakuan.ToString();
+                        this.ucTotalZYKC.Title.Text = viewDasboardSource.jhkucun.ToString();
+                        this.ucTotalZYCQ.Title.Text = viewDasboardSource.jhchaoqi.ToString();
                     }));
 
                     return;
                 }
 
-                this.ucGoodsTotalJiHuo.Title.Text = viewDasboardSource.JinHuoLiang.ToString();
-                this.ucGoodsTotalShouChu.Title.Text = viewDasboardSource.XiaoShouLiang.ToString();
+                this.ucGoodsTotalJiHuo.Title.Text = viewDasboardSource.jinhuoliang.ToString();
+                this.ucGoodsTotalShouChu.Title.Text = viewDasboardSource.xiaoshouliang.ToString();
 
-                this.ucTotalJSWDK.Title.Text = viewDasboardSource.JSWeiDaKuan.ToString();
-                this.ucTotalJSKC.Title.Text = viewDasboardSource.JSKuCun.ToString();
-                this.ucTotalJSCQ.Title.Text = viewDasboardSource.JSChaoQi.ToString();
+                this.ucTotalJSWDK.Title.Text = viewDasboardSource.jsweidakuan.ToString();
+                this.ucTotalJSKC.Title.Text = viewDasboardSource.jskucun.ToString();
+                this.ucTotalJSCQ.Title.Text = viewDasboardSource.jschaoqi.ToString();
 
-                this.ucTotalZYWDK.Title.Text = viewDasboardSource.JHWeiDaKuan.ToString();
-                this.ucTotalZYKC.Title.Text = viewDasboardSource.JHChaoQi.ToString();
-                this.ucTotalZYCQ.Title.Text = viewDasboardSource.JHKuCun.ToString();
+                this.ucTotalZYWDK.Title.Text = viewDasboardSource.jhweidakuan.ToString();
+                this.ucTotalZYKC.Title.Text = viewDasboardSource.jhkucun.ToString();
+                this.ucTotalZYCQ.Title.Text = viewDasboardSource.jhchaoqi.ToString();
             }
         }
 

@@ -309,11 +309,11 @@ namespace Vogue2_IMS
                     int daySpan = 0 - (string.IsNullOrEmpty(daySpanStr) ? 7 : Convert.ToInt32(daySpanStr));
                     var endDate = string.IsNullOrEmpty(endDateStr) ? DateTime.Now : Convert.ToDateTime(endDateStr);
 
-                    var queryDateInfo = GetBIViewDateQuery(QueryDateRange.Customer);  
-                    queryDateInfo.SalesEndDate = endDate;
-                    queryDateInfo.SalesStartDate = queryDateInfo.SalesEndDate.Value.AddDays(daySpan);
+                    var queryDateInfo = new ProListRequest(); 
+                    queryDateInfo.oetime = endDate;
+                    queryDateInfo.ostime = queryDateInfo.oetime.Value.AddDays(daySpan);
                 
-                    mFmBI.SalesDataSource = GoodsBusiness.Instance.GetGoodses(queryDateInfo);
+                    mFmBI.SalesDataSource = GoodsWebBusiness.GetProInfoList(queryDateInfo);
 
                     var viewQuaryTotal = new ViewQuaryTotal();
                     string jhTimeOutDaySpanStr = ConfigurationManager.AppSettings["JinHuoTimeoutDaySpan"];
@@ -322,13 +322,13 @@ namespace Vogue2_IMS
                     viewQuaryTotal.EndDate=endDate;
                     viewQuaryTotal.StartDate = viewQuaryTotal.EndDate.Value.AddDays(daySpan);
 
-                    var viewDasboardSourceList=GoodsBusiness.Instance.GetDashboardTotal(viewQuaryTotal);
-                    mFmBI.ViewDasboardSource = (viewDasboardSourceList == null || viewDasboardSourceList.Count == 0) ? null : viewDasboardSourceList.First();
-                    string str = string.Empty;
+                    mFmBI.ViewDasboardSource = GoodsWebBusiness.GetProTongJi(new DashBoardRequest() { dayspan = jhTimeOutDaySpan });
+                   
+                   
                 }
                 catch
                 {
-                    mFmBI.SalesDataSource = new List<ViewMainGoodsInfos>();
+                    mFmBI.SalesDataSource = new List<ProInfo>();
                     throw;
                 }
                 finally
@@ -484,9 +484,10 @@ namespace Vogue2_IMS
                         Thread.Sleep(500);
                     }
 
-                    //var datesource = GoodsWebBusiness.GetProInfoList();
                     mFmGoodsMainView.DefaultQueryInfo = mCurrentQueryInfo;
-                    mFmGoodsMainView.DataSource = GoodsWebBusiness.GetProInfoList(mCurrentQueryInfo); //GoodsBusiness.Instance.GetGoodses(mCurrentQueryInfo);
+                    mFmGoodsMainView.DataSource = GoodsWebBusiness.GetProInfoList(mCurrentQueryInfo.Clone());
+
+                   // mCurrentQueryInfo = mFmGoodsMainView.DefaultQueryInfo;
                 }
                 finally
                 {
@@ -662,7 +663,7 @@ namespace Vogue2_IMS
 
         private void btnPayment_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var mainGoodsInfos = this.GetSelectedGoodsInfos();
+            var mainGoodsInfos = this.GetCheckedGoodsInfos();
             if (mainGoodsInfos == null) return;
 
             var tempGoodsInfos = mainGoodsInfos.Where(info =>
@@ -687,14 +688,8 @@ namespace Vogue2_IMS
                     return;
             }
 
-            //var purchaseGoodsInfos = mainGoodsInfos.Select(info =>
-            //{
-            //    //var goodsInfo = info.GetPurchaseRecordInfo();
-            //    //goodsInfo.Goods.Paid = (int)GoodsPaid.HasPaid;
-            //    return goodsInfo;
-            //}).ToList();
-
-            //Business.PurchaseGoodsBusiness.Instance.BatchUpdatePurchaseGoods(purchaseGoodsInfos);
+            GoodsWebBusiness.ProDaKuan(mainGoodsInfos.Select(a => { return a.proid.Value; }).ToList());
+            StartRefreshGoodsView(this, null);
         }
 
         private void btnRollBackGoods_ItemClick(object sender, ItemClickEventArgs e)
@@ -703,55 +698,41 @@ namespace Vogue2_IMS
 
             if (chkedMainGoodsInfos.Count > 0)
             {
-                var rollBackEnabledGoods = new List<SaledGoodsInfo>();
-                chkedMainGoodsInfos.ForEach(goods =>
+                var rollBackEnabledGoods = new List<ProInfo>();
+                chkedMainGoodsInfos.ForEach(pro =>
                 {
-                    if (goods.prostatus == ConfigManager.ShouChu
-                            || goods.prostatus == ConfigManager.YuDing)
-                        rollBackEnabledGoods.Add(null);
+                    if (pro.prostatus == ConfigManager.ShouChu || pro.prostatus == ConfigManager.YuDing)
+                    {
+                        rollBackEnabledGoods.Add(pro);
+                    }
                 });
 
                 if (rollBackEnabledGoods.Count > 0 &&
                     XtraMessageBox.Show("您确定要退货?", "提示", MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    rollBackEnabledGoods.ForEach(goods =>
-                    {
-                        goods.Goods.Status = (int)GoodsStatus.In;
-                        goods.SaledRecord.Remark = string.Format("商品{0}【{1}】,售价{2},预售价{3},折扣价{4},退货时间:{5}",
-                                                    goods.Goods.Name,
-                                                    goods.Goods.Code,
-                                                    goods.Goods.SalePrice,
-                                                    goods.Goods.Prepay,
-                                                    goods.Goods.Discount,
-                                                    DateTime.Now.ToString("yyyy-MM-dd hh:mm"));
-                        goods.SaledRecord.UserId = ConfigManager.LoginUser.uid;
-
-                        goods.Goods.SalePrice = 0;
-                        goods.Goods.Prepay = 0;
-                        goods.Goods.Discount = 0;
-                        goods.Goods.SaledDate = null;
-                    });
-                    Business.SaleGoodsBusiness.Instance.BatchUpdateSaledGoods(rollBackEnabledGoods);
+                    GoodsWebBusiness.ProTuiHuo(rollBackEnabledGoods.Select(a => { return a.proid.Value; }).ToList());
+                    StartRefreshGoodsView(this, null);
                 }
             }
         }
 
         private void btnJS_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            //var fmGoodsAdd = new FmGoodsAdd(SourceType.JiShou);
-            //fmGoodsAdd.WindowState = FormWindowState.Maximized;
-
-            //fmGoodsAdd.ShowDialog();
-
             var fmProInfo = new FmGoodsInfo(ConfigManager.JiShou);
-            fmProInfo.ShowDialog();
+            if (fmProInfo.ShowDialog() == DialogResult.OK)
+            {
+                StartRefreshGoodsView(this, null);
+            }
         }
 
         private void btnJH_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             var fmProInfo = new FmGoodsInfo(ConfigManager.JinHuo);
-            fmProInfo.ShowDialog();
+            if (fmProInfo.ShowDialog() == DialogResult.OK)
+            {
+                StartRefreshGoodsView(this, null);
+            }
         }
 
         private void btnCK_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -763,8 +744,12 @@ namespace Vogue2_IMS
                   {
                       var dialogresult = DialogResult.Cancel;
                       int[] rowIndexs = gridMainView.GetSelectedRows();
-                      var fmGoodsSales = new FmGoodsSaledMondify(gridMainView.GetRow(0) as ProInfo);
+                      var fmGoodsSales = new FmGoodsSaledMondify(gridMainView.GetRow(rowIndexs.First()) as ProInfo);
                       dialogresult = fmGoodsSales.ShowDialog();
+                      if (dialogresult == DialogResult.OK)
+                      {
+                          StartRefreshGoodsView(this, null);
+                      }
                   }
               
             }
@@ -832,7 +817,7 @@ namespace Vogue2_IMS
             {
                 var curGoods = listSelectedGoods.FirstOrDefault();
                 btnUpdateGoods.Enabled = (curGoods.prostatus == ConfigManager.ZaiKu || curGoods.prostatus == ConfigManager.YuDing);
-                BtnPrintXS.Enabled = curGoods.prostatus == ConfigManager.ZaiKu;
+                BtnPrintXS.Enabled = curGoods.prostatus == ConfigManager.ShouChu || curGoods.prostatus == ConfigManager.YuDing;
                 BtnPrintJH.Enabled = curGoods.protype == ConfigManager.JinHuo;
                 BtnPrintJS.Enabled = curGoods.protype == ConfigManager.JiShou;
                 return;
@@ -925,11 +910,11 @@ namespace Vogue2_IMS
                         else
                         {
                             if (source.prostatus == ConfigManager.ZaiKu)
-                                sumJHPrimice += source.projiage.HasValue ? source.projiage.Value : 0;
+                                sumJSPrimice += source.projiage.HasValue ? source.projiage.Value : 0;
 
                             if (source.prostatus == ConfigManager.ShouChu)
                             {
-                                sumJHSaled += source.prosjiage.HasValue ? source.prosjiage.Value : 0;
+                                sumJSSaled += source.prosjiage.HasValue ? source.prosjiage.Value : 0;
 
                             }
                         }
@@ -1121,10 +1106,10 @@ namespace Vogue2_IMS
 
         private void BtnPrintJH_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var listSelectedGoods = GetSelectedGoodsInfos();
+            var listSelectedGoods = GetCheckedGoodsInfos();
             if (listSelectedGoods == null) return;
 
-            if (listSelectedGoods.Count(item => item.protype == ConfigManager.JinHuo) > 0)
+            if (listSelectedGoods.Count(item => item.protype == ConfigManager.JiShou) > 0)
             {
                 XtraMessageBox.Show("进货回单里不能包含寄售商品!");
                 return;
@@ -1133,14 +1118,16 @@ namespace Vogue2_IMS
             var totalPrice = listSelectedGoods.Sum(item => item.projiage);
             listSelectedGoods.ForEach(item =>
             {
-                //listJHGoods.Add(new PurchaseJhGoodsOrderInfo(item.GetPurchaseRecordInfo(), 1)
-                //{
-                //    TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0.00
-                //});
-                //listJHGoods.Add(new PurchaseJhGoodsOrderInfo(item.GetPurchaseRecordInfo(), 2)
-                //{
-                //    TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0.00
-                //});
+                item.images = GoodsWebBusiness.GetProImages(item.proid.Value);
+
+                listJHGoods.Add(new PurchaseJhGoodsOrderInfo(item, 1)
+                {
+                    TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0.00
+                });
+                listJHGoods.Add(new PurchaseJhGoodsOrderInfo(item, 2)
+                {
+                    TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0.00
+                });
             });
             var receiptView = new FmReceiptView();
             receiptView.InitializeReceiptView<PurchaseJhGoodsOrderInfo>(listJHGoods);
@@ -1149,10 +1136,10 @@ namespace Vogue2_IMS
 
         private void BtnPrintJS_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var listSelectedGoods = GetSelectedGoodsInfos();
+            var listSelectedGoods = GetCheckedGoodsInfos();
             if (listSelectedGoods == null) return;
 
-            if (listSelectedGoods.Count(item => item.protype == ConfigManager.JiShou) > 0)
+            if (listSelectedGoods.Count(item => item.protype == ConfigManager.JinHuo) > 0)
             {
                 XtraMessageBox.Show("寄售回单里不能包含自有商品!");
                 return;
@@ -1161,14 +1148,16 @@ namespace Vogue2_IMS
             var totalPrice = listSelectedGoods.Sum(item => item.projiage);
             listSelectedGoods.ForEach(item =>
             {
-                //listJsGoods.Add(new PurchaseJsGoodsOrderInfo(item.GetPurchaseRecordInfo(), 1)
-                //{
-                //    TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0.00
-                //});
-                //listJsGoods.Add(new PurchaseJsGoodsOrderInfo(item.GetPurchaseRecordInfo(), 2)
-                //{
-                //    TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0.00
-                //});
+                item.images = GoodsWebBusiness.GetProImages(item.proid.Value);
+
+                listJsGoods.Add(new PurchaseJsGoodsOrderInfo(item, 1)
+                {
+                    TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0.00
+                });
+                listJsGoods.Add(new PurchaseJsGoodsOrderInfo(item, 2)
+                {
+                    TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0.00
+                });
             });
             var receiptView = new FmReceiptView();
             receiptView.InitializeReceiptView<PurchaseJsGoodsOrderInfo>(listJsGoods);
@@ -1177,7 +1166,7 @@ namespace Vogue2_IMS
 
         private void BtnPrintXS_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var listSelectedGoods = GetSelectedGoodsInfos();
+            var listSelectedGoods = GetCheckedGoodsInfos();
             if (listSelectedGoods == null) return;
 
             if (listSelectedGoods.Count(item => item.prostatus == ConfigManager.ZaiKu) > 0)
@@ -1190,20 +1179,21 @@ namespace Vogue2_IMS
             var totalMarkPrice = listSelectedGoods.Sum(record => record.probjiage);
             var totalPrice = listSelectedGoods.Sum(record => record.prosjiage);
             var totalDiscount = listSelectedGoods.Sum(record => record.prozhekou);
-            listSelectedGoods.ForEach(goods =>
+            listSelectedGoods.ForEach(item =>
             {
-                //listSaledOrderInfo.Add(new SaledGoodsOrderInfo(goods.GetSaledGoodsInfo(), 1)
-                //{
-                //    TotalMarkPrice = totalMarkPrice.HasValue ? totalMarkPrice.Value : (decimal)0,
-                //    TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0,
-                //    TotalDiscount = totalDiscount.HasValue ? totalDiscount.Value : (decimal)0
-                //});
-                //listSaledOrderInfo.Add(new SaledGoodsOrderInfo(goods.GetSaledGoodsInfo(), 2)
-                //{
-                //    TotalMarkPrice = totalMarkPrice.HasValue ? totalMarkPrice.Value : (decimal)0,
-                //    TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0,
-                //    TotalDiscount = totalDiscount.HasValue ? totalDiscount.Value : (decimal)0
-                //});
+                item.images = GoodsWebBusiness.GetProImages(item.proid.Value);
+                listSaledOrderInfo.Add(new SaledGoodsOrderInfo(item, 1)
+                {
+                    TotalMarkPrice = totalMarkPrice.HasValue ? totalMarkPrice.Value : (decimal)0,
+                    TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0,
+                    TotalDiscount = totalDiscount.HasValue ? totalDiscount.Value : (decimal)0
+                });
+                listSaledOrderInfo.Add(new SaledGoodsOrderInfo(item, 2)
+                {
+                    TotalMarkPrice = totalMarkPrice.HasValue ? totalMarkPrice.Value : (decimal)0,
+                    TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0,
+                    TotalDiscount = totalDiscount.HasValue ? totalDiscount.Value : (decimal)0
+                });
             });
 
             var receiptView = new FmReceiptView();

@@ -94,8 +94,6 @@ namespace Vogue2_IMS.ReceiptManager
             report.Refresh();
             //report.GetDefaultPageSettings().PaperSize);
 
-            
-
             #region deviceInfo
 
 //            string deviceInfo =

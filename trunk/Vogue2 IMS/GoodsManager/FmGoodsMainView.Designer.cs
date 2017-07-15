@@ -825,6 +825,7 @@
             // colPayType
             // 
             this.colPayType.Caption = "付款类型";
+            this.colPayType.FieldName = "proinpaytype";
             this.colPayType.Name = "colPayType";
             this.colPayType.OptionsColumn.ReadOnly = true;
             this.colPayType.Visible = true;

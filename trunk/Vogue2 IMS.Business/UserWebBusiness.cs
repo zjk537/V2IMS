@@ -40,7 +40,7 @@ namespace Vogue2_IMS.Business
 
         public override string ToString()
         {
-            return username.ToString();
+            return truename.ToString();
         }
     }
 

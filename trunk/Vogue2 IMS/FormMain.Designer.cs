@@ -324,7 +324,6 @@ namespace Vogue2_IMS
             // btnRollBackGoods
             // 
             resources.ApplyResources(this.btnRollBackGoods, "btnRollBackGoods");
-            this.btnRollBackGoods.Enabled = false;
             this.btnRollBackGoods.Id = 171;
             this.btnRollBackGoods.ImageIndex = 46;
             this.btnRollBackGoods.Name = "btnRollBackGoods";
