@@ -304,7 +304,7 @@ namespace Vogue2_IMS
                 }
                 try
                 {
-                    string endDateStr = ConfigurationManager.AppSettings["DashBoardEndDate"];
+                    string endDateStr = ConfigurationManager.AppSettings["DashBoardEndDate"];                                                                                                                                                                                                                                                                       
                     string daySpanStr = ConfigurationManager.AppSettings["DashBoardDaySpan"];
                     int daySpan = 0 - (string.IsNullOrEmpty(daySpanStr) ? 7 : Convert.ToInt32(daySpanStr));
                     var endDate = string.IsNullOrEmpty(endDateStr) ? DateTime.Now : Convert.ToDateTime(endDateStr);
@@ -852,7 +852,7 @@ namespace Vogue2_IMS
                     }
                     else
                     {
-                        var fmGoodsInfo = new FmGoodsInfo(goodsInfo);
+                        var fmGoodsInfo = new FmGoodsInfo(new List<ProInfo>() { goodsInfo });
                         dialogresult = fmGoodsInfo.ShowDialog();
                     }
 

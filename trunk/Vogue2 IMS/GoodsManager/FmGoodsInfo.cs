@@ -53,11 +53,15 @@ namespace Vogue2_IMS.OrderManager
             newProCustInfo.uuname = ConfigManager.LoginUser.username; 
         }
 
-        public FmGoodsInfo(ProInfo protInfo)
+        private int proIndex = 0;
+        private List<ProInfo> proInfos = new List<ProInfo>();
+        public FmGoodsInfo(List<ProInfo> proInfos)
             : base()
         {
             InitializeComponent();
-            InitializeControls(protInfo);
+            this.proInfos.AddRange(proInfos);
+
+            InitializeControls(this.proInfos.Count > 0 ? proInfos[proIndex] : null);
         }
 
         private void InitializeControls(ProInfo proinfo = null)
@@ -65,6 +69,10 @@ namespace Vogue2_IMS.OrderManager
             users = UserWebBusiness.GetUserInfoList();
             if (proinfo != null)
             {
+                btnNext.Visible = btnLast.Visible = true;
+                btnNext.Enabled = this.proInfos.Count > proIndex + 1;
+                btnLast.Enabled = proIndex != 0;
+
                 var probaseinfo = GoodsWebBusiness.GetProBaseInfo(proinfo.proid.Value);
                 newProCustInfo = probaseinfo as ProCustInfo;
                 newProCustInfo.cust = proinfo.Cust;
@@ -404,6 +412,27 @@ namespace Vogue2_IMS.OrderManager
 
                 this.DialogResult = DialogResult.OK;
             }
+        }
+
+        private void radioGroup1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (radioGroup1.SelectedIndex != 2)
+            {
+                gcExtendInfo.Visible = true;
+            }
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            proIndex = proIndex++;
+            InitializeControls(this.proInfos[proIndex]);
+
+        }
+
+        private void btnLast_Click(object sender, EventArgs e)
+        {
+            proIndex = proIndex--;
+            InitializeControls(this.proInfos[proIndex]);
         }
     }
 }
