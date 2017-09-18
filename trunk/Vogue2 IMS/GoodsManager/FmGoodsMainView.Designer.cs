@@ -59,6 +59,7 @@
             this.colChk = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colShop = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGoodsCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colGoodsPinPai = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCategory = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGoodsName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGoodsColor = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -525,6 +526,7 @@
             this.colChk,
             this.colShop,
             this.colGoodsCode,
+            this.colGoodsPinPai,
             this.colCategory,
             this.colGoodsName,
             this.colGoodsColor,
@@ -663,7 +665,7 @@
             this.colChk.Name = "colChk";
             this.colChk.Visible = true;
             this.colChk.VisibleIndex = 0;
-            this.colChk.Width = 30;
+            this.colChk.Width = 33;
             // 
             // colShop
             // 
@@ -684,6 +686,14 @@
             this.colGoodsCode.Visible = true;
             this.colGoodsCode.VisibleIndex = 2;
             this.colGoodsCode.Width = 100;
+            // 
+            // colGoodsPinPai
+            // 
+            this.colGoodsPinPai.Caption = "品牌";
+            this.colGoodsPinPai.FieldName = "propinpai";
+            this.colGoodsPinPai.Name = "colGoodsPinPai";
+            this.colGoodsPinPai.Visible = true;
+            this.colGoodsPinPai.VisibleIndex = 11;
             // 
             // colCategory
             // 
@@ -728,7 +738,7 @@
             this.colprochima.FieldName = "prochima";
             this.colprochima.Name = "colprochima";
             this.colprochima.Visible = true;
-            this.colprochima.VisibleIndex = 15;
+            this.colprochima.VisibleIndex = 16;
             // 
             // colprojiankuan
             // 
@@ -736,7 +746,7 @@
             this.colprojiankuan.FieldName = "projiankuan";
             this.colprojiankuan.Name = "colprojiankuan";
             this.colprojiankuan.Visible = true;
-            this.colprojiankuan.VisibleIndex = 16;
+            this.colprojiankuan.VisibleIndex = 17;
             // 
             // colproyaowei
             // 
@@ -744,7 +754,7 @@
             this.colproyaowei.FieldName = "proyaowei";
             this.colproyaowei.Name = "colproyaowei";
             this.colproyaowei.Visible = true;
-            this.colproyaowei.VisibleIndex = 17;
+            this.colproyaowei.VisibleIndex = 18;
             // 
             // colproxiongwei
             // 
@@ -752,7 +762,7 @@
             this.colproxiongwei.FieldName = "proxiongwei";
             this.colproxiongwei.Name = "colproxiongwei";
             this.colproxiongwei.Visible = true;
-            this.colproxiongwei.VisibleIndex = 18;
+            this.colproxiongwei.VisibleIndex = 19;
             // 
             // colprotunwei
             // 
@@ -760,7 +770,7 @@
             this.colprotunwei.FieldName = "protunwei";
             this.colprotunwei.Name = "colprotunwei";
             this.colprotunwei.Visible = true;
-            this.colprotunwei.VisibleIndex = 19;
+            this.colprotunwei.VisibleIndex = 20;
             // 
             // colproyichang
             // 
@@ -768,7 +778,7 @@
             this.colproyichang.FieldName = "proyichang";
             this.colproyichang.Name = "colproyichang";
             this.colproyichang.Visible = true;
-            this.colproyichang.VisibleIndex = 20;
+            this.colproyichang.VisibleIndex = 21;
             // 
             // colprokuchang
             // 
@@ -776,7 +786,7 @@
             this.colprokuchang.FieldName = "prokuchang";
             this.colprokuchang.Name = "colprokuchang";
             this.colprokuchang.Visible = true;
-            this.colprokuchang.VisibleIndex = 21;
+            this.colprokuchang.VisibleIndex = 22;
             // 
             // colproxiuchang
             // 
@@ -784,7 +794,7 @@
             this.colproxiuchang.FieldName = "proxiuchang";
             this.colproxiuchang.Name = "colproxiuchang";
             this.colproxiuchang.Visible = true;
-            this.colproxiuchang.VisibleIndex = 22;
+            this.colproxiuchang.VisibleIndex = 23;
             // 
             // colSourceName
             // 
@@ -812,7 +822,7 @@
             this.colGoosPaid.GroupInterval = DevExpress.XtraGrid.ColumnGroupInterval.DisplayText;
             this.colGoosPaid.Name = "colGoosPaid";
             this.colGoosPaid.Visible = true;
-            this.colGoosPaid.VisibleIndex = 37;
+            this.colGoosPaid.VisibleIndex = 38;
             // 
             // colGoodsDesc
             // 
@@ -837,7 +847,7 @@
             this.colGoodsPrimePrice.FieldName = "projiage";
             this.colGoodsPrimePrice.Name = "colGoodsPrimePrice";
             this.colGoodsPrimePrice.Visible = true;
-            this.colGoodsPrimePrice.VisibleIndex = 11;
+            this.colGoodsPrimePrice.VisibleIndex = 12;
             // 
             // colGoodsMarkPrice
             // 
@@ -845,7 +855,7 @@
             this.colGoodsMarkPrice.FieldName = "probjiage";
             this.colGoodsMarkPrice.Name = "colGoodsMarkPrice";
             this.colGoodsMarkPrice.Visible = true;
-            this.colGoodsMarkPrice.VisibleIndex = 12;
+            this.colGoodsMarkPrice.VisibleIndex = 13;
             // 
             // colPurchaseOperator
             // 
@@ -853,7 +863,7 @@
             this.colPurchaseOperator.FieldName = "proinuname";
             this.colPurchaseOperator.Name = "colPurchaseOperator";
             this.colPurchaseOperator.Visible = true;
-            this.colPurchaseOperator.VisibleIndex = 13;
+            this.colPurchaseOperator.VisibleIndex = 14;
             // 
             // colSaledPayType
             // 
@@ -862,7 +872,7 @@
             this.colSaledPayType.GroupInterval = DevExpress.XtraGrid.ColumnGroupInterval.DisplayText;
             this.colSaledPayType.Name = "colSaledPayType";
             this.colSaledPayType.Visible = true;
-            this.colSaledPayType.VisibleIndex = 14;
+            this.colSaledPayType.VisibleIndex = 15;
             // 
             // colGoodsSalePrice
             // 
@@ -870,7 +880,7 @@
             this.colGoodsSalePrice.FieldName = "prosjiage";
             this.colGoodsSalePrice.Name = "colGoodsSalePrice";
             this.colGoodsSalePrice.Visible = true;
-            this.colGoodsSalePrice.VisibleIndex = 23;
+            this.colGoodsSalePrice.VisibleIndex = 24;
             // 
             // colGoodsDisCount
             // 
@@ -878,7 +888,7 @@
             this.colGoodsDisCount.FieldName = "prozhekou";
             this.colGoodsDisCount.Name = "colGoodsDisCount";
             this.colGoodsDisCount.Visible = true;
-            this.colGoodsDisCount.VisibleIndex = 24;
+            this.colGoodsDisCount.VisibleIndex = 25;
             // 
             // colGoodsPrepay
             // 
@@ -886,7 +896,7 @@
             this.colGoodsPrepay.FieldName = "proyufu";
             this.colGoodsPrepay.Name = "colGoodsPrepay";
             this.colGoodsPrepay.Visible = true;
-            this.colGoodsPrepay.VisibleIndex = 26;
+            this.colGoodsPrepay.VisibleIndex = 27;
             // 
             // colGoodsCreateDate
             // 
@@ -894,7 +904,7 @@
             this.colGoodsCreateDate.FieldName = "proinaddtime.Value";
             this.colGoodsCreateDate.Name = "colGoodsCreateDate";
             this.colGoodsCreateDate.Visible = true;
-            this.colGoodsCreateDate.VisibleIndex = 27;
+            this.colGoodsCreateDate.VisibleIndex = 28;
             // 
             // colGOodsSaledDate
             // 
@@ -902,7 +912,7 @@
             this.colGOodsSaledDate.FieldName = "prooutaddtime.Value";
             this.colGOodsSaledDate.Name = "colGOodsSaledDate";
             this.colGOodsSaledDate.Visible = true;
-            this.colGOodsSaledDate.VisibleIndex = 28;
+            this.colGOodsSaledDate.VisibleIndex = 29;
             // 
             // colGoodsLastUpdatedDate
             // 
@@ -910,7 +920,7 @@
             this.colGoodsLastUpdatedDate.FieldName = "proupdatetime.Value";
             this.colGoodsLastUpdatedDate.Name = "colGoodsLastUpdatedDate";
             this.colGoodsLastUpdatedDate.Visible = true;
-            this.colGoodsLastUpdatedDate.VisibleIndex = 29;
+            this.colGoodsLastUpdatedDate.VisibleIndex = 30;
             // 
             // colSaledOperator
             // 
@@ -918,7 +928,7 @@
             this.colSaledOperator.FieldName = "prooutjuname";
             this.colSaledOperator.Name = "colSaledOperator";
             this.colSaledOperator.Visible = true;
-            this.colSaledOperator.VisibleIndex = 30;
+            this.colSaledOperator.VisibleIndex = 31;
             // 
             // colSupplierName
             // 
@@ -926,7 +936,7 @@
             this.colSupplierName.FieldName = "custname";
             this.colSupplierName.Name = "colSupplierName";
             this.colSupplierName.Visible = true;
-            this.colSupplierName.VisibleIndex = 31;
+            this.colSupplierName.VisibleIndex = 32;
             // 
             // colSupplierPhone
             // 
@@ -934,7 +944,7 @@
             this.colSupplierPhone.FieldName = "custphone";
             this.colSupplierPhone.Name = "colSupplierPhone";
             this.colSupplierPhone.Visible = true;
-            this.colSupplierPhone.VisibleIndex = 32;
+            this.colSupplierPhone.VisibleIndex = 33;
             // 
             // colSupplierBankName
             // 
@@ -942,7 +952,7 @@
             this.colSupplierBankName.FieldName = "custyhname";
             this.colSupplierBankName.Name = "colSupplierBankName";
             this.colSupplierBankName.Visible = true;
-            this.colSupplierBankName.VisibleIndex = 33;
+            this.colSupplierBankName.VisibleIndex = 34;
             // 
             // colSupplierBankCard
             // 
@@ -950,7 +960,7 @@
             this.colSupplierBankCard.FieldName = "custyhcard";
             this.colSupplierBankCard.Name = "colSupplierBankCard";
             this.colSupplierBankCard.Visible = true;
-            this.colSupplierBankCard.VisibleIndex = 34;
+            this.colSupplierBankCard.VisibleIndex = 35;
             // 
             // colSupplierIdCard
             // 
@@ -958,7 +968,7 @@
             this.colSupplierIdCard.FieldName = "custidcard";
             this.colSupplierIdCard.Name = "colSupplierIdCard";
             this.colSupplierIdCard.Visible = true;
-            this.colSupplierIdCard.VisibleIndex = 35;
+            this.colSupplierIdCard.VisibleIndex = 36;
             // 
             // colConsignEndDate
             // 
@@ -972,7 +982,7 @@
             this.colConsignStartDate.FieldName = "prostarttime.Value";
             this.colConsignStartDate.Name = "colConsignStartDate";
             this.colConsignStartDate.Visible = true;
-            this.colConsignStartDate.VisibleIndex = 36;
+            this.colConsignStartDate.VisibleIndex = 37;
             // 
             // colCustomerName
             // 
@@ -991,7 +1001,7 @@
             this.colGoodsPayCharge.Caption = "手续费";
             this.colGoodsPayCharge.Name = "colGoodsPayCharge";
             this.colGoodsPayCharge.Visible = true;
-            this.colGoodsPayCharge.VisibleIndex = 25;
+            this.colGoodsPayCharge.VisibleIndex = 26;
             // 
             // ComboxGoodStatus
             // 
@@ -2938,5 +2948,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn ccConsignStartDate;
         private DevExpress.XtraGrid.Columns.GridColumn ccCustomerName;
         private DevExpress.XtraGrid.Columns.GridColumn ccCustomerPhone;
+        private DevExpress.XtraGrid.Columns.GridColumn colGoodsPinPai;
     }
 }

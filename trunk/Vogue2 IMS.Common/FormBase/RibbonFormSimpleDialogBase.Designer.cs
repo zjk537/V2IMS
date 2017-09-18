@@ -120,6 +120,8 @@
             this.image16.Images.SetKeyName(46, "back.png");
             this.image16.Images.SetKeyName(47, "basket_back.png");
             this.image16.Images.SetKeyName(48, "left.png");
+            this.image16.Images.SetKeyName(49, "ooopic_1505739023.png");
+            this.image16.Images.SetKeyName(50, "Bar_code_24.446215139442px_1156986_easyicon.net.png");
             // 
             // ribbonViewSkins
             // 
@@ -193,6 +195,8 @@
             this.image32.Images.SetKeyName(53, "back.png");
             this.image32.Images.SetKeyName(54, "basket_back.png");
             this.image32.Images.SetKeyName(55, "left.png");
+            this.image32.Images.SetKeyName(64, "ooopic_1505739023.png");
+            this.image32.Images.SetKeyName(65, "Bar_code_48.892430278884px_1156986_easyicon.net.png");
             // 
             // IndividualizationRibbonPage
             // 

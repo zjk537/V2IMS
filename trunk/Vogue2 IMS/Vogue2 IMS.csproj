@@ -114,6 +114,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\DevControlHelper.cs" />
     <Compile Include="Common\FmProgressBar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -464,6 +465,8 @@
     <Content Include="Images\Layout_32.png" />
     <Content Include="Images\Login_Animation.gif" />
     <Content Include="Images\Map_32.png" />
+    <Content Include="Images\ooopic_1505739017.ico" />
+    <Content Include="Images\ooopic_1505739023.png" />
     <Content Include="Images\Print_32.png" />
     <Content Include="Images\QueryDetail_16.png" />
     <Content Include="Images\QueryDetail_32.png" />

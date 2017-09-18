@@ -244,6 +244,7 @@ namespace Vogue2_IMS.Business
         public string prodepphone { get; set; }
         public string proname { get; set; }
         public string profenlei { get; set; }
+        public string propinpai { get; set; }
         public string procode { get; set; }
         public string projcode { get; set; }
         public int? projcustid { get; set; }
@@ -380,7 +381,8 @@ namespace Vogue2_IMS.Business
             get {
                 return new ProSalesInfo()
                 {
-                    fenlei = profenlei,
+                    fenlei=profenlei,
+                    pinpai = propinpai,
                     bjiage = probjiage,
                     jpid = proid,
                     jpname = proname,
@@ -404,6 +406,7 @@ namespace Vogue2_IMS.Business
         public int? id { get; set; }
         public string name { get; set; }
         public string fenlei { get; set; }
+        public string pinpai { get; set; }
         public string code { get; set; }
         public string jcode { get; set; }     
         public string type { get; set; }
@@ -640,6 +643,8 @@ namespace Vogue2_IMS.Business
 
 
         public string fenlei { get; set; }
+        public string pinpai { get; set; }
+
         public decimal? bjiage { get; set; }
         public int? jpid { get; set; }
         public string jpname { get; set; }

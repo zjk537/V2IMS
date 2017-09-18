@@ -664,7 +664,7 @@ namespace Vogue2_IMS
         private void btnPayment_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             var mainGoodsInfos = this.GetCheckedGoodsInfos();
-            if (mainGoodsInfos == null) return;
+            if (mainGoodsInfos == null || mainGoodsInfos.Count == 0) return;
 
             var tempGoodsInfos = mainGoodsInfos.Where(info =>
             {
@@ -797,6 +797,8 @@ namespace Vogue2_IMS
                 {
                     return goods.prostatus == ConfigManager.ShouChu || goods.prostatus == ConfigManager.QuHui;
                 }) == 0;
+
+                this.btnShow.Enabled = chkedGoodsInfos.Count > 0;
             }
         }
 
@@ -1208,8 +1210,26 @@ namespace Vogue2_IMS
 
         #endregion
 
+        private void btnShow_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var dialogresult = DialogResult.Cancel;
+
+            var fmGoodsInfo = new FmGoodsInfo(GetCheckedGoodsInfos());
+            dialogresult = fmGoodsInfo.ShowDialog();
+
+            if (dialogresult == DialogResult.OK)
+            {
+                StartRefreshGoodsView(this, null);
+            }
+        }
+
 
         #endregion       
+
+        private void btnPrintBarCode_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
 
     }
 }

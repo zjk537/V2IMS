@@ -84,15 +84,26 @@ namespace Vogue2_IMS.OrderManager
 
                 this.mRKType = mProBaseInfo.type;
             }
+            else
+                newProCustInfo.cust = GoodsWebBusiness.GetCustInfoList(string.Empty);
+          
 
             this.custsex.Properties.Items.Clear();
+            this.profenlei.Properties.Items.Clear();
+            this.propaytype.Properties.Items.Clear();
+            this.projuser.Properties.Items.Clear();
+            this.propaystatus.Properties.Items.Clear();
+            this.radioGroup1.Properties.Items.Clear();
+
 
             this.custsex.Properties.Items.AddRange(new List<string>() { "男", "女" });
             this.profenlei.Properties.Items.AddRange(GoodsWebBusiness.GetProFenLeis());
             this.propaytype.Properties.Items.AddRange(ConfigManager.ProPayType);
             this.projuser.Properties.Items.AddRange(users);
             this.propaystatus.Properties.Items.AddRange(ConfigManager.ProPayStatus);
+            this.radioGroup1.Properties.Items.AddRange(ConfigManager.ProFenLei);
 
+         
 
             ControlsBinding();
         }
@@ -137,9 +148,28 @@ namespace Vogue2_IMS.OrderManager
             endtime.Visible = mRKType == ConfigManager.JiShou;
             propaystatus.Visible = mRKType == ConfigManager.JinHuo;
 
-            BindCustMsg();
+            BindCustMsg(true);
 
-            profenlei.DataBindings.Add("Text", newProCustInfo, "fenlei");
+            profenlei.DataBindings.Clear();
+            projcode.DataBindings.Clear();
+            proname.DataBindings.Clear();
+            procolor.DataBindings.Clear();
+            prochengse.DataBindings.Clear();
+            prochima.DataBindings.Clear();
+            projiankuan.DataBindings.Clear();
+            proyaowei.DataBindings.Clear();
+            proxiongwei.DataBindings.Clear();
+            protunwei.DataBindings.Clear();
+            proyichang.DataBindings.Clear();
+            proxiuchang.DataBindings.Clear();
+            prokuchang.DataBindings.Clear();
+            projuser.DataBindings.Clear();
+            probujian.DataBindings.Clear();
+            proremark.DataBindings.Clear();
+            propaytype.DataBindings.Clear();
+            radioGroup1.DataBindings.Clear();
+
+            profenlei.DataBindings.Add("Text", newProCustInfo, "pinpai");
             projcode.DataBindings.Add("Text", newProCustInfo, "jcode");
             proname.DataBindings.Add("Text", newProCustInfo, "name");
             procolor.DataBindings.Add("Text", newProCustInfo, "color");
@@ -162,6 +192,9 @@ namespace Vogue2_IMS.OrderManager
 
             propaytype.DataBindings.Add("EditValue", newProCustInfo, "paytype");
 
+            radioGroup1.DataBindings.Add("EditValue", newProCustInfo, "fenlei");
+
+
             if (this.mRKType == ConfigManager.JinHuo)
             {
                 propaystatus.Text ="已打款";
@@ -174,7 +207,10 @@ namespace Vogue2_IMS.OrderManager
             projiage.EditValue = newProCustInfo.jiage ?? 0;
             probjiage.EditValue = newProCustInfo.bjiage ?? 0;
             endtime.EditValue = newProCustInfo.endtime.HasValue ? newProCustInfo.endtime.Value.ToString("yyyy/MM/dd") : "";
+
+            gcExtendInfo.Visible = radioGroup1.EditValue.ToString() == "衣服";
         }
+
 
         private void BindCustMsg(bool isRefresh=false)
         {
@@ -241,7 +277,8 @@ namespace Vogue2_IMS.OrderManager
                 this.proimage.Enabled =
             this.prochengse.Enabled =
             this.endtime.Enabled =
-          
+            this.gcExtendInfo.Enabled=
+            this.groupControl6.Enabled=
             this.probujian.Enabled =
             this.proremark.Enabled = status;// || SharedVariables.Instance.LoginUser.User.RoleId == SharedVariables.PMRoleId;
         }
@@ -315,7 +352,7 @@ namespace Vogue2_IMS.OrderManager
             else newProCustInfo.bjiage = validationTryDecimal;
 
             //if (string.IsNullOrEmpty(this.projuser.Text.Trim()))
-            if (this.projuser.SelectedItem == null)
+            if (this.projuser.EditValue == null || string.IsNullOrEmpty(this.projuser.Text.Trim()))
             {
                 mErrorProvider.SetError(this.projuser, "请选择经手人", ErrorType.Warning);
             }
@@ -416,22 +453,19 @@ namespace Vogue2_IMS.OrderManager
 
         private void radioGroup1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (radioGroup1.SelectedIndex != 2)
-            {
-                gcExtendInfo.Visible = true;
-            }
+            gcExtendInfo.Visible = radioGroup1.EditValue.ToString() == "衣服";
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            proIndex = proIndex++;
+            proIndex++;
             InitializeControls(this.proInfos[proIndex]);
 
         }
 
         private void btnLast_Click(object sender, EventArgs e)
         {
-            proIndex = proIndex--;
+            proIndex--;
             InitializeControls(this.proInfos[proIndex]);
         }
     }

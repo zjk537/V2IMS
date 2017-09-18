@@ -92,9 +92,10 @@ namespace Vogue2_IMS.GoodsManager
             InitializeComponent();
             InitializeNavBar();
 
-            gridViewControl.DataSource = DataSource;
+           gridViewControl.DataSource = DataSource;
 
             DevViewDefine.ResetToNormalView(GridDefaultView, false, true, false);
+
             //DevViewDefine.ResetToNormalView(GridLayoutView, false, true, false);
             //DevViewDefine.ResetToNormalView(GridAdvBandedView, false, true, false);
 

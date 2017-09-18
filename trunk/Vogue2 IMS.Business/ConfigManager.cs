@@ -34,6 +34,8 @@ namespace Vogue2_IMS.Business
             ProStatus = res.First(a => a.name == RepsonseConfigMsg.PRO_STATUS).Values;
             ProType = res.First(a => a.name == RepsonseConfigMsg.PRO_TYPE).Values;
             BaseSex = res.First(a => a.name == RepsonseConfigMsg.BASE_SEX).Values;
+
+            ProFenLei = res.First(a => a.name == RepsonseConfigMsg.PRO_FENLEI).Values;
         }
 
         public static LoginUser LoginUser { get; private set; }
@@ -59,6 +61,11 @@ namespace Vogue2_IMS.Business
         /// 性别
         /// </summary>
         public static List<string> BaseSex { get; private set; }
+
+        /// <summary>
+        /// 性别
+        /// </summary>
+        public static List<string> ProFenLei { get; private set; }
     }
 
     public class RepsonseConfigMsg
@@ -83,6 +90,11 @@ namespace Vogue2_IMS.Business
         /// 性别 
         /// </summary>
         public static string BASE_SEX = "BASE_SEX";
+
+        /// <summary>
+        /// 性别 
+        /// </summary>
+        public static string PRO_FENLEI = "PRO_FENLEI";
 
         public string type { get; set; }
         public string name { get; set; }

@@ -38,6 +38,28 @@
             this.custdizhi = new DevExpress.XtraEditors.TextEdit();
             this.custname = new DevExpress.XtraEditors.TextEdit();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
+            this.probujian = new DevExpress.XtraEditors.TextEdit();
+            this.proremark = new DevExpress.XtraEditors.TextEdit();
+            this.projuser = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.profenlei = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.projcode = new DevExpress.XtraEditors.TextEdit();
+            this.prochengse = new DevExpress.XtraEditors.TextEdit();
+            this.proname = new DevExpress.XtraEditors.TextEdit();
+            this.procolor = new DevExpress.XtraEditors.TextEdit();
+            this.prokuchang = new DevExpress.XtraEditors.TextEdit();
+            this.proxiuchang = new DevExpress.XtraEditors.TextEdit();
+            this.proyichang = new DevExpress.XtraEditors.TextEdit();
+            this.protunwei = new DevExpress.XtraEditors.TextEdit();
+            this.proxiongwei = new DevExpress.XtraEditors.TextEdit();
+            this.proyaowei = new DevExpress.XtraEditors.TextEdit();
+            this.projiankuan = new DevExpress.XtraEditors.TextEdit();
+            this.prochima = new DevExpress.XtraEditors.TextEdit();
+            this.projiage = new DevExpress.XtraEditors.TextEdit();
+            this.probjiage = new DevExpress.XtraEditors.TextEdit();
+            this.propaytype = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.propaystatus = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.endtime = new DevExpress.XtraEditors.DateEdit();
+            this.proimage = new DevExpress.XtraEditors.PictureEdit();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl27 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl26 = new DevExpress.XtraEditors.LabelControl();
@@ -47,6 +69,8 @@
             this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl24 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.btnNext = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLast = new DevExpress.XtraEditors.SimpleButton();
             this.ckbprinted = new DevExpress.XtraEditors.CheckEdit();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.btnOk = new DevExpress.XtraEditors.SimpleButton();
@@ -54,54 +78,30 @@
             this.labelControl28 = new DevExpress.XtraEditors.LabelControl();
             this.radioGroup1 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.probujian = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.proremark = new DevExpress.XtraEditors.TextEdit();
-            this.projuser = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
-            this.profenlei = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.projcode = new DevExpress.XtraEditors.TextEdit();
-            this.prochengse = new DevExpress.XtraEditors.TextEdit();
-            this.proname = new DevExpress.XtraEditors.TextEdit();
-            this.procolor = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.gcExtendInfo = new DevExpress.XtraEditors.GroupControl();
-            this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
-            this.prokuchang = new DevExpress.XtraEditors.TextEdit();
-            this.proxiuchang = new DevExpress.XtraEditors.TextEdit();
-            this.proyichang = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
-            this.protunwei = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-            this.proxiongwei = new DevExpress.XtraEditors.TextEdit();
-            this.proyaowei = new DevExpress.XtraEditors.TextEdit();
-            this.projiankuan = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
-            this.prochima = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.projiage = new DevExpress.XtraEditors.TextEdit();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
-            this.probjiage = new DevExpress.XtraEditors.TextEdit();
-            this.propaytype = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.propaystatus = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.endtime = new DevExpress.XtraEditors.DateEdit();
+            this.gcExtendInfo = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
+            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.proimage = new DevExpress.XtraEditors.PictureEdit();
-            this.btnLast = new DevExpress.XtraEditors.SimpleButton();
-            this.btnNext = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.mErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.custphone.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.custyhname.Properties)).BeginInit();
@@ -111,6 +111,29 @@
             ((System.ComponentModel.ISupportInitialize)(this.custdizhi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.custname.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.probujian.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proremark.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projuser.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profenlei.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projcode.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prochengse.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proname.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.procolor.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prokuchang.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proxiuchang.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proyichang.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protunwei.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proxiongwei.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proyaowei.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projiankuan.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prochima.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projiage.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.probjiage.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.propaytype.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.propaystatus.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.endtime.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.endtime.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proimage.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -121,37 +144,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
-            this.groupControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.probujian.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proremark.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projuser.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.profenlei.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projcode.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.prochengse.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proname.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.procolor.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcExtendInfo)).BeginInit();
-            this.gcExtendInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.prokuchang.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proxiuchang.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proyichang.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.protunwei.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proxiongwei.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proyaowei.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projiankuan.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.prochima.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.projiage.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.probjiage.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.propaytype.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.propaystatus.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.endtime.Properties.VistaTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.endtime.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcExtendInfo)).BeginInit();
+            this.gcExtendInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
+            this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.proimage.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // mErrorProvider
@@ -224,6 +224,8 @@
             "女"});
             this.custsex.Size = new System.Drawing.Size(135, 21);
             this.custsex.TabIndex = 3;
+            this.custsex.SelectedIndexChanged += new System.EventHandler(this.ComboxEdit_SelectedIndexChanged);
+            this.custsex.Enter += new System.EventHandler(this.TextEdit_TextChanged);
             // 
             // custyhcard
             // 
@@ -291,6 +293,304 @@
             this.pictureEdit1.TabIndex = 1;
             this.pictureEdit1.ToolTip = "查找供货方";
             this.pictureEdit1.Click += new System.EventHandler(this.pictureEdit1_Click);
+            // 
+            // probujian
+            // 
+            this.probujian.EnterMoveNextControl = true;
+            this.mErrorProvider.SetIconAlignment(this.probujian, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
+            this.probujian.Location = new System.Drawing.Point(70, 120);
+            this.probujian.Name = "probujian";
+            this.probujian.Properties.NullValuePrompt = "默认为空";
+            this.probujian.Properties.NullValuePromptShowForEmptyValue = true;
+            this.probujian.Size = new System.Drawing.Size(345, 21);
+            this.probujian.TabIndex = 22;
+            // 
+            // proremark
+            // 
+            this.proremark.EnterMoveNextControl = true;
+            this.mErrorProvider.SetIconAlignment(this.proremark, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
+            this.proremark.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.proremark.Location = new System.Drawing.Point(70, 147);
+            this.proremark.Name = "proremark";
+            this.proremark.Properties.AutoHeight = false;
+            this.proremark.Properties.NullValuePrompt = "默认为空";
+            this.proremark.Properties.NullValuePromptShowForEmptyValue = true;
+            this.proremark.Size = new System.Drawing.Size(345, 21);
+            this.proremark.TabIndex = 23;
+            // 
+            // projuser
+            // 
+            this.projuser.EnterMoveNextControl = true;
+            this.mErrorProvider.SetIconAlignment(this.projuser, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
+            this.projuser.Location = new System.Drawing.Point(278, 92);
+            this.projuser.Name = "projuser";
+            this.projuser.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.projuser.Size = new System.Drawing.Size(135, 21);
+            this.projuser.TabIndex = 21;
+            this.projuser.TextChanged += new System.EventHandler(this.ComboxEdit_SelectedIndexChanged);
+            // 
+            // profenlei
+            // 
+            this.profenlei.EnterMoveNextControl = true;
+            this.mErrorProvider.SetIconAlignment(this.profenlei, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
+            this.profenlei.Location = new System.Drawing.Point(69, 35);
+            this.profenlei.Name = "profenlei";
+            this.profenlei.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.profenlei.Size = new System.Drawing.Size(135, 21);
+            this.profenlei.TabIndex = 8;
+            this.profenlei.SelectedValueChanged += new System.EventHandler(this.ComboxEdit_SelectedIndexChanged);
+            this.profenlei.Enter += new System.EventHandler(this.TextEdit_TextChanged);
+            // 
+            // projcode
+            // 
+            this.projcode.EnterMoveNextControl = true;
+            this.mErrorProvider.SetIconAlignment(this.projcode, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
+            this.projcode.Location = new System.Drawing.Point(278, 35);
+            this.projcode.Name = "projcode";
+            this.projcode.Properties.NullValuePrompt = "<必填>";
+            this.projcode.Properties.NullValuePromptShowForEmptyValue = true;
+            this.projcode.Size = new System.Drawing.Size(135, 21);
+            this.projcode.TabIndex = 9;
+            this.projcode.TextChanged += new System.EventHandler(this.TextEdit_TextChanged);
+            this.projcode.Enter += new System.EventHandler(this.TextEdit_Enter);
+            // 
+            // prochengse
+            // 
+            this.prochengse.EnterMoveNextControl = true;
+            this.mErrorProvider.SetIconAlignment(this.prochengse, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
+            this.prochengse.Location = new System.Drawing.Point(69, 89);
+            this.prochengse.Name = "prochengse";
+            this.prochengse.Properties.NullText = "默认为空";
+            this.prochengse.Properties.NullValuePrompt = "默认为空";
+            this.prochengse.Properties.NullValuePromptShowForEmptyValue = true;
+            this.prochengse.Size = new System.Drawing.Size(135, 21);
+            this.prochengse.TabIndex = 12;
+            // 
+            // proname
+            // 
+            this.proname.EnterMoveNextControl = true;
+            this.mErrorProvider.SetIconAlignment(this.proname, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
+            this.proname.Location = new System.Drawing.Point(69, 62);
+            this.proname.Name = "proname";
+            this.proname.Properties.NullValuePrompt = "<必填>";
+            this.proname.Properties.NullValuePromptShowForEmptyValue = true;
+            this.proname.Size = new System.Drawing.Size(135, 21);
+            this.proname.TabIndex = 10;
+            this.proname.TextChanged += new System.EventHandler(this.TextEdit_TextChanged);
+            this.proname.Enter += new System.EventHandler(this.TextEdit_TextChanged);
+            // 
+            // procolor
+            // 
+            this.procolor.EnterMoveNextControl = true;
+            this.mErrorProvider.SetIconAlignment(this.procolor, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
+            this.procolor.Location = new System.Drawing.Point(278, 62);
+            this.procolor.Name = "procolor";
+            this.procolor.Properties.NullText = "默认为空";
+            this.procolor.Properties.NullValuePrompt = "默认为空";
+            this.procolor.Properties.NullValuePromptShowForEmptyValue = true;
+            this.procolor.Size = new System.Drawing.Size(135, 21);
+            this.procolor.TabIndex = 11;
+            // 
+            // prokuchang
+            // 
+            this.prokuchang.EnterMoveNextControl = true;
+            this.mErrorProvider.SetIconAlignment(this.prokuchang, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
+            this.prokuchang.Location = new System.Drawing.Point(279, 109);
+            this.prokuchang.Name = "prokuchang";
+            this.prokuchang.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.prokuchang.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.prokuchang.Properties.Mask.EditMask = "c";
+            this.prokuchang.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.prokuchang.Properties.NullText = "默认为空";
+            this.prokuchang.Properties.NullValuePrompt = "默认为空";
+            this.prokuchang.Properties.NullValuePromptShowForEmptyValue = true;
+            this.prokuchang.Size = new System.Drawing.Size(135, 21);
+            this.prokuchang.TabIndex = 1023;
+            // 
+            // proxiuchang
+            // 
+            this.proxiuchang.EnterMoveNextControl = true;
+            this.mErrorProvider.SetIconAlignment(this.proxiuchang, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
+            this.proxiuchang.Location = new System.Drawing.Point(70, 109);
+            this.proxiuchang.Name = "proxiuchang";
+            this.proxiuchang.Properties.NullText = "默认为空";
+            this.proxiuchang.Properties.NullValuePrompt = "默认为空";
+            this.proxiuchang.Properties.NullValuePromptShowForEmptyValue = true;
+            this.proxiuchang.Size = new System.Drawing.Size(135, 21);
+            this.proxiuchang.TabIndex = 1022;
+            // 
+            // proyichang
+            // 
+            this.proyichang.EnterMoveNextControl = true;
+            this.mErrorProvider.SetIconAlignment(this.proyichang, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
+            this.proyichang.Location = new System.Drawing.Point(279, 82);
+            this.proyichang.Name = "proyichang";
+            this.proyichang.Properties.NullText = "默认为空";
+            this.proyichang.Properties.NullValuePrompt = "默认为空";
+            this.proyichang.Properties.NullValuePromptShowForEmptyValue = true;
+            this.proyichang.Size = new System.Drawing.Size(135, 21);
+            this.proyichang.TabIndex = 1021;
+            // 
+            // protunwei
+            // 
+            this.protunwei.EnterMoveNextControl = true;
+            this.mErrorProvider.SetIconAlignment(this.protunwei, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
+            this.protunwei.Location = new System.Drawing.Point(70, 82);
+            this.protunwei.Name = "protunwei";
+            this.protunwei.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.protunwei.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.protunwei.Properties.Mask.EditMask = "c";
+            this.protunwei.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.protunwei.Properties.NullText = "默认为空";
+            this.protunwei.Properties.NullValuePrompt = "默认为空";
+            this.protunwei.Properties.NullValuePromptShowForEmptyValue = true;
+            this.protunwei.Size = new System.Drawing.Size(135, 21);
+            this.protunwei.TabIndex = 1020;
+            // 
+            // proxiongwei
+            // 
+            this.proxiongwei.EnterMoveNextControl = true;
+            this.mErrorProvider.SetIconAlignment(this.proxiongwei, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
+            this.proxiongwei.Location = new System.Drawing.Point(279, 55);
+            this.proxiongwei.Name = "proxiongwei";
+            this.proxiongwei.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.proxiongwei.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.proxiongwei.Properties.Mask.EditMask = "c";
+            this.proxiongwei.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.proxiongwei.Properties.NullText = "默认为空";
+            this.proxiongwei.Properties.NullValuePrompt = "默认为空";
+            this.proxiongwei.Properties.NullValuePromptShowForEmptyValue = true;
+            this.proxiongwei.Size = new System.Drawing.Size(135, 21);
+            this.proxiongwei.TabIndex = 1019;
+            // 
+            // proyaowei
+            // 
+            this.proyaowei.EnterMoveNextControl = true;
+            this.mErrorProvider.SetIconAlignment(this.proyaowei, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
+            this.proyaowei.Location = new System.Drawing.Point(70, 55);
+            this.proyaowei.Name = "proyaowei";
+            this.proyaowei.Properties.Mask.EditMask = "c";
+            this.proyaowei.Properties.NullText = "默认为空";
+            this.proyaowei.Properties.NullValuePrompt = "默认为空";
+            this.proyaowei.Properties.NullValuePromptShowForEmptyValue = true;
+            this.proyaowei.Size = new System.Drawing.Size(135, 21);
+            this.proyaowei.TabIndex = 1018;
+            // 
+            // projiankuan
+            // 
+            this.projiankuan.EnterMoveNextControl = true;
+            this.mErrorProvider.SetIconAlignment(this.projiankuan, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
+            this.projiankuan.Location = new System.Drawing.Point(279, 28);
+            this.projiankuan.Name = "projiankuan";
+            this.projiankuan.Properties.Mask.EditMask = "c";
+            this.projiankuan.Properties.NullText = "默认为空";
+            this.projiankuan.Properties.NullValuePrompt = "默认为空";
+            this.projiankuan.Properties.NullValuePromptShowForEmptyValue = true;
+            this.projiankuan.Size = new System.Drawing.Size(135, 21);
+            this.projiankuan.TabIndex = 1017;
+            // 
+            // prochima
+            // 
+            this.prochima.EnterMoveNextControl = true;
+            this.mErrorProvider.SetIconAlignment(this.prochima, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
+            this.prochima.Location = new System.Drawing.Point(70, 28);
+            this.prochima.Name = "prochima";
+            this.prochima.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.prochima.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.prochima.Properties.Mask.EditMask = "c";
+            this.prochima.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.prochima.Properties.NullText = "默认为空";
+            this.prochima.Properties.NullValuePrompt = "默认为空";
+            this.prochima.Properties.NullValuePromptShowForEmptyValue = true;
+            this.prochima.Size = new System.Drawing.Size(135, 21);
+            this.prochima.TabIndex = 1016;
+            // 
+            // projiage
+            // 
+            this.projiage.EnterMoveNextControl = true;
+            this.mErrorProvider.SetIconAlignment(this.projiage, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
+            this.projiage.Location = new System.Drawing.Point(279, 30);
+            this.projiage.Name = "projiage";
+            this.projiage.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.projiage.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.projiage.Properties.Mask.EditMask = "c";
+            this.projiage.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.projiage.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.projiage.Properties.NullValuePrompt = "数字格式<必填>";
+            this.projiage.Properties.NullValuePromptShowForEmptyValue = true;
+            this.projiage.Size = new System.Drawing.Size(132, 21);
+            this.projiage.TabIndex = 25;
+            this.projiage.Enter += new System.EventHandler(this.TextEdit_TextChanged);
+            // 
+            // probjiage
+            // 
+            this.probjiage.EnterMoveNextControl = true;
+            this.mErrorProvider.SetIconAlignment(this.probjiage, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
+            this.probjiage.Location = new System.Drawing.Point(68, 57);
+            this.probjiage.Name = "probjiage";
+            this.probjiage.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.probjiage.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.probjiage.Properties.Mask.EditMask = "c";
+            this.probjiage.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.probjiage.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.probjiage.Properties.NullValuePrompt = "数字格式";
+            this.probjiage.Properties.NullValuePromptShowForEmptyValue = true;
+            this.probjiage.Size = new System.Drawing.Size(133, 21);
+            this.probjiage.TabIndex = 26;
+            this.probjiage.Enter += new System.EventHandler(this.TextEdit_TextChanged);
+            // 
+            // propaytype
+            // 
+            this.mErrorProvider.SetIconAlignment(this.propaytype, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
+            this.propaytype.Location = new System.Drawing.Point(68, 30);
+            this.propaytype.Name = "propaytype";
+            this.propaytype.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.propaytype.Properties.ExportMode = DevExpress.XtraEditors.Repository.ExportMode.DisplayText;
+            this.propaytype.Size = new System.Drawing.Size(133, 21);
+            this.propaytype.TabIndex = 24;
+            this.propaytype.SelectedIndexChanged += new System.EventHandler(this.ComboxEdit_SelectedIndexChanged);
+            // 
+            // propaystatus
+            // 
+            this.mErrorProvider.SetIconAlignment(this.propaystatus, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
+            this.propaystatus.Location = new System.Drawing.Point(279, 56);
+            this.propaystatus.Name = "propaystatus";
+            this.propaystatus.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.propaystatus.Size = new System.Drawing.Size(133, 21);
+            this.propaystatus.TabIndex = 27;
+            this.propaystatus.SelectedIndexChanged += new System.EventHandler(this.ComboxEdit_SelectedIndexChanged);
+            // 
+            // endtime
+            // 
+            this.endtime.EditValue = null;
+            this.mErrorProvider.SetIconAlignment(this.endtime, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
+            this.endtime.Location = new System.Drawing.Point(279, 56);
+            this.endtime.Name = "endtime";
+            this.endtime.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.endtime.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.endtime.Size = new System.Drawing.Size(133, 21);
+            this.endtime.TabIndex = 9;
+            // 
+            // proimage
+            // 
+            this.proimage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.proimage.EditValue = global::Vogue2_IMS.Properties.Resources.search_d;
+            this.mErrorProvider.SetIconAlignment(this.proimage, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
+            this.proimage.Location = new System.Drawing.Point(2, 23);
+            this.proimage.Name = "proimage";
+            this.proimage.Properties.NullText = "双击选择图片";
+            this.proimage.Properties.PictureStoreMode = DevExpress.XtraEditors.Controls.PictureStoreMode.ByteArray;
+            this.proimage.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.proimage.Size = new System.Drawing.Size(513, 486);
+            this.proimage.TabIndex = 0;
+            this.proimage.ToolTip = "双击选择图片";
+            this.proimage.DoubleClick += new System.EventHandler(this.GoodsPictureImage_DoubleClick);
             // 
             // groupControl4
             // 
@@ -390,6 +690,28 @@
             this.panelControl2.Size = new System.Drawing.Size(968, 44);
             this.panelControl2.TabIndex = 1018;
             // 
+            // btnNext
+            // 
+            this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNext.Location = new System.Drawing.Point(691, 8);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(75, 26);
+            this.btnNext.TabIndex = 31;
+            this.btnNext.Text = "下一条（&2）";
+            this.btnNext.Visible = false;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // btnLast
+            // 
+            this.btnLast.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLast.Location = new System.Drawing.Point(610, 8);
+            this.btnLast.Name = "btnLast";
+            this.btnLast.Size = new System.Drawing.Size(75, 26);
+            this.btnLast.TabIndex = 31;
+            this.btnLast.Text = "上一条(&1)";
+            this.btnLast.Visible = false;
+            this.btnLast.Click += new System.EventHandler(this.btnLast_Click);
+            // 
             // ckbprinted
             // 
             this.ckbprinted.Location = new System.Drawing.Point(10, 15);
@@ -440,16 +762,13 @@
             // 
             // radioGroup1
             // 
-            this.radioGroup1.EditValue = "手表";
+            this.radioGroup1.EditValue = "";
             this.radioGroup1.Location = new System.Drawing.Point(70, 31);
             this.radioGroup1.Name = "radioGroup1";
             this.radioGroup1.Properties.AutoHeight = false;
             this.radioGroup1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.radioGroup1.Properties.Items.AddRange(new object[] {
-            "手表",
-            "包",
-            "衣服"});
+            this.radioGroup1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.radioGroup1.Size = new System.Drawing.Size(345, 22);
             this.radioGroup1.TabIndex = 40;
             this.radioGroup1.SelectedIndexChanged += new System.EventHandler(this.radioGroup1_SelectedIndexChanged);
@@ -466,186 +785,55 @@
             this.panelControl1.Size = new System.Drawing.Size(451, 511);
             this.panelControl1.TabIndex = 1023;
             // 
-            // groupControl3
+            // groupControl2
             // 
-            this.groupControl3.Controls.Add(this.labelControl1);
-            this.groupControl3.Controls.Add(this.labelControl8);
-            this.groupControl3.Controls.Add(this.probujian);
-            this.groupControl3.Controls.Add(this.labelControl7);
-            this.groupControl3.Controls.Add(this.proremark);
-            this.groupControl3.Controls.Add(this.projuser);
-            this.groupControl3.Controls.Add(this.labelControl10);
-            this.groupControl3.Controls.Add(this.labelControl5);
-            this.groupControl3.Controls.Add(this.labelControl12);
-            this.groupControl3.Controls.Add(this.profenlei);
-            this.groupControl3.Controls.Add(this.labelControl4);
-            this.groupControl3.Controls.Add(this.projcode);
-            this.groupControl3.Controls.Add(this.prochengse);
-            this.groupControl3.Controls.Add(this.proname);
-            this.groupControl3.Controls.Add(this.procolor);
-            this.groupControl3.Controls.Add(this.labelControl6);
-            this.groupControl3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl3.Location = new System.Drawing.Point(2, 62);
-            this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(447, 178);
-            this.groupControl3.TabIndex = 1024;
-            this.groupControl3.Text = "基本信息";
+            this.groupControl2.Controls.Add(this.projiage);
+            this.groupControl2.Controls.Add(this.labelControl11);
+            this.groupControl2.Controls.Add(this.probjiage);
+            this.groupControl2.Controls.Add(this.propaytype);
+            this.groupControl2.Controls.Add(this.propaystatus);
+            this.groupControl2.Controls.Add(this.labelControl3);
+            this.groupControl2.Controls.Add(this.labelControl2);
+            this.groupControl2.Controls.Add(this.labelControl9);
+            this.groupControl2.Controls.Add(this.endtime);
+            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupControl2.Location = new System.Drawing.Point(2, 379);
+            this.groupControl2.Name = "groupControl2";
+            this.groupControl2.Size = new System.Drawing.Size(447, 86);
+            this.groupControl2.TabIndex = 1026;
+            this.groupControl2.Text = "价格信息";
             // 
-            // labelControl1
+            // labelControl11
             // 
-            this.labelControl1.Location = new System.Drawing.Point(13, 37);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(24, 14);
-            this.labelControl1.TabIndex = 28;
-            this.labelControl1.Text = "类别";
+            this.labelControl11.Location = new System.Drawing.Point(12, 60);
+            this.labelControl11.Name = "labelControl11";
+            this.labelControl11.Size = new System.Drawing.Size(48, 14);
+            this.labelControl11.TabIndex = 51;
+            this.labelControl11.Text = "预售价格";
             // 
-            // labelControl8
+            // labelControl3
             // 
-            this.labelControl8.Location = new System.Drawing.Point(13, 65);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(24, 14);
-            this.labelControl8.TabIndex = 35;
-            this.labelControl8.Text = "名称";
+            this.labelControl3.Location = new System.Drawing.Point(12, 33);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(48, 14);
+            this.labelControl3.TabIndex = 30;
+            this.labelControl3.Text = "付款方式";
             // 
-            // probujian
+            // labelControl2
             // 
-            this.probujian.EnterMoveNextControl = true;
-            this.mErrorProvider.SetIconAlignment(this.probujian, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.probujian.Location = new System.Drawing.Point(70, 120);
-            this.probujian.Name = "probujian";
-            this.probujian.Properties.NullValuePrompt = "默认为空";
-            this.probujian.Properties.NullValuePromptShowForEmptyValue = true;
-            this.probujian.Size = new System.Drawing.Size(345, 21);
-            this.probujian.TabIndex = 22;
+            this.labelControl2.Location = new System.Drawing.Point(225, 33);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(48, 14);
+            this.labelControl2.TabIndex = 29;
+            this.labelControl2.Text = "进货价格";
             // 
-            // labelControl7
+            // labelControl9
             // 
-            this.labelControl7.Location = new System.Drawing.Point(222, 37);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(48, 14);
-            this.labelControl7.TabIndex = 34;
-            this.labelControl7.Text = "原厂编号";
-            // 
-            // proremark
-            // 
-            this.proremark.EnterMoveNextControl = true;
-            this.mErrorProvider.SetIconAlignment(this.proremark, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.proremark.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.proremark.Location = new System.Drawing.Point(70, 147);
-            this.proremark.Name = "proremark";
-            this.proremark.Properties.AutoHeight = false;
-            this.proremark.Properties.NullValuePrompt = "默认为空";
-            this.proremark.Properties.NullValuePromptShowForEmptyValue = true;
-            this.proremark.Size = new System.Drawing.Size(345, 21);
-            this.proremark.TabIndex = 23;
-            // 
-            // projuser
-            // 
-            this.projuser.EnterMoveNextControl = true;
-            this.mErrorProvider.SetIconAlignment(this.projuser, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.projuser.Location = new System.Drawing.Point(278, 92);
-            this.projuser.Name = "projuser";
-            this.projuser.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.projuser.Size = new System.Drawing.Size(135, 21);
-            this.projuser.TabIndex = 21;
-            // 
-            // labelControl10
-            // 
-            this.labelControl10.Location = new System.Drawing.Point(222, 95);
-            this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(36, 14);
-            this.labelControl10.TabIndex = 37;
-            this.labelControl10.Text = "经手人";
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Location = new System.Drawing.Point(222, 65);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(24, 14);
-            this.labelControl5.TabIndex = 32;
-            this.labelControl5.Text = "颜色";
-            // 
-            // labelControl12
-            // 
-            this.labelControl12.Location = new System.Drawing.Point(14, 123);
-            this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(24, 14);
-            this.labelControl12.TabIndex = 38;
-            this.labelControl12.Text = "配件";
-            // 
-            // profenlei
-            // 
-            this.profenlei.EnterMoveNextControl = true;
-            this.mErrorProvider.SetIconAlignment(this.profenlei, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.profenlei.Location = new System.Drawing.Point(69, 35);
-            this.profenlei.Name = "profenlei";
-            this.profenlei.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.profenlei.Size = new System.Drawing.Size(135, 21);
-            this.profenlei.TabIndex = 8;
-            // 
-            // labelControl4
-            // 
-            this.labelControl4.Location = new System.Drawing.Point(13, 92);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(24, 14);
-            this.labelControl4.TabIndex = 31;
-            this.labelControl4.Text = "成色";
-            // 
-            // projcode
-            // 
-            this.projcode.EnterMoveNextControl = true;
-            this.mErrorProvider.SetIconAlignment(this.projcode, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.projcode.Location = new System.Drawing.Point(278, 35);
-            this.projcode.Name = "projcode";
-            this.projcode.Properties.NullValuePrompt = "<必填>";
-            this.projcode.Properties.NullValuePromptShowForEmptyValue = true;
-            this.projcode.Size = new System.Drawing.Size(135, 21);
-            this.projcode.TabIndex = 9;
-            // 
-            // prochengse
-            // 
-            this.prochengse.EnterMoveNextControl = true;
-            this.mErrorProvider.SetIconAlignment(this.prochengse, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.prochengse.Location = new System.Drawing.Point(69, 89);
-            this.prochengse.Name = "prochengse";
-            this.prochengse.Properties.NullText = "默认为空";
-            this.prochengse.Properties.NullValuePrompt = "默认为空";
-            this.prochengse.Properties.NullValuePromptShowForEmptyValue = true;
-            this.prochengse.Size = new System.Drawing.Size(135, 21);
-            this.prochengse.TabIndex = 12;
-            // 
-            // proname
-            // 
-            this.proname.EnterMoveNextControl = true;
-            this.mErrorProvider.SetIconAlignment(this.proname, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.proname.Location = new System.Drawing.Point(69, 62);
-            this.proname.Name = "proname";
-            this.proname.Properties.NullValuePrompt = "<必填>";
-            this.proname.Properties.NullValuePromptShowForEmptyValue = true;
-            this.proname.Size = new System.Drawing.Size(135, 21);
-            this.proname.TabIndex = 10;
-            // 
-            // procolor
-            // 
-            this.procolor.EnterMoveNextControl = true;
-            this.mErrorProvider.SetIconAlignment(this.procolor, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.procolor.Location = new System.Drawing.Point(278, 62);
-            this.procolor.Name = "procolor";
-            this.procolor.Properties.NullText = "默认为空";
-            this.procolor.Properties.NullValuePrompt = "默认为空";
-            this.procolor.Properties.NullValuePromptShowForEmptyValue = true;
-            this.procolor.Size = new System.Drawing.Size(135, 21);
-            this.procolor.TabIndex = 11;
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Location = new System.Drawing.Point(14, 150);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(24, 14);
-            this.labelControl6.TabIndex = 33;
-            this.labelControl6.Text = "描述";
+            this.labelControl9.Location = new System.Drawing.Point(225, 60);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(48, 14);
+            this.labelControl9.TabIndex = 999;
+            this.labelControl9.Text = "打款状态";
             // 
             // gcExtendInfo
             // 
@@ -680,46 +868,6 @@
             this.labelControl17.TabIndex = 1031;
             this.labelControl17.Text = "裤长";
             // 
-            // prokuchang
-            // 
-            this.prokuchang.EnterMoveNextControl = true;
-            this.mErrorProvider.SetIconAlignment(this.prokuchang, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.prokuchang.Location = new System.Drawing.Point(279, 109);
-            this.prokuchang.Name = "prokuchang";
-            this.prokuchang.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.prokuchang.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.prokuchang.Properties.Mask.EditMask = "c";
-            this.prokuchang.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.prokuchang.Properties.NullText = "默认为空";
-            this.prokuchang.Properties.NullValuePrompt = "默认为空";
-            this.prokuchang.Properties.NullValuePromptShowForEmptyValue = true;
-            this.prokuchang.Size = new System.Drawing.Size(135, 21);
-            this.prokuchang.TabIndex = 1023;
-            // 
-            // proxiuchang
-            // 
-            this.proxiuchang.EnterMoveNextControl = true;
-            this.mErrorProvider.SetIconAlignment(this.proxiuchang, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.proxiuchang.Location = new System.Drawing.Point(70, 109);
-            this.proxiuchang.Name = "proxiuchang";
-            this.proxiuchang.Properties.NullText = "默认为空";
-            this.proxiuchang.Properties.NullValuePrompt = "默认为空";
-            this.proxiuchang.Properties.NullValuePromptShowForEmptyValue = true;
-            this.proxiuchang.Size = new System.Drawing.Size(135, 21);
-            this.proxiuchang.TabIndex = 1022;
-            // 
-            // proyichang
-            // 
-            this.proyichang.EnterMoveNextControl = true;
-            this.mErrorProvider.SetIconAlignment(this.proyichang, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.proyichang.Location = new System.Drawing.Point(279, 82);
-            this.proyichang.Name = "proyichang";
-            this.proyichang.Properties.NullText = "默认为空";
-            this.proyichang.Properties.NullValuePrompt = "默认为空";
-            this.proyichang.Properties.NullValuePromptShowForEmptyValue = true;
-            this.proyichang.Size = new System.Drawing.Size(135, 21);
-            this.proyichang.TabIndex = 1021;
-            // 
             // labelControl18
             // 
             this.labelControl18.Location = new System.Drawing.Point(14, 112);
@@ -744,22 +892,6 @@
             this.labelControl20.TabIndex = 1028;
             this.labelControl20.Text = "臀围";
             // 
-            // protunwei
-            // 
-            this.protunwei.EnterMoveNextControl = true;
-            this.mErrorProvider.SetIconAlignment(this.protunwei, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.protunwei.Location = new System.Drawing.Point(70, 82);
-            this.protunwei.Name = "protunwei";
-            this.protunwei.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.protunwei.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.protunwei.Properties.Mask.EditMask = "c";
-            this.protunwei.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.protunwei.Properties.NullText = "默认为空";
-            this.protunwei.Properties.NullValuePrompt = "默认为空";
-            this.protunwei.Properties.NullValuePromptShowForEmptyValue = true;
-            this.protunwei.Size = new System.Drawing.Size(135, 21);
-            this.protunwei.TabIndex = 1020;
-            // 
             // labelControl14
             // 
             this.labelControl14.Location = new System.Drawing.Point(223, 58);
@@ -767,48 +899,6 @@
             this.labelControl14.Size = new System.Drawing.Size(24, 14);
             this.labelControl14.TabIndex = 1027;
             this.labelControl14.Text = "胸围";
-            // 
-            // proxiongwei
-            // 
-            this.proxiongwei.EnterMoveNextControl = true;
-            this.mErrorProvider.SetIconAlignment(this.proxiongwei, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.proxiongwei.Location = new System.Drawing.Point(279, 55);
-            this.proxiongwei.Name = "proxiongwei";
-            this.proxiongwei.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.proxiongwei.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.proxiongwei.Properties.Mask.EditMask = "c";
-            this.proxiongwei.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.proxiongwei.Properties.NullText = "默认为空";
-            this.proxiongwei.Properties.NullValuePrompt = "默认为空";
-            this.proxiongwei.Properties.NullValuePromptShowForEmptyValue = true;
-            this.proxiongwei.Size = new System.Drawing.Size(135, 21);
-            this.proxiongwei.TabIndex = 1019;
-            // 
-            // proyaowei
-            // 
-            this.proyaowei.EnterMoveNextControl = true;
-            this.mErrorProvider.SetIconAlignment(this.proyaowei, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.proyaowei.Location = new System.Drawing.Point(70, 55);
-            this.proyaowei.Name = "proyaowei";
-            this.proyaowei.Properties.Mask.EditMask = "c";
-            this.proyaowei.Properties.NullText = "默认为空";
-            this.proyaowei.Properties.NullValuePrompt = "默认为空";
-            this.proyaowei.Properties.NullValuePromptShowForEmptyValue = true;
-            this.proyaowei.Size = new System.Drawing.Size(135, 21);
-            this.proyaowei.TabIndex = 1018;
-            // 
-            // projiankuan
-            // 
-            this.projiankuan.EnterMoveNextControl = true;
-            this.mErrorProvider.SetIconAlignment(this.projiankuan, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.projiankuan.Location = new System.Drawing.Point(279, 28);
-            this.projiankuan.Name = "projiankuan";
-            this.projiankuan.Properties.Mask.EditMask = "c";
-            this.projiankuan.Properties.NullText = "默认为空";
-            this.projiankuan.Properties.NullValuePrompt = "默认为空";
-            this.projiankuan.Properties.NullValuePromptShowForEmptyValue = true;
-            this.projiankuan.Size = new System.Drawing.Size(135, 21);
-            this.projiankuan.TabIndex = 1017;
             // 
             // labelControl15
             // 
@@ -826,22 +916,6 @@
             this.labelControl16.TabIndex = 1026;
             this.labelControl16.Text = "肩宽";
             // 
-            // prochima
-            // 
-            this.prochima.EnterMoveNextControl = true;
-            this.mErrorProvider.SetIconAlignment(this.prochima, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.prochima.Location = new System.Drawing.Point(70, 28);
-            this.prochima.Name = "prochima";
-            this.prochima.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.prochima.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.prochima.Properties.Mask.EditMask = "c";
-            this.prochima.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.prochima.Properties.NullText = "默认为空";
-            this.prochima.Properties.NullValuePrompt = "默认为空";
-            this.prochima.Properties.NullValuePromptShowForEmptyValue = true;
-            this.prochima.Size = new System.Drawing.Size(135, 21);
-            this.prochima.TabIndex = 1016;
-            // 
             // labelControl13
             // 
             this.labelControl13.Location = new System.Drawing.Point(14, 31);
@@ -850,121 +924,94 @@
             this.labelControl13.TabIndex = 1024;
             this.labelControl13.Text = "尺码";
             // 
-            // groupControl2
+            // groupControl3
             // 
-            this.groupControl2.Controls.Add(this.projiage);
-            this.groupControl2.Controls.Add(this.labelControl11);
-            this.groupControl2.Controls.Add(this.probjiage);
-            this.groupControl2.Controls.Add(this.propaytype);
-            this.groupControl2.Controls.Add(this.propaystatus);
-            this.groupControl2.Controls.Add(this.labelControl3);
-            this.groupControl2.Controls.Add(this.labelControl2);
-            this.groupControl2.Controls.Add(this.labelControl9);
-            this.groupControl2.Controls.Add(this.endtime);
-            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl2.Location = new System.Drawing.Point(2, 379);
-            this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(447, 86);
-            this.groupControl2.TabIndex = 1026;
-            this.groupControl2.Text = "价格信息";
+            this.groupControl3.Controls.Add(this.labelControl1);
+            this.groupControl3.Controls.Add(this.labelControl8);
+            this.groupControl3.Controls.Add(this.probujian);
+            this.groupControl3.Controls.Add(this.labelControl7);
+            this.groupControl3.Controls.Add(this.proremark);
+            this.groupControl3.Controls.Add(this.projuser);
+            this.groupControl3.Controls.Add(this.labelControl10);
+            this.groupControl3.Controls.Add(this.labelControl5);
+            this.groupControl3.Controls.Add(this.labelControl12);
+            this.groupControl3.Controls.Add(this.profenlei);
+            this.groupControl3.Controls.Add(this.labelControl4);
+            this.groupControl3.Controls.Add(this.projcode);
+            this.groupControl3.Controls.Add(this.prochengse);
+            this.groupControl3.Controls.Add(this.proname);
+            this.groupControl3.Controls.Add(this.procolor);
+            this.groupControl3.Controls.Add(this.labelControl6);
+            this.groupControl3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupControl3.Location = new System.Drawing.Point(2, 62);
+            this.groupControl3.Name = "groupControl3";
+            this.groupControl3.Size = new System.Drawing.Size(447, 178);
+            this.groupControl3.TabIndex = 1024;
+            this.groupControl3.Text = "基本信息";
             // 
-            // projiage
+            // labelControl1
             // 
-            this.projiage.EnterMoveNextControl = true;
-            this.mErrorProvider.SetIconAlignment(this.projiage, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.projiage.Location = new System.Drawing.Point(279, 30);
-            this.projiage.Name = "projiage";
-            this.projiage.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.projiage.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.projiage.Properties.Mask.EditMask = "c";
-            this.projiage.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.projiage.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.projiage.Properties.NullValuePrompt = "数字格式<必填>";
-            this.projiage.Properties.NullValuePromptShowForEmptyValue = true;
-            this.projiage.Size = new System.Drawing.Size(132, 21);
-            this.projiage.TabIndex = 25;
+            this.labelControl1.Location = new System.Drawing.Point(13, 37);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(24, 14);
+            this.labelControl1.TabIndex = 28;
+            this.labelControl1.Text = "品牌";
             // 
-            // labelControl11
+            // labelControl8
             // 
-            this.labelControl11.Location = new System.Drawing.Point(12, 60);
-            this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(48, 14);
-            this.labelControl11.TabIndex = 51;
-            this.labelControl11.Text = "预售价格";
+            this.labelControl8.Location = new System.Drawing.Point(13, 65);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(24, 14);
+            this.labelControl8.TabIndex = 35;
+            this.labelControl8.Text = "名称";
             // 
-            // probjiage
+            // labelControl7
             // 
-            this.probjiage.EnterMoveNextControl = true;
-            this.mErrorProvider.SetIconAlignment(this.probjiage, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.probjiage.Location = new System.Drawing.Point(68, 57);
-            this.probjiage.Name = "probjiage";
-            this.probjiage.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.probjiage.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.probjiage.Properties.Mask.EditMask = "c";
-            this.probjiage.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.probjiage.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.probjiage.Properties.NullValuePrompt = "数字格式";
-            this.probjiage.Properties.NullValuePromptShowForEmptyValue = true;
-            this.probjiage.Size = new System.Drawing.Size(133, 21);
-            this.probjiage.TabIndex = 26;
+            this.labelControl7.Location = new System.Drawing.Point(222, 37);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(48, 14);
+            this.labelControl7.TabIndex = 34;
+            this.labelControl7.Text = "原厂编号";
             // 
-            // propaytype
+            // labelControl10
             // 
-            this.mErrorProvider.SetIconAlignment(this.propaytype, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.propaytype.Location = new System.Drawing.Point(68, 30);
-            this.propaytype.Name = "propaytype";
-            this.propaytype.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.propaytype.Properties.ExportMode = DevExpress.XtraEditors.Repository.ExportMode.DisplayText;
-            this.propaytype.Size = new System.Drawing.Size(133, 21);
-            this.propaytype.TabIndex = 24;
+            this.labelControl10.Location = new System.Drawing.Point(222, 95);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(36, 14);
+            this.labelControl10.TabIndex = 37;
+            this.labelControl10.Text = "经手人";
             // 
-            // propaystatus
+            // labelControl5
             // 
-            this.mErrorProvider.SetIconAlignment(this.propaystatus, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.propaystatus.Location = new System.Drawing.Point(279, 56);
-            this.propaystatus.Name = "propaystatus";
-            this.propaystatus.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.propaystatus.Size = new System.Drawing.Size(133, 21);
-            this.propaystatus.TabIndex = 27;
+            this.labelControl5.Location = new System.Drawing.Point(222, 65);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(24, 14);
+            this.labelControl5.TabIndex = 32;
+            this.labelControl5.Text = "颜色";
             // 
-            // labelControl3
+            // labelControl12
             // 
-            this.labelControl3.Location = new System.Drawing.Point(12, 33);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(48, 14);
-            this.labelControl3.TabIndex = 30;
-            this.labelControl3.Text = "付款方式";
+            this.labelControl12.Location = new System.Drawing.Point(14, 123);
+            this.labelControl12.Name = "labelControl12";
+            this.labelControl12.Size = new System.Drawing.Size(24, 14);
+            this.labelControl12.TabIndex = 38;
+            this.labelControl12.Text = "配件";
             // 
-            // labelControl2
+            // labelControl4
             // 
-            this.labelControl2.Location = new System.Drawing.Point(225, 33);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(48, 14);
-            this.labelControl2.TabIndex = 29;
-            this.labelControl2.Text = "进货价格";
+            this.labelControl4.Location = new System.Drawing.Point(13, 92);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(24, 14);
+            this.labelControl4.TabIndex = 31;
+            this.labelControl4.Text = "成色";
             // 
-            // labelControl9
+            // labelControl6
             // 
-            this.labelControl9.Location = new System.Drawing.Point(225, 60);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(48, 14);
-            this.labelControl9.TabIndex = 999;
-            this.labelControl9.Text = "打款状态";
-            // 
-            // endtime
-            // 
-            this.endtime.EditValue = null;
-            this.mErrorProvider.SetIconAlignment(this.endtime, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.endtime.Location = new System.Drawing.Point(279, 56);
-            this.endtime.Name = "endtime";
-            this.endtime.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.endtime.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.endtime.Size = new System.Drawing.Size(133, 21);
-            this.endtime.TabIndex = 9;
+            this.labelControl6.Location = new System.Drawing.Point(14, 150);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(24, 14);
+            this.labelControl6.TabIndex = 33;
+            this.labelControl6.Text = "描述";
             // 
             // groupControl1
             // 
@@ -975,42 +1022,6 @@
             this.groupControl1.Size = new System.Drawing.Size(517, 511);
             this.groupControl1.TabIndex = 1024;
             this.groupControl1.Text = "图片";
-            // 
-            // proimage
-            // 
-            this.proimage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.proimage.EditValue = global::Vogue2_IMS.Properties.Resources.search_d;
-            this.mErrorProvider.SetIconAlignment(this.proimage, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.proimage.Location = new System.Drawing.Point(2, 23);
-            this.proimage.Name = "proimage";
-            this.proimage.Properties.NullText = "双击选择图片";
-            this.proimage.Properties.PictureStoreMode = DevExpress.XtraEditors.Controls.PictureStoreMode.ByteArray;
-            this.proimage.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.proimage.Size = new System.Drawing.Size(513, 486);
-            this.proimage.TabIndex = 0;
-            this.proimage.ToolTip = "双击选择图片";
-            // 
-            // btnLast
-            // 
-            this.btnLast.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLast.Location = new System.Drawing.Point(610, 8);
-            this.btnLast.Name = "btnLast";
-            this.btnLast.Size = new System.Drawing.Size(75, 26);
-            this.btnLast.TabIndex = 31;
-            this.btnLast.Text = "上一条(&<)";
-            this.btnLast.Visible = false;
-            this.btnLast.Click += new System.EventHandler(this.btnLast_Click);
-            // 
-            // btnNext
-            // 
-            this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNext.Location = new System.Drawing.Point(691, 8);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(75, 26);
-            this.btnNext.TabIndex = 31;
-            this.btnNext.Text = "下一条（&>）";
-            this.btnNext.Visible = false;
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // FmGoodsInfo
             // 
@@ -1036,6 +1047,29 @@
             ((System.ComponentModel.ISupportInitialize)(this.custdizhi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.custname.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.probujian.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proremark.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projuser.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profenlei.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projcode.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prochengse.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proname.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.procolor.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prokuchang.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proxiuchang.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proyichang.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protunwei.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proxiongwei.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proyaowei.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projiankuan.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prochima.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projiage.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.probjiage.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.propaytype.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.propaystatus.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.endtime.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.endtime.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proimage.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.groupControl4.ResumeLayout(false);
             this.groupControl4.PerformLayout();
@@ -1048,40 +1082,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
-            this.groupControl3.ResumeLayout(false);
-            this.groupControl3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.probujian.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proremark.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projuser.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.profenlei.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projcode.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.prochengse.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proname.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.procolor.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcExtendInfo)).EndInit();
-            this.gcExtendInfo.ResumeLayout(false);
-            this.gcExtendInfo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.prokuchang.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proxiuchang.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proyichang.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.protunwei.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proxiongwei.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proyaowei.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projiankuan.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.prochima.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.projiage.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.probjiage.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.propaytype.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.propaystatus.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.endtime.Properties.VistaTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.endtime.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcExtendInfo)).EndInit();
+            this.gcExtendInfo.ResumeLayout(false);
+            this.gcExtendInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
+            this.groupControl3.ResumeLayout(false);
+            this.groupControl3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.proimage.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1158,8 +1169,8 @@
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.GroupControl groupControl6;
         private DevExpress.XtraEditors.LabelControl labelControl28;
-        private DevExpress.XtraEditors.ComboBoxEdit radioGroup1;
         private DevExpress.XtraEditors.SimpleButton btnNext;
         private DevExpress.XtraEditors.SimpleButton btnLast;
+        private DevExpress.XtraEditors.ComboBoxEdit radioGroup1;
     }
 }
