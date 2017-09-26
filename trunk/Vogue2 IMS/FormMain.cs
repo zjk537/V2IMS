@@ -1223,13 +1223,18 @@ namespace Vogue2_IMS
             }
         }
 
-
-        #endregion       
-
         private void btnPrintBarCode_ItemClick(object sender, ItemClickEventArgs e)
         {
 
+            FmPrintBarCode fm = new FmPrintBarCode();
+            fm.Source = GetCheckedGoodsInfos();
+
+          
+            fm.Print();
         }
+
+
+        #endregion       
 
     }
 }

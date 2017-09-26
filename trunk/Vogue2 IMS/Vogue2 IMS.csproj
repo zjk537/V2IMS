@@ -59,6 +59,10 @@
     </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BarcodeLib, Version=1.0.0.12, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Documents\Visual Studio 2010\Projects\printtest\printtest\BarcodeLib.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.BonusSkins.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Charts.v11.1.Core, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.CodeRush.Common, Version=11.1.4.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d, processorArchitecture=MSIL">
@@ -114,13 +118,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\DevControlHelper.cs" />
     <Compile Include="Common\FmProgressBar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Common\FmProgressBar.Designer.cs">
       <DependentUpon>FmProgressBar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Common\ImageBarCodeHelper.cs" />
     <Compile Include="Common\UICommon.cs" />
     <Compile Include="FmBI.cs">
       <SubType>Form</SubType>
@@ -199,6 +203,12 @@
     </Compile>
     <Compile Include="GoodsManager\FmNewCustomerViewName.Designer.cs">
       <DependentUpon>FmNewCustomerViewName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GoodsManager\FmPrintBarCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GoodsManager\FmPrintBarCode.Designer.cs">
+      <DependentUpon>FmPrintBarCode.cs</DependentUpon>
     </Compile>
     <Compile Include="GoodsManager\FmWarningMessageBox.cs">
       <SubType>Form</SubType>
@@ -338,6 +348,9 @@
     <EmbeddedResource Include="GoodsManager\FmNewCustomerViewName.resx">
       <DependentUpon>FmNewCustomerViewName.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GoodsManager\FmPrintBarCode.resx">
+      <DependentUpon>FmPrintBarCode.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GoodsManager\FmWarningMessageBox.resx">
       <DependentUpon>FmWarningMessageBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -442,6 +455,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Common\BarcodeLib.dll" />
     <Content Include="icon1.ico" />
     <Content Include="icon2.ico" />
     <Content Include="icon3.ico" />
