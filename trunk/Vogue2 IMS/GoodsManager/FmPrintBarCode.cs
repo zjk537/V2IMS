@@ -67,10 +67,11 @@ namespace Vogue2_IMS.GoodsManager
         public void Print()
         {
             source.ForEach(proInfo => {
-
-              
-                var priceCode = string.Format("{0}{1}{2}B{3}", (int)proInfo.prosjiage / 10000, proInfo.procode.Substring(0, 2), proInfo.procode.Substring(9, 3),
-                   proInfo.prosjiage - ((int)proInfo.prosjiage / 10000) * 10000);
+                var price = proInfo.probjiage.ToString();
+                price=price.PadLeft(8,'0');
+                             
+                var priceCode = string.Format("{0}{1}{2}B{3}", price.Substring(0,4), proInfo.procode.Substring(0, 2), proInfo.procode.Substring(10, 3),
+                  price.Substring(4));
 
 
                 var image = ImageBarCodeHelper.GetBarcode(50, 180, 90, BarcodeLib.TYPE.CODE128, proInfo.procode, new System.Drawing.Font("verdana", 9f));

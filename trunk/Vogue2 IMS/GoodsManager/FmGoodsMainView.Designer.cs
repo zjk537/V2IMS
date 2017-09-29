@@ -97,7 +97,6 @@
             this.colConsignStartDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCustomerName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCustomerPhone = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colGoodsPayCharge = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ComboxGoodStatus = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.ComboxSex = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
@@ -363,8 +362,8 @@
             // 
             // labSourceCondition
             // 
-            this.labSourceCondition.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.labSourceCondition.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labSourceCondition.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labSourceCondition.Location = new System.Drawing.Point(79, 6);
             this.labSourceCondition.MaximumSize = new System.Drawing.Size(814, 14);
@@ -563,8 +562,7 @@
             this.colConsignEndDate,
             this.colConsignStartDate,
             this.colCustomerName,
-            this.colCustomerPhone,
-            this.colGoodsPayCharge});
+            this.colCustomerPhone});
             this.mGridDefaultViewAll.GridControl = this.gridViewControl;
             this.mGridDefaultViewAll.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "", null, "           商品数合计：{0}个"),
@@ -618,6 +616,7 @@
             // colShopPhone
             // 
             this.colShopPhone.Caption = "店铺通讯";
+            this.colShopPhone.FieldName = "prodepphone";
             this.colShopPhone.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
             this.colShopPhone.Name = "colShopPhone";
             // 
@@ -822,7 +821,7 @@
             this.colGoosPaid.GroupInterval = DevExpress.XtraGrid.ColumnGroupInterval.DisplayText;
             this.colGoosPaid.Name = "colGoosPaid";
             this.colGoosPaid.Visible = true;
-            this.colGoosPaid.VisibleIndex = 38;
+            this.colGoosPaid.VisibleIndex = 37;
             // 
             // colGoodsDesc
             // 
@@ -896,7 +895,7 @@
             this.colGoodsPrepay.FieldName = "proyufu";
             this.colGoodsPrepay.Name = "colGoodsPrepay";
             this.colGoodsPrepay.Visible = true;
-            this.colGoodsPrepay.VisibleIndex = 27;
+            this.colGoodsPrepay.VisibleIndex = 26;
             // 
             // colGoodsCreateDate
             // 
@@ -904,7 +903,7 @@
             this.colGoodsCreateDate.FieldName = "proinaddtime.Value";
             this.colGoodsCreateDate.Name = "colGoodsCreateDate";
             this.colGoodsCreateDate.Visible = true;
-            this.colGoodsCreateDate.VisibleIndex = 28;
+            this.colGoodsCreateDate.VisibleIndex = 27;
             // 
             // colGOodsSaledDate
             // 
@@ -912,7 +911,7 @@
             this.colGOodsSaledDate.FieldName = "prooutaddtime.Value";
             this.colGOodsSaledDate.Name = "colGOodsSaledDate";
             this.colGOodsSaledDate.Visible = true;
-            this.colGOodsSaledDate.VisibleIndex = 29;
+            this.colGOodsSaledDate.VisibleIndex = 28;
             // 
             // colGoodsLastUpdatedDate
             // 
@@ -920,7 +919,7 @@
             this.colGoodsLastUpdatedDate.FieldName = "proupdatetime.Value";
             this.colGoodsLastUpdatedDate.Name = "colGoodsLastUpdatedDate";
             this.colGoodsLastUpdatedDate.Visible = true;
-            this.colGoodsLastUpdatedDate.VisibleIndex = 30;
+            this.colGoodsLastUpdatedDate.VisibleIndex = 29;
             // 
             // colSaledOperator
             // 
@@ -928,7 +927,7 @@
             this.colSaledOperator.FieldName = "prooutjuname";
             this.colSaledOperator.Name = "colSaledOperator";
             this.colSaledOperator.Visible = true;
-            this.colSaledOperator.VisibleIndex = 31;
+            this.colSaledOperator.VisibleIndex = 30;
             // 
             // colSupplierName
             // 
@@ -936,7 +935,7 @@
             this.colSupplierName.FieldName = "custname";
             this.colSupplierName.Name = "colSupplierName";
             this.colSupplierName.Visible = true;
-            this.colSupplierName.VisibleIndex = 32;
+            this.colSupplierName.VisibleIndex = 31;
             // 
             // colSupplierPhone
             // 
@@ -944,7 +943,7 @@
             this.colSupplierPhone.FieldName = "custphone";
             this.colSupplierPhone.Name = "colSupplierPhone";
             this.colSupplierPhone.Visible = true;
-            this.colSupplierPhone.VisibleIndex = 33;
+            this.colSupplierPhone.VisibleIndex = 32;
             // 
             // colSupplierBankName
             // 
@@ -952,7 +951,7 @@
             this.colSupplierBankName.FieldName = "custyhname";
             this.colSupplierBankName.Name = "colSupplierBankName";
             this.colSupplierBankName.Visible = true;
-            this.colSupplierBankName.VisibleIndex = 34;
+            this.colSupplierBankName.VisibleIndex = 33;
             // 
             // colSupplierBankCard
             // 
@@ -960,7 +959,7 @@
             this.colSupplierBankCard.FieldName = "custyhcard";
             this.colSupplierBankCard.Name = "colSupplierBankCard";
             this.colSupplierBankCard.Visible = true;
-            this.colSupplierBankCard.VisibleIndex = 35;
+            this.colSupplierBankCard.VisibleIndex = 34;
             // 
             // colSupplierIdCard
             // 
@@ -968,7 +967,7 @@
             this.colSupplierIdCard.FieldName = "custidcard";
             this.colSupplierIdCard.Name = "colSupplierIdCard";
             this.colSupplierIdCard.Visible = true;
-            this.colSupplierIdCard.VisibleIndex = 36;
+            this.colSupplierIdCard.VisibleIndex = 35;
             // 
             // colConsignEndDate
             // 
@@ -982,7 +981,7 @@
             this.colConsignStartDate.FieldName = "prostarttime.Value";
             this.colConsignStartDate.Name = "colConsignStartDate";
             this.colConsignStartDate.Visible = true;
-            this.colConsignStartDate.VisibleIndex = 37;
+            this.colConsignStartDate.VisibleIndex = 36;
             // 
             // colCustomerName
             // 
@@ -995,13 +994,6 @@
             this.colCustomerPhone.Caption = "顾客联系方式";
             this.colCustomerPhone.FieldName = "prooutcustphone";
             this.colCustomerPhone.Name = "colCustomerPhone";
-            // 
-            // colGoodsPayCharge
-            // 
-            this.colGoodsPayCharge.Caption = "手续费";
-            this.colGoodsPayCharge.Name = "colGoodsPayCharge";
-            this.colGoodsPayCharge.Visible = true;
-            this.colGoodsPayCharge.VisibleIndex = 26;
             // 
             // ComboxGoodStatus
             // 
@@ -2773,7 +2765,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colConsignStartDate;
         private DevExpress.XtraGrid.Columns.GridColumn colCustomerName;
         private DevExpress.XtraGrid.Columns.GridColumn colCustomerPhone;
-        private DevExpress.XtraGrid.Columns.GridColumn colGoodsPayCharge;
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox ComboxGoodStatus;
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox ComboxSex;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;

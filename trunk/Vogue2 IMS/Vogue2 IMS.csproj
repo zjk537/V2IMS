@@ -364,11 +364,21 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReceiptManager\FmReceiptView.resx">
-      <DependentUpon>FmReceiptView.cs</DependentUpon>
+    <EmbeddedResource Include="ReceiptManager\Laohu of CkReceipt.rdlc">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReceiptManager\FmReceiptView.zh-CN.resx">
-      <DependentUpon>FmReceiptView.cs</DependentUpon>
+    <EmbeddedResource Include="ReceiptManager\Laohu of JhReceipt.rdlc">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceiptManager\Laohu of JsReceipt.rdlc">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceiptManager\CkReceipt.rdlc">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="ReceiptManager\JhReceipt.rdlc">
       <SubType>Designer</SubType>
@@ -378,9 +388,23 @@
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReceiptManager\CkReceipt.rdlc">
+    <EmbeddedResource Include="ReceiptManager\Maibao of CkReceipt.rdlc">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceiptManager\Maibao of JhReceipt.rdlc">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceiptManager\Maibao of JsReceipt.rdlc">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceiptManager\FmReceiptView.resx">
+      <DependentUpon>FmReceiptView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceiptManager\FmReceiptView.zh-CN.resx">
+      <DependentUpon>FmReceiptView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SupplierManager\FmFindSupplierByTel.resx">
       <DependentUpon>FmFindSupplierByTel.cs</DependentUpon>
