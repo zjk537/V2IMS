@@ -364,39 +364,39 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReceiptManager\Laohu of CkReceipt.rdlc">
+    <EmbeddedResource Include="ReceiptManager\LaoHu Of CkReceipt.rdlc">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReceiptManager\Laohu of JhReceipt.rdlc">
+    <EmbeddedResource Include="ReceiptManager\LaoHu Of JhReceipt.rdlc">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReceiptManager\Laohu of JsReceipt.rdlc">
+    <EmbeddedResource Include="ReceiptManager\LaoHu Of JsReceipt.rdlc">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReceiptManager\CkReceipt.rdlc">
+    <EmbeddedResource Include="ReceiptManager\V2 Of CkReceipt.rdlc">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReceiptManager\JhReceipt.rdlc">
+    <EmbeddedResource Include="ReceiptManager\V2 Of JhReceipt.rdlc">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReceiptManager\JsReceipt.rdlc">
+    <EmbeddedResource Include="ReceiptManager\V2 Of JsReceipt.rdlc">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReceiptManager\Maibao of CkReceipt.rdlc">
+    <EmbeddedResource Include="ReceiptManager\MaiBao Of CkReceipt.rdlc">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReceiptManager\Maibao of JhReceipt.rdlc">
+    <EmbeddedResource Include="ReceiptManager\MaiBao Of JhReceipt.rdlc">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReceiptManager\Maibao of JsReceipt.rdlc">
+    <EmbeddedResource Include="ReceiptManager\MaiBao Of JsReceipt.rdlc">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>

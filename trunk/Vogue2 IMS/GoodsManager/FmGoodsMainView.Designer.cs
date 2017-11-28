@@ -530,6 +530,8 @@
             this.colGoodsName,
             this.colGoodsColor,
             this.colGoodsQuality,
+            this.colGoodsPrimePrice,
+            this.colGoodsMarkPrice,
             this.colprochima,
             this.colprojiankuan,
             this.colproyaowei,
@@ -543,8 +545,6 @@
             this.colGoosPaid,
             this.colGoodsDesc,
             this.colPayType,
-            this.colGoodsPrimePrice,
-            this.colGoodsMarkPrice,
             this.colPurchaseOperator,
             this.colSaledPayType,
             this.colGoodsSalePrice,
@@ -690,9 +690,10 @@
             // 
             this.colGoodsPinPai.Caption = "品牌";
             this.colGoodsPinPai.FieldName = "propinpai";
+            this.colGoodsPinPai.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
             this.colGoodsPinPai.Name = "colGoodsPinPai";
             this.colGoodsPinPai.Visible = true;
-            this.colGoodsPinPai.VisibleIndex = 11;
+            this.colGoodsPinPai.VisibleIndex = 9;
             // 
             // colCategory
             // 
@@ -829,7 +830,7 @@
             this.colGoodsDesc.FieldName = "proremark";
             this.colGoodsDesc.Name = "colGoodsDesc";
             this.colGoodsDesc.Visible = true;
-            this.colGoodsDesc.VisibleIndex = 9;
+            this.colGoodsDesc.VisibleIndex = 12;
             // 
             // colPayType
             // 
@@ -838,23 +839,25 @@
             this.colPayType.Name = "colPayType";
             this.colPayType.OptionsColumn.ReadOnly = true;
             this.colPayType.Visible = true;
-            this.colPayType.VisibleIndex = 10;
+            this.colPayType.VisibleIndex = 13;
             // 
             // colGoodsPrimePrice
             // 
             this.colGoodsPrimePrice.Caption = "进价";
             this.colGoodsPrimePrice.FieldName = "projiage";
+            this.colGoodsPrimePrice.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
             this.colGoodsPrimePrice.Name = "colGoodsPrimePrice";
             this.colGoodsPrimePrice.Visible = true;
-            this.colGoodsPrimePrice.VisibleIndex = 12;
+            this.colGoodsPrimePrice.VisibleIndex = 10;
             // 
             // colGoodsMarkPrice
             // 
             this.colGoodsMarkPrice.Caption = "标价";
             this.colGoodsMarkPrice.FieldName = "probjiage";
+            this.colGoodsMarkPrice.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
             this.colGoodsMarkPrice.Name = "colGoodsMarkPrice";
             this.colGoodsMarkPrice.Visible = true;
-            this.colGoodsMarkPrice.VisibleIndex = 13;
+            this.colGoodsMarkPrice.VisibleIndex = 11;
             // 
             // colPurchaseOperator
             // 
