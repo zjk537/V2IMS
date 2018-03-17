@@ -73,18 +73,15 @@ namespace Vogue2_IMS.GoodsManager
                 var priceCode = string.Format("{0}{1}{2}B{3}", price.Substring(0,4), proInfo.procode.Substring(0, 2), proInfo.procode.Substring(10, 3),
                   price.Substring(4));
 
-
                 var image = ImageBarCodeHelper.GetBarcode(50, 180, 90, BarcodeLib.TYPE.CODE128, proInfo.procode, new System.Drawing.Font("verdana", 9f));
                 memoryImage = new Bitmap(image);
 
                 ImageBarCodeHelper.GetViewText(memoryImage, proInfo.proname, 52, new System.Drawing.Font("verdana", 9f, FontStyle.Bold));
                 ImageBarCodeHelper.GetViewText(memoryImage, priceCode, 70, new System.Drawing.Font("verdana", 9f));
 
-
                 printDocument.Print();
             
             });
-
           
         }
 

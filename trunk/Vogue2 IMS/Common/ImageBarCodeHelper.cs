@@ -16,10 +16,10 @@ namespace Vogue2_IMS.Common
             Graphics _Graphics = Graphics.FromImage(pBitmap);
             SizeF _DrawSize = _Graphics.MeasureString(showText, font);
 
-            if (_DrawSize.Height > pBitmap.Height - 10 || _DrawSize.Width > pBitmap.Width)
-            {
-                _Graphics.Dispose(); return;
-            }
+            //if (_DrawSize.Height > pBitmap.Height - 10 || _DrawSize.Width > pBitmap.Width)
+            //{
+            //    _Graphics.Dispose(); return;
+            //}
 
             int starX = (pBitmap.Width - (int)_DrawSize.Width) / 2;
             _Graphics.FillRectangle(Brushes.White, new Rectangle(starX, startY, pBitmap.Width, (int)_DrawSize.Height));

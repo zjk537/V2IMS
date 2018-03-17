@@ -14,6 +14,7 @@ namespace Vogue2_IMS.OrderManager
 {
     public partial class FmGoodsInfo : DevExpress.XtraEditors.XtraForm
     {
+        public ProInfo NewProInfo = new ProInfo();
         public bool IsPrint { get { return ckbprinted.Checked; } }
         string mRKType = ConfigManager.JiShou;
 
@@ -440,11 +441,11 @@ namespace Vogue2_IMS.OrderManager
 
                 if (mProBaseInfo != null)
                 {
-                    GoodsWebBusiness.ProEdit(newProCustInfo);
+                    this.NewProInfo = GoodsWebBusiness.ProEdit(newProCustInfo);
                 }
                 else
                 {
-                    GoodsWebBusiness.ProAdd(newProCustInfo);
+                    this.NewProInfo = GoodsWebBusiness.ProAdd(newProCustInfo);
                 }
 
                 this.DialogResult = DialogResult.OK;

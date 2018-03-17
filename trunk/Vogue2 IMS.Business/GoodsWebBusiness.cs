@@ -90,19 +90,21 @@ namespace Vogue2_IMS.Business
             return result;
         }
 
-        public static void ProAdd(ProCustInfo proCustInfo)
+        public static ProInfo ProAdd(ProCustInfo proCustInfo)
         {
-            WebServiceHelper.HttpPost<ProCustInfo, string>(_urlProAdd, proCustInfo);
+            return WebServiceHelper.HttpPost<ProCustInfo, ProListRepsone>(_urlProAdd, proCustInfo).list.FirstOrDefault();
+           
         }
 
-        public static void ProEdit(ProCustInfo proCustInfo)
+        public static ProInfo ProEdit(ProCustInfo proCustInfo)
         {
-            WebServiceHelper.HttpPost<ProCustInfo, string>(_urlProEdit, proCustInfo);
+            return WebServiceHelper.HttpPost<ProCustInfo, ProListRepsone>(_urlProEdit, proCustInfo).list.FirstOrDefault();
+            //WebServiceHelper.HttpPost<ProCustInfo, string>(_urlProEdit, proCustInfo);
         }
 
-        public static void ProOut(ProSalesInfo proSalesInfo)
+        public static ProInfo ProOut(ProSalesInfo proSalesInfo)
         {
-            WebServiceHelper.HttpPost<ProSalesInfo, string>(_urlProOut, proSalesInfo);
+            return WebServiceHelper.HttpPost<ProSalesInfo, ProListRepsone>(_urlProOut, proSalesInfo).list.FirstOrDefault();
         }
 
         public static void ProQuHui(List<int> ids)

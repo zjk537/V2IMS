@@ -37,6 +37,7 @@ namespace Vogue2_IMS
         private delegate void FormShowHandler();
         public DialogResult loginResult = DialogResult.Abort;
 
+        List<ProInfo> DataSource = new List<ProInfo>();
         private bool isLoaded = false;
         private void Login()
         {
@@ -485,20 +486,31 @@ namespace Vogue2_IMS
                     }
 
                     mFmGoodsMainView.DefaultQueryInfo = mCurrentQueryInfo;
-                    mFmGoodsMainView.DataSource = GoodsWebBusiness.GetProInfoList(mCurrentQueryInfo.Clone());
+
+                    DataSource = GoodsWebBusiness.GetProInfoList(mCurrentQueryInfo.Clone());
 
                    // mCurrentQueryInfo = mFmGoodsMainView.DefaultQueryInfo;
                 }
                 finally
                 {
-                    if (mFmGoodsMainView.DataSource == null) mFmGoodsMainView.DataSource = new List<ProInfo>();
-
-                    MainViewSource_Changed();
+                    if (DataSource == null || DataSource.Count()==0) DataSource = new List<ProInfo>();
+                    RefreshData();
                 }
             });
 
             task.Start();
-        }   
+        }
+
+        private void RefreshData()
+        {
+            mFmGoodsMainView.DataSource = new List<ProInfo>();
+            mFmGoodsMainView.RefreshData();
+
+            mFmGoodsMainView.DataSource = DataSource;
+            mFmGoodsMainView.RefreshData();
+
+            MainViewSource_Changed();
+        }
 
         #region Warning Message Box
 
@@ -621,6 +633,26 @@ namespace Vogue2_IMS
             }
             return chkedGoodsInfos;
         }
+
+        private void SetCheckedFalse()
+        {
+            var gridMainView = mFmGoodsMainView.MainView;
+            var chkedGoodsInfos = new List<ProInfo>();
+            for (var i = 0; i < gridMainView.RowCount; i++)
+            {
+                var rowObj = gridMainView.GetRow(i);
+                if (rowObj == null)
+                {
+                    continue;
+                }
+                var mainGoodsInfo = gridMainView.GetRow(i) as ProInfo;
+                if (mainGoodsInfo.CheckEdit)
+                {
+                    mainGoodsInfo.CheckEdit = false;
+                }
+            }
+        }
+
         private void btnFindGoods_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             mFmGoodsMainView.MainView.ShowFindPanel();
@@ -689,7 +721,11 @@ namespace Vogue2_IMS
             }
 
             GoodsWebBusiness.ProDaKuan(mainGoodsInfos.Select(a => { return a.proid.Value; }).ToList());
-            StartRefreshGoodsView(this, null);
+
+            mainGoodsInfos.ForEach((a) => { a.propaystatus = "已打款"; });
+            SetCheckedFalse();
+            RefreshData();
+            //StartRefreshGoodsView(this, null);
         }
 
         private void btnRollBackGoods_ItemClick(object sender, ItemClickEventArgs e)
@@ -712,7 +748,12 @@ namespace Vogue2_IMS
                     MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     GoodsWebBusiness.ProTuiHuo(rollBackEnabledGoods.Select(a => { return a.proid.Value; }).ToList());
-                    StartRefreshGoodsView(this, null);
+
+                    rollBackEnabledGoods.ForEach((a) => { a.prostatus = "在库"; });
+                    SetCheckedFalse();
+                    RefreshData();
+
+                    //StartRefreshGoodsView(this, null);
                 }
             }
         }
@@ -722,7 +763,9 @@ namespace Vogue2_IMS
             var fmProInfo = new FmGoodsInfo(ConfigManager.JiShou);
             if (fmProInfo.ShowDialog() == DialogResult.OK)
             {
-                StartRefreshGoodsView(this, null);
+               DataSource.Insert(0, fmProInfo.NewProInfo);
+               RefreshData();
+                //StartRefreshGoodsView(this, null);
             }
         }
 
@@ -731,7 +774,8 @@ namespace Vogue2_IMS
             var fmProInfo = new FmGoodsInfo(ConfigManager.JinHuo);
             if (fmProInfo.ShowDialog() == DialogResult.OK)
             {
-                StartRefreshGoodsView(this, null);
+                DataSource.Insert(0, fmProInfo.NewProInfo);
+                RefreshData();
             }
         }
 
@@ -746,9 +790,17 @@ namespace Vogue2_IMS
                       int[] rowIndexs = gridMainView.GetSelectedRows();
                       var fmGoodsSales = new FmGoodsSaledMondify(gridMainView.GetRow(rowIndexs.First()) as ProInfo);
                       dialogresult = fmGoodsSales.ShowDialog();
+                    
                       if (dialogresult == DialogResult.OK)
                       {
-                          StartRefreshGoodsView(this, null);
+                          var newGoodsInfo = fmGoodsSales.NewProInfo;
+                          var index = DataSource.FindIndex(a => { return a.proid == newGoodsInfo.proid; });
+                          DataSource.RemoveAt(index);
+                          DataSource.Insert(index, newGoodsInfo);
+                          
+                          RefreshData();
+
+                          // StartRefreshGoodsView(this, null);
                       }
                   }
               
@@ -842,6 +894,7 @@ namespace Vogue2_IMS
                     if (!hInfo.InRowCell) return;
                     //取得选定行信息  
                     var goodsInfo = gridMainView.GetRow(hInfo.RowHandle) as ProInfo;
+                    var newGoodsInfo = new ProInfo();
 
                     if (goodsInfo == null) return;
 
@@ -851,16 +904,25 @@ namespace Vogue2_IMS
                     {
                         var fmGoodsSales = new FmGoodsSaledMondify(goodsInfo);
                         dialogresult = fmGoodsSales.ShowDialog();
+                        newGoodsInfo = fmGoodsSales.NewProInfo;
                     }
                     else
                     {
                         var fmGoodsInfo = new FmGoodsInfo(new List<ProInfo>() { goodsInfo });
                         dialogresult = fmGoodsInfo.ShowDialog();
+                        newGoodsInfo = fmGoodsInfo.NewProInfo;
                     }
 
                     if (dialogresult == DialogResult.OK)
                     {
-                        StartRefreshGoodsView(this, null);
+                        var index = DataSource.FindIndex(a => { return a.proid == newGoodsInfo.proid; });
+                        DataSource.RemoveAt(index);
+                        DataSource.Insert(index,newGoodsInfo);
+
+                 
+                        RefreshData();
+                        
+                       // StartRefreshGoodsView(this, null);
                     }
                 }
             }

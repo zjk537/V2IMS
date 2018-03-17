@@ -60,7 +60,7 @@ namespace Vogue2_IMS.Business
         public static T1 HttpPost<T, T1>(string Url, T t)
         {
             var retusnStr = string.Empty;
-            var jsonPams = JsonConvert.SerializeObject(t, Formatting.None);
+            var jsonPams = JsonConvert.SerializeObject(t, Formatting.Indented);
 
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(Url);
             request.Method = "POST";
@@ -71,7 +71,7 @@ namespace Vogue2_IMS.Business
 
             using (Stream myRequestStream = request.GetRequestStream())
             {
-                StreamWriter myStreamWriter = new StreamWriter(myRequestStream, Encoding.GetEncoding("GB2312"));
+                StreamWriter myStreamWriter = new StreamWriter(myRequestStream);
                 myStreamWriter.Write(jsonPams);
                 myStreamWriter.Close();
             }

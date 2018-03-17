@@ -13,6 +13,7 @@ namespace Vogue2_IMS.GoodsManager
 {
     public partial class FmGoodsSaledMondify : FormSimpleDialogBase
     {
+        public ProInfo NewProInfo = new ProInfo();
         /// <summary>
         /// 编辑对象
         /// </summary>
@@ -88,6 +89,11 @@ namespace Vogue2_IMS.GoodsManager
         {
             mErrorProvider.ClearErrors();
 
+            if (!string.IsNullOrEmpty(paystatus.Text) && paystatus.Text.Equals("取回"))
+            {
+                return mErrorProvider.HasErrors;
+            }
+
             if (newProSalesInfo.zhekou + newProSalesInfo.jpsjiage != newProSalesInfo.bjiage)
             {
                 mErrorProvider.SetError(this.zhekou, "请调整折扣", ErrorType.Warning);
@@ -137,8 +143,8 @@ namespace Vogue2_IMS.GoodsManager
                     }
                 }
 
-                GoodsWebBusiness.ProOut(newProSalesInfo);
-
+                NewProInfo = GoodsWebBusiness.ProOut(newProSalesInfo);
+                
                 this.DialogResult = DialogResult.OK;
             }
         }

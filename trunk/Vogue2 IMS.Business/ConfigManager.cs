@@ -10,7 +10,7 @@ namespace Vogue2_IMS.Business
         public static string JinHuo = "进货";
         public static string JiShou = "寄售";
         public static string ZaiKu = "在库";
-        public static string YuDing = "预订";
+        public static string YuDing = "预定";
         public static string ShouChu = "售出";
         public static string QuHui = "取回";
         public static string YiDaKuan = "已打款";
