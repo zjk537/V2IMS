@@ -4670,7 +4670,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Vogue2 IMS V2.0"
         "ProductCode" = "8:{913D3956-A62F-4BEF-A8C3-FE170A37AE89}"
-        "PackageCode" = "8:{615B37B9-630C-45E5-8A50-848EC2F888F3}"
+        "PackageCode" = "8:{65B9B5F1-FF2A-4948-BB60-5FC5524CE1DB}"
         "UpgradeCode" = "8:{455DBE20-E004-4A36-9191-53C8F38E00DC}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

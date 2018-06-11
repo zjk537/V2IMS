@@ -364,6 +364,14 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReceiptManager\Images\Copy %282%29 of V2 Of CkReceipt.rdlc">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceiptManager\Images\Copy of V2 Of CkReceipt.rdlc">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReceiptManager\June Of CkReceipt.rdlc">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -418,6 +426,9 @@
     <EmbeddedResource Include="ReceiptManager\FmReceiptView.zh-CN.resx">
       <DependentUpon>FmReceiptView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReceiptManager\V2SH Of CkReceipt.rdlc" />
+    <EmbeddedResource Include="ReceiptManager\V2SH Of JhReceipt.rdlc" />
+    <EmbeddedResource Include="ReceiptManager\V2SH Of JsReceipt.rdlc" />
     <EmbeddedResource Include="SupplierManager\FmFindSupplierByTel.resx">
       <DependentUpon>FmFindSupplierByTel.cs</DependentUpon>
     </EmbeddedResource>
@@ -495,54 +506,54 @@
     <Content Include="icon1.ico" />
     <Content Include="icon2.ico" />
     <Content Include="icon3.ico" />
-    <Content Include="Images\back\Calendar_16x16.png" />
-    <Content Include="Images\back\Drafts_16x16.png" />
-    <Content Include="Images\back\Inbox_16x16.png" />
-    <Content Include="Images\back\Mail_16x16.png" />
-    <Content Include="Images\back\Organizer_16x16.png" />
-    <Content Include="Images\back\Outbox_16x16.png" />
-    <Content Include="Images\back\Tasks_16x16.png" />
-    <Content Include="Images\back\Trash_16x16.png" />
-    <Content Include="Images\Buy_Add_32.png" />
-    <Content Include="Images\Close_16x16.png" />
-    <Content Include="Images\Close_32x32.png" />
-    <Content Include="Images\Consignment_Add_32.png" />
-    <Content Include="Images\Delete_32.png" />
-    <Content Include="Images\Export_32.png" />
-    <Content Include="Images\Find_16x16.png" />
-    <Content Include="Images\Find_32x32.png" />
-    <Content Include="Images\Find_Good_32.png" />
-    <Content Include="Images\Layout_32.png" />
-    <Content Include="Images\Login_Animation.gif" />
-    <Content Include="Images\Map_32.png" />
-    <Content Include="Images\ooopic_1505739017.ico" />
-    <Content Include="Images\ooopic_1505739023.png" />
-    <Content Include="Images\Print_32.png" />
-    <Content Include="Images\QueryDetail_16.png" />
-    <Content Include="Images\QueryDetail_32.png" />
-    <Content Include="Images\Refresh_32.png" />
-    <Content Include="Images\Report_Day_16.png" />
-    <Content Include="Images\Report_Day_32.png" />
-    <Content Include="Images\Report_Month_16.png" />
-    <Content Include="Images\Report_Month_32.png" />
-    <Content Include="Images\Report_Preset_16.png" />
-    <Content Include="Images\Report_Preset_32.png" />
-    <Content Include="Images\Report_Spread_16.png" />
-    <Content Include="Images\Report_Spread_32.png" />
-    <Content Include="Images\Report_Week_16.png" />
-    <Content Include="Images\Repor_Weekt_32.png" />
-    <Content Include="Images\Reprot_Performance_16.png" />
-    <Content Include="Images\Reprot_Performance_32.png" />
-    <Content Include="Images\Sale_32.png" />
-    <Content Include="Images\SaveAs_16x16.png" />
-    <Content Include="Images\SaveAs_32x32.png" />
-    <Content Include="Images\Save_16x16.png" />
-    <Content Include="Images\Save_32x32.png" />
-    <Content Include="Images\Shop_16.png" />
-    <Content Include="Images\Shop_32.png" />
-    <Content Include="Images\SpreadTime_16.png" />
-    <Content Include="Images\SpreadTime_32.png" />
-    <Content Include="Images\Update_32.png" />
+    <Content Include="ReceiptManager\Images\back\Calendar_16x16.png" />
+    <Content Include="ReceiptManager\Images\back\Drafts_16x16.png" />
+    <Content Include="ReceiptManager\Images\back\Inbox_16x16.png" />
+    <Content Include="ReceiptManager\Images\back\Mail_16x16.png" />
+    <Content Include="ReceiptManager\Images\back\Organizer_16x16.png" />
+    <Content Include="ReceiptManager\Images\back\Outbox_16x16.png" />
+    <Content Include="ReceiptManager\Images\back\Tasks_16x16.png" />
+    <Content Include="ReceiptManager\Images\back\Trash_16x16.png" />
+    <Content Include="ReceiptManager\Images\Buy_Add_32.png" />
+    <Content Include="ReceiptManager\Images\Close_16x16.png" />
+    <Content Include="ReceiptManager\Images\Close_32x32.png" />
+    <Content Include="ReceiptManager\Images\Consignment_Add_32.png" />
+    <Content Include="ReceiptManager\Images\Delete_32.png" />
+    <Content Include="ReceiptManager\Images\Export_32.png" />
+    <Content Include="ReceiptManager\Images\Find_16x16.png" />
+    <Content Include="ReceiptManager\Images\Find_32x32.png" />
+    <Content Include="ReceiptManager\Images\Find_Good_32.png" />
+    <Content Include="ReceiptManager\Images\Layout_32.png" />
+    <Content Include="ReceiptManager\Images\Login_Animation.gif" />
+    <Content Include="ReceiptManager\Images\Map_32.png" />
+    <Content Include="ReceiptManager\Images\ooopic_1505739017.ico" />
+    <Content Include="ReceiptManager\Images\ooopic_1505739023.png" />
+    <Content Include="ReceiptManager\Images\Print_32.png" />
+    <Content Include="ReceiptManager\Images\QueryDetail_16.png" />
+    <Content Include="ReceiptManager\Images\QueryDetail_32.png" />
+    <Content Include="ReceiptManager\Images\Refresh_32.png" />
+    <Content Include="ReceiptManager\Images\Report_Day_16.png" />
+    <Content Include="ReceiptManager\Images\Report_Day_32.png" />
+    <Content Include="ReceiptManager\Images\Report_Month_16.png" />
+    <Content Include="ReceiptManager\Images\Report_Month_32.png" />
+    <Content Include="ReceiptManager\Images\Report_Preset_16.png" />
+    <Content Include="ReceiptManager\Images\Report_Preset_32.png" />
+    <Content Include="ReceiptManager\Images\Report_Spread_16.png" />
+    <Content Include="ReceiptManager\Images\Report_Spread_32.png" />
+    <Content Include="ReceiptManager\Images\Report_Week_16.png" />
+    <Content Include="ReceiptManager\Images\Repor_Weekt_32.png" />
+    <Content Include="ReceiptManager\Images\Reprot_Performance_16.png" />
+    <Content Include="ReceiptManager\Images\Reprot_Performance_32.png" />
+    <Content Include="ReceiptManager\Images\Sale_32.png" />
+    <Content Include="ReceiptManager\Images\SaveAs_16x16.png" />
+    <Content Include="ReceiptManager\Images\SaveAs_32x32.png" />
+    <Content Include="ReceiptManager\Images\Save_16x16.png" />
+    <Content Include="ReceiptManager\Images\Save_32x32.png" />
+    <Content Include="ReceiptManager\Images\Shop_16.png" />
+    <Content Include="ReceiptManager\Images\Shop_32.png" />
+    <Content Include="ReceiptManager\Images\SpreadTime_16.png" />
+    <Content Include="ReceiptManager\Images\SpreadTime_32.png" />
+    <Content Include="ReceiptManager\Images\Update_32.png" />
     <None Include="Properties\DataSources\Vogue2_IMS.Business.ProBaseInfo.datasource" />
     <None Include="Properties\DataSources\Vogue2_IMS.Business.ProInfo.datasource" />
     <None Include="Resources\paper-bag.png" />
