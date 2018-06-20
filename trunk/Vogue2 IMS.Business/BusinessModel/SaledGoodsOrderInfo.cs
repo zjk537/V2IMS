@@ -9,12 +9,17 @@ namespace Vogue2_IMS.Business.BusinessModel
 {
     public class SaledGoodsOrderInfo
     {
+
+        /// <summary>
+        /// get SaledGoodsInfo
+        /// </summary>
+        public ProInfo SaledGoodsInfo { get; private set; }
         /// <summary>
         /// 
         /// </summary>
         /// <param name="goodsInfo"></param>
         /// <param name="orderType">1:第一联 顾客联 2：第二联 记账联</param>
-        public SaledGoodsOrderInfo(SaledGoodsInfo goodsInfo, int orderType)
+        public SaledGoodsOrderInfo(ProInfo goodsInfo, int orderType)
         {
             this.SaledGoodsInfo = goodsInfo;
 
@@ -25,41 +30,38 @@ namespace Vogue2_IMS.Business.BusinessModel
 
         public string OrderType { get; private set; }
 
-        public int Id { get { return SaledGoodsInfo.Goods.Id; } }
+        public int Id { get { return SaledGoodsInfo.proid.Value; } }
 
-        /// <summary>
-        /// get SaledGoodsInfo
-        /// </summary>
-        public SaledGoodsInfo SaledGoodsInfo { get; private set; }
+      
 
         /// <summary>
         /// 商品编号 
         /// </summary>
-        public string GoodsCode { get { return SaledGoodsInfo.Goods.Code; } }
+        public string GoodsCode { get { return SaledGoodsInfo.procode; } }
         /// <summary>
         /// 商品名称 
         /// </summary>
-        public string Name { get { return SaledGoodsInfo.Goods.Name; } }
+        public string Name { get { return SaledGoodsInfo.proname; } }
         /// <summary>
         /// 商品原厂编号 
         /// </summary>
-        public string OriginalCode { get { return SaledGoodsInfo.Goods.OriginalCode; } }
+        public string OriginalCode { get { return SaledGoodsInfo.projcode; } }
         /// <summary>
         /// 商品图片 
         /// </summary>
-        public byte[] GoodsImageBytes { get { return SaledGoodsInfo.GoodsImageBytes; } }
+        public byte[] GoodsImageBytes { get { return SaledGoodsInfo.imagebytes; } }
         /// <summary>
         /// 商品颜色 
         /// </summary>
-        public string Color { get { return SaledGoodsInfo.Goods.Color; } }
+        public string Color { get { return SaledGoodsInfo.procolor; } }
         /// <summary>
         /// 商品成色 
         /// </summary>
-        public string Quality { get { return SaledGoodsInfo.Goods.Quality; } }
+        public string Quality { get { return SaledGoodsInfo.prochengse; } }
         /// <summary>
         /// 商品配件 
         /// </summary>
-        public string Parts { get { return SaledGoodsInfo.Goods.Parts; } }
+        public string Parts { get { return SaledGoodsInfo.probujian; } }
 
         /// <summary>
         /// 商品标价
@@ -68,8 +70,8 @@ namespace Vogue2_IMS.Business.BusinessModel
         {
             get
             {
-                return SaledGoodsInfo.Goods.MarkPrice.HasValue ?
-                    SaledGoodsInfo.Goods.MarkPrice.Value.ToString("F2") : string.Empty;
+                return SaledGoodsInfo.probjiage.HasValue ?
+                    SaledGoodsInfo.probjiage.Value.ToString("F2") : string.Empty;
             }
         }
         /// <summary>
@@ -79,21 +81,21 @@ namespace Vogue2_IMS.Business.BusinessModel
         {
             get
             {
-                return SaledGoodsInfo.Goods.SalePrice.HasValue ?
-                    SaledGoodsInfo.Goods.SalePrice.Value.ToString("F2") : string.Empty;
+                return SaledGoodsInfo.prosjiage.HasValue ?
+                    SaledGoodsInfo.prosjiage.Value.ToString("F2") : string.Empty;
             }
         }
-        /// <summary>
-        /// 商品 实售价格
-        /// </summary>
-        public string Discount
-        {
-            get
-            {
-                return SaledGoodsInfo.Goods.Discount.HasValue ?
-                    SaledGoodsInfo.Goods.Discount.Value.ToString("F2") : string.Empty;
-            }
-        }
+        ///// <summary>
+        ///// 商品 实售价格
+        ///// </summary>
+        //public string Discount
+        //{
+        //    get
+        //    {
+        //        return SaledGoodsInfo..Discount.HasValue ?
+        //            SaledGoodsInfo.Goods.Discount.Value.ToString("F2") : string.Empty;
+        //    }
+        //}
         /// <summary>
         /// 开始时间
         /// </summary>
@@ -101,7 +103,7 @@ namespace Vogue2_IMS.Business.BusinessModel
         {
             get
             {
-                return SaledGoodsInfo.Goods.CreatedDate.ToString("yyyy/MM/DD");
+                return SaledGoodsInfo.prostarttime.HasValue ? SaledGoodsInfo.prostarttime.Value.ToString("yyyy/MM/DD") : string.Empty; ;
             }
         }
         /// <summary>
@@ -111,48 +113,47 @@ namespace Vogue2_IMS.Business.BusinessModel
         {
             get
             {
-                return SaledGoodsInfo.Goods.SaledDate.HasValue ?
-                    SaledGoodsInfo.Goods.SaledDate.Value.ToString("yyyy/MM/DD") : string.Empty;
+                return SaledGoodsInfo.proendtime.HasValue ? SaledGoodsInfo.proendtime.Value.ToString("yyyy/MM/DD") : string.Empty; ;
             }
         }
 
-        /// <summary>
-        /// 当前登录用户所在店面信息
-        /// </summary>
-        private ShopInfo mShop = null;
-        private ShopInfo CurShopInfo
-        {
+        ///// <summary>
+        ///// 当前登录用户所在店面信息
+        ///// </summary>
+        //private ShopInfo mShop = null;
+        //private ShopInfo CurShopInfo
+        //{
 
-            get
-            {
-                if (mShop == null)
-                {
-                    mShop = SharedVariables.Instance.ShopInfos.FirstOrDefault(shop => shop.Id == SharedVariables.Instance.LoginUser.User.ShopId);
-                }
-                mShop = mShop ?? new ShopInfo();
-                return mShop;
-            }
-        }
+        //    get
+        //    {
+        //        if (mShop == null)
+        //        {
+        //            //mShop = SharedVariables.Instance.ShopInfos.FirstOrDefault(shop => shop.Id == SharedVariables.Instance.LoginUser.User.ShopId);
+        //        }
+        //        mShop = mShop ?? new ShopInfo();
+        //        return mShop;
+        //    }
+        //}
         /// <summary>
         /// 店面名
         /// </summary>
-        public string ShopName { get { return CurShopInfo.Name; } }
+        public string ShopName { get { return SaledGoodsInfo.prodepname; } }
         /// <summary>
         /// 店面联系方式
         /// </summary>
-        public string ShopPhone { get { return CurShopInfo.Phone; } }
+        public string ShopPhone { get { return SaledGoodsInfo.prodepphone; } }
         /// <summary>
         /// 顾客姓名
         /// </summary>
-        public string CustomerName { get { return SaledGoodsInfo.SaledRecord.CustomerName; } }
+        public string CustomerName { get { return SaledGoodsInfo.prooutcustname; } }
         /// <summary>
         /// 顾客联系方式
         /// </summary>
-        public string CustomerPhone { get { return SaledGoodsInfo.SaledRecord.CustomerPhone; } }
+        public string CustomerPhone { get { return SaledGoodsInfo.prooutcustphone; } }
         /// <summary>
         /// 付款方式
         /// </summary>
-        public string Paytype { get { return SaledGoodsInfo.PayType.Name; } }
+        public string Paytype { get { return SaledGoodsInfo.prooutpaytype; } }
         /// <summary>
         /// 合计金额
         /// </summary>
@@ -176,11 +177,11 @@ namespace Vogue2_IMS.Business.BusinessModel
         /// <summary>
         /// 经手人
         /// </summary>
-        public string Operator { get { return SaledGoodsInfo.SaledRecord.Operator; } }
+        public string Operator { get { return SaledGoodsInfo.prooutjuname; } }
         /// <summary>
         /// 备注信息 
         /// </summary>
-        public string Desc { get { return SaledGoodsInfo.Goods.Desc; } }
+        public string Desc { get { return SaledGoodsInfo.proremark; } }
 
     }
 }

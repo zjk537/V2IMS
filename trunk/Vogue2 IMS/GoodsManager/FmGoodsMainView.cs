@@ -25,12 +25,12 @@ namespace Vogue2_IMS.GoodsManager
     {
         #region property
 
-        List<ViewMainGoodsInfos> _DataSource = new List<ViewMainGoodsInfos>();
-        public List<ViewMainGoodsInfos> DataSource
+        List<ProInfo> _DataSource = new List<ProInfo>();
+        public List<ProInfo> DataSource
         {
             get
             {
-                if (_DataSource == null) _DataSource = new List<ViewMainGoodsInfos>();
+                if (_DataSource == null) _DataSource = new List<ProInfo>();
 
                 return _DataSource;
             }
@@ -87,18 +87,20 @@ namespace Vogue2_IMS.GoodsManager
 
         #endregion
 
-        public FmGoodsMainView()
+        public FmGoodsMainView(bool fromConfig=false)
         {
             InitializeComponent();
             InitializeNavBar();
 
-            gridViewControl.DataSource = DataSource;
+           gridViewControl.DataSource = DataSource;
 
             DevViewDefine.ResetToNormalView(GridDefaultView, false, true, false);
-            DevViewDefine.ResetToNormalView(GridLayoutView, false, true, false);
-            DevViewDefine.ResetToNormalView(GridAdvBandedView, false, true, false);
 
-            SetDefaultMainView();
+            //DevViewDefine.ResetToNormalView(GridLayoutView, false, true, false);
+            //DevViewDefine.ResetToNormalView(GridAdvBandedView, false, true, false);
+
+            if (!fromConfig)
+                SetDefaultMainView();
 
             if (MainView != null)
             {
@@ -106,7 +108,6 @@ namespace Vogue2_IMS.GoodsManager
                 MainView.ActiveFilterString = GetViewConditionStr(Condition);
             }
         }
-
 
         public void RefreshData()
         {
@@ -140,7 +141,7 @@ namespace Vogue2_IMS.GoodsManager
             get
             {
                 return Path.Combine(SharedVariables.Instance.LayoutXmlPath, string.Format("UserSystemDefaultLayout.{0}.{1}.{2}.xml",
-                     SharedVariables.Instance.LoginUser.User.Name, this.Name, this.MainView.Name));
+                     ConfigManager.LoginUser.username, this.Name, this.MainView.Name));
             }
         }
 
@@ -157,7 +158,7 @@ namespace Vogue2_IMS.GoodsManager
 
                     foreach (var file in filesTemp)
                     {
-                        if (file.Contains(string.Format("CustomerLayout.{0}.{1}", SharedVariables.Instance.LoginUser.User.Name, this.Name)))
+                        if (file.Contains(string.Format("CustomerLayout.{0}.{1}", ConfigManager.LoginUser.username, this.Name)))
                             using (StringReader strReader = new StringReader(File.ReadAllText(file, Encoding.Unicode)))
                             {
                                 try
@@ -191,7 +192,7 @@ namespace Vogue2_IMS.GoodsManager
             }
             else
             {
-                customerViewTemp.UserName = SharedVariables.Instance.LoginUser.User.Name;
+                customerViewTemp.UserName = ConfigManager.LoginUser.username;
                 customerViewTemp.FromUIName = this.Name;
                 customerViewTemp.BaseViewName = MainView.Name;
                 
@@ -238,7 +239,7 @@ namespace Vogue2_IMS.GoodsManager
             {
                 if (!File.Exists(UserSystemViewLayoutFile))
                 {
-                    var tempThis = new FmGoodsMainView();
+                    var tempThis = new FmGoodsMainView(true);
                     if (MainView.Name == GridDefaultView.Name)
                     {
                         tempThis.MainView = tempThis.GridDefaultView;
@@ -320,8 +321,8 @@ namespace Vogue2_IMS.GoodsManager
 
         #region Default View
 
-        ViewQueryGoodsInfo mDefaultQueryInfo = null;
-        public ViewQueryGoodsInfo DefaultQueryInfo
+        ProListRequest mDefaultQueryInfo = null;
+        public ProListRequest DefaultQueryInfo
         {
             get { return mDefaultQueryInfo; }
             set
@@ -339,7 +340,7 @@ namespace Vogue2_IMS.GoodsManager
             }
         }
  
-        string DefaultViewPath { get { return Path.Combine(SharedVariables.Instance.LayoutXmlPath, string.Format("DefaultMainViewSet.{0}.{1}.config", this.Name,SharedVariables.Instance.LoginUser.User.Name)); } }
+        string DefaultViewPath { get { return Path.Combine(SharedVariables.Instance.LayoutXmlPath, string.Format("DefaultMainViewSet.{0}.{1}.config", this.Name,ConfigManager.LoginUser.username)); } }
 
         /// <summary>
         /// 保存默认视图选项
@@ -492,29 +493,34 @@ namespace Vogue2_IMS.GoodsManager
             switch(condition)
             {
                 case ViewCondition.ZYWeiDaKuan:
-                    returnStr = "[GoodsStatusName] = '售出' And [SourceName] = '进货' And [GoodsPaid.Name] = '未打款'";
+                    returnStr = "[prostatus] = '售出' And [protype] = '进货' And [propaystatus] = '未打款'";
                     break;
                 case ViewCondition.ZYZaiKu:
-                    returnStr = "[GoodsStatusName] = '在库' And [SourceName] = '进货'";
+                    returnStr = "[prostatus] = '在库' And [protype] = '进货'";
                     break;
                 case ViewCondition.ZYChaoQi:
                     var daySpanStr = ConfigurationManager.AppSettings["JinHuoTimeoutDaySpan"];
                     var daySpan = string.IsNullOrEmpty(daySpanStr) ? 180 : Convert.ToInt32(daySpanStr);
 
-                    returnStr = "[GoodsStatusName] = '在库' And [SourceName] = '进货' And [Goods.UpdatedDate.Value] <= '" + DateTime.Now.AddDays(0 - daySpan).ToShortDateString() + "'";
+                    returnStr = "[prostatus] = '在库' And [protype] = '进货' And [proupdatetime.Value] <= '" + DateTime.Now.AddDays(0 - daySpan).ToShortDateString() + "'";
                     break;
                 case ViewCondition.JSWeiDaKuan:
-                    returnStr = "[GoodsStatusName] = '售出' And [SourceName] = '寄售' And [GoodsPaid.Name] = '未打款'";
+                    returnStr = "[prostatus] = '售出' And [protype] = '寄售' And [propaystatus] = '未打款'";
                     break;
                 case ViewCondition.JSZaiKu:
-                    returnStr = "[GoodsStatusName] = '在库' And [SourceName] = '寄售'";
+                    returnStr = "[prostatus] = '在库' And [protype] = '寄售'";
                     break;
                 case ViewCondition.JSChaoQi:
-                    returnStr = "[GoodsStatusName] = '在库' And [SourceName] = '寄售' and [Goods.ConsignEndDate]" + "< '" + DateTime.Now.ToShortDateString() + "'";
+                    returnStr = "[prostatus] = '在库' And [protype] = '寄售' and [proendtime.Value]" + "< '" + DateTime.Now.ToShortDateString() + "'";
                     break;
             }
 
             return returnStr;
+        }
+
+        private void viewMainGoodsInfosBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
         }
     }
 
@@ -537,7 +543,7 @@ namespace Vogue2_IMS.GoodsManager
 
         public string DefaultMainViewName { get; set; }
 
-        public ViewQueryGoodsInfo DefaultQuery { get; set; }
+        public ProListRequest DefaultQuery { get; set; }
     }
 
     [Serializable]

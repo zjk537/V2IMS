@@ -37,11 +37,11 @@ namespace Vogue2_IMS.Business.BusinessModel
         {
             get
             {
-                if (mShop == null)
-                    mShop = SharedVariables.Instance.ShopInfos.First(shop =>
-                    {
-                        return shop.Id.Equals(LoginUser.ShopId);
-                    });
+                //if (mShop == null)
+                    //mShop = SharedVariables.Instance.ShopInfos.First(shop =>
+                    //{
+                    //    return shop.Id.Equals(LoginUser.ShopId);
+                    //});
 
                 return mShop;
             }
@@ -95,20 +95,17 @@ namespace Vogue2_IMS.Business.BusinessModel
             }
         }
 
-        UserInfo mLoginUser = null;
+        LoginUser mLoginUser = null;
         /// <summary>
         /// 当前(录入)用户
         /// </summary>
-        public UserInfo LoginUser
+        public LoginUser LoginUser
         {
             get
             {
                 if (mLoginUser == null)
                 {
-                    mLoginUser = SharedVariables.Instance.UserInfos.FirstOrDefault(user =>
-                    {
-                        return user.Id == PurchaseRecord.UserId;
-                    });
+                    mLoginUser = ConfigManager.LoginUser;
                 }
 
                 return mLoginUser;
@@ -116,7 +113,7 @@ namespace Vogue2_IMS.Business.BusinessModel
             set
             {
                 mLoginUser = value;
-                this.PurchaseRecord.UserId = value.Id;
+                this.PurchaseRecord.UserId = value.uid;
             }
         }
 
@@ -223,10 +220,10 @@ namespace Vogue2_IMS.Business.BusinessModel
             var tempCategory = new CategoryInfo();
             var tempPayInfo = new PayTypeInfo();
             var tempSupplier = new SupplierInfo();
-            var tempLoginUser = new UserInfo();
+            //var tempLoginUser = new LoginUser();
 
             DBModelBase.Clone<CategoryInfo>(Category, ref tempCategory);
-            DBModelBase.Clone<UserInfo>(LoginUser, ref tempLoginUser);
+            //DBModelBase.Clone<LoginUser>(LoginUser, ref tempLoginUser);
             DBModelBase.Clone<PayTypeInfo>(PayType, ref tempPayInfo);
             DBModelBase.Clone<SupplierInfo>(Supplier, ref tempSupplier);
             DBModelBase.Clone<GoodsInfo>(Goods, ref tempGoods);
@@ -235,7 +232,7 @@ namespace Vogue2_IMS.Business.BusinessModel
             PurchaseGoodsInfo newPurchaseGoodsInfo = new PurchaseGoodsInfo();
             newPurchaseGoodsInfo.Category = tempCategory;
             newPurchaseGoodsInfo.PayType = tempPayInfo;
-            newPurchaseGoodsInfo.LoginUser = tempLoginUser;
+            newPurchaseGoodsInfo.LoginUser = ConfigManager.LoginUser;
 
             newPurchaseGoodsInfo.PurchaseRecord = tempPurchaseRecordInfo;
             newPurchaseGoodsInfo.Supplier = tempSupplier;

@@ -79,7 +79,7 @@ namespace Vogue2_IMS.GoodsManager
                         dataColumn.SetOrdinal(0);
                         foreach (DataRow datarow in tempTable.Rows)
                         {
-                            datarow[dataColumn] = SharedVariables.Instance.LoginUser.User.Id;
+                            datarow[dataColumn] = ConfigManager.LoginUser.uid; //SharedVariables.Instance.LoginUser.User.Id;
                         }
 
                         PurchaseGoodsBusiness.Instance.BulkInsertPurchaseGoods(tempTable);

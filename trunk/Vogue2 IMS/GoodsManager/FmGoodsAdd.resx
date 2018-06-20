@@ -117,8 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;layoutViewColumn12.Name" xml:space="preserve">
-    <value>layoutViewColumn12</value>
+  <data name="&gt;&gt;gridColumn27.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;labelControl3.Name" xml:space="preserve">
     <value>labelControl3</value>
@@ -130,12 +130,11 @@
   <data name="gridColumn10.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="gridColumn19.Caption" xml:space="preserve">
+    <value>创建日期</value>
+  </data>
   <data name="&gt;&gt;gridBand2.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="SupplierBankCardTxt.Location" type="System.Drawing.Point, System.Drawing">
-    <value>288, 38</value>
   </data>
   <data name="SupplierTelTxt.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -157,14 +156,18 @@
   <data name="SupplierBankCardTxt.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v11.1">
     <value>Default</value>
   </data>
-  <data name="SupplierNameTxt.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 21</value>
+  <data name="repositoryItemTextEdit3.Mask.EditMask" xml:space="preserve">
+    <value />
   </data>
   <data name="&gt;&gt;repositoryItemSearchLookUpEdit1View.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="labelControl8.Location" type="System.Drawing.Point, System.Drawing">
     <value>749, 12</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_gridColumn20.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="SupplierTelTxt.Properties.Mask.EditMask" xml:space="preserve">
     <value />
@@ -182,9 +185,6 @@
   <data name="&gt;&gt;SupplierTelTxt.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="SupplierAddressTxt.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
   <data name="&gt;&gt;labelControl4.Parent" xml:space="preserve">
     <value>panelControl2</value>
   </data>
@@ -199,6 +199,9 @@
   </data>
   <data name="&gt;&gt;layoutViewField_layoutViewColumn11.Name" xml:space="preserve">
     <value>layoutViewField_layoutViewColumn11</value>
+  </data>
+  <data name="&gt;&gt;gridColumn6.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="gcComboxGoodsStatus.Items4" xml:space="preserve">
     <value>取回</value>
@@ -236,14 +239,8 @@
   <data name="SupplierBankTxt.Size" type="System.Drawing.Size, System.Drawing">
     <value>132, 21</value>
   </data>
-  <data name="gcCmboxSourceType.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v11.1">
-    <value>Combo</value>
-  </data>
   <data name="&gt;&gt;layoutViewColumn3.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="SupplierIdCardTxt.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="repositoryItemTextEdit3.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -257,8 +254,14 @@
   <data name="btnCardLayout.Caption" xml:space="preserve">
     <value>卡片布局</value>
   </data>
+  <data name="gridColumn18.VisibleIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
   <data name="SupplierSexCmbox.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_gridColumn8.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;gcComboxGoodsStatus.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.Repository.RepositoryItemComboBox, DevExpress.XtraEditors.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
@@ -286,6 +289,12 @@
   </data>
   <data name="&gt;&gt;GridCardView.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Views.Card.CardView, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn23.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="gcGoodsCreateDate.Caption" xml:space="preserve">
+    <value>创建日期</value>
   </data>
   <data name="&gt;&gt;gcGoodsPayName.Name" xml:space="preserve">
     <value>gcGoodsPayName</value>
@@ -320,8 +329,8 @@
   <data name="&gt;&gt;btnAdd.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;layoutViewField_layoutViewColumn8.Name" xml:space="preserve">
-    <value>layoutViewField_layoutViewColumn8</value>
+  <data name="&gt;&gt;chengse.Name" xml:space="preserve">
+    <value>chengse</value>
   </data>
   <data name="repositoryItemTextEdit2.Mask.SaveLiteral" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -344,8 +353,8 @@
   <data name="bandedGridColumn1.Width" type="System.Int32, mscorlib">
     <value>157</value>
   </data>
-  <data name="gcComboxGoodsStatus.Items1" xml:space="preserve">
-    <value>在库</value>
+  <data name="&gt;&gt;layoutViewColumn8.Name" xml:space="preserve">
+    <value>layoutViewColumn8</value>
   </data>
   <data name="repositoryItemTextEdit2.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v11.1">
     <value>Default</value>
@@ -355,6 +364,9 @@
   </data>
   <data name="&gt;&gt;GridAdvBandedView.Name" xml:space="preserve">
     <value>GridAdvBandedView</value>
+  </data>
+  <data name="&gt;&gt;bandedGridColumn10.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;labelControl8.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -368,63 +380,11 @@
   <data name="layoutViewColumn12.Caption" xml:space="preserve">
     <value>创建日期</value>
   </data>
+  <data name="&gt;&gt;gridColumn21.Name" xml:space="preserve">
+    <value>gridColumn21</value>
+  </data>
   <data name="gcGoodsPayName.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="imageS16.ImageStream" type="DevExpress.Utils.ImageCollectionStreamer, DevExpress.Utils.v11.1" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFpEZXZFeHByZXNzLlV0aWxzLnYxMS4xLCBWZXJzaW9uPTExLjEu
-        NC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI4OGQxNzU0ZDcwMGU0OWEMAwAAAFFT
-        eXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRv
-        a2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAAChEZXZFeHByZXNzLlV0aWxzLkltYWdlQ29sbGVjdGlvblN0
-        cmVhbWVyAgAAAAlJbWFnZVNpemUERGF0YQQHE1N5c3RlbS5EcmF3aW5nLlNpemUDAAAAAgIAAAAF/P//
-        /xNTeXN0ZW0uRHJhd2luZy5TaXplAgAAAAV3aWR0aAZoZWlnaHQAAAgIAwAAABAAAAAQAAAACQUAAAAP
-        BQAAAGUKAAACfQMAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgGAAAAH/P/YQAAAAFzUkdCAK7OHOkA
-        AAAEZ0FNQQAAsY8L/GEFAAADJ0lEQVQ4T7VSXUiTYRT+iOgiUWi6ocGybFqzsnRldSMZLQox+zN1Tp3T
-        uZw6XW7flttsc26upaYzZ1PLP+yHfrSiIMgugi4iapR+EnkTWUraLiodDS+e3n0YdFVXHTi8L+ec55z3
-        ec5L/TebnJxcFQwGD8zPfUlbDv3bZmZmVgeDP48u+GeGFuY++Mdfv8CDkTuz9+7eHXn65EnP61ev7F/n
-        52uWlpakgUBgzzKMohYXfhxa9H8eCXydXlycfY/A7Dt8+/gWvZ4OHDt8CAfT0pApFiM3Kws3+vvhbm7G
-        /dHRMRZcoW1WDw5d93//xOD79ATmJsYw/fwWng3YYdZpsCtRiPU8Hjav40MkFMJhNsNpscDe6PxWRbeq
-        qDyZlkk/kIF7/Z3odRhhVRVBlXMU2eJ0lCsrId4nRvLWFIiSRBBt34mifBlUyipI8oshlet9VJW2jdGZ
-        PLA6B+Fqvw139yN4B8fQ1vMIhobL0Fu70Op9CPeVx3B1jKKx5SaMtj7oTF1Q024fZbR4mA7PIEy2q3C0
-        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
-</value>
   </data>
   <data name="gridBand2.Width" type="System.Int32, mscorlib">
     <value>106</value>
@@ -486,8 +446,14 @@
   <data name="SupplierAddressTxt.Location" type="System.Drawing.Point, System.Drawing">
     <value>71, 65</value>
   </data>
+  <data name="&gt;&gt;layoutViewCard1.Name" xml:space="preserve">
+    <value>layoutViewCard1</value>
+  </data>
   <data name="repositoryItemTextEdit5.Mask.EditMask" xml:space="preserve">
     <value>c</value>
+  </data>
+  <data name="gcGoodsOriginalCode.Caption" xml:space="preserve">
+    <value>原场编号</value>
   </data>
   <data name="btnAdd.Caption" xml:space="preserve">
     <value>添加商品</value>
@@ -498,20 +464,23 @@
   <data name="&gt;&gt;bandedGridColumn11.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="bandedGridColumn18.Caption" xml:space="preserve">
+    <value>描述</value>
+  </data>
   <data name="gridColumn16.VisibleIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="&gt;&gt;barCheckItem1.Name" xml:space="preserve">
     <value>barCheckItem1</value>
   </data>
+  <data name="&gt;&gt;bandedGridColumn16.Name" xml:space="preserve">
+    <value>bandedGridColumn16</value>
+  </data>
   <data name="SupplierBankTxt.Properties.NullValuePrompt" xml:space="preserve">
     <value>&lt;不可为空&gt;</value>
   </data>
   <data name="labelControl6.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
-  </data>
-  <data name="&gt;&gt;repositoryItemTextEdit2.Name" xml:space="preserve">
-    <value>repositoryItemTextEdit2</value>
   </data>
   <data name="gcGoodsMarkPrice.AppearanceCell.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -534,6 +503,9 @@
   <data name="&gt;&gt;btnCardLayout.Name" xml:space="preserve">
     <value>btnCardLayout</value>
   </data>
+  <data name="&gt;&gt;layoutViewField_chengse.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="layoutViewColumn12.Width" type="System.Int32, mscorlib">
     <value>153</value>
   </data>
@@ -546,8 +518,8 @@
   <data name="&gt;&gt;panelView.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;labelCustomer.Parent" xml:space="preserve">
-    <value>panelControl2</value>
+  <data name="&gt;&gt;gridColumn20.Name" xml:space="preserve">
+    <value>gridColumn20</value>
   </data>
   <data name="dcConsignEndDate.Caption" xml:space="preserve">
     <value>寄售结束时间</value>
@@ -570,17 +542,14 @@
   <data name="btnFindSupplier.Caption" xml:space="preserve">
     <value>查找供应商</value>
   </data>
-  <data name="gridColumn14.VisibleIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+  <data name="&gt;&gt;dcConsignEndDate.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="SupplierSexCmbox.Size" type="System.Drawing.Size, System.Drawing">
     <value>96, 21</value>
   </data>
-  <data name="gridColumn11.Caption" xml:space="preserve">
-    <value>颜色</value>
-  </data>
-  <data name="layoutViewColumn6.Caption" xml:space="preserve">
-    <value>成色</value>
+  <data name="&gt;&gt;repositoryItemTextEdit2.Name" xml:space="preserve">
+    <value>repositoryItemTextEdit2</value>
   </data>
   <data name="&gt;&gt;gridColumn19.Name" xml:space="preserve">
     <value>gridColumn19</value>
@@ -591,7 +560,10 @@
   <data name="&gt;&gt;layoutViewColumn12.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;gcGoodsPayName.Type" xml:space="preserve">
+  <data name="&gt;&gt;bandedGridColumn1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn13.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="bandedGridColumn15.AppearanceHeader.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
@@ -608,6 +580,12 @@
   </data>
   <data name="repositoryItemTextEdit4.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="&gt;&gt;gridColumn20.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_gridColumn7.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;SupplierSexCmbox.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -657,9 +635,6 @@
   <data name="bandedGridColumn11.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;barButtonItem2.Name" xml:space="preserve">
-    <value>barButtonItem2</value>
-  </data>
   <data name="&gt;&gt;gcPrimePrice.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
@@ -681,9 +656,6 @@
   <data name="&gt;&gt;bandedGridColumn10.Name" xml:space="preserve">
     <value>bandedGridColumn10</value>
   </data>
-  <data name="gridColumn18.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="layoutViewColumn4.Width" type="System.Int32, mscorlib">
     <value>195</value>
   </data>
@@ -698,6 +670,9 @@
   </data>
   <data name="labelControl7.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 14</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_gridColumn5.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;SupplierBankCardTxt.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
@@ -732,6 +707,9 @@
   <data name="repositoryItemButtonEdit1.Mask.EditMask" xml:space="preserve">
     <value />
   </data>
+  <data name="&gt;&gt;gridView1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="SupplierTelTxt.Size" type="System.Drawing.Size, System.Drawing">
     <value>426, 21</value>
   </data>
@@ -741,11 +719,14 @@
   <data name="labelControl6.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 14</value>
   </data>
-  <data name="&gt;&gt;layoutViewColumn8.Name" xml:space="preserve">
-    <value>layoutViewColumn8</value>
+  <data name="&gt;&gt;layoutViewField_gridColumn8.Name" xml:space="preserve">
+    <value>layoutViewField_gridColumn8</value>
   </data>
   <data name="layoutViewColumn5.Width" type="System.Int32, mscorlib">
     <value>149</value>
+  </data>
+  <data name="&gt;&gt;proBaseInfoBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="gcPrimePrice.AppearanceCell.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
     <value>Horizontal</value>
@@ -768,11 +749,11 @@
   <data name="SupplierSexCmbox.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
+  <data name="&gt;&gt;layoutViewColumn8.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;TxtPrimeSum.Name" xml:space="preserve">
     <value>TxtPrimeSum</value>
-  </data>
-  <data name="&gt;&gt;layoutViewField_layoutViewColumn10.Name" xml:space="preserve">
-    <value>layoutViewField_layoutViewColumn10</value>
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>7, 14</value>
@@ -783,11 +764,11 @@
   <data name="&gt;&gt;gcGoodsDesc.Name" xml:space="preserve">
     <value>gcGoodsDesc</value>
   </data>
+  <data name="&gt;&gt;layoutView1.Name" xml:space="preserve">
+    <value>layoutView1</value>
+  </data>
   <data name="SupplierAddressTxt.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
     <value>False</value>
-  </data>
-  <data name="labelControl6.Text" xml:space="preserve">
-    <value>开户银行</value>
   </data>
   <data name="&gt;&gt;btnExit.Name" xml:space="preserve">
     <value>btnExit</value>
@@ -798,11 +779,14 @@
   <data name="&gt;&gt;gcPrimePrice.Name" xml:space="preserve">
     <value>gcPrimePrice</value>
   </data>
-  <data name="SupplierNameTxt.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="gcCmboxSourceType.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v11.1">
+    <value>Combo</value>
   </data>
   <data name="layoutViewColumn8.Width" type="System.Int32, mscorlib">
     <value>106</value>
+  </data>
+  <data name="repositoryItemTextEdit2.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v11.1">
+    <value>None</value>
   </data>
   <data name="SupplierAddressTxt.Properties.NullValuePrompt" xml:space="preserve">
     <value>&lt;不可为空&gt;</value>
@@ -822,6 +806,9 @@
   <data name="bandedGridColumn10.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="&gt;&gt;gcGoodsPayName.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="GridViewGoodsInfo.EmbeddedNavigator.BackgroundImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -831,11 +818,8 @@
   <data name="bandedGridColumn3.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;layoutViewField_layoutViewColumn8.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutViewCard1.Name" xml:space="preserve">
-    <value>layoutViewCard1</value>
+  <data name="panelView.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="repositoryItemButtonEdit1.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -846,17 +830,11 @@
   <data name="&gt;&gt;btnSave.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="bandedGridColumn12.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="&gt;&gt;SupplierTelTxt.Parent" xml:space="preserve">
     <value>panelControl2</value>
   </data>
   <data name="GridViewGoodsInfo.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 92</value>
-  </data>
-  <data name="labelControl8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 14</value>
   </data>
   <data name="&gt;&gt;gridColumn13.Name" xml:space="preserve">
     <value>gridColumn13</value>
@@ -867,8 +845,8 @@
   <data name="&gt;&gt;repositoryItemButtonEdit1.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit, DevExpress.XtraEditors.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="gcGoodsMarkPrice.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;layoutViewField_gridColumn17.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="repositoryItemButtonEdit1.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v11.1">
     <value>Default</value>
@@ -879,6 +857,9 @@
   <data name="&gt;&gt;layoutViewField_layoutViewColumn3.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;layoutViewField_gridColumn4.Name" xml:space="preserve">
+    <value>layoutViewField_gridColumn4</value>
+  </data>
   <data name="&gt;&gt;gcGoodsOriginalCode.Name" xml:space="preserve">
     <value>gcGoodsOriginalCode</value>
   </data>
@@ -887,9 +868,6 @@
   </data>
   <data name="gcGoodsImageBytes.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="&gt;&gt;labelCustomer.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="repositoryItemButtonEdit2.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -918,6 +896,9 @@
   <data name="gcGoodsQuality.Caption" xml:space="preserve">
     <value>成色</value>
   </data>
+  <data name="repositoryItemDateEdit1.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v11.1">
+    <value>Default</value>
+  </data>
   <data name="bandedGridColumn8.Width" type="System.Int32, mscorlib">
     <value>123</value>
   </data>
@@ -932,6 +913,9 @@
   </data>
   <data name="layoutViewColumn9.Width" type="System.Int32, mscorlib">
     <value>153</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemTextEdit5.Name" xml:space="preserve">
+    <value>repositoryItemTextEdit5</value>
   </data>
   <data name="layoutViewColumn7.AppearanceCell.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -960,6 +944,9 @@
   <data name="repositoryItemTextEdit3.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
     <value>_</value>
   </data>
+  <data name="SupplierNameTxt.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="panelControl2.Size" type="System.Drawing.Size, System.Drawing">
     <value>1121, 423</value>
   </data>
@@ -981,6 +968,9 @@
   <data name="SupplierBankCardTxt.Properties.Mask.EditMask" xml:space="preserve">
     <value />
   </data>
+  <data name="&gt;&gt;repositoryItemSearchLookUpEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="gridColumn14.AppearanceCell.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -990,6 +980,9 @@
   <data name="&gt;&gt;gcComboxGoodsStatus.Name" xml:space="preserve">
     <value>gcComboxGoodsStatus</value>
   </data>
+  <data name="SupplierBankCardTxt.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
   <data name="&gt;&gt;labelControl8.Parent" xml:space="preserve">
     <value>panelControl2</value>
   </data>
@@ -998,6 +991,9 @@
   </data>
   <data name="SupplierBankCardTxt.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
+  </data>
+  <data name="bandedGridColumn8.ImageIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="ribPageMenu.Text" xml:space="preserve">
     <value>商品入库</value>
@@ -1017,9 +1013,6 @@
   <data name="btnDefaultLayout.Caption" xml:space="preserve">
     <value>默认布局</value>
   </data>
-  <data name="SupplierNameTxt.Properties.Mask.EditMask" xml:space="preserve">
-    <value />
-  </data>
   <data name="&gt;&gt;labelControl5.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
@@ -1035,17 +1028,14 @@
   <data name="gridColumn18.Caption" xml:space="preserve">
     <value>描述</value>
   </data>
-  <data name="SupplierSexCmbox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+  <data name="&gt;&gt;layoutViewField_gridColumn4.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="gridBand4.AppearanceHeader.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 9pt, style=Bold</value>
   </data>
   <data name="SupplierAddressTxt.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
-  </data>
-  <data name="gridColumn15.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="SupplierNameTxt.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1074,6 +1064,9 @@
   <data name="gcTimeEdit.Mask.BeepOnError" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="&gt;&gt;layoutViewField_layoutViewColumn8.Name" xml:space="preserve">
+    <value>layoutViewField_layoutViewColumn8</value>
+  </data>
   <data name="&gt;&gt;SupplierIdCardTxt.Name" xml:space="preserve">
     <value>SupplierIdCardTxt</value>
   </data>
@@ -1089,8 +1082,8 @@
   <data name="SupplierBankTxt.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;bandedGridColumn19.Name" xml:space="preserve">
-    <value>bandedGridColumn19</value>
+  <data name="&gt;&gt;layoutViewField_gridColumn7.Name" xml:space="preserve">
+    <value>layoutViewField_gridColumn7</value>
   </data>
   <data name="&gt;&gt;repositoryItemTextEdit2.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.Repository.RepositoryItemTextEdit, DevExpress.XtraEditors.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
@@ -1101,8 +1094,8 @@
   <data name="labelControl5.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;gridColumn16.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="gridColumn11.Caption" xml:space="preserve">
+    <value>颜色</value>
   </data>
   <data name="layoutViewColumn10.Width" type="System.Int32, mscorlib">
     <value>592</value>
@@ -1116,11 +1109,11 @@
   <data name="SupplierNameTxt.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
     <value>_</value>
   </data>
-  <data name="&gt;&gt;layoutViewColumn11.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;btnViewLayout.Name" xml:space="preserve">
     <value>btnViewLayout</value>
+  </data>
+  <data name="&gt;&gt;gridColumn22.Name" xml:space="preserve">
+    <value>gridColumn22</value>
   </data>
   <data name="SupplierBankTxt.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v11.1">
     <value>Default</value>
@@ -1143,6 +1136,9 @@
   <data name="gcGoodsQuality.VisibleIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
+  <data name="&gt;&gt;layoutViewField_gridColumn6.Name" xml:space="preserve">
+    <value>layoutViewField_gridColumn6</value>
+  </data>
   <data name="&gt;&gt;repositoryItemTextEdit5.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.Repository.RepositoryItemTextEdit, DevExpress.XtraEditors.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
@@ -1152,8 +1148,8 @@
   <data name="&gt;&gt;layoutViewColumn1.Name" xml:space="preserve">
     <value>layoutViewColumn1</value>
   </data>
-  <data name="SupplierIdCardTxt.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v11.1">
-    <value>Default</value>
+  <data name="&gt;&gt;labelCustomer.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="SupplierBankCardTxt.Size" type="System.Drawing.Size, System.Drawing">
     <value>426, 21</value>
@@ -1170,8 +1166,14 @@
   <data name="&gt;&gt;gcPictureEdit.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit, DevExpress.XtraEditors.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;layoutViewField_gridColumn5.Name" xml:space="preserve">
+    <value>layoutViewField_gridColumn5</value>
+  </data>
   <data name="&gt;&gt;layoutViewField_layoutViewColumn6.Name" xml:space="preserve">
     <value>layoutViewField_layoutViewColumn6</value>
+  </data>
+  <data name="&gt;&gt;btnRestoreViewLayout.Name" xml:space="preserve">
+    <value>btnRestoreViewLayout</value>
   </data>
   <data name="&gt;&gt;labelControl6.ZOrder" xml:space="preserve">
     <value>8</value>
@@ -1190,6 +1192,9 @@
   </data>
   <data name="SupplierBankCardTxt.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="&gt;&gt;gridColumn2.Name" xml:space="preserve">
+    <value>gridColumn2</value>
   </data>
   <data name="colConsignEndDate.Caption" xml:space="preserve">
     <value>寄售结束时间</value>
@@ -1212,8 +1217,8 @@
   <data name="gridColumn1.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="gcPrimePrice.AppearanceHeader.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="&gt;&gt;layoutViewField_layoutViewColumn9.Name" xml:space="preserve">
+    <value>layoutViewField_layoutViewColumn9</value>
   </data>
   <data name="gcGoodsCategoryName.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1221,8 +1226,8 @@
   <data name="&gt;&gt;gcTimeEdit.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.Repository.RepositoryItemTimeEdit, DevExpress.XtraEditors.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="bandedGridColumn16.Width" type="System.Int32, mscorlib">
-    <value>153</value>
+  <data name="&gt;&gt;gridColumn24.Name" xml:space="preserve">
+    <value>gridColumn24</value>
   </data>
   <data name="gcConsignEndDate.Caption" xml:space="preserve">
     <value>寄售结束时间</value>
@@ -1236,8 +1241,8 @@
   <data name="bandedGridColumn18.Width" type="System.Int32, mscorlib">
     <value>592</value>
   </data>
-  <data name="&gt;&gt;gcGoosColor.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="bcConsignEndDate.Caption" xml:space="preserve">
+    <value>寄售结束时间</value>
   </data>
   <data name="bandedGridColumn13.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1247,9 +1252,6 @@
   </data>
   <data name="&gt;&gt;layoutViewField_layoutViewColumn7.Name" xml:space="preserve">
     <value>layoutViewField_layoutViewColumn7</value>
-  </data>
-  <data name="repositoryItemTextEdit3.Mask.EditMask" xml:space="preserve">
-    <value />
   </data>
   <data name="gridBand4.AppearanceHeader.ForeColor" type="System.Drawing.Color, System.Drawing">
     <value>Green</value>
@@ -1266,6 +1268,9 @@
   <data name="&gt;&gt;layoutViewColumn6.Name" xml:space="preserve">
     <value>layoutViewColumn6</value>
   </data>
+  <data name="labelControl7.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
   <data name="btnSetMainView.Caption" xml:space="preserve">
     <value>指定默认视图</value>
   </data>
@@ -1277,9 +1282,6 @@
   </data>
   <data name="&gt;&gt;SupplierNameTxt.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;gridColumn3.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;SupplierBankCardTxt.Parent" xml:space="preserve">
     <value>panelControl2</value>
@@ -1317,6 +1319,9 @@
   <data name="GridViewGoodsInfo.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
+  <data name="&gt;&gt;labelControl7.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;bandedGridColumn8.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
@@ -1337,6 +1342,12 @@
   </data>
   <data name="&gt;&gt;panelView.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.PanelControl, DevExpress.Utils.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;proBaseInfoBindingSource.Name" xml:space="preserve">
+    <value>proBaseInfoBindingSource</value>
+  </data>
+  <data name="&gt;&gt;labelControl8.Name" xml:space="preserve">
+    <value>labelControl8</value>
   </data>
   <data name="gridBand2.Caption" xml:space="preserve">
     <value>商品价格</value>
@@ -1362,8 +1373,8 @@
   <data name="labelControl4.Text" xml:space="preserve">
     <value>通信地址</value>
   </data>
-  <data name="SupplierAddressTxt.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="SupplierNameTxt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 21</value>
   </data>
   <data name="&gt;&gt;btnAdvBandedLayout.Name" xml:space="preserve">
     <value>btnAdvBandedLayout</value>
@@ -1401,14 +1412,17 @@
   <data name="&gt;&gt;repositoryItemButtonEdit2.Name" xml:space="preserve">
     <value>repositoryItemButtonEdit2</value>
   </data>
-  <data name="repositoryItemDateEdit1.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v11.1">
-    <value>Default</value>
+  <data name="&gt;&gt;layoutViewField_layoutViewColumn8.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="repositoryItemButtonEdit1.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="labelCustomer.Text" xml:space="preserve">
     <value>供应商</value>
+  </data>
+  <data name="SupplierAddressTxt.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;GridBandGoodsInfo.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
@@ -1440,6 +1454,9 @@
   <data name="gcCmboxSourceType.Items2" xml:space="preserve">
     <value>进货</value>
   </data>
+  <data name="gridColumn14.AppearanceCell.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
   <data name="gridColumn13.AppearanceCell.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
     <value>Horizontal</value>
   </data>
@@ -1449,11 +1466,17 @@
   <data name="&gt;&gt;gcConsignEndDate.Name" xml:space="preserve">
     <value>gcConsignEndDate</value>
   </data>
+  <data name="repositoryItemDateEdit1.VistaTimeProperties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="&gt;&gt;SupplierBankCardTxt.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
   <data name="gridColumn14.Caption" xml:space="preserve">
     <value>进价</value>
+  </data>
+  <data name="repositoryItemDateEdit1.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;bandedGridColumn12.Name" xml:space="preserve">
     <value>bandedGridColumn12</value>
@@ -1464,9 +1487,6 @@
   <data name="gcGoosColor.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;btnUpdate.Name" xml:space="preserve">
-    <value>btnUpdate</value>
-  </data>
   <data name="&gt;&gt;layoutViewField_layoutViewColumn5.Name" xml:space="preserve">
     <value>layoutViewField_layoutViewColumn5</value>
   </data>
@@ -1475,6 +1495,9 @@
   </data>
   <data name="gridColumn9.VisibleIndex" type="System.Int32, mscorlib">
     <value>1</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_colConsignEndDate.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="repositoryItemTextEdit3.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1503,11 +1526,8 @@
   <data name="&gt;&gt;panelControl2.Parent" xml:space="preserve">
     <value>panelView</value>
   </data>
-  <data name="&gt;&gt;layoutViewField_layoutViewColumn9.Name" xml:space="preserve">
-    <value>layoutViewField_layoutViewColumn9</value>
-  </data>
-  <data name="btnViewLayout.Caption" xml:space="preserve">
-    <value>视图布局</value>
+  <data name="&gt;&gt;layoutViewColumn11.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="SupplierTelTxt.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1566,11 +1586,11 @@
   <data name="&gt;&gt;layoutViewField_layoutViewColumn13.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;labelControl3.Parent" xml:space="preserve">
-    <value>panelControl2</value>
+  <data name="repositoryItemTextEdit1.Mask.EditMask" xml:space="preserve">
+    <value />
   </data>
-  <data name="repositoryItemTextEdit2.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="repositoryItemTextEdit1.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
   </data>
   <data name="bandedGridColumn10.Width" type="System.Int32, mscorlib">
     <value>79</value>
@@ -1578,17 +1598,14 @@
   <data name="labelControl7.Text" xml:space="preserve">
     <value>银行卡号</value>
   </data>
-  <data name="panelView.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="repositoryItemDateEdit1.VistaTimeProperties.NullValuePrompt" xml:space="preserve">
+    <value />
   </data>
   <data name="gridColumn9.Caption" xml:space="preserve">
     <value>分类</value>
   </data>
   <data name="&gt;&gt;bandedGridColumn11.Name" xml:space="preserve">
     <value>bandedGridColumn11</value>
-  </data>
-  <data name="gcGoodsOriginalCode.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="&gt;&gt;gridColumn3.Name" xml:space="preserve">
     <value>gridColumn3</value>
@@ -1598,6 +1615,9 @@
   </data>
   <data name="gridColumn3.VisibleIndex" type="System.Int32, mscorlib">
     <value>2</value>
+  </data>
+  <data name="&gt;&gt;gridColumn25.Name" xml:space="preserve">
+    <value>gridColumn25</value>
   </data>
   <data name="repositoryItemTextEdit4.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1614,11 +1634,8 @@
   <data name="gcGoodsPayName.Caption" xml:space="preserve">
     <value>付款类型</value>
   </data>
-  <data name="repositoryItemTextEdit5.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="repositoryItemTextEdit3.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v11.1">
-    <value>Default</value>
+  <data name="labelControl6.Text" xml:space="preserve">
+    <value>开户银行</value>
   </data>
   <data name="&gt;&gt;gcGoodsQuality.Name" xml:space="preserve">
     <value>gcGoodsQuality</value>
@@ -1647,11 +1664,11 @@
   <data name="SupplierTelTxt.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v11.1">
     <value>None</value>
   </data>
-  <data name="&gt;&gt;dcConsignEndDate.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="gridColumn16.Caption" xml:space="preserve">
     <value>商品图片</value>
+  </data>
+  <data name="&gt;&gt;gridView1.Name" xml:space="preserve">
+    <value>gridView1</value>
   </data>
   <data name="&gt;&gt;labelControl7.Parent" xml:space="preserve">
     <value>panelControl2</value>
@@ -1662,8 +1679,14 @@
   <data name="SupplierNameTxt.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
+  <data name="bandedGridColumn3.Width" type="System.Int32, mscorlib">
+    <value>169</value>
+  </data>
   <data name="bandedGridColumn15.AppearanceCell.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
+  </data>
+  <data name="&gt;&gt;layoutViewField_gridColumn6.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;gridColumn14.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
@@ -1695,9 +1718,6 @@
   <data name="SupplierTelTxt.Location" type="System.Drawing.Point, System.Drawing">
     <value>288, 11</value>
   </data>
-  <data name="&gt;&gt;btnAdd.Name" xml:space="preserve">
-    <value>btnAdd</value>
-  </data>
   <data name="gridColumn14.AppearanceHeader.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
     <value>Horizontal</value>
   </data>
@@ -1722,11 +1742,8 @@
   <data name="dcConsignEndDate.VisibleIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
-  <data name="&gt;&gt;SupplierAddressTxt.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="labelControl7.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+  <data name="&gt;&gt;chengse.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="repositoryItemTextEdit1.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v11.1">
     <value>Default</value>
@@ -1752,11 +1769,20 @@
   <data name="bandedGridColumn14.AppearanceCell.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="GridViewGoodsInfo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
+  <data name="SupplierIdCardTxt.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v11.1">
+    <value>Default</value>
+  </data>
+  <data name="&gt;&gt;colConsignEndDate.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="SupplierAddressTxt.Size" type="System.Drawing.Size, System.Drawing">
     <value>1038, 21</value>
+  </data>
+  <data name="&gt;&gt;gridColumn7.Name" xml:space="preserve">
+    <value>gridColumn7</value>
+  </data>
+  <data name="&gt;&gt;gcGoodsMarkPrice.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;SupplierBankCardTxt.Name" xml:space="preserve">
     <value>SupplierBankCardTxt</value>
@@ -1769,6 +1795,9 @@
   </data>
   <data name="repositoryItemButtonEdit1.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_chengse.Name" xml:space="preserve">
+    <value>layoutViewField_chengse</value>
   </data>
   <data name="&gt;&gt;GridViewGoodsInfo.Parent" xml:space="preserve">
     <value>panelControl2</value>
@@ -1791,8 +1820,8 @@
   <data name="&gt;&gt;SupplierAddressTxt.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;bandedGridColumn1.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="&gt;&gt;gcGoosColor.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="layoutViewCard1.Text" xml:space="preserve">
     <value>TemplateCard</value>
@@ -1818,6 +1847,9 @@
   <data name="SupplierIdCardTxt.Location" type="System.Drawing.Point, System.Drawing">
     <value>787, 38</value>
   </data>
+  <data name="&gt;&gt;layoutViewField_layoutViewColumn9.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;gridColumn10.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
@@ -1830,8 +1862,8 @@
   <data name="repositoryItemButtonEdit1.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
     <value>_</value>
   </data>
-  <data name="bandedGridColumn1.Caption" xml:space="preserve">
-    <value>经手人</value>
+  <data name="&gt;&gt;gridColumn5.Name" xml:space="preserve">
+    <value>gridColumn5</value>
   </data>
   <data name="repositoryItemTextEdit4.Mask.EditMask" xml:space="preserve">
     <value>c</value>
@@ -1847,6 +1879,9 @@
   </data>
   <data name="gcGoodsName.VisibleIndex" type="System.Int32, mscorlib">
     <value>2</value>
+  </data>
+  <data name="bandedGridColumn8.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="repositoryItemButtonEdit2.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v11.1">
     <value>None</value>
@@ -1866,6 +1901,9 @@
   <data name="SupplierIdCardTxt.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="&gt;&gt;gridColumn24.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;bandedGridColumn13.Name" xml:space="preserve">
     <value>bandedGridColumn13</value>
   </data>
@@ -1875,8 +1913,14 @@
   <data name="SupplierNameTxt.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="repositoryItemDateEdit1.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="gcGoodsMarkPrice.Caption" xml:space="preserve">
     <value>标价</value>
+  </data>
+  <data name="&gt;&gt;gcGoodsName.Name" xml:space="preserve">
+    <value>gcGoodsName</value>
   </data>
   <data name="&gt;&gt;ribPageGroupManager.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
@@ -1905,6 +1949,9 @@
   <data name="&gt;&gt;SupplierNameTxt.Name" xml:space="preserve">
     <value>SupplierNameTxt</value>
   </data>
+  <data name="&gt;&gt;gridColumn17.Name" xml:space="preserve">
+    <value>gridColumn17</value>
+  </data>
   <data name="&gt;&gt;btnDelete.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
@@ -1932,8 +1979,8 @@
   <data name="gcGoodsCategoryName.Caption" xml:space="preserve">
     <value>分类</value>
   </data>
-  <data name="&gt;&gt;repositoryItemSearchLookUpEdit1.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="&gt;&gt;btnAdd.Name" xml:space="preserve">
+    <value>btnAdd</value>
   </data>
   <data name="repositoryItemDateEdit1.VistaTimeProperties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1947,6 +1994,9 @@
   <data name="gcPrimePrice.AppearanceHeader.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
     <value>Horizontal</value>
   </data>
+  <data name="&gt;&gt;gridColumn8.Name" xml:space="preserve">
+    <value>gridColumn8</value>
+  </data>
   <data name="SupplierBankTxt.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -1959,8 +2009,8 @@
   <data name="&gt;&gt;gridColumn16.Name" xml:space="preserve">
     <value>gridColumn16</value>
   </data>
-  <data name="gcGoodsCreateDate.Caption" xml:space="preserve">
-    <value>创建日期</value>
+  <data name="&gt;&gt;layoutView1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutView, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="gcComboxGoodsStatus.Items3" xml:space="preserve">
     <value>售出</value>
@@ -1970,6 +2020,9 @@
   </data>
   <data name="&gt;&gt;gcGoodsCategoryName.Name" xml:space="preserve">
     <value>gcGoodsCategoryName</value>
+  </data>
+  <data name="bandedGridColumn1.Caption" xml:space="preserve">
+    <value>经手人</value>
   </data>
   <data name="repositoryItemDateEdit1.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v11.1">
     <value>Combo</value>
@@ -1985,6 +2038,9 @@
   </data>
   <data name="repositoryItemTextEdit5.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="repositoryItemTextEdit4.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;ribPageGroupOther.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
@@ -2016,9 +2072,6 @@
   <data name="&gt;&gt;rPageGroupView.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;GridLayoutView.Name" xml:space="preserve">
-    <value>GridLayoutView</value>
-  </data>
   <data name="repositoryItemDateEdit1.Mask.BeepOnError" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -2033,6 +2086,9 @@
   </data>
   <data name="&gt;&gt;btnSetMainView.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn6.Name" xml:space="preserve">
+    <value>gridColumn6</value>
   </data>
   <data name="&gt;&gt;layoutViewField_layoutViewColumn4.Name" xml:space="preserve">
     <value>layoutViewField_layoutViewColumn4</value>
@@ -2055,11 +2111,11 @@
   <data name="&gt;&gt;layoutViewColumn9.Name" xml:space="preserve">
     <value>layoutViewColumn9</value>
   </data>
-  <data name="SupplierNameTxt.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v11.1">
-    <value>Default</value>
+  <data name="&gt;&gt;labelCustomer.Parent" xml:space="preserve">
+    <value>panelControl2</value>
   </data>
-  <data name="&gt;&gt;layoutViewField_layoutViewColumn2.Name" xml:space="preserve">
-    <value>layoutViewField_layoutViewColumn2</value>
+  <data name="repositoryItemTextEdit3.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v11.1">
+    <value>Default</value>
   </data>
   <data name="btnAdvBandedLayout.Caption" xml:space="preserve">
     <value>聚合布局</value>
@@ -2067,11 +2123,8 @@
   <data name="SupplierBankTxt.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
     <value>_</value>
   </data>
-  <data name="repositoryItemDateEdit1.VistaTimeProperties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="repositoryItemTextEdit1.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
+  <data name="&gt;&gt;GridLayoutView.Name" xml:space="preserve">
+    <value>GridLayoutView</value>
   </data>
   <data name="&gt;&gt;imageS16.Name" xml:space="preserve">
     <value>imageS16</value>
@@ -2094,8 +2147,8 @@
   <data name="SupplierSexCmbox.Properties.NullValuePrompt" xml:space="preserve">
     <value>默认：未知</value>
   </data>
-  <data name="repositoryItemTextEdit1.Mask.EditMask" xml:space="preserve">
-    <value />
+  <data name="gcGoodsMarkPrice.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;gcGoodsCreateDate.Name" xml:space="preserve">
     <value>gcGoodsCreateDate</value>
@@ -2109,20 +2162,26 @@
   <data name="&gt;&gt;layoutViewColumn9.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="bcConsignEndDate.Caption" xml:space="preserve">
-    <value>寄售结束时间</value>
+  <data name="&gt;&gt;layoutViewColumn12.Name" xml:space="preserve">
+    <value>layoutViewColumn12</value>
   </data>
   <data name="&gt;&gt;labelControl4.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <data name="&gt;&gt;btnDefaultLayout.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="SupplierNameTxt.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;gcGoodsMarkPrice.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="&gt;&gt;layoutViewField_colConsignEndDate.Name" xml:space="preserve">
+    <value>layoutViewField_colConsignEndDate</value>
+  </data>
+  <data name="&gt;&gt;gridColumn27.Name" xml:space="preserve">
+    <value>gridColumn27</value>
   </data>
   <data name="repositoryItemTextEdit3.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="&gt;&gt;gridColumn25.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="TxtPrimeSum.Caption" xml:space="preserve">
     <value>进价汇总</value>
@@ -2142,20 +2201,26 @@
   <data name="&gt;&gt;bandedGridColumn12.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;labelControl7.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="SupplierBankCardTxt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>288, 38</value>
+  </data>
+  <data name="SupplierNameTxt.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v11.1">
+    <value>Default</value>
   </data>
   <data name="&gt;&gt;SupplierAddressTxt.Name" xml:space="preserve">
     <value>SupplierAddressTxt</value>
   </data>
-  <data name="&gt;&gt;bandedGridColumn10.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="bandedGridColumn16.Width" type="System.Int32, mscorlib">
+    <value>153</value>
   </data>
   <data name="&gt;&gt;btnViewList.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarSubItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;layoutViewColumn1.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn26.Name" xml:space="preserve">
+    <value>gridColumn26</value>
   </data>
   <data name="SupplierBankCardTxt.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v11.1">
     <value>None</value>
@@ -2169,17 +2234,69 @@
   <data name="gridColumn13.AppearanceCell.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="bandedGridColumn8.ImageIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="SupplierAddressTxt.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
   <data name="labelControl3.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="SupplierBankCardTxt.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="bandedGridColumn12.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="repositoryItemTextEdit2.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v11.1">
-    <value>None</value>
+  <data name="imageS16.ImageStream" type="DevExpress.Utils.ImageCollectionStreamer, DevExpress.Utils.v11.1" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFpEZXZFeHByZXNzLlV0aWxzLnYxMS4xLCBWZXJzaW9uPTExLjEu
+        NC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI4OGQxNzU0ZDcwMGU0OWEMAwAAAFFT
+        eXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRv
+        a2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAAChEZXZFeHByZXNzLlV0aWxzLkltYWdlQ29sbGVjdGlvblN0
+        cmVhbWVyAgAAAAlJbWFnZVNpemUERGF0YQQHE1N5c3RlbS5EcmF3aW5nLlNpemUDAAAAAgIAAAAF/P//
+        /xNTeXN0ZW0uRHJhd2luZy5TaXplAgAAAAV3aWR0aAZoZWlnaHQAAAgIAwAAABAAAAAQAAAACQUAAAAP
+        BQAAAGQKAAACewMAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgGAAAAH/P/YQAAAAFzUkdCAK7OHOkA
+        AAAEZ0FNQQAAsY8L/GEFAAADJUlEQVQ4T7VTXUySURj+1loXOd1CYdpGlqGF2Y9SVjcum7RaK/szFVER
+        RRQVJeGDBBREkEhNUTHU8qf1t0ytVltbdtHWRWvFyj7X8qZl6dK4qJTFvHg6fFtddNG66Wzvztn787zn
+        ed5zKOp/rampqVXBYDBjYf5z2j/3mJ2dXR0M/ji26J+9sjj/3j/58hnujd2euzM6Ovb40aO+ly9e2L8s
+        LNQsLy9LA4HAnt/AS4vfDy75P40FvswsLc29Q2DuLb5+eI1+TyeOHzqIA2lpOCIWIyczEzcGB+FuacHd
+        8fEJFqBC26IevnLd/+0jg28zbzD/ZgIzT2/hyZAdZp0GuxKFWM/jYfM6PkRCIRxmM5wWC+xNzq9VdJuK
+        ypVpmfSMw7gz2I1+hxFWVSFU2ceQJU5HubIS4n1iJCelQLRNBNH2nSjMk0GlrIIkrwhSud5HVWnbGZ3J
+        A6tzGK6OEbh7H8A7PIH2vgcwNF6E3tqDNu99uC89hKtzHE2tN2G0DUBn6oGadvsoo8XDdHqGYbJdhqP1
+        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
+</value>
   </data>
   <data name="gcOperator.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2199,14 +2316,14 @@
   <data name="SupplierNameTxt.Location" type="System.Drawing.Point, System.Drawing">
     <value>71, 11</value>
   </data>
-  <data name="repositoryItemTextEdit4.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="layoutViewColumn6.Caption" xml:space="preserve">
+    <value>成色</value>
   </data>
   <data name="&gt;&gt;layoutViewField_layoutViewColumn3.Name" xml:space="preserve">
     <value>layoutViewField_layoutViewColumn3</value>
   </data>
-  <data name="SupplierTelTxt.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;btnDefaultLayout.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="gcCmboxSourceType.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2214,8 +2331,8 @@
   <data name="&gt;&gt;gcOperator.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;colConsignEndDate.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="SupplierNameTxt.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
   </data>
   <data name="SupplierTelTxt.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v11.1">
     <value>Default</value>
@@ -2229,8 +2346,8 @@
   <data name="bandedGridColumn14.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;bandedGridColumn16.Name" xml:space="preserve">
-    <value>bandedGridColumn16</value>
+  <data name="SupplierIdCardTxt.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;barButtonItem2.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
@@ -2253,8 +2370,11 @@
   <data name="&gt;&gt;bandedGridColumn13.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="gridColumn18.VisibleIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+  <data name="SupplierTelTxt.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;gridColumn3.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="repositoryItemDateEdit1.VistaTimeProperties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
     <value>_</value>
@@ -2262,8 +2382,11 @@
   <data name="&gt;&gt;gridColumn18.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;btnRestoreViewLayout.Name" xml:space="preserve">
-    <value>btnRestoreViewLayout</value>
+  <data name="gcComboxGoodsStatus.Items1" xml:space="preserve">
+    <value>在库</value>
+  </data>
+  <data name="repositoryItemTextEdit5.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="bandedGridColumn11.Caption" xml:space="preserve">
     <value>商品名称</value>
@@ -2276,6 +2399,9 @@
   </data>
   <data name="&gt;&gt;repositoryItemSearchLookUpEdit1View.Name" xml:space="preserve">
     <value>repositoryItemSearchLookUpEdit1View</value>
+  </data>
+  <data name="&gt;&gt;gridColumn4.Name" xml:space="preserve">
+    <value>gridColumn4</value>
   </data>
   <data name="SupplierSexCmbox.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -2291,6 +2417,9 @@
   </data>
   <data name="&gt;&gt;btnFindSupplier.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn21.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="gcPrimePrice.Caption" xml:space="preserve">
     <value>进价</value>
@@ -2313,10 +2442,10 @@
   <data name="repositoryItemButtonEdit1.Mask.SaveLiteral" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;labelControl8.Name" xml:space="preserve">
-    <value>labelControl8</value>
+  <data name="&gt;&gt;layoutViewField_layoutViewColumn10.Name" xml:space="preserve">
+    <value>layoutViewField_layoutViewColumn10</value>
   </data>
-  <data name="repositoryItemDateEdit1.VistaTimeProperties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+  <data name="repositoryItemTextEdit2.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="bandedGridColumn15.Caption" xml:space="preserve">
@@ -2358,8 +2487,11 @@
   <data name="gridBand2.AppearanceHeader.ForeColor" type="System.Drawing.Color, System.Drawing">
     <value>Goldenrod</value>
   </data>
-  <data name="repositoryItemDateEdit1.AutoHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="&gt;&gt;gridColumn23.Name" xml:space="preserve">
+    <value>gridColumn23</value>
+  </data>
+  <data name="SupplierSexCmbox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
   <data name="GridViewGoodsInfo.EmbeddedNavigator.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -2370,8 +2502,8 @@
   <data name="SupplierAddressTxt.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="gcGoodsOriginalCode.Caption" xml:space="preserve">
-    <value>原场编号</value>
+  <data name="GridViewGoodsInfo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="bandedGridColumn13.Caption" xml:space="preserve">
     <value>成色</value>
@@ -2382,6 +2514,9 @@
   <data name="repositoryItemButtonEdit2.Mask.BeepOnError" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="&gt;&gt;layoutViewField_layoutViewColumn2.Name" xml:space="preserve">
+    <value>layoutViewField_layoutViewColumn2</value>
+  </data>
   <data name="&gt;&gt;ribbon.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
@@ -2391,14 +2526,17 @@
   <data name="repositoryItemDateEdit1.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="&gt;&gt;gridColumn26.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;btnFindSupplier.Name" xml:space="preserve">
     <value>btnFindSupplier</value>
   </data>
   <data name="&gt;&gt;ribPageMenu.Name" xml:space="preserve">
     <value>ribPageMenu</value>
   </data>
-  <data name="&gt;&gt;repositoryItemTextEdit5.Name" xml:space="preserve">
-    <value>repositoryItemTextEdit5</value>
+  <data name="gridColumn15.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;btnExit.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
@@ -2412,7 +2550,7 @@
   <data name="labelControl4.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="repositoryItemDateEdit1.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+  <data name="gridColumn18.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="bandedGridColumn15.Visible" type="System.Boolean, mscorlib">
@@ -2424,14 +2562,17 @@
   <data name="repositoryItemDateEdit1.Mask.EditMask" xml:space="preserve">
     <value>d</value>
   </data>
-  <data name="bandedGridColumn8.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;btnUpdate.Name" xml:space="preserve">
+    <value>btnUpdate</value>
   </data>
   <data name="gcCmboxSourceType.Items" xml:space="preserve">
     <value>未知</value>
   </data>
   <data name="&gt;&gt;GridViewGoodsInfo.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn7.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="SupplierTelTxt.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2442,8 +2583,8 @@
   <data name="gridColumn10.VisibleIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="repositoryItemTextEdit3.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;SupplierAddressTxt.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="gridBand4.Caption" xml:space="preserve">
     <value>商品预览</value>
@@ -2451,7 +2592,7 @@
   <data name="&gt;&gt;gcGoodsCreateDate.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;layoutViewColumn8.Type" xml:space="preserve">
+  <data name="&gt;&gt;gridColumn17.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="layoutViewColumn9.Caption" xml:space="preserve">
@@ -2466,6 +2607,9 @@
   <data name="SupplierTelTxt.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
     <value>_</value>
   </data>
+  <data name="repositoryItemTextEdit3.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="barButtonItem2.Caption" xml:space="preserve">
     <value>barButtonItem2</value>
   </data>
@@ -2474,6 +2618,9 @@
   </data>
   <data name="gcGoodsDesc.VisibleIndex" type="System.Int32, mscorlib">
     <value>9</value>
+  </data>
+  <data name="&gt;&gt;gridColumn4.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <assembly alias="DevExpress.Data.v11.1" name="DevExpress.Data.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="GridViewGoodsInfo.EmbeddedNavigator.AllowHtmlTextInToolTip" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v11.1">
@@ -2485,11 +2632,14 @@
   <data name="SupplierBankTxt.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="&gt;&gt;gridColumn16.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="SupplierIdCardTxt.Properties.NullValuePrompt" xml:space="preserve">
     <value>&lt;不可为空&gt;</value>
   </data>
-  <data name="SupplierNameTxt.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;labelControl3.Parent" xml:space="preserve">
+    <value>panelControl2</value>
   </data>
   <data name="SupplierBankTxt.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -2500,8 +2650,8 @@
   <data name="btnUpdate.Caption" xml:space="preserve">
     <value>修改商品</value>
   </data>
-  <data name="&gt;&gt;layoutViewField_layoutViewColumn9.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="&gt;&gt;gridColumn5.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="SupplierIdCardTxt.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2509,8 +2659,8 @@
   <data name="GridViewGoodsInfo.EmbeddedNavigator.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="bandedGridColumn3.Width" type="System.Int32, mscorlib">
-    <value>169</value>
+  <data name="SupplierAddressTxt.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="GridViewGoodsInfo.EmbeddedNavigator.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -2521,8 +2671,11 @@
   <data name="SupplierNameTxt.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="SupplierAddressTxt.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="labelControl8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 14</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_gridColumn20.Name" xml:space="preserve">
+    <value>layoutViewField_gridColumn20</value>
   </data>
   <data name="repositoryItemTextEdit2.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2536,8 +2689,11 @@
   <data name="gcTimeEdit.Mask.SaveLiteral" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;gcGoodsName.Name" xml:space="preserve">
-    <value>gcGoodsName</value>
+  <data name="&gt;&gt;barButtonItem2.Name" xml:space="preserve">
+    <value>barButtonItem2</value>
+  </data>
+  <data name="&gt;&gt;gridColumn2.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="btnSave.Caption" xml:space="preserve">
     <value>保存</value>
@@ -2545,8 +2701,8 @@
   <data name="gcPictureEdit.NullText" xml:space="preserve">
     <value>暂无图片</value>
   </data>
-  <data name="bandedGridColumn18.Caption" xml:space="preserve">
-    <value>描述</value>
+  <data name="&gt;&gt;gridColumn22.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="GridViewGoodsInfo.Size" type="System.Drawing.Size, System.Drawing">
     <value>1116, 326</value>
@@ -2560,11 +2716,11 @@
   <data name="repositoryItemDateEdit1.VistaTimeProperties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="gridColumn19.Caption" xml:space="preserve">
-    <value>创建日期</value>
+  <data name="&gt;&gt;layoutViewField_gridColumn17.Name" xml:space="preserve">
+    <value>layoutViewField_gridColumn17</value>
   </data>
-  <data name="gridColumn14.AppearanceCell.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
-    <value>Horizontal</value>
+  <data name="gcGoodsOriginalCode.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;barButtonItem1.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
@@ -2599,6 +2755,9 @@
   <data name="SupplierBankCardTxt.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
     <value>_</value>
   </data>
+  <data name="layoutViewColumn11.Caption" xml:space="preserve">
+    <value>经手人</value>
+  </data>
   <data name="gcOperator.VisibleIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
@@ -2611,8 +2770,8 @@
   <data name="&gt;&gt;layoutViewField_layoutViewColumn1.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;gridColumn13.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="gridColumn14.VisibleIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
   <data name="repositoryItemDateEdit1.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2629,8 +2788,8 @@
   <data name="layoutViewColumn8.AppearanceHeader.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="layoutViewColumn11.Caption" xml:space="preserve">
-    <value>经手人</value>
+  <data name="btnViewLayout.Caption" xml:space="preserve">
+    <value>视图布局</value>
   </data>
   <data name="SupplierBankCardTxt.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2640,6 +2799,15 @@
   </data>
   <data name="&gt;&gt;layoutViewColumn4.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="gcPrimePrice.AppearanceHeader.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;gridColumn8.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;bandedGridColumn19.Name" xml:space="preserve">
+    <value>bandedGridColumn19</value>
   </data>
   <data name="repositoryItemTextEdit1.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2661,6 +2829,9 @@
   </metadata>
   <metadata name="mErrorProvider.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>298, 17</value>
+  </metadata>
+  <metadata name="proBaseInfoBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>549, 17</value>
   </metadata>
   <metadata name="imageS16.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>439, 17</value>

@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RibbonFormSimpleDialogBase));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.image16 = new DevExpress.Utils.ImageCollection();
+            this.image16 = new DevExpress.Utils.ImageCollection(this.components);
             this.ribbonViewSkins = new DevExpress.XtraBars.RibbonGalleryBarItem();
             this.barBtnAbout = new DevExpress.XtraBars.BarButtonItem();
-            this.image32 = new DevExpress.Utils.ImageCollection();
+            this.image32 = new DevExpress.Utils.ImageCollection(this.components);
             this.IndividualizationRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.themePageMain = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
@@ -120,6 +121,9 @@
             this.image16.Images.SetKeyName(46, "back.png");
             this.image16.Images.SetKeyName(47, "basket_back.png");
             this.image16.Images.SetKeyName(48, "left.png");
+            this.image16.Images.SetKeyName(49, "ooopic_1505739023.png");
+            this.image16.Images.SetKeyName(50, "Bar_code_24.446215139442px_1156986_easyicon.net.png");
+            this.image16.Images.SetKeyName(51, "Bar_code_24.446215139442px_1156986_easyicon.net.png");
             // 
             // ribbonViewSkins
             // 
@@ -193,6 +197,9 @@
             this.image32.Images.SetKeyName(53, "back.png");
             this.image32.Images.SetKeyName(54, "basket_back.png");
             this.image32.Images.SetKeyName(55, "left.png");
+            this.image32.Images.SetKeyName(64, "ooopic_1505739023.png");
+            this.image32.Images.SetKeyName(65, "Bar_code_48.892430278884px_1156986_easyicon.net.png");
+            this.image32.Images.SetKeyName(66, "Bar_code_48.892430278884px_1156986_easyicon.net.png");
             // 
             // IndividualizationRibbonPage
             // 

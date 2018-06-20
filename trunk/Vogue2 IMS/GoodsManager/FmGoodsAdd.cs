@@ -70,7 +70,7 @@ namespace Vogue2_IMS.OrderManager
             labelCustomer.Text = SharedVariables.SupplierCNNames[rkType];
             btnAdd.LargeImageIndex = SharedVariables.SupplierIconIndexs[rkType];
 
-            btnSave.Enabled = SharedVariables.Instance.LoginUser.User.RoleId != SharedVariables.AdminRoleId;
+            //btnSave.Enabled = SharedVariables.Instance.LoginUser.User.RoleId != SharedVariables.AdminRoleId;
             SetDefaultMainView();
 
             #endregion
@@ -343,45 +343,45 @@ namespace Vogue2_IMS.OrderManager
 
         private void Print(List<PurchaseGoodsInfo> newGoodsList)
         {
-            if (newGoodsList == null || newGoodsList.Count == 0) return;
+            //if (newGoodsList == null || newGoodsList.Count == 0) return;
 
-            var totalPrice = newGoodsList.Sum(record => record.Goods.PrimePrice);
-            var receiptView = new FmReceiptView();
+            //var totalPrice = newGoodsList.Sum(record => record.Goods.PrimePrice);
+            //var receiptView = new FmReceiptView();
 
-            if (this.mRKType == SourceType.JinHuo)
-            {
-                List<PurchaseJhGoodsOrderInfo> jhOrderList = new List<PurchaseJhGoodsOrderInfo>();
-                newGoodsList.ForEach(record =>
-                {
-                    jhOrderList.Add(new PurchaseJhGoodsOrderInfo(record, 1)
-                    {
-                        TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0.00
-                    });
-                    jhOrderList.Add(new PurchaseJhGoodsOrderInfo(record, 2)
-                    {
-                        TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0.00
-                    });
-                });
-                receiptView.InitializeReceiptView<PurchaseJhGoodsOrderInfo>(jhOrderList);
-            }
-            else if (this.mRKType == SourceType.JiShou)
-            {
-                List<PurchaseJsGoodsOrderInfo> jsOrderList = new List<PurchaseJsGoodsOrderInfo>();
-                newGoodsList.ForEach(record =>
-                {
-                    jsOrderList.Add(new PurchaseJsGoodsOrderInfo(record, 1)
-                    {
-                        TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0.00
-                    });
-                    jsOrderList.Add(new PurchaseJsGoodsOrderInfo(record, 2)
-                    {
-                        TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0.00
-                    });
-                });
-                receiptView.InitializeReceiptView<PurchaseJsGoodsOrderInfo>(jsOrderList);
-            }
+            //if (this.mRKType == SourceType.JinHuo)
+            //{
+            //    List<PurchaseJhGoodsOrderInfo> jhOrderList = new List<PurchaseJhGoodsOrderInfo>();
+            //    newGoodsList.ForEach(record =>
+            //    {
+            //        jhOrderList.Add(new PurchaseJhGoodsOrderInfo(record, 1)
+            //        {
+            //            TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0.00
+            //        });
+            //        jhOrderList.Add(new PurchaseJhGoodsOrderInfo(record, 2)
+            //        {
+            //            TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0.00
+            //        });
+            //    });
+            //    receiptView.InitializeReceiptView<PurchaseJhGoodsOrderInfo>(jhOrderList);
+            //}
+            //else if (this.mRKType == SourceType.JiShou)
+            //{
+            //    List<PurchaseJsGoodsOrderInfo> jsOrderList = new List<PurchaseJsGoodsOrderInfo>();
+            //    newGoodsList.ForEach(record =>
+            //    {
+            //        jsOrderList.Add(new PurchaseJsGoodsOrderInfo(record, 1)
+            //        {
+            //            TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0.00
+            //        });
+            //        jsOrderList.Add(new PurchaseJsGoodsOrderInfo(record, 2)
+            //        {
+            //            TotalPrice = totalPrice.HasValue ? totalPrice.Value : (decimal)0.00
+            //        });
+            //    });
+            //    receiptView.InitializeReceiptView<PurchaseJsGoodsOrderInfo>(jsOrderList);
+            //}
 
-            receiptView.ShowDialog();
+            //receiptView.ShowDialog();
         }
 
         private void btnDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -398,33 +398,33 @@ namespace Vogue2_IMS.OrderManager
 
         private void btnAdd_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            FmGoodsInfo fmGoodsInfo = new FmGoodsInfo(mRKType);
-            if (fmGoodsInfo.ShowDialog() == DialogResult.OK)
-            {
-                var goodsInfo = fmGoodsInfo.PurchaseGoodsInfo;
-                goodsInfo.Supplier = this.mSupplier;
-                mListGoods.Add(goodsInfo);
+            //FmGoodsInfo fmGoodsInfo = new FmGoodsInfo(mRKType);
+            //if (fmGoodsInfo.ShowDialog() == DialogResult.OK)
+            //{
+            //    var goodsInfo = fmGoodsInfo.PurchaseGoodsInfo;
+            //    goodsInfo.Supplier = this.mSupplier;
+            //    mListGoods.Add(goodsInfo);
 
-                MainView.RefreshData();
-                ListGoods_CollectionChanged(mListGoods, null);
-            }
+            //    MainView.RefreshData();
+            //    ListGoods_CollectionChanged(mListGoods, null);
+            //}
         }
 
         private void btnUpdate_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (MainView.SelectedRowsCount > 0)
-            {
-                var dataRowIndex = MainView.GetDataSourceRowIndex(MainView.GetSelectedRows()[0]);
+            //if (MainView.SelectedRowsCount > 0)
+            //{
+            //    var dataRowIndex = MainView.GetDataSourceRowIndex(MainView.GetSelectedRows()[0]);
 
-                FmGoodsInfo goodsInfo = new FmGoodsInfo(mListGoods[dataRowIndex]);
-                if (goodsInfo.ShowDialog() == DialogResult.OK)
-                {
-                    mListGoods[dataRowIndex] = goodsInfo.PurchaseGoodsInfo;
-                    MainView.RefreshData();
+            //    FmGoodsInfo goodsInfo = new FmGoodsInfo(mListGoods[dataRowIndex]);
+            //    if (goodsInfo.ShowDialog() == DialogResult.OK)
+            //    {
+            //        mListGoods[dataRowIndex] = goodsInfo.PurchaseGoodsInfo;
+            //        MainView.RefreshData();
 
-                    ListGoods_CollectionChanged(mListGoods, null);
-                }
-            }
+            //        ListGoods_CollectionChanged(mListGoods, null);
+            //    }
+            //}
         }
 
         private void ComboxEdit_SelectedIndexChanged(object sender, EventArgs e)

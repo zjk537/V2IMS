@@ -44,16 +44,16 @@ namespace Vogue2_IMS.Business.BusinessModel
             }
         }
 
-        UserInfo mLoginUser = new UserInfo();
+        LoginUser mLoginUser = new LoginUser();
         /// <summary>
         /// get 当前(录入)用户
         /// </summary>
-        public UserInfo LoginUser
+        public LoginUser LoginUser
         {
             get
             {
-                if (mLoginUser.Id <= 0)
-                    mLoginUser = SharedVariables.Instance.LoginUser.User;
+                if (mLoginUser.uid <= 0)
+                    mLoginUser = ConfigManager.LoginUser;
 
                 return mLoginUser;
             }
@@ -62,7 +62,7 @@ namespace Vogue2_IMS.Business.BusinessModel
                 mLoginUser = value;
 
                 if (value != null)
-                    SaledRecord.UserId = value.Id;
+                    SaledRecord.UserId = value.uid;
             }
         }
 

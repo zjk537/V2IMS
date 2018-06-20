@@ -39,6 +39,7 @@ namespace Vogue2_IMS
             this.btnAddConsignmentGoods = new DevExpress.XtraBars.BarButtonItem();
             this.btnAddBuyGoods = new DevExpress.XtraBars.BarButtonItem();
             this.btnSaleGoods = new DevExpress.XtraBars.BarButtonItem();
+            this.btnShow = new DevExpress.XtraBars.BarButtonItem();
             this.btnUpdateGoods = new DevExpress.XtraBars.BarButtonItem();
             this.btnPayment = new DevExpress.XtraBars.BarButtonItem();
             this.btnRollBackGoods = new DevExpress.XtraBars.BarButtonItem();
@@ -76,6 +77,7 @@ namespace Vogue2_IMS
             this.BtnExportPdf = new DevExpress.XtraBars.BarButtonItem();
             this.BtnExportHtml = new DevExpress.XtraBars.BarButtonItem();
             this.BtnExportMhtml = new DevExpress.XtraBars.BarButtonItem();
+            this.btnPrintBarCode = new DevExpress.XtraBars.BarButtonItem();
             this.btnPrint = new DevExpress.XtraBars.BarSubItem();
             this.BtnPrintView = new DevExpress.XtraBars.BarButtonItem();
             this.BtnPrintJH = new DevExpress.XtraBars.BarButtonItem();
@@ -123,6 +125,7 @@ namespace Vogue2_IMS
             this.rPageHome = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rbnPgroupDashboard = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.btnDasbhoard = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).BeginInit();
@@ -211,13 +214,13 @@ namespace Vogue2_IMS
             this.TxtJSSaledSum,
             this.btnImport,
             this.btnRollBackGoods,
-            this.btnDasbhoard});
-            this.ribbon.MaxItemId = 182;
+            this.btnDasbhoard,
+            this.btnShow,
+            this.btnPrintBarCode});
+            this.ribbon.MaxItemId = 187;
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rPageHome,
-            this.rPageUserManager,
-            this.rPageGoodsManager,
-            this.rPageSystemConfig});
+            this.rPageGoodsManager});
             this.ribbon.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemComboBox1,
             this.repositoryItemDateEdit1,
@@ -231,7 +234,7 @@ namespace Vogue2_IMS
             this.repositoryItemPictureEdit2,
             this.repositoryItemTextEdit5,
             this.repositoryItemTextEdit6});
-            this.ribbon.SelectedPage = this.rPageHome;
+            this.ribbon.SelectedPage = this.rPageGoodsManager;
             resources.ApplyResources(this.ribbon, "ribbon");
             this.ribbon.Toolbar.ShowCustomizeItem = false;
             this.ribbon.SelectedPageChanged += new System.EventHandler(this.ribbon_SelectedPageChanged);
@@ -261,7 +264,8 @@ namespace Vogue2_IMS
             this.rPageGoodsGroup.ItemLinks.Add(this.btnAddConsignmentGoods);
             this.rPageGoodsGroup.ItemLinks.Add(this.btnAddBuyGoods);
             this.rPageGoodsGroup.ItemLinks.Add(this.btnSaleGoods);
-            this.rPageGoodsGroup.ItemLinks.Add(this.btnUpdateGoods, true);
+            this.rPageGoodsGroup.ItemLinks.Add(this.btnShow, true);
+            this.rPageGoodsGroup.ItemLinks.Add(this.btnUpdateGoods);
             this.rPageGoodsGroup.ItemLinks.Add(this.btnPayment);
             this.rPageGoodsGroup.ItemLinks.Add(this.btnRollBackGoods);
             this.rPageGoodsGroup.Name = "rPageGoodsGroup";
@@ -298,6 +302,17 @@ namespace Vogue2_IMS
             this.btnSaleGoods.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btnSaleGoods.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCK_ItemClick);
             // 
+            // btnShow
+            // 
+            resources.ApplyResources(this.btnShow, "btnShow");
+            this.btnShow.Enabled = false;
+            this.btnShow.Id = 184;
+            this.btnShow.ImageIndex = 21;
+            this.btnShow.LargeGlyph = global::Vogue2_IMS.Properties.Resources.search_d;
+            this.btnShow.Name = "btnShow";
+            this.btnShow.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnShow.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnShow_ItemClick);
+            // 
             // btnUpdateGoods
             // 
             resources.ApplyResources(this.btnUpdateGoods, "btnUpdateGoods");
@@ -306,8 +321,9 @@ namespace Vogue2_IMS
             this.btnUpdateGoods.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E));
             this.btnUpdateGoods.LargeImageIndex = 31;
             this.btnUpdateGoods.Name = "btnUpdateGoods";
-            this.btnUpdateGoods.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)
-                        | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.btnUpdateGoods.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.btnUpdateGoods.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.btnUpdateGoods.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnUpdateGoods_ItemClick);
             // 
             // btnPayment
@@ -315,8 +331,8 @@ namespace Vogue2_IMS
             resources.ApplyResources(this.btnPayment, "btnPayment");
             this.btnPayment.Id = 144;
             this.btnPayment.ImageIndex = 45;
-            this.btnPayment.ItemShortcut = new DevExpress.XtraBars.BarShortcut(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt)
-                            | System.Windows.Forms.Keys.S));
+            this.btnPayment.ItemShortcut = new DevExpress.XtraBars.BarShortcut(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+                | System.Windows.Forms.Keys.S));
             this.btnPayment.LargeImageIndex = 51;
             this.btnPayment.Name = "btnPayment";
             this.btnPayment.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
@@ -325,7 +341,6 @@ namespace Vogue2_IMS
             // btnRollBackGoods
             // 
             resources.ApplyResources(this.btnRollBackGoods, "btnRollBackGoods");
-            this.btnRollBackGoods.Enabled = false;
             this.btnRollBackGoods.Id = 171;
             this.btnRollBackGoods.ImageIndex = 46;
             this.btnRollBackGoods.Name = "btnRollBackGoods";
@@ -435,8 +450,8 @@ namespace Vogue2_IMS
             resources.ApplyResources(this.btnSaveNewCustomView, "btnSaveNewCustomView");
             this.btnSaveNewCustomView.Id = 154;
             this.btnSaveNewCustomView.ImageIndex = 10;
-            this.btnSaveNewCustomView.ItemShortcut = new DevExpress.XtraBars.BarShortcut(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
-                            | System.Windows.Forms.Keys.S));
+            this.btnSaveNewCustomView.ItemShortcut = new DevExpress.XtraBars.BarShortcut(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+                | System.Windows.Forms.Keys.S));
             this.btnSaveNewCustomView.Name = "btnSaveNewCustomView";
             this.btnSaveNewCustomView.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSaveNewCustomView_ItemClick);
             // 
@@ -481,8 +496,8 @@ namespace Vogue2_IMS
             resources.ApplyResources(this.btnShowFilterRow, "btnShowFilterRow");
             this.btnShowFilterRow.Id = 159;
             this.btnShowFilterRow.ImageIndex = 17;
-            this.btnShowFilterRow.ItemShortcut = new DevExpress.XtraBars.BarShortcut(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt)
-                            | System.Windows.Forms.Keys.F));
+            this.btnShowFilterRow.ItemShortcut = new DevExpress.XtraBars.BarShortcut(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+                | System.Windows.Forms.Keys.F));
             this.btnShowFilterRow.Name = "btnShowFilterRow";
             this.btnShowFilterRow.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnShowFilterRow_ItemClick);
             // 
@@ -576,6 +591,7 @@ namespace Vogue2_IMS
             // ribbonPageGroup1
             // 
             this.ribbonPageGroup1.ItemLinks.Add(this.btnViewExport, true);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnPrintBarCode);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnPrint);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnImport, true);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
@@ -634,6 +650,17 @@ namespace Vogue2_IMS
             this.BtnExportMhtml.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.BtnExportMhtml.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnExportMhtml_ItemClick);
             // 
+            // btnPrintBarCode
+            // 
+            resources.ApplyResources(this.btnPrintBarCode, "btnPrintBarCode");
+            this.btnPrintBarCode.Id = 185;
+            this.btnPrintBarCode.LargeGlyphDisabled = ((System.Drawing.Image)(resources.GetObject("btnPrintBarCode.LargeGlyphDisabled")));
+            this.btnPrintBarCode.LargeImageIndex = 65;
+            this.btnPrintBarCode.LargeImageIndexDisabled = 64;
+            this.btnPrintBarCode.Name = "btnPrintBarCode";
+            this.btnPrintBarCode.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnPrintBarCode.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPrintBarCode_ItemClick);
+            // 
             // btnPrint
             // 
             resources.ApplyResources(this.btnPrint, "btnPrint");
@@ -681,6 +708,7 @@ namespace Vogue2_IMS
             this.btnImport.Id = 170;
             this.btnImport.LargeImageIndex = 34;
             this.btnImport.Name = "btnImport";
+            this.btnImport.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.btnImport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnImport_ItemClick);
             // 
             // btnDefaultView
@@ -984,6 +1012,12 @@ namespace Vogue2_IMS
             this.btnDasbhoard.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btnDasbhoard.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDasbhoard_ItemClick);
             // 
+            // barButtonItem4
+            // 
+            resources.ApplyResources(this.barButtonItem4, "barButtonItem4");
+            this.barButtonItem4.Id = -1;
+            this.barButtonItem4.Name = "barButtonItem4";
+            // 
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
@@ -1110,6 +1144,9 @@ namespace Vogue2_IMS
         private RibbonPage rPageHome;
         private DevExpress.XtraBars.BarButtonItem btnDasbhoard;
         private RibbonPageGroup rbnPgroupDashboard;
+        private DevExpress.XtraBars.BarButtonItem btnShow;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
+        private DevExpress.XtraBars.BarButtonItem btnPrintBarCode;
        // private ViewControls.UCMainGoodsView MainGoodsView;
 
     }

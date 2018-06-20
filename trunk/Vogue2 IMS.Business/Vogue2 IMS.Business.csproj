@@ -55,6 +55,9 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\refrence\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="NPOI">
       <HintPath>..\..\refrence\NPOI.dll</HintPath>
     </Reference>
@@ -78,7 +81,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusinessBase.cs" />
+    <Compile Include="ConfigManager.cs" />
+    <Compile Include="GoodsWebBusiness.cs" />
+    <Compile Include="LoginUser.cs" />
+    <Compile Include="OldBussiness\BusinessBase.cs" />
     <Compile Include="BusinessModel\CurrentLoginUser.cs" />
     <Compile Include="BusinessModel\GoodsPaidInfo.cs" />
     <Compile Include="BusinessModel\PurchaseGoodsInfo.cs" />
@@ -87,29 +93,31 @@
     <Compile Include="BusinessModel\SaledGoodsInfo.cs" />
     <Compile Include="BusinessModel\SaledGoodsOrderInfo.cs" />
     <Compile Include="BusinessModel\UserShopRoleInfo.cs" />
-    <Compile Include="CategoryBusiness.cs" />
-    <Compile Include="DataImportBusiness.cs" />
-    <Compile Include="GoodsBusiness.cs" />
-    <Compile Include="OperateLogBusiness.cs" />
-    <Compile Include="PayTypeBusiness.cs" />
-    <Compile Include="TableColumnBusiness.cs" />
+    <Compile Include="OldBussiness\CategoryBusiness.cs" />
+    <Compile Include="OldBussiness\DataImportBusiness.cs" />
+    <Compile Include="OldBussiness\GoodsBusiness.cs" />
+    <Compile Include="OldBussiness\OperateLogBusiness.cs" />
+    <Compile Include="OldBussiness\PayTypeBusiness.cs" />
+    <Compile Include="OldBussiness\TableColumnBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PurchaseGoodsBusiness.cs" />
-    <Compile Include="RoleBusiness.cs" />
-    <Compile Include="SaleGoodsBusiness.cs" />
+    <Compile Include="OldBussiness\PurchaseGoodsBusiness.cs" />
+    <Compile Include="OldBussiness\RoleBusiness.cs" />
+    <Compile Include="OldBussiness\SaleGoodsBusiness.cs" />
     <Compile Include="Service References\DataServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Service\ServiceManager.cs" />
-    <Compile Include="SharedVariables.cs" />
-    <Compile Include="ShopBusiness.cs" />
-    <Compile Include="SupplierBusiness.cs" />
+    <Compile Include="OldBussiness\SharedVariables.cs" />
+    <Compile Include="OldBussiness\ShopBusiness.cs" />
+    <Compile Include="OldBussiness\SupplierBusiness.cs" />
     <Compile Include="ViewModel\ViewDashboard.cs" />
     <Compile Include="ViewModel\ViewMainGoodsInfos.cs" />
-    <Compile Include="UserBusiness.cs" />
+    <Compile Include="OldBussiness\UserBusiness.cs" />
     <Compile Include="ViewModel\ViewQueryGoodsInfo.cs" />
+    <Compile Include="WebServiceHelper.cs" />
+    <Compile Include="UserWebBusiness.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

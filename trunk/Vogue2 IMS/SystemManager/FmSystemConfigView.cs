@@ -104,8 +104,8 @@ namespace Vogue2_IMS.SystemManager
             GridControlCategory.Dock = GridControlPayType.Dock = GridControlShop.Dock = GridControlRoleColumn.Dock = DockStyle.Fill;
             GridControlCategory.Visible = GridControlPayType.Visible = GridControlShop.Visible = GridControlRoleColumn.Visible = false;
             
-            NavBtnGroupRoleConfig.Visible = SharedVariables.Instance.LoginUser.User.RoleId == SharedVariables.AdminRoleId; //超管可见
-            NavBtnGroupSystemConfig.Visible = SharedVariables.Instance.LoginUser.User.RoleId <= SharedVariables.PMRoleId; // 店长，超管可见
+            //NavBtnGroupRoleConfig.Visible = SharedVariables.Instance.LoginUser.User.RoleId == SharedVariables.AdminRoleId; //超管可见
+            //NavBtnGroupSystemConfig.Visible = SharedVariables.Instance.LoginUser.User.RoleId <= SharedVariables.PMRoleId; // 店长，超管可见
         }
 
         #endregion
