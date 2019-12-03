@@ -305,7 +305,7 @@
             this.yufu.Properties.Mask.EditMask = "c";
             this.yufu.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.yufu.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.yufu.Properties.MaxLength = 9;
+            this.yufu.Properties.MaxLength = 12;
             this.yufu.Properties.NullValuePrompt = "数字格式";
             this.yufu.Properties.NullValuePromptShowForEmptyValue = true;
             this.yufu.Size = new System.Drawing.Size(166, 21);
@@ -337,7 +337,7 @@
             this.sjiage.Properties.Mask.EditMask = "c";
             this.sjiage.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.sjiage.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.sjiage.Properties.MaxLength = 9;
+            this.sjiage.Properties.MaxLength = 12;
             this.sjiage.Properties.NullValuePrompt = "数字格式";
             this.sjiage.Properties.NullValuePromptShowForEmptyValue = true;
             this.sjiage.Size = new System.Drawing.Size(166, 21);
@@ -369,7 +369,7 @@
             this.zhekou.Properties.Mask.EditMask = "c";
             this.zhekou.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.zhekou.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.zhekou.Properties.MaxLength = 9;
+            this.zhekou.Properties.MaxLength = 12;
             this.zhekou.Properties.NullValuePrompt = "数字格式";
             this.zhekou.Properties.NullValuePromptShowForEmptyValue = true;
             this.zhekou.Size = new System.Drawing.Size(166, 21);

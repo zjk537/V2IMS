@@ -101,7 +101,7 @@
             this.TxtBankCharge.Properties.Mask.EditMask = "c";
             this.TxtBankCharge.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.TxtBankCharge.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.TxtBankCharge.Properties.MaxLength = 9;
+            this.TxtBankCharge.Properties.MaxLength = 12;
             this.TxtBankCharge.Properties.NullValuePrompt = "数字格式";
             this.TxtBankCharge.Properties.NullValuePromptShowForEmptyValue = true;
             this.TxtBankCharge.Size = new System.Drawing.Size(166, 20);

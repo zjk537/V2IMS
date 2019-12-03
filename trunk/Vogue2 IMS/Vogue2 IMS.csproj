@@ -354,16 +354,19 @@
     <EmbeddedResource Include="GoodsManager\FmWarningMessageBox.resx">
       <DependentUpon>FmWarningMessageBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReceiptManager\His Of CkReceipt.rdlc" />
+    <EmbeddedResource Include="ReceiptManager\His Of JhReceipt.rdlc" />
+    <EmbeddedResource Include="ReceiptManager\His Of JsReceipt.rdlc" />
     <EmbeddedResource Include="ReceiptManager\Images\Copy %282%29 of V2 Of CkReceipt.rdlc">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
