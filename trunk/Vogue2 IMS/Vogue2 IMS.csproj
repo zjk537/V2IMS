@@ -30,6 +30,7 @@
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -57,6 +58,27 @@
   <PropertyGroup>
     <ApplicationIcon>
     </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>DFA1CEDAA86B32B85EA67E359CDEFE24BFC0C7BA</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Vogue2 IMS_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BarcodeLib, Version=1.0.0.12, Culture=neutral, processorArchitecture=MSIL">
@@ -399,6 +421,9 @@
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReceiptManager\MS Of CkReceipt.rdlc" />
+    <EmbeddedResource Include="ReceiptManager\MS Of JhReceipt.rdlc" />
+    <EmbeddedResource Include="ReceiptManager\MS Of JsReceipt.rdlc" />
     <EmbeddedResource Include="ReceiptManager\V2 Of CkReceipt.rdlc">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -484,6 +509,8 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Properties\app.manifest" />
+    <None Include="Vogue2 IMS_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -529,8 +556,6 @@
     <Content Include="ReceiptManager\Images\Layout_32.png" />
     <Content Include="ReceiptManager\Images\Login_Animation.gif" />
     <Content Include="ReceiptManager\Images\Map_32.png" />
-    <Content Include="ReceiptManager\Images\ooopic_1505739017.ico" />
-    <Content Include="ReceiptManager\Images\ooopic_1505739023.png" />
     <Content Include="ReceiptManager\Images\Print_32.png" />
     <Content Include="ReceiptManager\Images\QueryDetail_16.png" />
     <Content Include="ReceiptManager\Images\QueryDetail_32.png" />
@@ -566,7 +591,6 @@
     <None Include="Resources\timg %281%29.jpg" />
     <None Include="Resources\timg.jpg" />
     <None Include="Resources\search_d.png" />
-    <Content Include="权限备注说明.txt" />
     <None Include="Properties\DataSources\Vogue2_IMS.Business.ViewModel.ViewMainGoodsInfos.datasource" />
     <None Include="Resources\login_V2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
