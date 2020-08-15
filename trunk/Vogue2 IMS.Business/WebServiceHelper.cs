@@ -11,6 +11,7 @@ namespace Vogue2_IMS.Business
     class WebServiceHelper
     {
         private static string _tokenName = "V2AUTHTOKEN";
+        private static string _baseUrl = "http://120.27.21.93:8080/api.php/pc";
         public static string Token { get; set; }
         /// <summary>
         /// POST &=&
@@ -21,7 +22,7 @@ namespace Vogue2_IMS.Business
         public static string Post(string url, Dictionary<string, string> dic)
         {
             string result = "";
-            HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
+            HttpWebRequest req = (HttpWebRequest)WebRequest.Create(_baseUrl + url);
             req.Method = "POST";
             req.ContentType = "application/x-www-form-urlencoded";
             #region 添加Post 参数
@@ -57,12 +58,12 @@ namespace Vogue2_IMS.Business
         /// <param name="Url"></param>
         /// <param name="postDataStr"></param>
         /// <returns></returns>
-        public static T1 HttpPost<T, T1>(string Url, T t)
+        public static T1 HttpPost<T, T1>(string url, T t)
         {
             var retusnStr = string.Empty;
             var jsonPams = JsonConvert.SerializeObject(t, Formatting.Indented);
 
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(Url);
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(_baseUrl + url);
             request.Method = "POST";
             request.ContentType = "application/json";
             //request.ContentLength = Encoding.UTF8.GetByteCount(jsonPams);

@@ -66,6 +66,7 @@
             this.colGoodsQuality = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGoodsPrimePrice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGoodsMarkPrice = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colProLirun = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colprochima = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colprojiankuan = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colproyaowei = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -339,7 +340,6 @@
             // viewMainGoodsInfosBindingSource
             // 
             this.viewMainGoodsInfosBindingSource.DataSource = typeof(Vogue2_IMS.Business.ProInfo);
-            this.viewMainGoodsInfosBindingSource.CurrentChanged += new System.EventHandler(this.viewMainGoodsInfosBindingSource_CurrentChanged);
             // 
             // image32
             // 
@@ -355,28 +355,28 @@
             this.panelControl1.Controls.Add(this.labSourceCondition);
             this.panelControl1.Controls.Add(this.labelControl1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl1.Location = new System.Drawing.Point(2, 364);
+            this.panelControl1.Location = new System.Drawing.Point(2, 338);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(730, 32);
+            this.panelControl1.Size = new System.Drawing.Size(625, 30);
             this.panelControl1.TabIndex = 20;
             // 
             // labSourceCondition
             // 
-            this.labSourceCondition.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labSourceCondition.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.labSourceCondition.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labSourceCondition.Location = new System.Drawing.Point(79, 6);
-            this.labSourceCondition.MaximumSize = new System.Drawing.Size(814, 14);
+            this.labSourceCondition.Location = new System.Drawing.Point(68, 6);
+            this.labSourceCondition.MaximumSize = new System.Drawing.Size(698, 13);
             this.labSourceCondition.Name = "labSourceCondition";
-            this.labSourceCondition.Size = new System.Drawing.Size(641, 14);
+            this.labSourceCondition.Size = new System.Drawing.Size(548, 13);
             this.labSourceCondition.TabIndex = 1;
             this.labSourceCondition.Text = "无";
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(13, 6);
+            this.labelControl1.Location = new System.Drawing.Point(11, 6);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(60, 14);
+            this.labelControl1.Size = new System.Drawing.Size(60, 13);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "视图条件：";
             // 
@@ -400,7 +400,7 @@
             this.ViewTypeContainer.Dock = System.Windows.Forms.DockStyle.Left;
             this.ViewTypeContainer.Location = new System.Drawing.Point(0, 0);
             this.ViewTypeContainer.Name = "ViewTypeContainer";
-            this.ViewTypeContainer.Size = new System.Drawing.Size(171, 398);
+            this.ViewTypeContainer.Size = new System.Drawing.Size(147, 370);
             this.ViewTypeContainer.TabIndex = 22;
             // 
             // mNavBarControl
@@ -420,7 +420,7 @@
             this.mNavBarControl.Location = new System.Drawing.Point(2, 2);
             this.mNavBarControl.Name = "mNavBarControl";
             this.mNavBarControl.OptionsNavPane.ExpandedWidth = 186;
-            this.mNavBarControl.Size = new System.Drawing.Size(170, 394);
+            this.mNavBarControl.Size = new System.Drawing.Size(146, 366);
             this.mNavBarControl.SmallImages = this.image16;
             this.mNavBarControl.StoreDefaultPaintStyleName = true;
             this.mNavBarControl.TabIndex = 1;
@@ -482,15 +482,16 @@
             this.ViewContainer.Controls.Add(this.gridViewControl);
             this.ViewContainer.Controls.Add(this.panelControl1);
             this.ViewContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ViewContainer.Location = new System.Drawing.Point(171, 0);
+            this.ViewContainer.Location = new System.Drawing.Point(147, 0);
             this.ViewContainer.Name = "ViewContainer";
-            this.ViewContainer.Size = new System.Drawing.Size(734, 398);
+            this.ViewContainer.Size = new System.Drawing.Size(629, 370);
             this.ViewContainer.TabIndex = 23;
             // 
             // gridViewControl
             // 
             this.gridViewControl.DataSource = this.viewMainGoodsInfosBindingSource;
             this.gridViewControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridViewControl.EmbeddedNavigator.TextStringFormat = "Record {0} of {1}";
             this.gridViewControl.Location = new System.Drawing.Point(2, 2);
             this.gridViewControl.MainView = this.mGridDefaultViewAll;
             this.gridViewControl.Name = "gridViewControl";
@@ -501,7 +502,7 @@
             this.repositoryItemCheckEdit1,
             this.repositoryItemComboBox1,
             this.repositoryItemCheckEdit2});
-            this.gridViewControl.Size = new System.Drawing.Size(730, 362);
+            this.gridViewControl.Size = new System.Drawing.Size(625, 336);
             this.gridViewControl.TabIndex = 21;
             this.gridViewControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.mGridDefaultViewAll,
@@ -532,6 +533,7 @@
             this.colGoodsQuality,
             this.colGoodsPrimePrice,
             this.colGoodsMarkPrice,
+            this.colProLirun,
             this.colprochima,
             this.colprojiankuan,
             this.colproyaowei,
@@ -750,13 +752,21 @@
             this.colGoodsMarkPrice.Visible = true;
             this.colGoodsMarkPrice.VisibleIndex = 11;
             // 
+            // colProLirun
+            // 
+            this.colProLirun.Caption = "利润";
+            this.colProLirun.FieldName = "prolirun";
+            this.colProLirun.Name = "colProLirun";
+            this.colProLirun.Visible = true;
+            this.colProLirun.VisibleIndex = 12;
+            // 
             // colprochima
             // 
             this.colprochima.Caption = "尺码";
             this.colprochima.FieldName = "prochima";
             this.colprochima.Name = "colprochima";
             this.colprochima.Visible = true;
-            this.colprochima.VisibleIndex = 16;
+            this.colprochima.VisibleIndex = 17;
             // 
             // colprojiankuan
             // 
@@ -764,7 +774,7 @@
             this.colprojiankuan.FieldName = "projiankuan";
             this.colprojiankuan.Name = "colprojiankuan";
             this.colprojiankuan.Visible = true;
-            this.colprojiankuan.VisibleIndex = 17;
+            this.colprojiankuan.VisibleIndex = 18;
             // 
             // colproyaowei
             // 
@@ -772,7 +782,7 @@
             this.colproyaowei.FieldName = "proyaowei";
             this.colproyaowei.Name = "colproyaowei";
             this.colproyaowei.Visible = true;
-            this.colproyaowei.VisibleIndex = 18;
+            this.colproyaowei.VisibleIndex = 19;
             // 
             // colproxiongwei
             // 
@@ -780,7 +790,7 @@
             this.colproxiongwei.FieldName = "proxiongwei";
             this.colproxiongwei.Name = "colproxiongwei";
             this.colproxiongwei.Visible = true;
-            this.colproxiongwei.VisibleIndex = 19;
+            this.colproxiongwei.VisibleIndex = 20;
             // 
             // colprotunwei
             // 
@@ -788,7 +798,7 @@
             this.colprotunwei.FieldName = "protunwei";
             this.colprotunwei.Name = "colprotunwei";
             this.colprotunwei.Visible = true;
-            this.colprotunwei.VisibleIndex = 20;
+            this.colprotunwei.VisibleIndex = 21;
             // 
             // colproyichang
             // 
@@ -796,7 +806,7 @@
             this.colproyichang.FieldName = "proyichang";
             this.colproyichang.Name = "colproyichang";
             this.colproyichang.Visible = true;
-            this.colproyichang.VisibleIndex = 21;
+            this.colproyichang.VisibleIndex = 22;
             // 
             // colprokuchang
             // 
@@ -804,7 +814,7 @@
             this.colprokuchang.FieldName = "prokuchang";
             this.colprokuchang.Name = "colprokuchang";
             this.colprokuchang.Visible = true;
-            this.colprokuchang.VisibleIndex = 22;
+            this.colprokuchang.VisibleIndex = 23;
             // 
             // colproxiuchang
             // 
@@ -812,7 +822,7 @@
             this.colproxiuchang.FieldName = "proxiuchang";
             this.colproxiuchang.Name = "colproxiuchang";
             this.colproxiuchang.Visible = true;
-            this.colproxiuchang.VisibleIndex = 23;
+            this.colproxiuchang.VisibleIndex = 24;
             // 
             // colSourceName
             // 
@@ -840,7 +850,7 @@
             this.colGoosPaid.GroupInterval = DevExpress.XtraGrid.ColumnGroupInterval.DisplayText;
             this.colGoosPaid.Name = "colGoosPaid";
             this.colGoosPaid.Visible = true;
-            this.colGoosPaid.VisibleIndex = 37;
+            this.colGoosPaid.VisibleIndex = 38;
             // 
             // colGoodsDesc
             // 
@@ -848,7 +858,7 @@
             this.colGoodsDesc.FieldName = "proremark";
             this.colGoodsDesc.Name = "colGoodsDesc";
             this.colGoodsDesc.Visible = true;
-            this.colGoodsDesc.VisibleIndex = 12;
+            this.colGoodsDesc.VisibleIndex = 13;
             // 
             // colPayType
             // 
@@ -857,7 +867,7 @@
             this.colPayType.Name = "colPayType";
             this.colPayType.OptionsColumn.ReadOnly = true;
             this.colPayType.Visible = true;
-            this.colPayType.VisibleIndex = 13;
+            this.colPayType.VisibleIndex = 14;
             // 
             // colPurchaseOperator
             // 
@@ -865,7 +875,7 @@
             this.colPurchaseOperator.FieldName = "proinuname";
             this.colPurchaseOperator.Name = "colPurchaseOperator";
             this.colPurchaseOperator.Visible = true;
-            this.colPurchaseOperator.VisibleIndex = 14;
+            this.colPurchaseOperator.VisibleIndex = 15;
             // 
             // colSaledPayType
             // 
@@ -874,7 +884,7 @@
             this.colSaledPayType.GroupInterval = DevExpress.XtraGrid.ColumnGroupInterval.DisplayText;
             this.colSaledPayType.Name = "colSaledPayType";
             this.colSaledPayType.Visible = true;
-            this.colSaledPayType.VisibleIndex = 15;
+            this.colSaledPayType.VisibleIndex = 16;
             // 
             // colGoodsSalePrice
             // 
@@ -882,7 +892,7 @@
             this.colGoodsSalePrice.FieldName = "prosjiage";
             this.colGoodsSalePrice.Name = "colGoodsSalePrice";
             this.colGoodsSalePrice.Visible = true;
-            this.colGoodsSalePrice.VisibleIndex = 24;
+            this.colGoodsSalePrice.VisibleIndex = 25;
             // 
             // colGoodsDisCount
             // 
@@ -890,7 +900,7 @@
             this.colGoodsDisCount.FieldName = "prozhekou";
             this.colGoodsDisCount.Name = "colGoodsDisCount";
             this.colGoodsDisCount.Visible = true;
-            this.colGoodsDisCount.VisibleIndex = 25;
+            this.colGoodsDisCount.VisibleIndex = 26;
             // 
             // colGoodsPrepay
             // 
@@ -898,7 +908,7 @@
             this.colGoodsPrepay.FieldName = "proyufu";
             this.colGoodsPrepay.Name = "colGoodsPrepay";
             this.colGoodsPrepay.Visible = true;
-            this.colGoodsPrepay.VisibleIndex = 26;
+            this.colGoodsPrepay.VisibleIndex = 27;
             // 
             // colGoodsCreateDate
             // 
@@ -906,7 +916,7 @@
             this.colGoodsCreateDate.FieldName = "proinaddtime.Value";
             this.colGoodsCreateDate.Name = "colGoodsCreateDate";
             this.colGoodsCreateDate.Visible = true;
-            this.colGoodsCreateDate.VisibleIndex = 27;
+            this.colGoodsCreateDate.VisibleIndex = 28;
             // 
             // colGOodsSaledDate
             // 
@@ -914,7 +924,7 @@
             this.colGOodsSaledDate.FieldName = "prooutaddtime.Value";
             this.colGOodsSaledDate.Name = "colGOodsSaledDate";
             this.colGOodsSaledDate.Visible = true;
-            this.colGOodsSaledDate.VisibleIndex = 28;
+            this.colGOodsSaledDate.VisibleIndex = 29;
             // 
             // colGoodsLastUpdatedDate
             // 
@@ -922,7 +932,7 @@
             this.colGoodsLastUpdatedDate.FieldName = "proupdatetime.Value";
             this.colGoodsLastUpdatedDate.Name = "colGoodsLastUpdatedDate";
             this.colGoodsLastUpdatedDate.Visible = true;
-            this.colGoodsLastUpdatedDate.VisibleIndex = 29;
+            this.colGoodsLastUpdatedDate.VisibleIndex = 30;
             // 
             // colSaledOperator
             // 
@@ -930,7 +940,7 @@
             this.colSaledOperator.FieldName = "prooutjuname";
             this.colSaledOperator.Name = "colSaledOperator";
             this.colSaledOperator.Visible = true;
-            this.colSaledOperator.VisibleIndex = 30;
+            this.colSaledOperator.VisibleIndex = 31;
             // 
             // colSupplierName
             // 
@@ -938,7 +948,7 @@
             this.colSupplierName.FieldName = "custname";
             this.colSupplierName.Name = "colSupplierName";
             this.colSupplierName.Visible = true;
-            this.colSupplierName.VisibleIndex = 31;
+            this.colSupplierName.VisibleIndex = 32;
             // 
             // colSupplierPhone
             // 
@@ -946,7 +956,7 @@
             this.colSupplierPhone.FieldName = "custphone";
             this.colSupplierPhone.Name = "colSupplierPhone";
             this.colSupplierPhone.Visible = true;
-            this.colSupplierPhone.VisibleIndex = 32;
+            this.colSupplierPhone.VisibleIndex = 33;
             // 
             // colSupplierBankName
             // 
@@ -954,7 +964,7 @@
             this.colSupplierBankName.FieldName = "custyhname";
             this.colSupplierBankName.Name = "colSupplierBankName";
             this.colSupplierBankName.Visible = true;
-            this.colSupplierBankName.VisibleIndex = 33;
+            this.colSupplierBankName.VisibleIndex = 34;
             // 
             // colSupplierBankCard
             // 
@@ -962,7 +972,7 @@
             this.colSupplierBankCard.FieldName = "custyhcard";
             this.colSupplierBankCard.Name = "colSupplierBankCard";
             this.colSupplierBankCard.Visible = true;
-            this.colSupplierBankCard.VisibleIndex = 34;
+            this.colSupplierBankCard.VisibleIndex = 35;
             // 
             // colSupplierIdCard
             // 
@@ -970,7 +980,7 @@
             this.colSupplierIdCard.FieldName = "custidcard";
             this.colSupplierIdCard.Name = "colSupplierIdCard";
             this.colSupplierIdCard.Visible = true;
-            this.colSupplierIdCard.VisibleIndex = 35;
+            this.colSupplierIdCard.VisibleIndex = 36;
             // 
             // colConsignEndDate
             // 
@@ -984,7 +994,7 @@
             this.colConsignStartDate.FieldName = "prostarttime.Value";
             this.colConsignStartDate.Name = "colConsignStartDate";
             this.colConsignStartDate.Visible = true;
-            this.colConsignStartDate.VisibleIndex = 36;
+            this.colConsignStartDate.VisibleIndex = 37;
             // 
             // colCustomerName
             // 
@@ -1738,7 +1748,7 @@
             this.layoutViewField_layoutViewColumn36_2.Location = new System.Drawing.Point(0, 220);
             this.layoutViewField_layoutViewColumn36_2.Name = "layoutViewField_layoutViewColumn36_2";
             this.layoutViewField_layoutViewColumn36_2.Size = new System.Drawing.Size(637, 20);
-            this.layoutViewField_layoutViewColumn36_2.TextSize = new System.Drawing.Size(52, 14);
+            this.layoutViewField_layoutViewColumn36_2.TextSize = new System.Drawing.Size(52, 13);
             this.layoutViewField_layoutViewColumn36_2.TextToControlDistance = 5;
             // 
             // layoutViewColumn9
@@ -1755,7 +1765,7 @@
             this.layoutViewField_colShop.Location = new System.Drawing.Point(256, 0);
             this.layoutViewField_colShop.Name = "layoutViewField_colShop";
             this.layoutViewField_colShop.Size = new System.Drawing.Size(381, 20);
-            this.layoutViewField_colShop.TextSize = new System.Drawing.Size(52, 14);
+            this.layoutViewField_colShop.TextSize = new System.Drawing.Size(52, 13);
             this.layoutViewField_colShop.TextToControlDistance = 5;
             // 
             // layoutViewColumn10
@@ -1771,7 +1781,7 @@
             this.layoutViewField_colGoodsCode.Location = new System.Drawing.Point(0, 0);
             this.layoutViewField_colGoodsCode.Name = "layoutViewField_colGoodsCode";
             this.layoutViewField_colGoodsCode.Size = new System.Drawing.Size(256, 20);
-            this.layoutViewField_colGoodsCode.TextSize = new System.Drawing.Size(52, 14);
+            this.layoutViewField_colGoodsCode.TextSize = new System.Drawing.Size(52, 13);
             this.layoutViewField_colGoodsCode.TextToControlDistance = 5;
             // 
             // layoutViewColumn11
@@ -1788,7 +1798,7 @@
             this.layoutViewField_colCategory.Location = new System.Drawing.Point(256, 20);
             this.layoutViewField_colCategory.Name = "layoutViewField_colCategory";
             this.layoutViewField_colCategory.Size = new System.Drawing.Size(381, 20);
-            this.layoutViewField_colCategory.TextSize = new System.Drawing.Size(52, 14);
+            this.layoutViewField_colCategory.TextSize = new System.Drawing.Size(52, 13);
             this.layoutViewField_colCategory.TextToControlDistance = 5;
             // 
             // layoutViewColumn12
@@ -1822,7 +1832,7 @@
             this.layoutViewField_colGoodsName.Location = new System.Drawing.Point(256, 40);
             this.layoutViewField_colGoodsName.Name = "layoutViewField_colGoodsName";
             this.layoutViewField_colGoodsName.Size = new System.Drawing.Size(381, 20);
-            this.layoutViewField_colGoodsName.TextSize = new System.Drawing.Size(52, 14);
+            this.layoutViewField_colGoodsName.TextSize = new System.Drawing.Size(52, 13);
             this.layoutViewField_colGoodsName.TextToControlDistance = 5;
             // 
             // layoutViewColumn14
@@ -1854,7 +1864,7 @@
             this.layoutViewField_colGoodsQuality.Location = new System.Drawing.Point(256, 80);
             this.layoutViewField_colGoodsQuality.Name = "layoutViewField_colGoodsQuality";
             this.layoutViewField_colGoodsQuality.Size = new System.Drawing.Size(381, 20);
-            this.layoutViewField_colGoodsQuality.TextSize = new System.Drawing.Size(52, 14);
+            this.layoutViewField_colGoodsQuality.TextSize = new System.Drawing.Size(52, 13);
             this.layoutViewField_colGoodsQuality.TextToControlDistance = 5;
             // 
             // layoutViewColumn16
@@ -1871,7 +1881,7 @@
             this.layoutViewField_colGoodsStatus.Location = new System.Drawing.Point(256, 60);
             this.layoutViewField_colGoodsStatus.Name = "layoutViewField_colGoodsStatus";
             this.layoutViewField_colGoodsStatus.Size = new System.Drawing.Size(381, 20);
-            this.layoutViewField_colGoodsStatus.TextSize = new System.Drawing.Size(52, 14);
+            this.layoutViewField_colGoodsStatus.TextSize = new System.Drawing.Size(52, 13);
             this.layoutViewField_colGoodsStatus.TextToControlDistance = 5;
             // 
             // layoutViewColumn17
@@ -1887,7 +1897,7 @@
             this.layoutViewField_colGoodsDesc.Location = new System.Drawing.Point(0, 200);
             this.layoutViewField_colGoodsDesc.Name = "layoutViewField_colGoodsDesc";
             this.layoutViewField_colGoodsDesc.Size = new System.Drawing.Size(637, 20);
-            this.layoutViewField_colGoodsDesc.TextSize = new System.Drawing.Size(52, 14);
+            this.layoutViewField_colGoodsDesc.TextSize = new System.Drawing.Size(52, 13);
             this.layoutViewField_colGoodsDesc.TextToControlDistance = 5;
             // 
             // layoutViewColumn18
@@ -1936,7 +1946,7 @@
             this.layoutViewField_colGoodsMarkPrice.Location = new System.Drawing.Point(256, 100);
             this.layoutViewField_colGoodsMarkPrice.Name = "layoutViewField_colGoodsMarkPrice";
             this.layoutViewField_colGoodsMarkPrice.Size = new System.Drawing.Size(381, 20);
-            this.layoutViewField_colGoodsMarkPrice.TextSize = new System.Drawing.Size(52, 14);
+            this.layoutViewField_colGoodsMarkPrice.TextSize = new System.Drawing.Size(52, 13);
             this.layoutViewField_colGoodsMarkPrice.TextToControlDistance = 5;
             // 
             // layoutViewColumn21
@@ -2016,7 +2026,7 @@
             this.layoutViewField_layoutViewColumn1.Location = new System.Drawing.Point(0, 240);
             this.layoutViewField_layoutViewColumn1.Name = "layoutViewField_layoutViewColumn1";
             this.layoutViewField_layoutViewColumn1.Size = new System.Drawing.Size(637, 20);
-            this.layoutViewField_layoutViewColumn1.TextSize = new System.Drawing.Size(52, 14);
+            this.layoutViewField_layoutViewColumn1.TextSize = new System.Drawing.Size(52, 13);
             this.layoutViewField_layoutViewColumn1.TextToControlDistance = 5;
             // 
             // layoutViewColumn25
@@ -2048,7 +2058,7 @@
             this.layoutViewField_colGoodsCreateDate.Location = new System.Drawing.Point(256, 120);
             this.layoutViewField_colGoodsCreateDate.Name = "layoutViewField_colGoodsCreateDate";
             this.layoutViewField_colGoodsCreateDate.Size = new System.Drawing.Size(381, 20);
-            this.layoutViewField_colGoodsCreateDate.TextSize = new System.Drawing.Size(52, 14);
+            this.layoutViewField_colGoodsCreateDate.TextSize = new System.Drawing.Size(52, 13);
             this.layoutViewField_colGoodsCreateDate.TextToControlDistance = 5;
             // 
             // layoutViewColumn27
@@ -2112,7 +2122,7 @@
             this.layoutViewField_colSupplierName.Location = new System.Drawing.Point(256, 140);
             this.layoutViewField_colSupplierName.Name = "layoutViewField_colSupplierName";
             this.layoutViewField_colSupplierName.Size = new System.Drawing.Size(381, 20);
-            this.layoutViewField_colSupplierName.TextSize = new System.Drawing.Size(52, 14);
+            this.layoutViewField_colSupplierName.TextSize = new System.Drawing.Size(52, 13);
             this.layoutViewField_colSupplierName.TextToControlDistance = 5;
             // 
             // layoutViewColumn31
@@ -2128,7 +2138,7 @@
             this.layoutViewField_colSupplierPhone.Location = new System.Drawing.Point(256, 180);
             this.layoutViewField_colSupplierPhone.Name = "layoutViewField_colSupplierPhone";
             this.layoutViewField_colSupplierPhone.Size = new System.Drawing.Size(381, 20);
-            this.layoutViewField_colSupplierPhone.TextSize = new System.Drawing.Size(52, 14);
+            this.layoutViewField_colSupplierPhone.TextSize = new System.Drawing.Size(52, 13);
             this.layoutViewField_colSupplierPhone.TextToControlDistance = 5;
             // 
             // layoutViewColumn32
@@ -2160,7 +2170,7 @@
             this.layoutViewField_colSupplierBankCard.Location = new System.Drawing.Point(256, 160);
             this.layoutViewField_colSupplierBankCard.Name = "layoutViewField_colSupplierBankCard";
             this.layoutViewField_colSupplierBankCard.Size = new System.Drawing.Size(381, 20);
-            this.layoutViewField_colSupplierBankCard.TextSize = new System.Drawing.Size(52, 14);
+            this.layoutViewField_colSupplierBankCard.TextSize = new System.Drawing.Size(52, 13);
             this.layoutViewField_colSupplierBankCard.TextToControlDistance = 5;
             // 
             // layoutViewColumn34
@@ -2623,9 +2633,9 @@
             // 
             // FmGoodsMainView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(905, 398);
+            this.ClientSize = new System.Drawing.Size(776, 370);
             this.Controls.Add(this.ViewContainer);
             this.Controls.Add(this.ViewTypeContainer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -2943,5 +2953,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn ccCustomerName;
         private DevExpress.XtraGrid.Columns.GridColumn ccCustomerPhone;
         private DevExpress.XtraGrid.Columns.GridColumn colGoodsPinPai;
+        private DevExpress.XtraGrid.Columns.GridColumn colProLirun;
     }
 }

@@ -139,7 +139,7 @@ namespace Vogue2_IMS
                 {
                     this.WindowState = FormWindowState.Maximized;
                     this.ShowInTaskbar = true;
-                    this.Text += string.Format("{0}", ConfigManager.LoginUser.username);
+                    this.Text += string.Format(" {0} - {1}", ConfigManager.LoginUser.username, ConfigManager.LoginUser.posname);
                     RegiserView();
                     // 起线程取预警消息
                     //SCWarning();

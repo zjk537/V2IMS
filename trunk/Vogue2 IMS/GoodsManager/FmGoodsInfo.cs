@@ -416,6 +416,9 @@ namespace Vogue2_IMS.OrderManager
 
         private void pictureEdit1_Click(object sender, EventArgs e)
         {
+            if(string.IsNullOrEmpty(custphone.Text.Trim())){
+                return;
+            }
             newProCustInfo.cust = GoodsWebBusiness.GetCustInfoList(custphone.Text.Trim());
             BindCustMsg(true);
         }
@@ -423,6 +426,11 @@ namespace Vogue2_IMS.OrderManager
 
         private void btnOk_Click(object sender, EventArgs e)
         {
+            if (ConfigManager.LoginUser.posname.Trim() == "店员")
+            {
+                XtraMessageBox.Show("请联系店长,修改商品信息.", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             if (!ValidatFail())
             {
                 if (string.IsNullOrEmpty(endtime.EditValue.ToString()))

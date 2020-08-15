@@ -15,9 +15,9 @@ namespace Vogue2_IMS.Business
         public static string QuHui = "取回";
         public static string YiDaKuan = "已打款";
 
-        private static string _urlLogin = " http://120.27.21.93:8080/api.php/pc/public/login";
-        private static string _urlConifgs = "http://120.27.21.93:8080/api.php/pc/config/lists";
-        private static string _urlLogLists = " http://120.27.21.93:8080/api.php/pc/log/lists";
+        private static string _urlLogin = "/public/login";
+        private static string _urlConifgs = "/config/lists";
+        private static string _urlLogLists = "/log/lists";
     
         public static void Login(string username,string password)
         {
@@ -25,7 +25,7 @@ namespace Vogue2_IMS.Business
 
             var loginRes = WebServiceHelper.HttpPost<LoginUser, LoginUser>(_urlLogin, user);
             WebServiceHelper.Token = loginRes.token;
-            LoginUser = user;
+            LoginUser = loginRes;
 
             var res = WebServiceHelper.HttpPost<LoginUser, List<RepsonseConfigMsg>>(_urlConifgs, null);
 

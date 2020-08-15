@@ -175,7 +175,6 @@ namespace Vogue2_IMS.Model.DataModel
         [DBFieldAttribute("GoodsSalePrice")]
         public decimal? SalePrice { get { return salePrice; } set { salePrice = value; SalePriceSpecify = true; } }
 
-
         private decimal? prepay = null;
         public bool PrepaySpecify { get; set; }
         /// <summary>

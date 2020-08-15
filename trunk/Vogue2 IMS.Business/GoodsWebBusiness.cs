@@ -8,20 +8,20 @@ namespace Vogue2_IMS.Business
 {
     public class GoodsWebBusiness
     {
-        private static string _urlProList = " http://120.27.21.93:8080/api.php/pc/pro/lists";
-        private static string _urlProDetail = " http://120.27.21.93:8080/api.php/pc/pro/detail";
-        private static string _urlProAdd = " http://120.27.21.93:8080/api.php/pc/pro/add";
-        private static string _urlProEdit = " http://120.27.21.93:8080/api.php/pc/pro/edit";
-        private static string _urlCustList = " http://120.27.21.93:8080/api.php/pc/cust/lists";
-        private static string _urlProOut = " http://120.27.21.93:8080/api.php/pc/proout/add";
-        private static string _urlProTongJi = " http://120.27.21.93:8080/api.php/pc/pro/tongji";
+        private static string _urlProList = "/pro/lists";
+        private static string _urlProDetail = "/pro/detail";
+        private static string _urlProAdd = "/pro/add";
+        private static string _urlProEdit = "/pro/edit";
+        private static string _urlCustList = "/cust/lists";
+        private static string _urlProOut = "/proout/add";
+        private static string _urlProTongJi = "/pro/tongji";
 
-        private static string _urlProQuHui = " http://120.27.21.93:8080/api.php/pc/pro/quhui";
-        private static string _urlProTuiHuo = " http://120.27.21.93:8080/api.php/pc/pro/tuihuo";
-        private static string _urlProDaKuan = " http://120.27.21.93:8080/api.php/pc/pro/dakuan";
+        private static string _urlProQuHui = "/pro/quhui";
+        private static string _urlProTuiHuo = "/pro/tuihuo";
+        private static string _urlProDaKuan = "/pro/dakuan";
 
-        private static string _urlProGetImages = " http://120.27.21.93:8080/api.php/pc/pro/getimages";
-        private static string _urlProgettypes = "http://120.27.21.93:8080/api.php/pc/pro/gettypes";
+        private static string _urlProGetImages = "/pro/getimages";
+        private static string _urlProgettypes = "/pro/gettypes";
 
         public static List<string> GetProImages(int proid)
         {
@@ -266,6 +266,16 @@ namespace Vogue2_IMS.Business
         public decimal? projiage { get; set; }
         public decimal? probjiage { get; set; }
         public decimal? prosjiage { get; set; }
+        public decimal? prolirun { 
+            get 
+            {
+                if (this.projiage.HasValue && this.prosjiage.HasValue && this.prostatus == ConfigManager.ShouChu)
+                {
+                    return (this.prosjiage - this.projiage);
+                }
+                return new Nullable<decimal>();
+            } 
+        }
         public decimal? proyufu { get; set; }
         public decimal? prozhekou { get; set; }
         public string prostatus { get; set; }

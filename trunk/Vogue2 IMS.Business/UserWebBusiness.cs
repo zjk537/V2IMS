@@ -48,7 +48,7 @@ namespace Vogue2_IMS.Business
   
     public class UserWebBusiness
     {
-        private static string _urlUserList = " http://120.27.21.93:8080/api.php/pc//user/lists";
+        private static string _urlUserList = "/user/lists";
 
         public static List<WebUserInfo> GetUserInfoList()
         {

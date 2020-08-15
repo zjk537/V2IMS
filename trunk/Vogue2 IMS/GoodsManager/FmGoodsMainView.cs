@@ -518,10 +518,6 @@ namespace Vogue2_IMS.GoodsManager
             return returnStr;
         }
 
-        private void viewMainGoodsInfosBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 
     [Serializable]
