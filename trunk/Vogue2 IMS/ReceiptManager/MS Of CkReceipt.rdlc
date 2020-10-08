@@ -1533,7 +1533,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>= First(Fields!ShopName.Value, "GoodsJsSource") &amp;"      电话："&amp; First(Fields!ShopPhone.Value, "GoodsJsSource") &amp; "&lt;br&gt; 地址一：广州市天河区兴安路15号保利中达广场2栋102铺 &lt;br&gt; 地址二：广州市天河区猎德大道33号中海璟晖华庭二期01-103"</Value>
+                  <Value>= "联系电话："&amp; First(Fields!ShopPhone.Value, "GoodsJsSource") &amp; "&lt;br&gt; 地址一：广州市天河区兴安路15号保利中达广场2栋102铺 &lt;br&gt; 地址二：广州市天河区猎德大道33号中海璟晖华庭二期01-103"</Value>
                   <MarkupType>HTML</MarkupType>
                   <Style>
                     <FontFamily>微软雅黑</FontFamily>
